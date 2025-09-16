@@ -11,39 +11,92 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ChartsIndexRouteImport } from './routes/charts/index'
 
+const TestLazyRouteImport = createFileRoute('/test')()
+const ChartsLazyRouteImport = createFileRoute('/charts')()
 const IndexLazyRouteImport = createFileRoute('/')()
+const ChartsCircle1LazyRouteImport = createFileRoute('/charts/circle-1')()
 
+const TestLazyRoute = TestLazyRouteImport.update({
+  id: '/test',
+  path: '/test',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/test.lazy').then((d) => d.Route))
+const ChartsLazyRoute = ChartsLazyRouteImport.update({
+  id: '/charts',
+  path: '/charts',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/charts.lazy').then((d) => d.Route))
 const IndexLazyRoute = IndexLazyRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+const ChartsIndexRoute = ChartsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ChartsLazyRoute,
+} as any)
+const ChartsCircle1LazyRoute = ChartsCircle1LazyRouteImport.update({
+  id: '/circle-1',
+  path: '/circle-1',
+  getParentRoute: () => ChartsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/charts/circle-1.lazy').then((d) => d.Route),
+)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
+  '/charts': typeof ChartsLazyRouteWithChildren
+  '/test': typeof TestLazyRoute
+  '/charts/circle-1': typeof ChartsCircle1LazyRoute
+  '/charts/': typeof ChartsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
+  '/test': typeof TestLazyRoute
+  '/charts/circle-1': typeof ChartsCircle1LazyRoute
+  '/charts': typeof ChartsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexLazyRoute
+  '/charts': typeof ChartsLazyRouteWithChildren
+  '/test': typeof TestLazyRoute
+  '/charts/circle-1': typeof ChartsCircle1LazyRoute
+  '/charts/': typeof ChartsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/charts' | '/test' | '/charts/circle-1' | '/charts/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/test' | '/charts/circle-1' | '/charts'
+  id: '__root__' | '/' | '/charts' | '/test' | '/charts/circle-1' | '/charts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
+  ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
+  TestLazyRoute: typeof TestLazyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/test': {
+      id: '/test'
+      path: '/test'
+      fullPath: '/test'
+      preLoaderRoute: typeof TestLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/charts': {
+      id: '/charts'
+      path: '/charts'
+      fullPath: '/charts'
+      preLoaderRoute: typeof ChartsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -51,11 +104,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/charts/': {
+      id: '/charts/'
+      path: '/'
+      fullPath: '/charts/'
+      preLoaderRoute: typeof ChartsIndexRouteImport
+      parentRoute: typeof ChartsLazyRoute
+    }
+    '/charts/circle-1': {
+      id: '/charts/circle-1'
+      path: '/circle-1'
+      fullPath: '/charts/circle-1'
+      preLoaderRoute: typeof ChartsCircle1LazyRouteImport
+      parentRoute: typeof ChartsLazyRoute
+    }
   }
 }
 
+interface ChartsLazyRouteChildren {
+  ChartsCircle1LazyRoute: typeof ChartsCircle1LazyRoute
+  ChartsIndexRoute: typeof ChartsIndexRoute
+}
+
+const ChartsLazyRouteChildren: ChartsLazyRouteChildren = {
+  ChartsCircle1LazyRoute: ChartsCircle1LazyRoute,
+  ChartsIndexRoute: ChartsIndexRoute,
+}
+
+const ChartsLazyRouteWithChildren = ChartsLazyRoute._addFileChildren(
+  ChartsLazyRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
+  ChartsLazyRoute: ChartsLazyRouteWithChildren,
+  TestLazyRoute: TestLazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

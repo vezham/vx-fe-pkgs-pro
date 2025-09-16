@@ -16,6 +16,12 @@
     },
     {
       "path": "./apps_internals/playground"
+    },
+    {
+      "path": "./packages/components/abc"
+    },
+    {
+      "path": "./packages/components/charts-circle-1"
     }
   ]
 }

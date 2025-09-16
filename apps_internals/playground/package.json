@@ -4,6 +4,8 @@
   "private": true,
   "devDependencies": {
     "@vx/start": "workspace:*",
-    "@vx/system-utils": "workspace:*"
+    "@vx/system-utils": "workspace:*",
+    "@vx-pro/abc": "workspace:*",
+    "@vx-pro/charts-circle-1": "workspace:*"
   }
 }
