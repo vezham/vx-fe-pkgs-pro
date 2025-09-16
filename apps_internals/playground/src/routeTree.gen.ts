@@ -16,6 +16,7 @@ import { Route as ChartsIndexRouteImport } from './routes/charts/index'
 const TestLazyRouteImport = createFileRoute('/test')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const IndexLazyRouteImport = createFileRoute('/')()
+const ChartsCircle2LazyRouteImport = createFileRoute('/charts/circle-2')()
 const ChartsCircle1LazyRouteImport = createFileRoute('/charts/circle-1')()
 
 const TestLazyRoute = TestLazyRouteImport.update({
@@ -38,6 +39,13 @@ const ChartsIndexRoute = ChartsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ChartsLazyRoute,
 } as any)
+const ChartsCircle2LazyRoute = ChartsCircle2LazyRouteImport.update({
+  id: '/circle-2',
+  path: '/circle-2',
+  getParentRoute: () => ChartsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/charts/circle-2.lazy').then((d) => d.Route),
+)
 const ChartsCircle1LazyRoute = ChartsCircle1LazyRouteImport.update({
   id: '/circle-1',
   path: '/circle-1',
@@ -51,12 +59,14 @@ export interface FileRoutesByFullPath {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
+  '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/': typeof ChartsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/test': typeof TestLazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
+  '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts': typeof ChartsIndexRoute
 }
 export interface FileRoutesById {
@@ -65,14 +75,28 @@ export interface FileRoutesById {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
+  '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/': typeof ChartsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/charts' | '/test' | '/charts/circle-1' | '/charts/'
+  fullPaths:
+    | '/'
+    | '/charts'
+    | '/test'
+    | '/charts/circle-1'
+    | '/charts/circle-2'
+    | '/charts/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/test' | '/charts/circle-1' | '/charts'
-  id: '__root__' | '/' | '/charts' | '/test' | '/charts/circle-1' | '/charts/'
+  to: '/' | '/test' | '/charts/circle-1' | '/charts/circle-2' | '/charts'
+  id:
+    | '__root__'
+    | '/'
+    | '/charts'
+    | '/test'
+    | '/charts/circle-1'
+    | '/charts/circle-2'
+    | '/charts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -111,6 +135,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChartsIndexRouteImport
       parentRoute: typeof ChartsLazyRoute
     }
+    '/charts/circle-2': {
+      id: '/charts/circle-2'
+      path: '/circle-2'
+      fullPath: '/charts/circle-2'
+      preLoaderRoute: typeof ChartsCircle2LazyRouteImport
+      parentRoute: typeof ChartsLazyRoute
+    }
     '/charts/circle-1': {
       id: '/charts/circle-1'
       path: '/circle-1'
@@ -123,11 +154,13 @@ declare module '@tanstack/react-router' {
 
 interface ChartsLazyRouteChildren {
   ChartsCircle1LazyRoute: typeof ChartsCircle1LazyRoute
+  ChartsCircle2LazyRoute: typeof ChartsCircle2LazyRoute
   ChartsIndexRoute: typeof ChartsIndexRoute
 }
 
 const ChartsLazyRouteChildren: ChartsLazyRouteChildren = {
   ChartsCircle1LazyRoute: ChartsCircle1LazyRoute,
+  ChartsCircle2LazyRoute: ChartsCircle2LazyRoute,
   ChartsIndexRoute: ChartsIndexRoute,
 }
 

@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "@iconify/react": "^6.0.2",
     "@vx/start": "workspace:*",
     "@vx/system-utils": "workspace:*",
     "@vx-pro/abc": "workspace:*",
-    "@vx-pro/charts-circle-1": "workspace:*"
+    "@vx-pro/charts-circle-1": "workspace:*",
+    "@vx-pro/charts-circle-2": "workspace:*"
   }
 }

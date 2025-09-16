@@ -35,6 +35,9 @@
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
+      "path": "../../packages/components/charts-circle-2/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/charts-circle-1/tsconfig.lib.json"
     },
     {

@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/charts-circle-2"
+    },
+    {
       "path": "../../packages/components/charts-circle-1"
     },
     {

@@ -24,6 +24,12 @@ importers:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
+      '@babel/core':
+        specifier: ^7.14.5
+        version: 7.28.3
+      '@babel/preset-react':
+        specifier: ^7.14.5
+        version: 7.27.1(@babel/core@7.28.3)
       '@commitlint/cli':
         specifier: ^19.8.1
         version: 19.8.1(@types/node@20.19.9)(typescript@5.8.3)
@@ -243,12 +249,18 @@ importers:
 
   apps_internals/playground:
     devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
       '@vx-pro/abc':
         specifier: workspace:*
         version: link:../../packages/components/abc
       '@vx-pro/charts-circle-1':
         specifier: workspace:*
         version: link:../../packages/components/charts-circle-1
+      '@vx-pro/charts-circle-2':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-circle-2
       '@vx/start':
         specifier: workspace:*
         version: link:../../packages/vx/start
@@ -285,6 +297,8 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-circle-2: {}
 
   packages/vx/start:
     devDependencies:
