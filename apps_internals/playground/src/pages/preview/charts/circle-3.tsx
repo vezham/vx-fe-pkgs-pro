@@ -6,9 +6,9 @@ import {
   DropdownMenu,
   DropdownTrigger
 } from '@vx-oss/react'
-import { CircleChartCard, CircleChartProps } from '@vx-pro/charts-circle-2'
+import { CircleChartCard, CircleChartProps } from '@vx-pro/charts-circle-3'
 
-const circle_2 = () => {
+const circle_3 = () => {
   const formatTotal = (total: number | undefined) =>
     total == null
       ? ''
@@ -19,11 +19,8 @@ const circle_2 = () => {
   const data: CircleChartProps[] = [
     {
       title: 'Traffic Sources',
-      total: 224000,
-      unit: 'Visitors',
       categories: ['Search', 'Direct', 'Social', 'Referral'],
-      color: 'default',
-
+      color: 'warning',
       chartData: [
         { name: 'Search', value: 400 },
         { name: 'Direct', value: 300 },
@@ -55,11 +52,8 @@ const circle_2 = () => {
     },
     {
       title: 'Device Usage',
-      total: 4500,
-      unit: 'Devices',
       categories: ['Mobile', 'Desktop', 'Tablet', 'Smart TV'],
-      color: 'primary',
-
+      color: 'success',
       chartData: [
         { name: 'Mobile', value: 450 },
         { name: 'Desktop', value: 300 },
@@ -87,16 +81,12 @@ const circle_2 = () => {
         'per-week': { label: 'Per Week' },
         'per-month': { label: 'Per Month' }
       },
-
       formatTotal
     },
     {
       title: 'Browser Usage',
-      total: 8790,
-      unit: 'Devices',
       categories: ['Chrome', 'Safari', 'Firefox', 'Edge'],
-      color: 'secondary',
-
+      color: 'danger',
       chartData: [
         { name: 'Chrome', value: 350 },
         { name: 'Safari', value: 280 },
@@ -129,14 +119,12 @@ const circle_2 = () => {
   ]
 
   return (
-    <div>
-      <dl className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-        {data.map((item, index) => (
-          <CircleChartCard key={index} {...item} />
-        ))}
-      </dl>
-    </div>
+    <dl className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      {data.map((item, index) => (
+        <CircleChartCard key={index} {...item} />
+      ))}
+    </dl>
   )
 }
 
-export default circle_2
+export default circle_3

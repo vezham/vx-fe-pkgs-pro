@@ -41,6 +41,9 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/charts-circle-3/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/charts-circle-2/tsconfig.lib.json"
     },
     {

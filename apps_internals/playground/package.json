@@ -8,6 +8,7 @@
     "@vx/system-utils": "workspace:*",
     "@vx-pro/abc": "workspace:*",
     "@vx-pro/charts-circle-1": "workspace:*",
-    "@vx-pro/charts-circle-2": "workspace:*"
+    "@vx-pro/charts-circle-2": "workspace:*",
+    "@vx-pro/charts-circle-3": "workspace:*"
   }
 }
