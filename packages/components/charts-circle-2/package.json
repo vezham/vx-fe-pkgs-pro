@@ -17,5 +17,11 @@
   "files": [
     "dist",
     "!**/*.tsbuildinfo"
-  ]
+  ],
+  "dependencies": {
+    "recharts": "^3.2.1"
+  },
+  "devDependencies": {
+    "@iconify/react": "^6.0.2"
+  }
 }

@@ -1,7 +1,5 @@
-import { createLazyFileRoute } from '@tanstack/react-router'
-
-import Page from '../pages/preview/charts/circle-1'
+import { createLazyFileRoute, Outlet } from '@tanstack/react-router'
 
 export const Route = createLazyFileRoute('/charts')({
-  component: () => <Page />
+  component: () => <Outlet />
 })

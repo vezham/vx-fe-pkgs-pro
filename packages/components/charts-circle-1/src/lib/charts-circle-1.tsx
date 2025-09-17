@@ -30,7 +30,7 @@ const Charts = React.forwardRef<
     color,
     chartData,
     changeType = 'neutral',
-    formatStyle = 'currency',
+    formatStyle = 'unit',
     ...rest
   } = props
 
