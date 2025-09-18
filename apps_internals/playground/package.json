@@ -9,6 +9,9 @@
     "@vx-pro/abc": "workspace:*",
     "@vx-pro/charts-circle-1": "workspace:*",
     "@vx-pro/charts-circle-2": "workspace:*",
-    "@vx-pro/charts-circle-3": "workspace:*"
+    "@vx-pro/charts-circle-3": "workspace:*",
+    "@vx-pro/charts-circle-4": "workspace:*",
+    "@vx-pro/charts-circle-5": "workspace:*",
+    "@vx-pro/charts-circle-6": "workspace:*"
   }
 }

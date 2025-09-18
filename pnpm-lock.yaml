@@ -258,6 +258,15 @@ importers:
       '@vx-pro/charts-circle-3':
         specifier: workspace:*
         version: link:../../packages/components/charts-circle-3
+      '@vx-pro/charts-circle-4':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-circle-4
+      '@vx-pro/charts-circle-5':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-circle-5
+      '@vx-pro/charts-circle-6':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-circle-6
       '@vx/start':
         specifier: workspace:*
         version: link:../../packages/vx/start
@@ -285,6 +294,16 @@ importers:
 
   packages/components/abc: {}
 
+  packages/components/charts-bars-1:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
   packages/components/charts-circle-1:
     dependencies:
       recharts:
@@ -306,6 +325,36 @@ importers:
         version: 6.0.2(react@19.0.0)
 
   packages/components/charts-circle-3:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-circle-4:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-circle-5:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-circle-6:
     dependencies:
       recharts:
         specifier: ^3.2.1

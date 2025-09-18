@@ -28,6 +28,18 @@
     },
     {
       "path": "./packages/components/charts-circle-3"
+    },
+    {
+      "path": "./packages/components/charts-circle-4"
+    },
+    {
+      "path": "./packages/components/charts-circle-5"
+    },
+    {
+      "path": "./packages/components/charts-circle-6"
+    },
+    {
+      "path": "./packages/components/charts-bars-1"
     }
   ]
 }
