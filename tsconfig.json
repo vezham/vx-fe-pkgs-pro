@@ -49,6 +49,12 @@
     },
     {
       "path": "./packages/components/charts-bars-4"
+    },
+    {
+      "path": "./packages/components/charts-graph-1"
+    },
+    {
+      "path": "./packages/components/charts-graph-2"
     }
   ]
 }

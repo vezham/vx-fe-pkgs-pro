@@ -16,6 +16,8 @@
     "@vx-pro/charts-bars-1": "workspace:*",
     "@vx-pro/charts-bars-2": "workspace:*",
     "@vx-pro/charts-bars-3": "workspace:*",
-    "@vx-pro/charts-bars-4": "workspace:*"
+    "@vx-pro/charts-bars-4": "workspace:*",
+    "@vx-pro/charts-graph-1": "workspace:*",
+    "@vx-pro/charts-graph-2": "workspace:*"
   }
 }

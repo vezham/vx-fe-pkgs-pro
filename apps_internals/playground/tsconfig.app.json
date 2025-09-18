@@ -41,6 +41,12 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/charts-graph-2/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-graph-1/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/charts-bars-4/tsconfig.lib.json"
     },
     {

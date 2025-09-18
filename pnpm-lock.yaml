@@ -279,6 +279,12 @@ importers:
       '@vx-pro/charts-circle-6':
         specifier: workspace:*
         version: link:../../packages/components/charts-circle-6
+      '@vx-pro/charts-graph-1':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-graph-1
+      '@vx-pro/charts-graph-2':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-graph-2
       '@vx/start':
         specifier: workspace:*
         version: link:../../packages/vx/start
@@ -397,6 +403,26 @@ importers:
         version: 6.0.2(react@19.0.0)
 
   packages/components/charts-circle-6:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-graph-1:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-graph-2:
     dependencies:
       recharts:
         specifier: ^3.2.1
