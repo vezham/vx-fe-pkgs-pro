@@ -249,6 +249,18 @@ importers:
       '@vx-pro/abc':
         specifier: workspace:*
         version: link:../../packages/components/abc
+      '@vx-pro/charts-bars-1':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-bars-1
+      '@vx-pro/charts-bars-2':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-bars-2
+      '@vx-pro/charts-bars-3':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-bars-3
+      '@vx-pro/charts-bars-4':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-bars-4
       '@vx-pro/charts-circle-1':
         specifier: workspace:*
         version: link:../../packages/components/charts-circle-1
@@ -295,6 +307,36 @@ importers:
   packages/components/abc: {}
 
   packages/components/charts-bars-1:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-bars-2:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-bars-3:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-bars-4:
     dependencies:
       recharts:
         specifier: ^3.2.1

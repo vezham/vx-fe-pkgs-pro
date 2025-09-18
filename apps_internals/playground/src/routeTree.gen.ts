@@ -22,6 +22,9 @@ const ChartsCircle4LazyRouteImport = createFileRoute('/charts/circle-4')()
 const ChartsCircle3LazyRouteImport = createFileRoute('/charts/circle-3')()
 const ChartsCircle2LazyRouteImport = createFileRoute('/charts/circle-2')()
 const ChartsCircle1LazyRouteImport = createFileRoute('/charts/circle-1')()
+const BarsBars4LazyRouteImport = createFileRoute('/bars/bars-4')()
+const BarsBars3LazyRouteImport = createFileRoute('/bars/bars-3')()
+const BarsBars2LazyRouteImport = createFileRoute('/bars/bars-2')()
 const BarsBars1LazyRouteImport = createFileRoute('/bars/bars-1')()
 
 const TestLazyRoute = TestLazyRouteImport.update({
@@ -86,6 +89,21 @@ const ChartsCircle1LazyRoute = ChartsCircle1LazyRouteImport.update({
 } as any).lazy(() =>
   import('./routes/charts/circle-1.lazy').then((d) => d.Route),
 )
+const BarsBars4LazyRoute = BarsBars4LazyRouteImport.update({
+  id: '/bars-4',
+  path: '/bars-4',
+  getParentRoute: () => BarsLazyRoute,
+} as any).lazy(() => import('./routes/bars/bars-4.lazy').then((d) => d.Route))
+const BarsBars3LazyRoute = BarsBars3LazyRouteImport.update({
+  id: '/bars-3',
+  path: '/bars-3',
+  getParentRoute: () => BarsLazyRoute,
+} as any).lazy(() => import('./routes/bars/bars-3.lazy').then((d) => d.Route))
+const BarsBars2LazyRoute = BarsBars2LazyRouteImport.update({
+  id: '/bars-2',
+  path: '/bars-2',
+  getParentRoute: () => BarsLazyRoute,
+} as any).lazy(() => import('./routes/bars/bars-2.lazy').then((d) => d.Route))
 const BarsBars1LazyRoute = BarsBars1LazyRouteImport.update({
   id: '/bars-1',
   path: '/bars-1',
@@ -98,6 +116,9 @@ export interface FileRoutesByFullPath {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
+  '/bars/bars-2': typeof BarsBars2LazyRoute
+  '/bars/bars-3': typeof BarsBars3LazyRoute
+  '/bars/bars-4': typeof BarsBars4LazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
   '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/circle-3': typeof ChartsCircle3LazyRoute
@@ -111,6 +132,9 @@ export interface FileRoutesByTo {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
+  '/bars/bars-2': typeof BarsBars2LazyRoute
+  '/bars/bars-3': typeof BarsBars3LazyRoute
+  '/bars/bars-4': typeof BarsBars4LazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
   '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/circle-3': typeof ChartsCircle3LazyRoute
@@ -125,6 +149,9 @@ export interface FileRoutesById {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
+  '/bars/bars-2': typeof BarsBars2LazyRoute
+  '/bars/bars-3': typeof BarsBars3LazyRoute
+  '/bars/bars-4': typeof BarsBars4LazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
   '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/circle-3': typeof ChartsCircle3LazyRoute
@@ -140,6 +167,9 @@ export interface FileRouteTypes {
     | '/charts'
     | '/test'
     | '/bars/bars-1'
+    | '/bars/bars-2'
+    | '/bars/bars-3'
+    | '/bars/bars-4'
     | '/charts/circle-1'
     | '/charts/circle-2'
     | '/charts/circle-3'
@@ -153,6 +183,9 @@ export interface FileRouteTypes {
     | '/charts'
     | '/test'
     | '/bars/bars-1'
+    | '/bars/bars-2'
+    | '/bars/bars-3'
+    | '/bars/bars-4'
     | '/charts/circle-1'
     | '/charts/circle-2'
     | '/charts/circle-3'
@@ -166,6 +199,9 @@ export interface FileRouteTypes {
     | '/charts'
     | '/test'
     | '/bars/bars-1'
+    | '/bars/bars-2'
+    | '/bars/bars-3'
+    | '/bars/bars-4'
     | '/charts/circle-1'
     | '/charts/circle-2'
     | '/charts/circle-3'
@@ -253,6 +289,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChartsCircle1LazyRouteImport
       parentRoute: typeof ChartsLazyRoute
     }
+    '/bars/bars-4': {
+      id: '/bars/bars-4'
+      path: '/bars-4'
+      fullPath: '/bars/bars-4'
+      preLoaderRoute: typeof BarsBars4LazyRouteImport
+      parentRoute: typeof BarsLazyRoute
+    }
+    '/bars/bars-3': {
+      id: '/bars/bars-3'
+      path: '/bars-3'
+      fullPath: '/bars/bars-3'
+      preLoaderRoute: typeof BarsBars3LazyRouteImport
+      parentRoute: typeof BarsLazyRoute
+    }
+    '/bars/bars-2': {
+      id: '/bars/bars-2'
+      path: '/bars-2'
+      fullPath: '/bars/bars-2'
+      preLoaderRoute: typeof BarsBars2LazyRouteImport
+      parentRoute: typeof BarsLazyRoute
+    }
     '/bars/bars-1': {
       id: '/bars/bars-1'
       path: '/bars-1'
@@ -265,10 +322,16 @@ declare module '@tanstack/react-router' {
 
 interface BarsLazyRouteChildren {
   BarsBars1LazyRoute: typeof BarsBars1LazyRoute
+  BarsBars2LazyRoute: typeof BarsBars2LazyRoute
+  BarsBars3LazyRoute: typeof BarsBars3LazyRoute
+  BarsBars4LazyRoute: typeof BarsBars4LazyRoute
 }
 
 const BarsLazyRouteChildren: BarsLazyRouteChildren = {
   BarsBars1LazyRoute: BarsBars1LazyRoute,
+  BarsBars2LazyRoute: BarsBars2LazyRoute,
+  BarsBars3LazyRoute: BarsBars3LazyRoute,
+  BarsBars4LazyRoute: BarsBars4LazyRoute,
 }
 
 const BarsLazyRouteWithChildren = BarsLazyRoute._addFileChildren(

@@ -247,9 +247,10 @@ export type CircleChartProps = {
   color: ButtonProps['color']
   categories: string[]
   chartData: ChartData[]
-  period?: Period
+
   formatStyle?: StyleValues
   actions?: React.ReactNode
+  period?: Period
   getPeriodProps?: Record<Period, periodProps>
   getStyleValueProps?: Record<StyleValues, StyleValueProps>
   formatValue?: (value: number | undefined, props: StyleValueProps) => string

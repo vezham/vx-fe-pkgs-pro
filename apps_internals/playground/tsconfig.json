@@ -3,6 +3,18 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/charts-bars-4"
+    },
+    {
+      "path": "../../packages/components/charts-bars-3"
+    },
+    {
+      "path": "../../packages/components/charts-bars-2"
+    },
+    {
+      "path": "../../packages/components/charts-bars-1"
+    },
+    {
       "path": "../../packages/components/charts-circle-6"
     },
     {

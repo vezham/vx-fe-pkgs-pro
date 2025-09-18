@@ -1,15 +1,8 @@
 'use client'
 
-import type { ButtonProps, CardProps, RadioProps } from '@vx-oss/react'
+import type { ButtonProps, CardProps } from '@vx-oss/react'
 
-import {
-  Button,
-  Card,
-  Divider,
-  VisuallyHidden,
-  cn,
-  useRadio
-} from '@vx-oss/react'
+import { Card, Select, SelectItem, cn } from '@vx-oss/react'
 import React from 'react'
 import {
   Bar,
@@ -20,7 +13,6 @@ import {
   YAxis
 } from 'recharts'
 
-// ------------------ Component ------------------
 const BarChartCard = React.forwardRef<
   HTMLDivElement,
   Omit<CardProps, 'children'> & BarChartProps
@@ -29,11 +21,14 @@ const BarChartCard = React.forwardRef<
     {
       className,
       title,
+      value,
+      unit,
       categories,
       color,
-      chartData,
-      actions,
       formatWeekday,
+      getPeriodProps,
+      actions,
+      chartData,
       ...props
     },
     ref
@@ -46,24 +41,47 @@ const BarChartCard = React.forwardRef<
           className
         )}
         {...props}>
-        <div className="flex flex-col gap-y-4 p-4">
-          <dt>
-            <h3 className="text-small text-default-500 font-medium">{title}</h3>
-          </dt>
-          <dd className="text-tiny text-default-500 flex w-full justify-end gap-4">
-            {categories.map((category, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <span
-                  className="h-2 w-2 rounded-full"
-                  style={{
-                    backgroundColor: `hsl(var(--heroui-${color}-${(index + 1) * 200}))`
+        <div className="flex flex-col gap-y-2 p-4">
+          <div className="flex items-center justify-between gap-x-2">
+            <dt>
+              <h3 className="text-small text-default-500 font-medium">
+                {title}
+              </h3>
+            </dt>
+            <div className="flex items-center justify-end gap-x-2">
+              {getPeriodProps && (
+                <Select
+                  aria-label="Time Range"
+                  classNames={{
+                    trigger: 'min-w-[100px] min-h-7 h-7',
+                    value: 'text-tiny text-default-500!',
+                    selectorIcon: 'text-default-500',
+                    popoverContent: 'min-w-[120px]'
                   }}
-                />
-                <span className="capitalize">{category}</span>
-              </div>
-            ))}
+                  defaultSelectedKeys={['per-day']}
+                  listboxProps={{
+                    itemClasses: { title: 'text-tiny' }
+                  }}
+                  placeholder="Select Period"
+                  size="sm">
+                  {Object.entries(getPeriodProps).map(([key, { label }]) => (
+                    <SelectItem key={key}>{label}</SelectItem>
+                  ))}
+                </Select>
+              )}
+              {actions}
+            </div>
+          </div>
+          <dd className="flex items-baseline gap-x-1">
+            <span className="text-default-900 text-3xl font-semibold">
+              {value}
+            </span>
+            <span className="text-medium text-default-500 font-medium">
+              {unit}
+            </span>
           </dd>
         </div>
+
         <ResponsiveContainer
           className="[&_.recharts-surface]:outline-hidden"
           height="100%"
@@ -79,8 +97,7 @@ const BarChartCard = React.forwardRef<
             }}>
             <XAxis
               dataKey="weekday"
-              strokeOpacity={0.25}
-              style={{ fontSize: 'var(--heroui-font-size-tiny)', color: 'red' }}
+              style={{ fontSize: 'var(--heroui-font-size-tiny)' }}
               tickLine={false}
             />
             <YAxis
@@ -101,9 +118,7 @@ const BarChartCard = React.forwardRef<
                       const name = p.name
                       const value = p.value
                       const category =
-                        categories.find(
-                          c => c.toLowerCase() === name?.toLowerCase()
-                        ) ?? name
+                        categories.find(c => c.toLowerCase() === name) ?? name
 
                       return (
                         <div
@@ -135,7 +150,7 @@ const BarChartCard = React.forwardRef<
                 animationDuration={450}
                 animationEasing="ease"
                 barSize={24}
-                dataKey={category.toLowerCase()}
+                dataKey={category}
                 fill={`hsl(var(--heroui-${color}-${(index + 1) * 200}))`}
                 radius={index === categories.length - 1 ? [4, 4, 0, 0] : 0}
                 stackId="bars"
@@ -144,9 +159,19 @@ const BarChartCard = React.forwardRef<
           </BarChart>
         </ResponsiveContainer>
 
-        <Divider className="bg-default-100 mx-auto w-full max-w-[calc(100%-2rem)]" />
-
-        {actions}
+        <div className="text-tiny text-default-500 flex w-full justify-center gap-4 pb-4">
+          {categories.map((category, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <span
+                className="h-2 w-2 rounded-full"
+                style={{
+                  backgroundColor: `hsl(var(--heroui-${color}-${(index + 1) * 200}))`
+                }}
+              />
+              <span className="capitalize">{category}</span>
+            </div>
+          ))}
+        </div>
       </Card>
     )
   }
@@ -156,40 +181,6 @@ BarChartCard.displayName = 'BarChartCard'
 
 export { BarChartCard }
 
-const ButtonRadioItem = React.forwardRef<
-  HTMLInputElement,
-  Omit<RadioProps, 'color'> & {
-    color?: ButtonProps['color']
-    size?: ButtonProps['size']
-    variant?: ButtonProps['variant']
-  }
->(({ children, color, size = 'sm', variant, ...props }, ref) => {
-  const { Component, isSelected, getBaseProps, getInputProps } = useRadio(props)
-
-  return (
-    <Component {...getBaseProps()} ref={ref}>
-      <VisuallyHidden>
-        <input {...getInputProps()} />
-      </VisuallyHidden>
-      <Button
-        disableRipple
-        className={cn('text-default-500 pointer-events-none', {
-          'text-foreground': isSelected
-        })}
-        color={color}
-        size={size}
-        variant={variant || isSelected ? 'solid' : 'flat'}>
-        {children}
-      </Button>
-    </Component>
-  )
-})
-
-ButtonRadioItem.displayName = 'ButtonRadioItem'
-
-export { ButtonRadioItem }
-
-// ------------------ Types ------------------
 export type ChartData = {
   weekday: string
   [key: string]: string | number
@@ -197,9 +188,16 @@ export type ChartData = {
 
 export type BarChartProps = {
   title: string
+  value?: string
+  unit?: string
   color: ButtonProps['color']
   categories: string[]
   chartData: ChartData[]
+  period?: Period
+  getPeriodProps?: Record<Period, periodProps>
   actions?: React.ReactNode
   formatWeekday?: (weekday: string) => string
 }
+
+export type Period = 'per-day' | 'per-week' | 'per-month'
+export type periodProps = { label: string }

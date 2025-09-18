@@ -1,4 +1,17 @@
-import { BarChartCard, BarChartProps } from '@vx-pro/charts-bars-1'
+import { Icon } from '@iconify/react'
+import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+  RadioGroup
+} from '@vx-oss/react'
+import {
+  BarChartCard,
+  BarChartProps,
+  ButtonRadioItem
+} from '@vx-pro/charts-bars-1'
 
 const bars_1 = () => {
   const formatWeekday = (weekday: string) => {
@@ -74,6 +87,44 @@ const bars_1 = () => {
           windows: 10
         }
       ],
+      actions: (
+        <>
+          <RadioGroup
+            aria-label="Time Range"
+            className="flex gap-x-2 p-4"
+            defaultValue="7"
+            orientation="horizontal">
+            <ButtonRadioItem value="7">7 days</ButtonRadioItem>
+            <ButtonRadioItem value="14">14 days</ButtonRadioItem>
+            <ButtonRadioItem value="30">30 days</ButtonRadioItem>
+          </RadioGroup>
+
+          <Dropdown
+            classNames={{
+              content: 'min-w-[120px]'
+            }}
+            placement="bottom-end">
+            <DropdownTrigger>
+              <Button
+                isIconOnly
+                className="absolute top-2 right-2 w-auto rounded-full"
+                size="sm"
+                variant="light">
+                <Icon height={16} icon="solar:menu-dots-bold" width={16} />
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              itemClasses={{
+                title: 'text-tiny'
+              }}
+              variant="flat">
+              <DropdownItem key="view-details">View Details</DropdownItem>
+              <DropdownItem key="export-data">Export Data</DropdownItem>
+              <DropdownItem key="set-alert">Set Alert</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </>
+      ),
       formatWeekday
     },
     {
@@ -131,6 +182,44 @@ const bars_1 = () => {
           edge: 5
         }
       ],
+      actions: (
+        <>
+          <RadioGroup
+            aria-label="Time Range"
+            className="flex gap-x-2 p-4"
+            defaultValue="7"
+            orientation="horizontal">
+            <ButtonRadioItem value="7">7 days</ButtonRadioItem>
+            <ButtonRadioItem value="14">14 days</ButtonRadioItem>
+            <ButtonRadioItem value="30">30 days</ButtonRadioItem>
+          </RadioGroup>
+
+          <Dropdown
+            classNames={{
+              content: 'min-w-[120px]'
+            }}
+            placement="bottom-end">
+            <DropdownTrigger>
+              <Button
+                isIconOnly
+                className="absolute top-2 right-2 w-auto rounded-full"
+                size="sm"
+                variant="light">
+                <Icon height={16} icon="solar:menu-dots-bold" width={16} />
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              itemClasses={{
+                title: 'text-tiny'
+              }}
+              variant="flat">
+              <DropdownItem key="view-details">View Details</DropdownItem>
+              <DropdownItem key="export-data">Export Data</DropdownItem>
+              <DropdownItem key="set-alert">Set Alert</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </>
+      ),
       formatWeekday
     },
     {
@@ -188,6 +277,44 @@ const bars_1 = () => {
           other: 20
         }
       ],
+      actions: (
+        <>
+          <RadioGroup
+            aria-label="Time Range"
+            className="flex gap-x-2 p-4"
+            defaultValue="7"
+            orientation="horizontal">
+            <ButtonRadioItem value="7">7 days</ButtonRadioItem>
+            <ButtonRadioItem value="14">14 days</ButtonRadioItem>
+            <ButtonRadioItem value="30">30 days</ButtonRadioItem>
+          </RadioGroup>
+
+          <Dropdown
+            classNames={{
+              content: 'min-w-[120px]'
+            }}
+            placement="bottom-end">
+            <DropdownTrigger>
+              <Button
+                isIconOnly
+                className="absolute top-2 right-2 w-auto rounded-full"
+                size="sm"
+                variant="light">
+                <Icon height={16} icon="solar:menu-dots-bold" width={16} />
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              itemClasses={{
+                title: 'text-tiny'
+              }}
+              variant="flat">
+              <DropdownItem key="view-details">View Details</DropdownItem>
+              <DropdownItem key="export-data">Export Data</DropdownItem>
+              <DropdownItem key="set-alert">Set Alert</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </>
+      ),
       formatWeekday
     }
   ]

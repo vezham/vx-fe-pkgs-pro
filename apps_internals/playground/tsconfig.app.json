@@ -41,6 +41,18 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/charts-bars-4/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-bars-3/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-bars-2/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-bars-1/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/charts-circle-6/tsconfig.lib.json"
     },
     {
