@@ -18,6 +18,15 @@
     "@vx-pro/charts-bars-3": "workspace:*",
     "@vx-pro/charts-bars-4": "workspace:*",
     "@vx-pro/charts-graph-1": "workspace:*",
-    "@vx-pro/charts-graph-2": "workspace:*"
+    "@vx-pro/charts-graph-2": "workspace:*",
+    "@vx-pro/charts-kpistat-1": "workspace:*",
+    "@vx-pro/charts-kpistat-2": "workspace:*",
+    "@vx-pro/charts-kpistat-3": "workspace:*",
+    "@vx-pro/charts-kpistat-4": "workspace:*",
+    "@vx-pro/charts-kpistat-5": "workspace:*",
+    "@vx-pro/charts-kpistat-6": "workspace:*",
+    "@vx-pro/charts-kpistat-7": "workspace:*",
+    "@vx-pro/charts-kpistat-8": "workspace:*",
+    "@vx-pro/charts-kpistat-9": "workspace:*"
   }
 }

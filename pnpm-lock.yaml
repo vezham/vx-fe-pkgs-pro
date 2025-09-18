@@ -285,6 +285,33 @@ importers:
       '@vx-pro/charts-graph-2':
         specifier: workspace:*
         version: link:../../packages/components/charts-graph-2
+      '@vx-pro/charts-kpistat-1':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-1
+      '@vx-pro/charts-kpistat-2':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-2
+      '@vx-pro/charts-kpistat-3':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-3
+      '@vx-pro/charts-kpistat-4':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-4
+      '@vx-pro/charts-kpistat-5':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-5
+      '@vx-pro/charts-kpistat-6':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-6
+      '@vx-pro/charts-kpistat-7':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-7
+      '@vx-pro/charts-kpistat-8':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-8
+      '@vx-pro/charts-kpistat-9':
+        specifier: workspace:*
+        version: link:../../packages/components/charts-kpistat-9
       '@vx/start':
         specifier: workspace:*
         version: link:../../packages/vx/start
@@ -427,6 +454,64 @@ importers:
       recharts:
         specifier: ^3.2.1
         version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-1:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-2:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-3:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-4:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-5:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-6:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-7:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-8:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/charts-kpistat-9:
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2

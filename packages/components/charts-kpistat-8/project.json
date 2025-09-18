@@ -1,0 +1,9 @@
+{
+  "name": "charts-kpistat-8",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/charts-kpistat-8/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project charts-kpistat-8 --web",
+  "targets": {}
+}

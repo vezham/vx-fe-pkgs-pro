@@ -13,10 +13,15 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Route as rootRouteImport } from './routes/__root'
 
 const TestLazyRouteImport = createFileRoute('/test')()
+const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const IndexLazyRouteImport = createFileRoute('/')()
+const KpistatsKpistat4LazyRouteImport = createFileRoute('/kpistats/kpistat-4')()
+const KpistatsKpistat3LazyRouteImport = createFileRoute('/kpistats/kpistat-3')()
+const KpistatsKpistat2LazyRouteImport = createFileRoute('/kpistats/kpistat-2')()
+const KpistatsKpistat1LazyRouteImport = createFileRoute('/kpistats/kpistat-1')()
 const GraphGraph2LazyRouteImport = createFileRoute('/graph/graph-2')()
 const GraphGraph1LazyRouteImport = createFileRoute('/graph/graph-1')()
 const ChartsCircle6LazyRouteImport = createFileRoute('/charts/circle-6')()
@@ -35,6 +40,11 @@ const TestLazyRoute = TestLazyRouteImport.update({
   path: '/test',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/test.lazy').then((d) => d.Route))
+const KpistatsLazyRoute = KpistatsLazyRouteImport.update({
+  id: '/kpistats',
+  path: '/kpistats',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/kpistats.lazy').then((d) => d.Route))
 const GraphLazyRoute = GraphLazyRouteImport.update({
   id: '/graph',
   path: '/graph',
@@ -55,6 +65,34 @@ const IndexLazyRoute = IndexLazyRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+const KpistatsKpistat4LazyRoute = KpistatsKpistat4LazyRouteImport.update({
+  id: '/kpistat-4',
+  path: '/kpistat-4',
+  getParentRoute: () => KpistatsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/kpistats/kpistat-4.lazy').then((d) => d.Route),
+)
+const KpistatsKpistat3LazyRoute = KpistatsKpistat3LazyRouteImport.update({
+  id: '/kpistat-3',
+  path: '/kpistat-3',
+  getParentRoute: () => KpistatsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/kpistats/kpistat-3.lazy').then((d) => d.Route),
+)
+const KpistatsKpistat2LazyRoute = KpistatsKpistat2LazyRouteImport.update({
+  id: '/kpistat-2',
+  path: '/kpistat-2',
+  getParentRoute: () => KpistatsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/kpistats/kpistat-2.lazy').then((d) => d.Route),
+)
+const KpistatsKpistat1LazyRoute = KpistatsKpistat1LazyRouteImport.update({
+  id: '/kpistat-1',
+  path: '/kpistat-1',
+  getParentRoute: () => KpistatsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/kpistats/kpistat-1.lazy').then((d) => d.Route),
+)
 const GraphGraph2LazyRoute = GraphGraph2LazyRouteImport.update({
   id: '/graph-2',
   path: '/graph-2',
@@ -133,6 +171,7 @@ export interface FileRoutesByFullPath {
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/graph': typeof GraphLazyRouteWithChildren
+  '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
@@ -146,12 +185,17 @@ export interface FileRoutesByFullPath {
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
+  '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
+  '/kpistats/kpistat-2': typeof KpistatsKpistat2LazyRoute
+  '/kpistats/kpistat-3': typeof KpistatsKpistat3LazyRoute
+  '/kpistats/kpistat-4': typeof KpistatsKpistat4LazyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/graph': typeof GraphLazyRouteWithChildren
+  '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
@@ -165,6 +209,10 @@ export interface FileRoutesByTo {
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
+  '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
+  '/kpistats/kpistat-2': typeof KpistatsKpistat2LazyRoute
+  '/kpistats/kpistat-3': typeof KpistatsKpistat3LazyRoute
+  '/kpistats/kpistat-4': typeof KpistatsKpistat4LazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -172,6 +220,7 @@ export interface FileRoutesById {
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/graph': typeof GraphLazyRouteWithChildren
+  '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
@@ -185,6 +234,10 @@ export interface FileRoutesById {
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
+  '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
+  '/kpistats/kpistat-2': typeof KpistatsKpistat2LazyRoute
+  '/kpistats/kpistat-3': typeof KpistatsKpistat3LazyRoute
+  '/kpistats/kpistat-4': typeof KpistatsKpistat4LazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -193,6 +246,7 @@ export interface FileRouteTypes {
     | '/bars'
     | '/charts'
     | '/graph'
+    | '/kpistats'
     | '/test'
     | '/bars/bars-1'
     | '/bars/bars-2'
@@ -206,12 +260,17 @@ export interface FileRouteTypes {
     | '/charts/circle-6'
     | '/graph/graph-1'
     | '/graph/graph-2'
+    | '/kpistats/kpistat-1'
+    | '/kpistats/kpistat-2'
+    | '/kpistats/kpistat-3'
+    | '/kpistats/kpistat-4'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/bars'
     | '/charts'
     | '/graph'
+    | '/kpistats'
     | '/test'
     | '/bars/bars-1'
     | '/bars/bars-2'
@@ -225,12 +284,17 @@ export interface FileRouteTypes {
     | '/charts/circle-6'
     | '/graph/graph-1'
     | '/graph/graph-2'
+    | '/kpistats/kpistat-1'
+    | '/kpistats/kpistat-2'
+    | '/kpistats/kpistat-3'
+    | '/kpistats/kpistat-4'
   id:
     | '__root__'
     | '/'
     | '/bars'
     | '/charts'
     | '/graph'
+    | '/kpistats'
     | '/test'
     | '/bars/bars-1'
     | '/bars/bars-2'
@@ -244,6 +308,10 @@ export interface FileRouteTypes {
     | '/charts/circle-6'
     | '/graph/graph-1'
     | '/graph/graph-2'
+    | '/kpistats/kpistat-1'
+    | '/kpistats/kpistat-2'
+    | '/kpistats/kpistat-3'
+    | '/kpistats/kpistat-4'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -251,6 +319,7 @@ export interface RootRouteChildren {
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
+  KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
   TestLazyRoute: typeof TestLazyRoute
 }
 
@@ -261,6 +330,13 @@ declare module '@tanstack/react-router' {
       path: '/test'
       fullPath: '/test'
       preLoaderRoute: typeof TestLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kpistats': {
+      id: '/kpistats'
+      path: '/kpistats'
+      fullPath: '/kpistats'
+      preLoaderRoute: typeof KpistatsLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/graph': {
@@ -290,6 +366,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexLazyRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/kpistats/kpistat-4': {
+      id: '/kpistats/kpistat-4'
+      path: '/kpistat-4'
+      fullPath: '/kpistats/kpistat-4'
+      preLoaderRoute: typeof KpistatsKpistat4LazyRouteImport
+      parentRoute: typeof KpistatsLazyRoute
+    }
+    '/kpistats/kpistat-3': {
+      id: '/kpistats/kpistat-3'
+      path: '/kpistat-3'
+      fullPath: '/kpistats/kpistat-3'
+      preLoaderRoute: typeof KpistatsKpistat3LazyRouteImport
+      parentRoute: typeof KpistatsLazyRoute
+    }
+    '/kpistats/kpistat-2': {
+      id: '/kpistats/kpistat-2'
+      path: '/kpistat-2'
+      fullPath: '/kpistats/kpistat-2'
+      preLoaderRoute: typeof KpistatsKpistat2LazyRouteImport
+      parentRoute: typeof KpistatsLazyRoute
+    }
+    '/kpistats/kpistat-1': {
+      id: '/kpistats/kpistat-1'
+      path: '/kpistat-1'
+      fullPath: '/kpistats/kpistat-1'
+      preLoaderRoute: typeof KpistatsKpistat1LazyRouteImport
+      parentRoute: typeof KpistatsLazyRoute
     }
     '/graph/graph-2': {
       id: '/graph/graph-2'
@@ -432,11 +536,30 @@ const GraphLazyRouteWithChildren = GraphLazyRoute._addFileChildren(
   GraphLazyRouteChildren,
 )
 
+interface KpistatsLazyRouteChildren {
+  KpistatsKpistat1LazyRoute: typeof KpistatsKpistat1LazyRoute
+  KpistatsKpistat2LazyRoute: typeof KpistatsKpistat2LazyRoute
+  KpistatsKpistat3LazyRoute: typeof KpistatsKpistat3LazyRoute
+  KpistatsKpistat4LazyRoute: typeof KpistatsKpistat4LazyRoute
+}
+
+const KpistatsLazyRouteChildren: KpistatsLazyRouteChildren = {
+  KpistatsKpistat1LazyRoute: KpistatsKpistat1LazyRoute,
+  KpistatsKpistat2LazyRoute: KpistatsKpistat2LazyRoute,
+  KpistatsKpistat3LazyRoute: KpistatsKpistat3LazyRoute,
+  KpistatsKpistat4LazyRoute: KpistatsKpistat4LazyRoute,
+}
+
+const KpistatsLazyRouteWithChildren = KpistatsLazyRoute._addFileChildren(
+  KpistatsLazyRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   BarsLazyRoute: BarsLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
   GraphLazyRoute: GraphLazyRouteWithChildren,
+  KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
   TestLazyRoute: TestLazyRoute,
 }
 export const routeTree = rootRouteImport

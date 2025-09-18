@@ -55,6 +55,33 @@
     },
     {
       "path": "./packages/components/charts-graph-2"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-1"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-2"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-3"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-4"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-5"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-6"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-7"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-8"
+    },
+    {
+      "path": "./packages/components/charts-kpistat-9"
     }
   ]
 }
