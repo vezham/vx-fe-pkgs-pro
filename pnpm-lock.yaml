@@ -494,24 +494,46 @@ importers:
         version: 6.0.2(react@19.0.0)
 
   packages/components/charts-kpistat-6:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
   packages/components/charts-kpistat-7:
+    dependencies:
+      clsx:
+        specifier: latest
+        version: 2.1.1
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+      tailwind-merge:
+        specifier: latest
+        version: 3.3.1
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
   packages/components/charts-kpistat-8:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
   packages/components/charts-kpistat-9:
+    dependencies:
+      recharts:
+        specifier: ^3.2.1
+        version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2

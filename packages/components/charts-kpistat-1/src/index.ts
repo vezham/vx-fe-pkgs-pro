@@ -1,1 +1,1 @@
-export * from './lib/charts-kpistat-1'
+export * from './lib/index'

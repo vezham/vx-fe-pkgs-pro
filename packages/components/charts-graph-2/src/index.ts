@@ -1,1 +1,1 @@
-export * from './lib/charts-graph-2'
+export * from './lib/index'

@@ -18,6 +18,11 @@
     "dist",
     "!**/*.tsbuildinfo"
   ],
+  "dependencies": {
+    "clsx": "latest",
+    "recharts": "^3.2.1",
+    "tailwind-merge": "latest"
+  },
   "devDependencies": {
     "@iconify/react": "^6.0.2"
   }

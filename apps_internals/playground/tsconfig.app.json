@@ -41,6 +41,33 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/charts-kpistat-9/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-8/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-7/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-6/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-5/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-4/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-3/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-2/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/charts-kpistat-1/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/charts-graph-2/tsconfig.lib.json"
     },
     {
