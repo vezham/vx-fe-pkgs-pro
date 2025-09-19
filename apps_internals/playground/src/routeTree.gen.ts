@@ -16,6 +16,7 @@ const TestLazyRouteImport = createFileRoute('/test')()
 const TeamsLazyRouteImport = createFileRoute('/teams')()
 const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
+const FooterLazyRouteImport = createFileRoute('/footer')()
 const FaqsLazyRouteImport = createFileRoute('/faqs')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
@@ -31,6 +32,18 @@ const KpistatsKpistat2LazyRouteImport = createFileRoute('/kpistats/kpistat-2')()
 const KpistatsKpistat1LazyRouteImport = createFileRoute('/kpistats/kpistat-1')()
 const GraphGraph2LazyRouteImport = createFileRoute('/graph/graph-2')()
 const GraphGraph1LazyRouteImport = createFileRoute('/graph/graph-1')()
+const FootersFooterThemeLazyRouteImport = createFileRoute(
+  '/footers/footer-theme',
+)()
+const FootersFooterSocialLinkLazyRouteImport = createFileRoute(
+  '/footers/footer-socialLink',
+)()
+const FootersFooterNewsletterLazyRouteImport = createFileRoute(
+  '/footers/footer-newsletter',
+)()
+const FootersFooterColumnLazyRouteImport = createFileRoute(
+  '/footers/footer-column',
+)()
 const FaqsTwocolumnFaqsLazyRouteImport = createFileRoute(
   '/faqs/twocolumn-faqs',
 )()
@@ -68,6 +81,11 @@ const GraphLazyRoute = GraphLazyRouteImport.update({
   path: '/graph',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/graph.lazy').then((d) => d.Route))
+const FooterLazyRoute = FooterLazyRouteImport.update({
+  id: '/footer',
+  path: '/footer',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/footer.lazy').then((d) => d.Route))
 const FaqsLazyRoute = FaqsLazyRouteImport.update({
   id: '/faqs',
   path: '/faqs',
@@ -161,6 +179,36 @@ const GraphGraph1LazyRoute = GraphGraph1LazyRouteImport.update({
   path: '/graph-1',
   getParentRoute: () => GraphLazyRoute,
 } as any).lazy(() => import('./routes/graph/graph-1.lazy').then((d) => d.Route))
+const FootersFooterThemeLazyRoute = FootersFooterThemeLazyRouteImport.update({
+  id: '/footers/footer-theme',
+  path: '/footers/footer-theme',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/footers/footer-theme.lazy').then((d) => d.Route),
+)
+const FootersFooterSocialLinkLazyRoute =
+  FootersFooterSocialLinkLazyRouteImport.update({
+    id: '/footers/footer-socialLink',
+    path: '/footers/footer-socialLink',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/footers/footer-socialLink.lazy').then((d) => d.Route),
+  )
+const FootersFooterNewsletterLazyRoute =
+  FootersFooterNewsletterLazyRouteImport.update({
+    id: '/footers/footer-newsletter',
+    path: '/footers/footer-newsletter',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/footers/footer-newsletter.lazy').then((d) => d.Route),
+  )
+const FootersFooterColumnLazyRoute = FootersFooterColumnLazyRouteImport.update({
+  id: '/footers/footer-column',
+  path: '/footers/footer-column',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/footers/footer-column.lazy').then((d) => d.Route),
+)
 const FaqsTwocolumnFaqsLazyRoute = FaqsTwocolumnFaqsLazyRouteImport.update({
   id: '/twocolumn-faqs',
   path: '/twocolumn-faqs',
@@ -257,6 +305,7 @@ export interface FileRoutesByFullPath {
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
+  '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
@@ -275,6 +324,10 @@ export interface FileRoutesByFullPath {
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
   '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
+  '/footers/footer-column': typeof FootersFooterColumnLazyRoute
+  '/footers/footer-newsletter': typeof FootersFooterNewsletterLazyRoute
+  '/footers/footer-socialLink': typeof FootersFooterSocialLinkLazyRoute
+  '/footers/footer-theme': typeof FootersFooterThemeLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
@@ -292,6 +345,7 @@ export interface FileRoutesByTo {
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
+  '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
@@ -310,6 +364,10 @@ export interface FileRoutesByTo {
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
   '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
+  '/footers/footer-column': typeof FootersFooterColumnLazyRoute
+  '/footers/footer-newsletter': typeof FootersFooterNewsletterLazyRoute
+  '/footers/footer-socialLink': typeof FootersFooterSocialLinkLazyRoute
+  '/footers/footer-theme': typeof FootersFooterThemeLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
@@ -328,6 +386,7 @@ export interface FileRoutesById {
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
+  '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
@@ -346,6 +405,10 @@ export interface FileRoutesById {
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
   '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
+  '/footers/footer-column': typeof FootersFooterColumnLazyRoute
+  '/footers/footer-newsletter': typeof FootersFooterNewsletterLazyRoute
+  '/footers/footer-socialLink': typeof FootersFooterSocialLinkLazyRoute
+  '/footers/footer-theme': typeof FootersFooterThemeLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
@@ -365,6 +428,7 @@ export interface FileRouteTypes {
     | '/bars'
     | '/charts'
     | '/faqs'
+    | '/footer'
     | '/graph'
     | '/kpistats'
     | '/teams'
@@ -383,6 +447,10 @@ export interface FileRouteTypes {
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
     | '/faqs/twocolumn-faqs'
+    | '/footers/footer-column'
+    | '/footers/footer-newsletter'
+    | '/footers/footer-socialLink'
+    | '/footers/footer-theme'
     | '/graph/graph-1'
     | '/graph/graph-2'
     | '/kpistats/kpistat-1'
@@ -400,6 +468,7 @@ export interface FileRouteTypes {
     | '/bars'
     | '/charts'
     | '/faqs'
+    | '/footer'
     | '/graph'
     | '/kpistats'
     | '/teams'
@@ -418,6 +487,10 @@ export interface FileRouteTypes {
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
     | '/faqs/twocolumn-faqs'
+    | '/footers/footer-column'
+    | '/footers/footer-newsletter'
+    | '/footers/footer-socialLink'
+    | '/footers/footer-theme'
     | '/graph/graph-1'
     | '/graph/graph-2'
     | '/kpistats/kpistat-1'
@@ -435,6 +508,7 @@ export interface FileRouteTypes {
     | '/bars'
     | '/charts'
     | '/faqs'
+    | '/footer'
     | '/graph'
     | '/kpistats'
     | '/teams'
@@ -453,6 +527,10 @@ export interface FileRouteTypes {
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
     | '/faqs/twocolumn-faqs'
+    | '/footers/footer-column'
+    | '/footers/footer-newsletter'
+    | '/footers/footer-socialLink'
+    | '/footers/footer-theme'
     | '/graph/graph-1'
     | '/graph/graph-2'
     | '/kpistats/kpistat-1'
@@ -471,10 +549,15 @@ export interface RootRouteChildren {
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
   FaqsLazyRoute: typeof FaqsLazyRouteWithChildren
+  FooterLazyRoute: typeof FooterLazyRoute
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
   KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
   TeamsLazyRoute: typeof TeamsLazyRoute
   TestLazyRoute: typeof TestLazyRoute
+  FootersFooterColumnLazyRoute: typeof FootersFooterColumnLazyRoute
+  FootersFooterNewsletterLazyRoute: typeof FootersFooterNewsletterLazyRoute
+  FootersFooterSocialLinkLazyRoute: typeof FootersFooterSocialLinkLazyRoute
+  FootersFooterThemeLazyRoute: typeof FootersFooterThemeLazyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -505,6 +588,13 @@ declare module '@tanstack/react-router' {
       path: '/graph'
       fullPath: '/graph'
       preLoaderRoute: typeof GraphLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/footer': {
+      id: '/footer'
+      path: '/footer'
+      fullPath: '/footer'
+      preLoaderRoute: typeof FooterLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faqs': {
@@ -611,6 +701,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/graph/graph-1'
       preLoaderRoute: typeof GraphGraph1LazyRouteImport
       parentRoute: typeof GraphLazyRoute
+    }
+    '/footers/footer-theme': {
+      id: '/footers/footer-theme'
+      path: '/footers/footer-theme'
+      fullPath: '/footers/footer-theme'
+      preLoaderRoute: typeof FootersFooterThemeLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/footers/footer-socialLink': {
+      id: '/footers/footer-socialLink'
+      path: '/footers/footer-socialLink'
+      fullPath: '/footers/footer-socialLink'
+      preLoaderRoute: typeof FootersFooterSocialLinkLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/footers/footer-newsletter': {
+      id: '/footers/footer-newsletter'
+      path: '/footers/footer-newsletter'
+      fullPath: '/footers/footer-newsletter'
+      preLoaderRoute: typeof FootersFooterNewsletterLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/footers/footer-column': {
+      id: '/footers/footer-column'
+      path: '/footers/footer-column'
+      fullPath: '/footers/footer-column'
+      preLoaderRoute: typeof FootersFooterColumnLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/faqs/twocolumn-faqs': {
       id: '/faqs/twocolumn-faqs'
@@ -818,10 +936,15 @@ const rootRouteChildren: RootRouteChildren = {
   BarsLazyRoute: BarsLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
   FaqsLazyRoute: FaqsLazyRouteWithChildren,
+  FooterLazyRoute: FooterLazyRoute,
   GraphLazyRoute: GraphLazyRouteWithChildren,
   KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
   TeamsLazyRoute: TeamsLazyRoute,
   TestLazyRoute: TestLazyRoute,
+  FootersFooterColumnLazyRoute: FootersFooterColumnLazyRoute,
+  FootersFooterNewsletterLazyRoute: FootersFooterNewsletterLazyRoute,
+  FootersFooterSocialLinkLazyRoute: FootersFooterSocialLinkLazyRoute,
+  FootersFooterThemeLazyRoute: FootersFooterThemeLazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

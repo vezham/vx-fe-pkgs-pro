@@ -44,6 +44,18 @@
       "path": "../../packages/components/marketing-teams/tsconfig.lib.json"
     },
     {
+      "path": "../../packages/components/marketing-twocolumns-faqs/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-faqs-with-divider/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-centered-faqs/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-faqs/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/charts-kpistat-9/tsconfig.lib.json"
     },
     {

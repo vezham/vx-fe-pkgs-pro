@@ -27,6 +27,15 @@
     "@vx-pro/charts-kpistat-6": "workspace:*",
     "@vx-pro/charts-kpistat-7": "workspace:*",
     "@vx-pro/charts-kpistat-8": "workspace:*",
-    "@vx-pro/charts-kpistat-9": "workspace:*"
+    "@vx-pro/charts-kpistat-9": "workspace:*",
+    "@vx-pro/marketing-teams": "workspace:*",
+    "@vx-pro/marketing-faqs": "workspace:*",
+    "@vx-pro/marketing-faqs-with-divider": "workspace:*",
+    "@vx-pro/marketing-centered-faqs": "workspace:*",
+    "@vx-pro/marketing-twocolumns-faqs": "workspace:*",
+    "@vx-pro/marketing-footer-with-themeswitch": "workspace:*",
+    "@vx-pro/marketing-footer-with-columns": "workspace:*",
+    "@vx-pro/marketing-footer-with-columns-newsletter": "workspace:*",
+    "@vx-pro/marketing-centeredfooter-with-sociallinks": "workspace:*"
   }
 }

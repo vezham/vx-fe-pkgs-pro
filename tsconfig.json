@@ -97,6 +97,18 @@
     },
     {
       "path": "./packages/components/marketing-twocolumns-faqs"
+    },
+    {
+      "path": "./packages/components/marketing-footer-with-themeswitch"
+    },
+    {
+      "path": "./packages/components/marketing-centeredfooter-with-sociallinks"
+    },
+    {
+      "path": "./packages/components/marketing-footer-with-columns"
+    },
+    {
+      "path": "./packages/components/marketing-footer-with-columns-newsletter"
     }
   ]
 }

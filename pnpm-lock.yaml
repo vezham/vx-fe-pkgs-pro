@@ -312,6 +312,33 @@ importers:
       '@vx-pro/charts-kpistat-9':
         specifier: workspace:*
         version: link:../../packages/components/charts-kpistat-9
+      '@vx-pro/marketing-centered-faqs':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-centered-faqs
+      '@vx-pro/marketing-centeredfooter-with-sociallinks':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-centeredfooter-with-sociallinks
+      '@vx-pro/marketing-faqs':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-faqs
+      '@vx-pro/marketing-faqs-with-divider':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-faqs-with-divider
+      '@vx-pro/marketing-footer-with-columns':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-footer-with-columns
+      '@vx-pro/marketing-footer-with-columns-newsletter':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-footer-with-columns-newsletter
+      '@vx-pro/marketing-footer-with-themeswitch':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-footer-with-themeswitch
+      '@vx-pro/marketing-teams':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-teams
+      '@vx-pro/marketing-twocolumns-faqs':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-twocolumns-faqs
       '@vx/start':
         specifier: workspace:*
         version: link:../../packages/vx/start
@@ -545,6 +572,12 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
+  packages/components/marketing-centeredfooter-with-sociallinks:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
   packages/components/marketing-faqs:
     devDependencies:
       '@iconify/react':
@@ -552,6 +585,24 @@ importers:
         version: 6.0.2(react@19.0.0)
 
   packages/components/marketing-faqs-with-divider:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-footer-with-columns:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-footer-with-columns-newsletter:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-footer-with-themeswitch:
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2
