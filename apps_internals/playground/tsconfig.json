@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/marketing-teams"
+    },
+    {
       "path": "../../packages/components/charts-kpistat-9"
     },
     {

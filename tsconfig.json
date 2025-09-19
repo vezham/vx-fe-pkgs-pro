@@ -82,6 +82,21 @@
     },
     {
       "path": "./packages/components/charts-kpistat-9"
+    },
+    {
+      "path": "./packages/components/marketing-teams"
+    },
+    {
+      "path": "./packages/components/marketing-faqs"
+    },
+    {
+      "path": "./packages/components/marketing-centered-faqs"
+    },
+    {
+      "path": "./packages/components/marketing-faqs-with-divider"
+    },
+    {
+      "path": "./packages/components/marketing-twocolumns-faqs"
     }
   ]
 }

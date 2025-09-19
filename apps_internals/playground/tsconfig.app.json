@@ -41,6 +41,9 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/marketing-teams/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/charts-kpistat-9/tsconfig.lib.json"
     },
     {

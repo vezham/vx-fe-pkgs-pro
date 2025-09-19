@@ -67,7 +67,9 @@ const kpistat_7 = () => {
         { weekday: 'Su', value: 11300 }
       ],
       formatWeekday,
-      formatValue
+      formatValue,
+      handleMouseEnter,
+      handleMouseLeave
     },
     {
       title: 'Total Expenses',
@@ -85,7 +87,9 @@ const kpistat_7 = () => {
         { weekday: 'Su', value: 8187 }
       ],
       formatWeekday,
-      formatValue
+      formatValue,
+      handleMouseEnter,
+      handleMouseLeave
     },
     {
       title: 'Total Profit',
@@ -103,16 +107,18 @@ const kpistat_7 = () => {
         { weekday: 'Su', value: 11813 }
       ],
       formatWeekday,
-      formatValue
+      formatValue,
+      handleMouseEnter,
+      handleMouseLeave
     }
   ]
 
   return (
-    <KPIStatCard
-      data={data}
-      handleMouseEnter={handleMouseEnter}
-      handleMouseLeave={handleMouseLeave}
-    />
+    <dl className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      {data.map((props, index) => (
+        <KPIStatCard key={index} {...props} index={index} />
+      ))}
+    </dl>
   )
 }
 

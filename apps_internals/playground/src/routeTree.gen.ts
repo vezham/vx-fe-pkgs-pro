@@ -13,8 +13,10 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Route as rootRouteImport } from './routes/__root'
 
 const TestLazyRouteImport = createFileRoute('/test')()
+const TeamsLazyRouteImport = createFileRoute('/teams')()
 const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
+const FaqsLazyRouteImport = createFileRoute('/faqs')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const IndexLazyRouteImport = createFileRoute('/')()
@@ -29,6 +31,12 @@ const KpistatsKpistat2LazyRouteImport = createFileRoute('/kpistats/kpistat-2')()
 const KpistatsKpistat1LazyRouteImport = createFileRoute('/kpistats/kpistat-1')()
 const GraphGraph2LazyRouteImport = createFileRoute('/graph/graph-2')()
 const GraphGraph1LazyRouteImport = createFileRoute('/graph/graph-1')()
+const FaqsTwocolumnFaqsLazyRouteImport = createFileRoute(
+  '/faqs/twocolumn-faqs',
+)()
+const FaqsFaqsDividerLazyRouteImport = createFileRoute('/faqs/faqs-divider')()
+const FaqsCenteredFaqsLazyRouteImport = createFileRoute('/faqs/centered-faqs')()
+const FaqsBasicFaqsLazyRouteImport = createFileRoute('/faqs/basic-faqs')()
 const ChartsCircle6LazyRouteImport = createFileRoute('/charts/circle-6')()
 const ChartsCircle5LazyRouteImport = createFileRoute('/charts/circle-5')()
 const ChartsCircle4LazyRouteImport = createFileRoute('/charts/circle-4')()
@@ -45,6 +53,11 @@ const TestLazyRoute = TestLazyRouteImport.update({
   path: '/test',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/test.lazy').then((d) => d.Route))
+const TeamsLazyRoute = TeamsLazyRouteImport.update({
+  id: '/teams',
+  path: '/teams',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/teams.lazy').then((d) => d.Route))
 const KpistatsLazyRoute = KpistatsLazyRouteImport.update({
   id: '/kpistats',
   path: '/kpistats',
@@ -55,6 +68,11 @@ const GraphLazyRoute = GraphLazyRouteImport.update({
   path: '/graph',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/graph.lazy').then((d) => d.Route))
+const FaqsLazyRoute = FaqsLazyRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/faqs.lazy').then((d) => d.Route))
 const ChartsLazyRoute = ChartsLazyRouteImport.update({
   id: '/charts',
   path: '/charts',
@@ -143,6 +161,34 @@ const GraphGraph1LazyRoute = GraphGraph1LazyRouteImport.update({
   path: '/graph-1',
   getParentRoute: () => GraphLazyRoute,
 } as any).lazy(() => import('./routes/graph/graph-1.lazy').then((d) => d.Route))
+const FaqsTwocolumnFaqsLazyRoute = FaqsTwocolumnFaqsLazyRouteImport.update({
+  id: '/twocolumn-faqs',
+  path: '/twocolumn-faqs',
+  getParentRoute: () => FaqsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/faqs/twocolumn-faqs.lazy').then((d) => d.Route),
+)
+const FaqsFaqsDividerLazyRoute = FaqsFaqsDividerLazyRouteImport.update({
+  id: '/faqs-divider',
+  path: '/faqs-divider',
+  getParentRoute: () => FaqsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/faqs/faqs-divider.lazy').then((d) => d.Route),
+)
+const FaqsCenteredFaqsLazyRoute = FaqsCenteredFaqsLazyRouteImport.update({
+  id: '/centered-faqs',
+  path: '/centered-faqs',
+  getParentRoute: () => FaqsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/faqs/centered-faqs.lazy').then((d) => d.Route),
+)
+const FaqsBasicFaqsLazyRoute = FaqsBasicFaqsLazyRouteImport.update({
+  id: '/basic-faqs',
+  path: '/basic-faqs',
+  getParentRoute: () => FaqsLazyRoute,
+} as any).lazy(() =>
+  import('./routes/faqs/basic-faqs.lazy').then((d) => d.Route),
+)
 const ChartsCircle6LazyRoute = ChartsCircle6LazyRouteImport.update({
   id: '/circle-6',
   path: '/circle-6',
@@ -210,8 +256,10 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
+  '/faqs': typeof FaqsLazyRouteWithChildren
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
+  '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
@@ -223,6 +271,10 @@ export interface FileRoutesByFullPath {
   '/charts/circle-4': typeof ChartsCircle4LazyRoute
   '/charts/circle-5': typeof ChartsCircle5LazyRoute
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
+  '/faqs/basic-faqs': typeof FaqsBasicFaqsLazyRoute
+  '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
+  '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
+  '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
@@ -239,8 +291,10 @@ export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
+  '/faqs': typeof FaqsLazyRouteWithChildren
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
+  '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
@@ -252,6 +306,10 @@ export interface FileRoutesByTo {
   '/charts/circle-4': typeof ChartsCircle4LazyRoute
   '/charts/circle-5': typeof ChartsCircle5LazyRoute
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
+  '/faqs/basic-faqs': typeof FaqsBasicFaqsLazyRoute
+  '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
+  '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
+  '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
@@ -269,8 +327,10 @@ export interface FileRoutesById {
   '/': typeof IndexLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
+  '/faqs': typeof FaqsLazyRouteWithChildren
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
+  '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
@@ -282,6 +342,10 @@ export interface FileRoutesById {
   '/charts/circle-4': typeof ChartsCircle4LazyRoute
   '/charts/circle-5': typeof ChartsCircle5LazyRoute
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
+  '/faqs/basic-faqs': typeof FaqsBasicFaqsLazyRoute
+  '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
+  '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
+  '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
@@ -300,8 +364,10 @@ export interface FileRouteTypes {
     | '/'
     | '/bars'
     | '/charts'
+    | '/faqs'
     | '/graph'
     | '/kpistats'
+    | '/teams'
     | '/test'
     | '/bars/bars-1'
     | '/bars/bars-2'
@@ -313,6 +379,10 @@ export interface FileRouteTypes {
     | '/charts/circle-4'
     | '/charts/circle-5'
     | '/charts/circle-6'
+    | '/faqs/basic-faqs'
+    | '/faqs/centered-faqs'
+    | '/faqs/faqs-divider'
+    | '/faqs/twocolumn-faqs'
     | '/graph/graph-1'
     | '/graph/graph-2'
     | '/kpistats/kpistat-1'
@@ -329,8 +399,10 @@ export interface FileRouteTypes {
     | '/'
     | '/bars'
     | '/charts'
+    | '/faqs'
     | '/graph'
     | '/kpistats'
+    | '/teams'
     | '/test'
     | '/bars/bars-1'
     | '/bars/bars-2'
@@ -342,6 +414,10 @@ export interface FileRouteTypes {
     | '/charts/circle-4'
     | '/charts/circle-5'
     | '/charts/circle-6'
+    | '/faqs/basic-faqs'
+    | '/faqs/centered-faqs'
+    | '/faqs/faqs-divider'
+    | '/faqs/twocolumn-faqs'
     | '/graph/graph-1'
     | '/graph/graph-2'
     | '/kpistats/kpistat-1'
@@ -358,8 +434,10 @@ export interface FileRouteTypes {
     | '/'
     | '/bars'
     | '/charts'
+    | '/faqs'
     | '/graph'
     | '/kpistats'
+    | '/teams'
     | '/test'
     | '/bars/bars-1'
     | '/bars/bars-2'
@@ -371,6 +449,10 @@ export interface FileRouteTypes {
     | '/charts/circle-4'
     | '/charts/circle-5'
     | '/charts/circle-6'
+    | '/faqs/basic-faqs'
+    | '/faqs/centered-faqs'
+    | '/faqs/faqs-divider'
+    | '/faqs/twocolumn-faqs'
     | '/graph/graph-1'
     | '/graph/graph-2'
     | '/kpistats/kpistat-1'
@@ -388,8 +470,10 @@ export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
+  FaqsLazyRoute: typeof FaqsLazyRouteWithChildren
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
   KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
+  TeamsLazyRoute: typeof TeamsLazyRoute
   TestLazyRoute: typeof TestLazyRoute
 }
 
@@ -400,6 +484,13 @@ declare module '@tanstack/react-router' {
       path: '/test'
       fullPath: '/test'
       preLoaderRoute: typeof TestLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teams': {
+      id: '/teams'
+      path: '/teams'
+      fullPath: '/teams'
+      preLoaderRoute: typeof TeamsLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kpistats': {
@@ -414,6 +505,13 @@ declare module '@tanstack/react-router' {
       path: '/graph'
       fullPath: '/graph'
       preLoaderRoute: typeof GraphLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/charts': {
@@ -513,6 +611,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/graph/graph-1'
       preLoaderRoute: typeof GraphGraph1LazyRouteImport
       parentRoute: typeof GraphLazyRoute
+    }
+    '/faqs/twocolumn-faqs': {
+      id: '/faqs/twocolumn-faqs'
+      path: '/twocolumn-faqs'
+      fullPath: '/faqs/twocolumn-faqs'
+      preLoaderRoute: typeof FaqsTwocolumnFaqsLazyRouteImport
+      parentRoute: typeof FaqsLazyRoute
+    }
+    '/faqs/faqs-divider': {
+      id: '/faqs/faqs-divider'
+      path: '/faqs-divider'
+      fullPath: '/faqs/faqs-divider'
+      preLoaderRoute: typeof FaqsFaqsDividerLazyRouteImport
+      parentRoute: typeof FaqsLazyRoute
+    }
+    '/faqs/centered-faqs': {
+      id: '/faqs/centered-faqs'
+      path: '/centered-faqs'
+      fullPath: '/faqs/centered-faqs'
+      preLoaderRoute: typeof FaqsCenteredFaqsLazyRouteImport
+      parentRoute: typeof FaqsLazyRoute
+    }
+    '/faqs/basic-faqs': {
+      id: '/faqs/basic-faqs'
+      path: '/basic-faqs'
+      fullPath: '/faqs/basic-faqs'
+      preLoaderRoute: typeof FaqsBasicFaqsLazyRouteImport
+      parentRoute: typeof FaqsLazyRoute
     }
     '/charts/circle-6': {
       id: '/charts/circle-6'
@@ -627,6 +753,24 @@ const ChartsLazyRouteWithChildren = ChartsLazyRoute._addFileChildren(
   ChartsLazyRouteChildren,
 )
 
+interface FaqsLazyRouteChildren {
+  FaqsBasicFaqsLazyRoute: typeof FaqsBasicFaqsLazyRoute
+  FaqsCenteredFaqsLazyRoute: typeof FaqsCenteredFaqsLazyRoute
+  FaqsFaqsDividerLazyRoute: typeof FaqsFaqsDividerLazyRoute
+  FaqsTwocolumnFaqsLazyRoute: typeof FaqsTwocolumnFaqsLazyRoute
+}
+
+const FaqsLazyRouteChildren: FaqsLazyRouteChildren = {
+  FaqsBasicFaqsLazyRoute: FaqsBasicFaqsLazyRoute,
+  FaqsCenteredFaqsLazyRoute: FaqsCenteredFaqsLazyRoute,
+  FaqsFaqsDividerLazyRoute: FaqsFaqsDividerLazyRoute,
+  FaqsTwocolumnFaqsLazyRoute: FaqsTwocolumnFaqsLazyRoute,
+}
+
+const FaqsLazyRouteWithChildren = FaqsLazyRoute._addFileChildren(
+  FaqsLazyRouteChildren,
+)
+
 interface GraphLazyRouteChildren {
   GraphGraph1LazyRoute: typeof GraphGraph1LazyRoute
   GraphGraph2LazyRoute: typeof GraphGraph2LazyRoute
@@ -673,8 +817,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   BarsLazyRoute: BarsLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
+  FaqsLazyRoute: FaqsLazyRouteWithChildren,
   GraphLazyRoute: GraphLazyRouteWithChildren,
   KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
+  TeamsLazyRoute: TeamsLazyRoute,
   TestLazyRoute: TestLazyRoute,
 }
 export const routeTree = rootRouteImport

@@ -539,6 +539,36 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
+  packages/components/marketing-centered-faqs:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-faqs:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-faqs-with-divider:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-teams:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-twocolumns-faqs:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
   packages/vx/start:
     devDependencies:
       '@vx/system-utils':
