@@ -3,6 +3,30 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/marketing-pricing-simpleprice"
+    },
+    {
+      "path": "../../packages/components/marketing-pricing-mostpopulartierfilled"
+    },
+    {
+      "path": "../../packages/components/marketing-pricing-mostpopulartier-highlighted"
+    },
+    {
+      "path": "../../packages/components/marketing-pricing-mostpopulartier"
+    },
+    {
+      "path": "../../packages/components/marketing-pricing-featuredtierfilled"
+    },
+    {
+      "path": "../../packages/components/marketing-pricing-featuredtier"
+    },
+    {
+      "path": "../../packages/components/marketing-pricing-blurredbackground"
+    },
+    {
+      "path": "../../packages/components/marketing-pricing-basicprice"
+    },
+    {
       "path": "../../packages/components/marketing-banner-floatingbottomcenter"
     },
     {

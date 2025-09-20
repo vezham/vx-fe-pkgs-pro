@@ -14,6 +14,7 @@ import { Route as rootRouteImport } from './routes/__root'
 
 const TestLazyRouteImport = createFileRoute('/test')()
 const TeamsLazyRouteImport = createFileRoute('/teams')()
+const PricingLazyRouteImport = createFileRoute('/pricing')()
 const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
 const FooterLazyRouteImport = createFileRoute('/footer')()
@@ -23,6 +24,30 @@ const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const BannerLazyRouteImport = createFileRoute('/banner')()
 const IndexLazyRouteImport = createFileRoute('/')()
+const PricingPricingSimplepriceLazyRouteImport = createFileRoute(
+  '/pricing/pricing-simpleprice',
+)()
+const PricingPricingMostpopulartierfilledLazyRouteImport = createFileRoute(
+  '/pricing/pricing-mostpopulartierfilled',
+)()
+const PricingPricingMostpopulartierLazyRouteImport = createFileRoute(
+  '/pricing/pricing-mostpopulartier',
+)()
+const PricingPricingMostpopularhighlightedLazyRouteImport = createFileRoute(
+  '/pricing/pricing-mostpopularhighlighted',
+)()
+const PricingPricingFeaturedtierFilledLazyRouteImport = createFileRoute(
+  '/pricing/pricing-featuredtier-filled',
+)()
+const PricingPricingFeaturedtierLazyRouteImport = createFileRoute(
+  '/pricing/pricing-featuredtier',
+)()
+const PricingPricingBlurredbackgroundLazyRouteImport = createFileRoute(
+  '/pricing/pricing-blurredbackground',
+)()
+const PricingPricingBasepriceLazyRouteImport = createFileRoute(
+  '/pricing/pricing-baseprice',
+)()
 const KpistatsKpistat9LazyRouteImport = createFileRoute('/kpistats/kpistat-9')()
 const KpistatsKpistat8LazyRouteImport = createFileRoute('/kpistats/kpistat-8')()
 const KpistatsKpistat7LazyRouteImport = createFileRoute('/kpistats/kpistat-7')()
@@ -121,6 +146,11 @@ const TeamsLazyRoute = TeamsLazyRouteImport.update({
   path: '/teams',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/teams.lazy').then((d) => d.Route))
+const PricingLazyRoute = PricingLazyRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/pricing.lazy').then((d) => d.Route))
 const KpistatsLazyRoute = KpistatsLazyRouteImport.update({
   id: '/kpistats',
   path: '/kpistats',
@@ -166,6 +196,80 @@ const IndexLazyRoute = IndexLazyRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+const PricingPricingSimplepriceLazyRoute =
+  PricingPricingSimplepriceLazyRouteImport.update({
+    id: '/pricing-simpleprice',
+    path: '/pricing-simpleprice',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-simpleprice.lazy').then((d) => d.Route),
+  )
+const PricingPricingMostpopulartierfilledLazyRoute =
+  PricingPricingMostpopulartierfilledLazyRouteImport.update({
+    id: '/pricing-mostpopulartierfilled',
+    path: '/pricing-mostpopulartierfilled',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-mostpopulartierfilled.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const PricingPricingMostpopulartierLazyRoute =
+  PricingPricingMostpopulartierLazyRouteImport.update({
+    id: '/pricing-mostpopulartier',
+    path: '/pricing-mostpopulartier',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-mostpopulartier.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const PricingPricingMostpopularhighlightedLazyRoute =
+  PricingPricingMostpopularhighlightedLazyRouteImport.update({
+    id: '/pricing-mostpopularhighlighted',
+    path: '/pricing-mostpopularhighlighted',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-mostpopularhighlighted.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const PricingPricingFeaturedtierFilledLazyRoute =
+  PricingPricingFeaturedtierFilledLazyRouteImport.update({
+    id: '/pricing-featuredtier-filled',
+    path: '/pricing-featuredtier-filled',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-featuredtier-filled.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const PricingPricingFeaturedtierLazyRoute =
+  PricingPricingFeaturedtierLazyRouteImport.update({
+    id: '/pricing-featuredtier',
+    path: '/pricing-featuredtier',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-featuredtier.lazy').then((d) => d.Route),
+  )
+const PricingPricingBlurredbackgroundLazyRoute =
+  PricingPricingBlurredbackgroundLazyRouteImport.update({
+    id: '/pricing-blurredbackground',
+    path: '/pricing-blurredbackground',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-blurredbackground.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const PricingPricingBasepriceLazyRoute =
+  PricingPricingBasepriceLazyRouteImport.update({
+    id: '/pricing-baseprice',
+    path: '/pricing-baseprice',
+    getParentRoute: () => PricingLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing/pricing-baseprice.lazy').then((d) => d.Route),
+  )
 const KpistatsKpistat9LazyRoute = KpistatsKpistat9LazyRouteImport.update({
   id: '/kpistat-9',
   path: '/kpistat-9',
@@ -501,6 +605,7 @@ export interface FileRoutesByFullPath {
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
+  '/pricing': typeof PricingLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -548,6 +653,14 @@ export interface FileRoutesByFullPath {
   '/kpistats/kpistat-7': typeof KpistatsKpistat7LazyRoute
   '/kpistats/kpistat-8': typeof KpistatsKpistat8LazyRoute
   '/kpistats/kpistat-9': typeof KpistatsKpistat9LazyRoute
+  '/pricing/pricing-baseprice': typeof PricingPricingBasepriceLazyRoute
+  '/pricing/pricing-blurredbackground': typeof PricingPricingBlurredbackgroundLazyRoute
+  '/pricing/pricing-featuredtier': typeof PricingPricingFeaturedtierLazyRoute
+  '/pricing/pricing-featuredtier-filled': typeof PricingPricingFeaturedtierFilledLazyRoute
+  '/pricing/pricing-mostpopularhighlighted': typeof PricingPricingMostpopularhighlightedLazyRoute
+  '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
+  '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
+  '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
@@ -559,6 +672,7 @@ export interface FileRoutesByTo {
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
+  '/pricing': typeof PricingLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -606,6 +720,14 @@ export interface FileRoutesByTo {
   '/kpistats/kpistat-7': typeof KpistatsKpistat7LazyRoute
   '/kpistats/kpistat-8': typeof KpistatsKpistat8LazyRoute
   '/kpistats/kpistat-9': typeof KpistatsKpistat9LazyRoute
+  '/pricing/pricing-baseprice': typeof PricingPricingBasepriceLazyRoute
+  '/pricing/pricing-blurredbackground': typeof PricingPricingBlurredbackgroundLazyRoute
+  '/pricing/pricing-featuredtier': typeof PricingPricingFeaturedtierLazyRoute
+  '/pricing/pricing-featuredtier-filled': typeof PricingPricingFeaturedtierFilledLazyRoute
+  '/pricing/pricing-mostpopularhighlighted': typeof PricingPricingMostpopularhighlightedLazyRoute
+  '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
+  '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
+  '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -618,6 +740,7 @@ export interface FileRoutesById {
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
+  '/pricing': typeof PricingLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -665,6 +788,14 @@ export interface FileRoutesById {
   '/kpistats/kpistat-7': typeof KpistatsKpistat7LazyRoute
   '/kpistats/kpistat-8': typeof KpistatsKpistat8LazyRoute
   '/kpistats/kpistat-9': typeof KpistatsKpistat9LazyRoute
+  '/pricing/pricing-baseprice': typeof PricingPricingBasepriceLazyRoute
+  '/pricing/pricing-blurredbackground': typeof PricingPricingBlurredbackgroundLazyRoute
+  '/pricing/pricing-featuredtier': typeof PricingPricingFeaturedtierLazyRoute
+  '/pricing/pricing-featuredtier-filled': typeof PricingPricingFeaturedtierFilledLazyRoute
+  '/pricing/pricing-mostpopularhighlighted': typeof PricingPricingMostpopularhighlightedLazyRoute
+  '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
+  '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
+  '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -678,6 +809,7 @@ export interface FileRouteTypes {
     | '/footer'
     | '/graph'
     | '/kpistats'
+    | '/pricing'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -725,6 +857,14 @@ export interface FileRouteTypes {
     | '/kpistats/kpistat-7'
     | '/kpistats/kpistat-8'
     | '/kpistats/kpistat-9'
+    | '/pricing/pricing-baseprice'
+    | '/pricing/pricing-blurredbackground'
+    | '/pricing/pricing-featuredtier'
+    | '/pricing/pricing-featuredtier-filled'
+    | '/pricing/pricing-mostpopularhighlighted'
+    | '/pricing/pricing-mostpopulartier'
+    | '/pricing/pricing-mostpopulartierfilled'
+    | '/pricing/pricing-simpleprice'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -736,6 +876,7 @@ export interface FileRouteTypes {
     | '/footer'
     | '/graph'
     | '/kpistats'
+    | '/pricing'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -783,6 +924,14 @@ export interface FileRouteTypes {
     | '/kpistats/kpistat-7'
     | '/kpistats/kpistat-8'
     | '/kpistats/kpistat-9'
+    | '/pricing/pricing-baseprice'
+    | '/pricing/pricing-blurredbackground'
+    | '/pricing/pricing-featuredtier'
+    | '/pricing/pricing-featuredtier-filled'
+    | '/pricing/pricing-mostpopularhighlighted'
+    | '/pricing/pricing-mostpopulartier'
+    | '/pricing/pricing-mostpopulartierfilled'
+    | '/pricing/pricing-simpleprice'
   id:
     | '__root__'
     | '/'
@@ -794,6 +943,7 @@ export interface FileRouteTypes {
     | '/footer'
     | '/graph'
     | '/kpistats'
+    | '/pricing'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -841,6 +991,14 @@ export interface FileRouteTypes {
     | '/kpistats/kpistat-7'
     | '/kpistats/kpistat-8'
     | '/kpistats/kpistat-9'
+    | '/pricing/pricing-baseprice'
+    | '/pricing/pricing-blurredbackground'
+    | '/pricing/pricing-featuredtier'
+    | '/pricing/pricing-featuredtier-filled'
+    | '/pricing/pricing-mostpopularhighlighted'
+    | '/pricing/pricing-mostpopulartier'
+    | '/pricing/pricing-mostpopulartierfilled'
+    | '/pricing/pricing-simpleprice'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -853,6 +1011,7 @@ export interface RootRouteChildren {
   FooterLazyRoute: typeof FooterLazyRoute
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
   KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
+  PricingLazyRoute: typeof PricingLazyRouteWithChildren
   TeamsLazyRoute: typeof TeamsLazyRoute
   TestLazyRoute: typeof TestLazyRoute
   BannersBannerBasicLazyRoute: typeof BannersBannerBasicLazyRoute
@@ -883,6 +1042,13 @@ declare module '@tanstack/react-router' {
       path: '/teams'
       fullPath: '/teams'
       preLoaderRoute: typeof TeamsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kpistats': {
@@ -947,6 +1113,62 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexLazyRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/pricing/pricing-simpleprice': {
+      id: '/pricing/pricing-simpleprice'
+      path: '/pricing-simpleprice'
+      fullPath: '/pricing/pricing-simpleprice'
+      preLoaderRoute: typeof PricingPricingSimplepriceLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing/pricing-mostpopulartierfilled': {
+      id: '/pricing/pricing-mostpopulartierfilled'
+      path: '/pricing-mostpopulartierfilled'
+      fullPath: '/pricing/pricing-mostpopulartierfilled'
+      preLoaderRoute: typeof PricingPricingMostpopulartierfilledLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing/pricing-mostpopulartier': {
+      id: '/pricing/pricing-mostpopulartier'
+      path: '/pricing-mostpopulartier'
+      fullPath: '/pricing/pricing-mostpopulartier'
+      preLoaderRoute: typeof PricingPricingMostpopulartierLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing/pricing-mostpopularhighlighted': {
+      id: '/pricing/pricing-mostpopularhighlighted'
+      path: '/pricing-mostpopularhighlighted'
+      fullPath: '/pricing/pricing-mostpopularhighlighted'
+      preLoaderRoute: typeof PricingPricingMostpopularhighlightedLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing/pricing-featuredtier-filled': {
+      id: '/pricing/pricing-featuredtier-filled'
+      path: '/pricing-featuredtier-filled'
+      fullPath: '/pricing/pricing-featuredtier-filled'
+      preLoaderRoute: typeof PricingPricingFeaturedtierFilledLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing/pricing-featuredtier': {
+      id: '/pricing/pricing-featuredtier'
+      path: '/pricing-featuredtier'
+      fullPath: '/pricing/pricing-featuredtier'
+      preLoaderRoute: typeof PricingPricingFeaturedtierLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing/pricing-blurredbackground': {
+      id: '/pricing/pricing-blurredbackground'
+      path: '/pricing-blurredbackground'
+      fullPath: '/pricing/pricing-blurredbackground'
+      preLoaderRoute: typeof PricingPricingBlurredbackgroundLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing/pricing-baseprice': {
+      id: '/pricing/pricing-baseprice'
+      path: '/pricing-baseprice'
+      fullPath: '/pricing/pricing-baseprice'
+      preLoaderRoute: typeof PricingPricingBasepriceLazyRouteImport
+      parentRoute: typeof PricingLazyRoute
     }
     '/kpistats/kpistat-9': {
       id: '/kpistats/kpistat-9'
@@ -1393,6 +1615,37 @@ const KpistatsLazyRouteWithChildren = KpistatsLazyRoute._addFileChildren(
   KpistatsLazyRouteChildren,
 )
 
+interface PricingLazyRouteChildren {
+  PricingPricingBasepriceLazyRoute: typeof PricingPricingBasepriceLazyRoute
+  PricingPricingBlurredbackgroundLazyRoute: typeof PricingPricingBlurredbackgroundLazyRoute
+  PricingPricingFeaturedtierLazyRoute: typeof PricingPricingFeaturedtierLazyRoute
+  PricingPricingFeaturedtierFilledLazyRoute: typeof PricingPricingFeaturedtierFilledLazyRoute
+  PricingPricingMostpopularhighlightedLazyRoute: typeof PricingPricingMostpopularhighlightedLazyRoute
+  PricingPricingMostpopulartierLazyRoute: typeof PricingPricingMostpopulartierLazyRoute
+  PricingPricingMostpopulartierfilledLazyRoute: typeof PricingPricingMostpopulartierfilledLazyRoute
+  PricingPricingSimplepriceLazyRoute: typeof PricingPricingSimplepriceLazyRoute
+}
+
+const PricingLazyRouteChildren: PricingLazyRouteChildren = {
+  PricingPricingBasepriceLazyRoute: PricingPricingBasepriceLazyRoute,
+  PricingPricingBlurredbackgroundLazyRoute:
+    PricingPricingBlurredbackgroundLazyRoute,
+  PricingPricingFeaturedtierLazyRoute: PricingPricingFeaturedtierLazyRoute,
+  PricingPricingFeaturedtierFilledLazyRoute:
+    PricingPricingFeaturedtierFilledLazyRoute,
+  PricingPricingMostpopularhighlightedLazyRoute:
+    PricingPricingMostpopularhighlightedLazyRoute,
+  PricingPricingMostpopulartierLazyRoute:
+    PricingPricingMostpopulartierLazyRoute,
+  PricingPricingMostpopulartierfilledLazyRoute:
+    PricingPricingMostpopulartierfilledLazyRoute,
+  PricingPricingSimplepriceLazyRoute: PricingPricingSimplepriceLazyRoute,
+}
+
+const PricingLazyRouteWithChildren = PricingLazyRoute._addFileChildren(
+  PricingLazyRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   BannerLazyRoute: BannerLazyRoute,
@@ -1403,6 +1656,7 @@ const rootRouteChildren: RootRouteChildren = {
   FooterLazyRoute: FooterLazyRoute,
   GraphLazyRoute: GraphLazyRouteWithChildren,
   KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
+  PricingLazyRoute: PricingLazyRouteWithChildren,
   TeamsLazyRoute: TeamsLazyRoute,
   TestLazyRoute: TestLazyRoute,
   BannersBannerBasicLazyRoute: BannersBannerBasicLazyRoute,

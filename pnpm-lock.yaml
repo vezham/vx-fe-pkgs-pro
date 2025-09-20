@@ -381,6 +381,30 @@ importers:
       '@vx-pro/marketing-footer-with-themeswitch':
         specifier: workspace:*
         version: link:../../packages/components/marketing-footer-with-themeswitch
+      '@vx-pro/marketing-pricing-basicprice':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-basicprice
+      '@vx-pro/marketing-pricing-blurredbackground':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-blurredbackground
+      '@vx-pro/marketing-pricing-featuredtier':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-featuredtier
+      '@vx-pro/marketing-pricing-featuredtierfilled':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-featuredtierfilled
+      '@vx-pro/marketing-pricing-mostpopulartier':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-mostpopulartier
+      '@vx-pro/marketing-pricing-mostpopulartier-highlighted':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-mostpopulartier-highlighted
+      '@vx-pro/marketing-pricing-mostpopulartierfilled':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-mostpopulartierfilled
+      '@vx-pro/marketing-pricing-simpleprice':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-pricing-simpleprice
       '@vx-pro/marketing-teams':
         specifier: workspace:*
         version: link:../../packages/components/marketing-teams
@@ -719,6 +743,50 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-basicprice:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-blurredbackground:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-featuredtier:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-featuredtierfilled:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-mostpopulartier:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-mostpopulartier-highlighted:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-mostpopulartierfilled:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-pricing-simpleprice: {}
 
   packages/components/marketing-teams:
     devDependencies:

@@ -1,0 +1,99 @@
+import {
+  Frequency,
+  FrequencyEnum,
+  PriceFeatured,
+  pricingProps,
+  Tier,
+  TiersEnum
+} from '@vx-pro/marketing-pricing-featuredtier'
+
+const pricing_featured = () => {
+  const frequencies: Array<Frequency> = [
+    { key: FrequencyEnum.Yearly, label: 'Pay Yearly', priceSuffix: 'per year' },
+    {
+      key: FrequencyEnum.Quarterly,
+      label: 'Pay Quarterly',
+      priceSuffix: 'per quarter'
+    }
+  ]
+
+  const tiers: Array<Tier> = [
+    {
+      key: TiersEnum.Free,
+      title: 'Free',
+      price: 'Free',
+      href: '#',
+      featured: false,
+      mostPopular: false,
+      description: 'For starters and hobbyists that want to try out.',
+      features: [
+        '10 users included',
+        '2 GB of storage',
+        'Help center access',
+        'Email support'
+      ],
+      buttonText: 'Continue with Free',
+      buttonColor: 'default',
+      buttonVariant: 'flat'
+    },
+    {
+      key: TiersEnum.Pro,
+      title: 'Pro',
+      description: 'For small teams that have less than 10 members.',
+      href: '#',
+      mostPopular: true,
+      price: {
+        yearly: '$72',
+        quarterly: '$24'
+      },
+      featured: false,
+      features: [
+        '20 users included',
+        '10 GB of storage',
+        'Help center access',
+        'Priority email support'
+      ],
+      buttonText: 'Get started',
+      buttonColor: 'primary',
+      buttonVariant: 'solid'
+    },
+    {
+      key: TiersEnum.Team,
+      title: 'Team',
+      href: '#',
+      featured: true,
+      mostPopular: false,
+      description: 'For large teams that have more than 10 members.',
+      price: {
+        yearly: '$90',
+        quarterly: '$120'
+      },
+      priceSuffix: 'per user',
+      features: [
+        '50 users included',
+        '30 GB of storage',
+        'Help center access',
+        'Phone & email support'
+      ],
+      buttonText: 'Contact us',
+      buttonColor: 'default',
+      buttonVariant: 'flat'
+    }
+  ]
+
+  const data: pricingProps = {
+    title: 'Pricing',
+    mainHeading: 'Get unlimited access.',
+    subHeading: 'Discover the ideal plan, beginning at under $2 per week.',
+    footerText: 'Are you an open source developer?',
+    footerLinkText: 'Get a discount'
+  }
+
+  return (
+    <div>
+      <PriceFeatured data={data} frequencies={frequencies} tiers={tiers} />
+    </div>
+  )
+}
+
+export default pricing_featured

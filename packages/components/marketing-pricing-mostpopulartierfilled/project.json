@@ -1,0 +1,9 @@
+{
+  "name": "marketing-pricing-mostpopulartierfilled",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/marketing-pricing-mostpopulartierfilled/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project marketing-pricing-mostpopulartierfilled --web",
+  "targets": {}
+}

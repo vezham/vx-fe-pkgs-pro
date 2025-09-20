@@ -52,6 +52,14 @@
     "@vx-pro/marketing-banner-betweenjustified": "workspace:*",
     "@vx-pro/marketing-banner-floating": "workspace:*",
     "@vx-pro/marketing-banner-floatingbottom": "workspace:*",
-    "@vx-pro/marketing-banner-floatingbottomcenter": "workspace:*"
+    "@vx-pro/marketing-banner-floatingbottomcenter": "workspace:*",
+    "@vx-pro/marketing-pricing-basicprice": "workspace:*",
+    "@vx-pro/marketing-pricing-blurredbackground": "workspace:*",
+    "@vx-pro/marketing-pricing-featuredtier": "workspace:*",
+    "@vx-pro/marketing-pricing-featuredtierfilled": "workspace:*",
+    "@vx-pro/marketing-pricing-mostpopulartier": "workspace:*",
+    "@vx-pro/marketing-pricing-mostpopulartier-highlighted": "workspace:*",
+    "@vx-pro/marketing-pricing-mostpopulartierfilled": "workspace:*",
+    "@vx-pro/marketing-pricing-simpleprice": "workspace:*"
   }
 }
