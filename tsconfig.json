@@ -109,6 +109,30 @@
     },
     {
       "path": "./packages/components/marketing-footer-with-columns-newsletter"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-basic"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-fullwidth"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-floatingbottom"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-brandcolors"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-animated"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-verticalbuttons"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-bottomfixed"
+    },
+    {
+      "path": "./packages/components/marketing-cookies-bottomcenter"
     }
   ]
 }

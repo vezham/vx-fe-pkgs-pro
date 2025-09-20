@@ -18,6 +18,7 @@ const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
 const FooterLazyRouteImport = createFileRoute('/footer')()
 const FaqsLazyRouteImport = createFileRoute('/faqs')()
+const CookiesLazyRouteImport = createFileRoute('/cookies')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const IndexLazyRouteImport = createFileRoute('/')()
@@ -50,6 +51,30 @@ const FaqsTwocolumnFaqsLazyRouteImport = createFileRoute(
 const FaqsFaqsDividerLazyRouteImport = createFileRoute('/faqs/faqs-divider')()
 const FaqsCenteredFaqsLazyRouteImport = createFileRoute('/faqs/centered-faqs')()
 const FaqsBasicFaqsLazyRouteImport = createFileRoute('/faqs/basic-faqs')()
+const CookiesCookiesVerticalbuttonsLazyRouteImport = createFileRoute(
+  '/cookies/cookies-verticalbuttons',
+)()
+const CookiesCookiesFullwidthLazyRouteImport = createFileRoute(
+  '/cookies/cookies-fullwidth',
+)()
+const CookiesCookiesFloatingbottomLazyRouteImport = createFileRoute(
+  '/cookies/cookies-floatingbottom',
+)()
+const CookiesCookiesBrandcolorsLazyRouteImport = createFileRoute(
+  '/cookies/cookies-brandcolors',
+)()
+const CookiesCookiesBottomfixedLazyRouteImport = createFileRoute(
+  '/cookies/cookies-bottomfixed',
+)()
+const CookiesCookiesBottomcenterLazyRouteImport = createFileRoute(
+  '/cookies/cookies-bottomcenter',
+)()
+const CookiesCookiesBasicLazyRouteImport = createFileRoute(
+  '/cookies/cookies-basic',
+)()
+const CookiesCookiesAnimatedLazyRouteImport = createFileRoute(
+  '/cookies/cookies-animated',
+)()
 const ChartsCircle6LazyRouteImport = createFileRoute('/charts/circle-6')()
 const ChartsCircle5LazyRouteImport = createFileRoute('/charts/circle-5')()
 const ChartsCircle4LazyRouteImport = createFileRoute('/charts/circle-4')()
@@ -91,6 +116,11 @@ const FaqsLazyRoute = FaqsLazyRouteImport.update({
   path: '/faqs',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/faqs.lazy').then((d) => d.Route))
+const CookiesLazyRoute = CookiesLazyRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/cookies.lazy').then((d) => d.Route))
 const ChartsLazyRoute = ChartsLazyRouteImport.update({
   id: '/charts',
   path: '/charts',
@@ -237,6 +267,71 @@ const FaqsBasicFaqsLazyRoute = FaqsBasicFaqsLazyRouteImport.update({
 } as any).lazy(() =>
   import('./routes/faqs/basic-faqs.lazy').then((d) => d.Route),
 )
+const CookiesCookiesVerticalbuttonsLazyRoute =
+  CookiesCookiesVerticalbuttonsLazyRouteImport.update({
+    id: '/cookies-verticalbuttons',
+    path: '/cookies-verticalbuttons',
+    getParentRoute: () => CookiesLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/cookies/cookies-verticalbuttons.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const CookiesCookiesFullwidthLazyRoute =
+  CookiesCookiesFullwidthLazyRouteImport.update({
+    id: '/cookies-fullwidth',
+    path: '/cookies-fullwidth',
+    getParentRoute: () => CookiesLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/cookies/cookies-fullwidth.lazy').then((d) => d.Route),
+  )
+const CookiesCookiesFloatingbottomLazyRoute =
+  CookiesCookiesFloatingbottomLazyRouteImport.update({
+    id: '/cookies-floatingbottom',
+    path: '/cookies-floatingbottom',
+    getParentRoute: () => CookiesLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/cookies/cookies-floatingbottom.lazy').then((d) => d.Route),
+  )
+const CookiesCookiesBrandcolorsLazyRoute =
+  CookiesCookiesBrandcolorsLazyRouteImport.update({
+    id: '/cookies-brandcolors',
+    path: '/cookies-brandcolors',
+    getParentRoute: () => CookiesLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/cookies/cookies-brandcolors.lazy').then((d) => d.Route),
+  )
+const CookiesCookiesBottomfixedLazyRoute =
+  CookiesCookiesBottomfixedLazyRouteImport.update({
+    id: '/cookies-bottomfixed',
+    path: '/cookies-bottomfixed',
+    getParentRoute: () => CookiesLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/cookies/cookies-bottomfixed.lazy').then((d) => d.Route),
+  )
+const CookiesCookiesBottomcenterLazyRoute =
+  CookiesCookiesBottomcenterLazyRouteImport.update({
+    id: '/cookies-bottomcenter',
+    path: '/cookies-bottomcenter',
+    getParentRoute: () => CookiesLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/cookies/cookies-bottomcenter.lazy').then((d) => d.Route),
+  )
+const CookiesCookiesBasicLazyRoute = CookiesCookiesBasicLazyRouteImport.update({
+  id: '/cookies-basic',
+  path: '/cookies-basic',
+  getParentRoute: () => CookiesLazyRoute,
+} as any).lazy(() =>
+  import('./routes/cookies/cookies-basic.lazy').then((d) => d.Route),
+)
+const CookiesCookiesAnimatedLazyRoute =
+  CookiesCookiesAnimatedLazyRouteImport.update({
+    id: '/cookies-animated',
+    path: '/cookies-animated',
+    getParentRoute: () => CookiesLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/cookies/cookies-animated.lazy').then((d) => d.Route),
+  )
 const ChartsCircle6LazyRoute = ChartsCircle6LazyRouteImport.update({
   id: '/circle-6',
   path: '/circle-6',
@@ -304,6 +399,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
+  '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
@@ -320,6 +416,14 @@ export interface FileRoutesByFullPath {
   '/charts/circle-4': typeof ChartsCircle4LazyRoute
   '/charts/circle-5': typeof ChartsCircle5LazyRoute
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
+  '/cookies/cookies-animated': typeof CookiesCookiesAnimatedLazyRoute
+  '/cookies/cookies-basic': typeof CookiesCookiesBasicLazyRoute
+  '/cookies/cookies-bottomcenter': typeof CookiesCookiesBottomcenterLazyRoute
+  '/cookies/cookies-bottomfixed': typeof CookiesCookiesBottomfixedLazyRoute
+  '/cookies/cookies-brandcolors': typeof CookiesCookiesBrandcolorsLazyRoute
+  '/cookies/cookies-floatingbottom': typeof CookiesCookiesFloatingbottomLazyRoute
+  '/cookies/cookies-fullwidth': typeof CookiesCookiesFullwidthLazyRoute
+  '/cookies/cookies-verticalbuttons': typeof CookiesCookiesVerticalbuttonsLazyRoute
   '/faqs/basic-faqs': typeof FaqsBasicFaqsLazyRoute
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
@@ -344,6 +448,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
+  '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
@@ -360,6 +465,14 @@ export interface FileRoutesByTo {
   '/charts/circle-4': typeof ChartsCircle4LazyRoute
   '/charts/circle-5': typeof ChartsCircle5LazyRoute
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
+  '/cookies/cookies-animated': typeof CookiesCookiesAnimatedLazyRoute
+  '/cookies/cookies-basic': typeof CookiesCookiesBasicLazyRoute
+  '/cookies/cookies-bottomcenter': typeof CookiesCookiesBottomcenterLazyRoute
+  '/cookies/cookies-bottomfixed': typeof CookiesCookiesBottomfixedLazyRoute
+  '/cookies/cookies-brandcolors': typeof CookiesCookiesBrandcolorsLazyRoute
+  '/cookies/cookies-floatingbottom': typeof CookiesCookiesFloatingbottomLazyRoute
+  '/cookies/cookies-fullwidth': typeof CookiesCookiesFullwidthLazyRoute
+  '/cookies/cookies-verticalbuttons': typeof CookiesCookiesVerticalbuttonsLazyRoute
   '/faqs/basic-faqs': typeof FaqsBasicFaqsLazyRoute
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
@@ -385,6 +498,7 @@ export interface FileRoutesById {
   '/': typeof IndexLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
+  '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
@@ -401,6 +515,14 @@ export interface FileRoutesById {
   '/charts/circle-4': typeof ChartsCircle4LazyRoute
   '/charts/circle-5': typeof ChartsCircle5LazyRoute
   '/charts/circle-6': typeof ChartsCircle6LazyRoute
+  '/cookies/cookies-animated': typeof CookiesCookiesAnimatedLazyRoute
+  '/cookies/cookies-basic': typeof CookiesCookiesBasicLazyRoute
+  '/cookies/cookies-bottomcenter': typeof CookiesCookiesBottomcenterLazyRoute
+  '/cookies/cookies-bottomfixed': typeof CookiesCookiesBottomfixedLazyRoute
+  '/cookies/cookies-brandcolors': typeof CookiesCookiesBrandcolorsLazyRoute
+  '/cookies/cookies-floatingbottom': typeof CookiesCookiesFloatingbottomLazyRoute
+  '/cookies/cookies-fullwidth': typeof CookiesCookiesFullwidthLazyRoute
+  '/cookies/cookies-verticalbuttons': typeof CookiesCookiesVerticalbuttonsLazyRoute
   '/faqs/basic-faqs': typeof FaqsBasicFaqsLazyRoute
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
@@ -427,6 +549,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bars'
     | '/charts'
+    | '/cookies'
     | '/faqs'
     | '/footer'
     | '/graph'
@@ -443,6 +566,14 @@ export interface FileRouteTypes {
     | '/charts/circle-4'
     | '/charts/circle-5'
     | '/charts/circle-6'
+    | '/cookies/cookies-animated'
+    | '/cookies/cookies-basic'
+    | '/cookies/cookies-bottomcenter'
+    | '/cookies/cookies-bottomfixed'
+    | '/cookies/cookies-brandcolors'
+    | '/cookies/cookies-floatingbottom'
+    | '/cookies/cookies-fullwidth'
+    | '/cookies/cookies-verticalbuttons'
     | '/faqs/basic-faqs'
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
@@ -467,6 +598,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bars'
     | '/charts'
+    | '/cookies'
     | '/faqs'
     | '/footer'
     | '/graph'
@@ -483,6 +615,14 @@ export interface FileRouteTypes {
     | '/charts/circle-4'
     | '/charts/circle-5'
     | '/charts/circle-6'
+    | '/cookies/cookies-animated'
+    | '/cookies/cookies-basic'
+    | '/cookies/cookies-bottomcenter'
+    | '/cookies/cookies-bottomfixed'
+    | '/cookies/cookies-brandcolors'
+    | '/cookies/cookies-floatingbottom'
+    | '/cookies/cookies-fullwidth'
+    | '/cookies/cookies-verticalbuttons'
     | '/faqs/basic-faqs'
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
@@ -507,6 +647,7 @@ export interface FileRouteTypes {
     | '/'
     | '/bars'
     | '/charts'
+    | '/cookies'
     | '/faqs'
     | '/footer'
     | '/graph'
@@ -523,6 +664,14 @@ export interface FileRouteTypes {
     | '/charts/circle-4'
     | '/charts/circle-5'
     | '/charts/circle-6'
+    | '/cookies/cookies-animated'
+    | '/cookies/cookies-basic'
+    | '/cookies/cookies-bottomcenter'
+    | '/cookies/cookies-bottomfixed'
+    | '/cookies/cookies-brandcolors'
+    | '/cookies/cookies-floatingbottom'
+    | '/cookies/cookies-fullwidth'
+    | '/cookies/cookies-verticalbuttons'
     | '/faqs/basic-faqs'
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
@@ -548,6 +697,7 @@ export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
+  CookiesLazyRoute: typeof CookiesLazyRouteWithChildren
   FaqsLazyRoute: typeof FaqsLazyRouteWithChildren
   FooterLazyRoute: typeof FooterLazyRoute
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
@@ -602,6 +752,13 @@ declare module '@tanstack/react-router' {
       path: '/faqs'
       fullPath: '/faqs'
       preLoaderRoute: typeof FaqsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/charts': {
@@ -758,6 +915,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqsBasicFaqsLazyRouteImport
       parentRoute: typeof FaqsLazyRoute
     }
+    '/cookies/cookies-verticalbuttons': {
+      id: '/cookies/cookies-verticalbuttons'
+      path: '/cookies-verticalbuttons'
+      fullPath: '/cookies/cookies-verticalbuttons'
+      preLoaderRoute: typeof CookiesCookiesVerticalbuttonsLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
+    '/cookies/cookies-fullwidth': {
+      id: '/cookies/cookies-fullwidth'
+      path: '/cookies-fullwidth'
+      fullPath: '/cookies/cookies-fullwidth'
+      preLoaderRoute: typeof CookiesCookiesFullwidthLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
+    '/cookies/cookies-floatingbottom': {
+      id: '/cookies/cookies-floatingbottom'
+      path: '/cookies-floatingbottom'
+      fullPath: '/cookies/cookies-floatingbottom'
+      preLoaderRoute: typeof CookiesCookiesFloatingbottomLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
+    '/cookies/cookies-brandcolors': {
+      id: '/cookies/cookies-brandcolors'
+      path: '/cookies-brandcolors'
+      fullPath: '/cookies/cookies-brandcolors'
+      preLoaderRoute: typeof CookiesCookiesBrandcolorsLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
+    '/cookies/cookies-bottomfixed': {
+      id: '/cookies/cookies-bottomfixed'
+      path: '/cookies-bottomfixed'
+      fullPath: '/cookies/cookies-bottomfixed'
+      preLoaderRoute: typeof CookiesCookiesBottomfixedLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
+    '/cookies/cookies-bottomcenter': {
+      id: '/cookies/cookies-bottomcenter'
+      path: '/cookies-bottomcenter'
+      fullPath: '/cookies/cookies-bottomcenter'
+      preLoaderRoute: typeof CookiesCookiesBottomcenterLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
+    '/cookies/cookies-basic': {
+      id: '/cookies/cookies-basic'
+      path: '/cookies-basic'
+      fullPath: '/cookies/cookies-basic'
+      preLoaderRoute: typeof CookiesCookiesBasicLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
+    '/cookies/cookies-animated': {
+      id: '/cookies/cookies-animated'
+      path: '/cookies-animated'
+      fullPath: '/cookies/cookies-animated'
+      preLoaderRoute: typeof CookiesCookiesAnimatedLazyRouteImport
+      parentRoute: typeof CookiesLazyRoute
+    }
     '/charts/circle-6': {
       id: '/charts/circle-6'
       path: '/circle-6'
@@ -871,6 +1084,33 @@ const ChartsLazyRouteWithChildren = ChartsLazyRoute._addFileChildren(
   ChartsLazyRouteChildren,
 )
 
+interface CookiesLazyRouteChildren {
+  CookiesCookiesAnimatedLazyRoute: typeof CookiesCookiesAnimatedLazyRoute
+  CookiesCookiesBasicLazyRoute: typeof CookiesCookiesBasicLazyRoute
+  CookiesCookiesBottomcenterLazyRoute: typeof CookiesCookiesBottomcenterLazyRoute
+  CookiesCookiesBottomfixedLazyRoute: typeof CookiesCookiesBottomfixedLazyRoute
+  CookiesCookiesBrandcolorsLazyRoute: typeof CookiesCookiesBrandcolorsLazyRoute
+  CookiesCookiesFloatingbottomLazyRoute: typeof CookiesCookiesFloatingbottomLazyRoute
+  CookiesCookiesFullwidthLazyRoute: typeof CookiesCookiesFullwidthLazyRoute
+  CookiesCookiesVerticalbuttonsLazyRoute: typeof CookiesCookiesVerticalbuttonsLazyRoute
+}
+
+const CookiesLazyRouteChildren: CookiesLazyRouteChildren = {
+  CookiesCookiesAnimatedLazyRoute: CookiesCookiesAnimatedLazyRoute,
+  CookiesCookiesBasicLazyRoute: CookiesCookiesBasicLazyRoute,
+  CookiesCookiesBottomcenterLazyRoute: CookiesCookiesBottomcenterLazyRoute,
+  CookiesCookiesBottomfixedLazyRoute: CookiesCookiesBottomfixedLazyRoute,
+  CookiesCookiesBrandcolorsLazyRoute: CookiesCookiesBrandcolorsLazyRoute,
+  CookiesCookiesFloatingbottomLazyRoute: CookiesCookiesFloatingbottomLazyRoute,
+  CookiesCookiesFullwidthLazyRoute: CookiesCookiesFullwidthLazyRoute,
+  CookiesCookiesVerticalbuttonsLazyRoute:
+    CookiesCookiesVerticalbuttonsLazyRoute,
+}
+
+const CookiesLazyRouteWithChildren = CookiesLazyRoute._addFileChildren(
+  CookiesLazyRouteChildren,
+)
+
 interface FaqsLazyRouteChildren {
   FaqsBasicFaqsLazyRoute: typeof FaqsBasicFaqsLazyRoute
   FaqsCenteredFaqsLazyRoute: typeof FaqsCenteredFaqsLazyRoute
@@ -935,6 +1175,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   BarsLazyRoute: BarsLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
+  CookiesLazyRoute: CookiesLazyRouteWithChildren,
   FaqsLazyRoute: FaqsLazyRouteWithChildren,
   FooterLazyRoute: FooterLazyRoute,
   GraphLazyRoute: GraphLazyRouteWithChildren,

@@ -578,6 +578,22 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
+  packages/components/marketing-cookies-animated: {}
+
+  packages/components/marketing-cookies-basic: {}
+
+  packages/components/marketing-cookies-bottomcenter: {}
+
+  packages/components/marketing-cookies-bottomfixed: {}
+
+  packages/components/marketing-cookies-brandcolors: {}
+
+  packages/components/marketing-cookies-floatingbottom: {}
+
+  packages/components/marketing-cookies-fullwidth: {}
+
+  packages/components/marketing-cookies-verticalbuttons: {}
+
   packages/components/marketing-faqs:
     devDependencies:
       '@iconify/react':

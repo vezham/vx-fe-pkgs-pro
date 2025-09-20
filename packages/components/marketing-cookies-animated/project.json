@@ -1,0 +1,9 @@
+{
+  "name": "marketing-cookies-animated",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/marketing-cookies-animated/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project marketing-cookies-animated --web",
+  "targets": {}
+}

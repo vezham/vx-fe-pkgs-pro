@@ -1,0 +1,9 @@
+{
+  "name": "marketing-cookies-fullwidth",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/marketing-cookies-fullwidth/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project marketing-cookies-fullwidth --web",
+  "targets": {}
+}

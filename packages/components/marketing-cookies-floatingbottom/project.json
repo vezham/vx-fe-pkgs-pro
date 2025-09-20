@@ -1,0 +1,9 @@
+{
+  "name": "marketing-cookies-floatingbottom",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/marketing-cookies-floatingbottom/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project marketing-cookies-floatingbottom --web",
+  "targets": {}
+}
