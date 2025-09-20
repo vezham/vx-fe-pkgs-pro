@@ -312,12 +312,60 @@ importers:
       '@vx-pro/charts-kpistat-9':
         specifier: workspace:*
         version: link:../../packages/components/charts-kpistat-9
+      '@vx-pro/marketing-banner-basic':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-basic
+      '@vx-pro/marketing-banner-betweenjustified':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-betweenjustified
+      '@vx-pro/marketing-banner-brandcolors':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-brandcolors
+      '@vx-pro/marketing-banner-floating':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-floating
+      '@vx-pro/marketing-banner-floatingbottom':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-floatingbottom
+      '@vx-pro/marketing-banner-floatingbottomcenter':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-floatingbottomcenter
+      '@vx-pro/marketing-banner-gradient':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-gradient
+      '@vx-pro/marketing-banner-inverted':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-banner-inverted
       '@vx-pro/marketing-centered-faqs':
         specifier: workspace:*
         version: link:../../packages/components/marketing-centered-faqs
       '@vx-pro/marketing-centeredfooter-with-sociallinks':
         specifier: workspace:*
         version: link:../../packages/components/marketing-centeredfooter-with-sociallinks
+      '@vx-pro/marketing-cookies-animated':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-animated
+      '@vx-pro/marketing-cookies-basic':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-basic
+      '@vx-pro/marketing-cookies-bottomcenter':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-bottomcenter
+      '@vx-pro/marketing-cookies-bottomfixed':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-bottomfixed
+      '@vx-pro/marketing-cookies-brandcolors':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-brandcolors
+      '@vx-pro/marketing-cookies-floatingbottom':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-floatingbottom
+      '@vx-pro/marketing-cookies-fullwidth':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-fullwidth
+      '@vx-pro/marketing-cookies-verticalbuttons':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-cookies-verticalbuttons
       '@vx-pro/marketing-faqs':
         specifier: workspace:*
         version: link:../../packages/components/marketing-faqs
@@ -561,6 +609,54 @@ importers:
       recharts:
         specifier: ^3.2.1
         version: 3.2.1(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(redux@5.0.1)
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-basic:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-betweenjustified:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-brandcolors:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-floating:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-floatingbottom:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-floatingbottomcenter:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-gradient:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/marketing-banner-inverted:
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2

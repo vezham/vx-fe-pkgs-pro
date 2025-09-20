@@ -21,6 +21,7 @@ const FaqsLazyRouteImport = createFileRoute('/faqs')()
 const CookiesLazyRouteImport = createFileRoute('/cookies')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
+const BannerLazyRouteImport = createFileRoute('/banner')()
 const IndexLazyRouteImport = createFileRoute('/')()
 const KpistatsKpistat9LazyRouteImport = createFileRoute('/kpistats/kpistat-9')()
 const KpistatsKpistat8LazyRouteImport = createFileRoute('/kpistats/kpistat-8')()
@@ -85,6 +86,30 @@ const BarsBars4LazyRouteImport = createFileRoute('/bars/bars-4')()
 const BarsBars3LazyRouteImport = createFileRoute('/bars/bars-3')()
 const BarsBars2LazyRouteImport = createFileRoute('/bars/bars-2')()
 const BarsBars1LazyRouteImport = createFileRoute('/bars/bars-1')()
+const BannersBannerInvertedLazyRouteImport = createFileRoute(
+  '/banners/banner-inverted',
+)()
+const BannersBannerGradientLazyRouteImport = createFileRoute(
+  '/banners/banner-gradient',
+)()
+const BannersBannerFloatbottomcenterLazyRouteImport = createFileRoute(
+  '/banners/banner-floatbottomcenter',
+)()
+const BannersBannerFloatbottomLazyRouteImport = createFileRoute(
+  '/banners/banner-floatbottom',
+)()
+const BannersBannerFloatLazyRouteImport = createFileRoute(
+  '/banners/banner-float',
+)()
+const BannersBannerBrandcolorsLazyRouteImport = createFileRoute(
+  '/banners/banner-brandcolors',
+)()
+const BannersBannerBetweenjustifiedLazyRouteImport = createFileRoute(
+  '/banners/banner-betweenjustified',
+)()
+const BannersBannerBasicLazyRouteImport = createFileRoute(
+  '/banners/banner-basic',
+)()
 
 const TestLazyRoute = TestLazyRouteImport.update({
   id: '/test',
@@ -131,6 +156,11 @@ const BarsLazyRoute = BarsLazyRouteImport.update({
   path: '/bars',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/bars.lazy').then((d) => d.Route))
+const BannerLazyRoute = BannerLazyRouteImport.update({
+  id: '/banner',
+  path: '/banner',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/banner.lazy').then((d) => d.Route))
 const IndexLazyRoute = IndexLazyRouteImport.update({
   id: '/',
   path: '/',
@@ -394,9 +424,76 @@ const BarsBars1LazyRoute = BarsBars1LazyRouteImport.update({
   path: '/bars-1',
   getParentRoute: () => BarsLazyRoute,
 } as any).lazy(() => import('./routes/bars/bars-1.lazy').then((d) => d.Route))
+const BannersBannerInvertedLazyRoute =
+  BannersBannerInvertedLazyRouteImport.update({
+    id: '/banners/banner-inverted',
+    path: '/banners/banner-inverted',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/banners/banner-inverted.lazy').then((d) => d.Route),
+  )
+const BannersBannerGradientLazyRoute =
+  BannersBannerGradientLazyRouteImport.update({
+    id: '/banners/banner-gradient',
+    path: '/banners/banner-gradient',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/banners/banner-gradient.lazy').then((d) => d.Route),
+  )
+const BannersBannerFloatbottomcenterLazyRoute =
+  BannersBannerFloatbottomcenterLazyRouteImport.update({
+    id: '/banners/banner-floatbottomcenter',
+    path: '/banners/banner-floatbottomcenter',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/banners/banner-floatbottomcenter.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const BannersBannerFloatbottomLazyRoute =
+  BannersBannerFloatbottomLazyRouteImport.update({
+    id: '/banners/banner-floatbottom',
+    path: '/banners/banner-floatbottom',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/banners/banner-floatbottom.lazy').then((d) => d.Route),
+  )
+const BannersBannerFloatLazyRoute = BannersBannerFloatLazyRouteImport.update({
+  id: '/banners/banner-float',
+  path: '/banners/banner-float',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/banners/banner-float.lazy').then((d) => d.Route),
+)
+const BannersBannerBrandcolorsLazyRoute =
+  BannersBannerBrandcolorsLazyRouteImport.update({
+    id: '/banners/banner-brandcolors',
+    path: '/banners/banner-brandcolors',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/banners/banner-brandcolors.lazy').then((d) => d.Route),
+  )
+const BannersBannerBetweenjustifiedLazyRoute =
+  BannersBannerBetweenjustifiedLazyRouteImport.update({
+    id: '/banners/banner-betweenjustified',
+    path: '/banners/banner-betweenjustified',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/banners/banner-betweenjustified.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const BannersBannerBasicLazyRoute = BannersBannerBasicLazyRouteImport.update({
+  id: '/banners/banner-basic',
+  path: '/banners/banner-basic',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/banners/banner-basic.lazy').then((d) => d.Route),
+)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
+  '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
@@ -406,6 +503,14 @@ export interface FileRoutesByFullPath {
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
+  '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
+  '/banners/banner-betweenjustified': typeof BannersBannerBetweenjustifiedLazyRoute
+  '/banners/banner-brandcolors': typeof BannersBannerBrandcolorsLazyRoute
+  '/banners/banner-float': typeof BannersBannerFloatLazyRoute
+  '/banners/banner-floatbottom': typeof BannersBannerFloatbottomLazyRoute
+  '/banners/banner-floatbottomcenter': typeof BannersBannerFloatbottomcenterLazyRoute
+  '/banners/banner-gradient': typeof BannersBannerGradientLazyRoute
+  '/banners/banner-inverted': typeof BannersBannerInvertedLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
@@ -446,6 +551,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
+  '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
@@ -455,6 +561,14 @@ export interface FileRoutesByTo {
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
+  '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
+  '/banners/banner-betweenjustified': typeof BannersBannerBetweenjustifiedLazyRoute
+  '/banners/banner-brandcolors': typeof BannersBannerBrandcolorsLazyRoute
+  '/banners/banner-float': typeof BannersBannerFloatLazyRoute
+  '/banners/banner-floatbottom': typeof BannersBannerFloatbottomLazyRoute
+  '/banners/banner-floatbottomcenter': typeof BannersBannerFloatbottomcenterLazyRoute
+  '/banners/banner-gradient': typeof BannersBannerGradientLazyRoute
+  '/banners/banner-inverted': typeof BannersBannerInvertedLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
@@ -496,6 +610,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexLazyRoute
+  '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
@@ -505,6 +620,14 @@ export interface FileRoutesById {
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
+  '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
+  '/banners/banner-betweenjustified': typeof BannersBannerBetweenjustifiedLazyRoute
+  '/banners/banner-brandcolors': typeof BannersBannerBrandcolorsLazyRoute
+  '/banners/banner-float': typeof BannersBannerFloatLazyRoute
+  '/banners/banner-floatbottom': typeof BannersBannerFloatbottomLazyRoute
+  '/banners/banner-floatbottomcenter': typeof BannersBannerFloatbottomcenterLazyRoute
+  '/banners/banner-gradient': typeof BannersBannerGradientLazyRoute
+  '/banners/banner-inverted': typeof BannersBannerInvertedLazyRoute
   '/bars/bars-1': typeof BarsBars1LazyRoute
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
@@ -547,6 +670,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/banner'
     | '/bars'
     | '/charts'
     | '/cookies'
@@ -556,6 +680,14 @@ export interface FileRouteTypes {
     | '/kpistats'
     | '/teams'
     | '/test'
+    | '/banners/banner-basic'
+    | '/banners/banner-betweenjustified'
+    | '/banners/banner-brandcolors'
+    | '/banners/banner-float'
+    | '/banners/banner-floatbottom'
+    | '/banners/banner-floatbottomcenter'
+    | '/banners/banner-gradient'
+    | '/banners/banner-inverted'
     | '/bars/bars-1'
     | '/bars/bars-2'
     | '/bars/bars-3'
@@ -596,6 +728,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/banner'
     | '/bars'
     | '/charts'
     | '/cookies'
@@ -605,6 +738,14 @@ export interface FileRouteTypes {
     | '/kpistats'
     | '/teams'
     | '/test'
+    | '/banners/banner-basic'
+    | '/banners/banner-betweenjustified'
+    | '/banners/banner-brandcolors'
+    | '/banners/banner-float'
+    | '/banners/banner-floatbottom'
+    | '/banners/banner-floatbottomcenter'
+    | '/banners/banner-gradient'
+    | '/banners/banner-inverted'
     | '/bars/bars-1'
     | '/bars/bars-2'
     | '/bars/bars-3'
@@ -645,6 +786,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/banner'
     | '/bars'
     | '/charts'
     | '/cookies'
@@ -654,6 +796,14 @@ export interface FileRouteTypes {
     | '/kpistats'
     | '/teams'
     | '/test'
+    | '/banners/banner-basic'
+    | '/banners/banner-betweenjustified'
+    | '/banners/banner-brandcolors'
+    | '/banners/banner-float'
+    | '/banners/banner-floatbottom'
+    | '/banners/banner-floatbottomcenter'
+    | '/banners/banner-gradient'
+    | '/banners/banner-inverted'
     | '/bars/bars-1'
     | '/bars/bars-2'
     | '/bars/bars-3'
@@ -695,6 +845,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
+  BannerLazyRoute: typeof BannerLazyRoute
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
   CookiesLazyRoute: typeof CookiesLazyRouteWithChildren
@@ -704,6 +855,14 @@ export interface RootRouteChildren {
   KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
   TeamsLazyRoute: typeof TeamsLazyRoute
   TestLazyRoute: typeof TestLazyRoute
+  BannersBannerBasicLazyRoute: typeof BannersBannerBasicLazyRoute
+  BannersBannerBetweenjustifiedLazyRoute: typeof BannersBannerBetweenjustifiedLazyRoute
+  BannersBannerBrandcolorsLazyRoute: typeof BannersBannerBrandcolorsLazyRoute
+  BannersBannerFloatLazyRoute: typeof BannersBannerFloatLazyRoute
+  BannersBannerFloatbottomLazyRoute: typeof BannersBannerFloatbottomLazyRoute
+  BannersBannerFloatbottomcenterLazyRoute: typeof BannersBannerFloatbottomcenterLazyRoute
+  BannersBannerGradientLazyRoute: typeof BannersBannerGradientLazyRoute
+  BannersBannerInvertedLazyRoute: typeof BannersBannerInvertedLazyRoute
   FootersFooterColumnLazyRoute: typeof FootersFooterColumnLazyRoute
   FootersFooterNewsletterLazyRoute: typeof FootersFooterNewsletterLazyRoute
   FootersFooterSocialLinkLazyRoute: typeof FootersFooterSocialLinkLazyRoute
@@ -773,6 +932,13 @@ declare module '@tanstack/react-router' {
       path: '/bars'
       fullPath: '/bars'
       preLoaderRoute: typeof BarsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banner': {
+      id: '/banner'
+      path: '/banner'
+      fullPath: '/banner'
+      preLoaderRoute: typeof BannerLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -1041,6 +1207,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BarsBars1LazyRouteImport
       parentRoute: typeof BarsLazyRoute
     }
+    '/banners/banner-inverted': {
+      id: '/banners/banner-inverted'
+      path: '/banners/banner-inverted'
+      fullPath: '/banners/banner-inverted'
+      preLoaderRoute: typeof BannersBannerInvertedLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banners/banner-gradient': {
+      id: '/banners/banner-gradient'
+      path: '/banners/banner-gradient'
+      fullPath: '/banners/banner-gradient'
+      preLoaderRoute: typeof BannersBannerGradientLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banners/banner-floatbottomcenter': {
+      id: '/banners/banner-floatbottomcenter'
+      path: '/banners/banner-floatbottomcenter'
+      fullPath: '/banners/banner-floatbottomcenter'
+      preLoaderRoute: typeof BannersBannerFloatbottomcenterLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banners/banner-floatbottom': {
+      id: '/banners/banner-floatbottom'
+      path: '/banners/banner-floatbottom'
+      fullPath: '/banners/banner-floatbottom'
+      preLoaderRoute: typeof BannersBannerFloatbottomLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banners/banner-float': {
+      id: '/banners/banner-float'
+      path: '/banners/banner-float'
+      fullPath: '/banners/banner-float'
+      preLoaderRoute: typeof BannersBannerFloatLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banners/banner-brandcolors': {
+      id: '/banners/banner-brandcolors'
+      path: '/banners/banner-brandcolors'
+      fullPath: '/banners/banner-brandcolors'
+      preLoaderRoute: typeof BannersBannerBrandcolorsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banners/banner-betweenjustified': {
+      id: '/banners/banner-betweenjustified'
+      path: '/banners/banner-betweenjustified'
+      fullPath: '/banners/banner-betweenjustified'
+      preLoaderRoute: typeof BannersBannerBetweenjustifiedLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/banners/banner-basic': {
+      id: '/banners/banner-basic'
+      path: '/banners/banner-basic'
+      fullPath: '/banners/banner-basic'
+      preLoaderRoute: typeof BannersBannerBasicLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -1173,6 +1395,7 @@ const KpistatsLazyRouteWithChildren = KpistatsLazyRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
+  BannerLazyRoute: BannerLazyRoute,
   BarsLazyRoute: BarsLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
   CookiesLazyRoute: CookiesLazyRouteWithChildren,
@@ -1182,6 +1405,16 @@ const rootRouteChildren: RootRouteChildren = {
   KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
   TeamsLazyRoute: TeamsLazyRoute,
   TestLazyRoute: TestLazyRoute,
+  BannersBannerBasicLazyRoute: BannersBannerBasicLazyRoute,
+  BannersBannerBetweenjustifiedLazyRoute:
+    BannersBannerBetweenjustifiedLazyRoute,
+  BannersBannerBrandcolorsLazyRoute: BannersBannerBrandcolorsLazyRoute,
+  BannersBannerFloatLazyRoute: BannersBannerFloatLazyRoute,
+  BannersBannerFloatbottomLazyRoute: BannersBannerFloatbottomLazyRoute,
+  BannersBannerFloatbottomcenterLazyRoute:
+    BannersBannerFloatbottomcenterLazyRoute,
+  BannersBannerGradientLazyRoute: BannersBannerGradientLazyRoute,
+  BannersBannerInvertedLazyRoute: BannersBannerInvertedLazyRoute,
   FootersFooterColumnLazyRoute: FootersFooterColumnLazyRoute,
   FootersFooterNewsletterLazyRoute: FootersFooterNewsletterLazyRoute,
   FootersFooterSocialLinkLazyRoute: FootersFooterSocialLinkLazyRoute,

@@ -133,6 +133,30 @@
     },
     {
       "path": "./packages/components/marketing-cookies-bottomcenter"
+    },
+    {
+      "path": "./packages/components/marketing-banner-basic"
+    },
+    {
+      "path": "./packages/components/marketing-banner-inverted"
+    },
+    {
+      "path": "./packages/components/marketing-banner-gradient"
+    },
+    {
+      "path": "./packages/components/marketing-banner-brandcolors"
+    },
+    {
+      "path": "./packages/components/marketing-banner-betweenjustified"
+    },
+    {
+      "path": "./packages/components/marketing-banner-floating"
+    },
+    {
+      "path": "./packages/components/marketing-banner-floatingbottom"
+    },
+    {
+      "path": "./packages/components/marketing-banner-floatingbottomcenter"
     }
   ]
 }

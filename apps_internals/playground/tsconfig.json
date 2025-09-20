@@ -3,6 +3,54 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/marketing-banner-floatingbottomcenter"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-floatingbottom"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-floating"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-betweenjustified"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-brandcolors"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-gradient"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-inverted"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-basic"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-verticalbuttons"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-fullwidth"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-floatingbottom"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-brandcolors"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-animated"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-bottomcenter"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-bottomfixed"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-basic"
+    },
+    {
       "path": "../../packages/components/marketing-centeredfooter-with-sociallinks"
     },
     {

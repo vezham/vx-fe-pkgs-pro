@@ -21,13 +21,15 @@ const variants = {
 
 const CookieAnimated = ({
   alertData,
-  settingData
+  settingData,
+  isSettingsOpen, // Prop from parent
+  setIsSettingsOpen // Prop from parent
 }: {
   alertData: cookieAlertProps
   settingData: cookieSettingProps
+  isSettingsOpen: boolean
+  setIsSettingsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }) => {
-  const [isSettingsOpen, setIsSettingsOpen] = React.useState(false)
-
   const AnimatedWrapper = ({
     children,
     className,
@@ -125,9 +127,11 @@ const CookieAnimated = ({
         {React.Children.map(settingData.setactions, child => {
           if (React.isValidElement(child)) {
             return React.cloneElement(child as React.ReactElement<any>, {
-              onPress:
-                (child.props as any)?.onPress ??
-                (() => setIsSettingsOpen(false))
+              onPress: () => {
+                const parentOnPress = (child.props as any)?.onPress
+                if (parentOnPress) parentOnPress()
+                setIsSettingsOpen(false)
+              }
             })
           }
           return child
@@ -155,18 +159,21 @@ const CookieAnimated = ({
         {React.Children.map(alertData.actions, child => {
           if (React.isValidElement(child)) {
             const label = (child.props as any)?.children
-
             const isSettingsBtn =
               typeof label === 'string' &&
               label.toLowerCase().includes('cookie settings')
 
             return React.cloneElement(child as React.ReactElement<any>, {
-              onPress:
-                (child.props as any)?.onPress ??
-                (() =>
-                  isSettingsBtn
-                    ? setIsSettingsOpen(true)
-                    : setIsSettingsOpen(false))
+              onPress: () => {
+                const parentOnPress = (child.props as any)?.onPress
+                if (parentOnPress) parentOnPress()
+
+                if (isSettingsBtn) {
+                  setIsSettingsOpen(true)
+                } else {
+                  setIsSettingsOpen(false)
+                }
+              }
             })
           }
           return child

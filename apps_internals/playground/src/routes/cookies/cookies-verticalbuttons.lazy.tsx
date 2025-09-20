@@ -1,9 +1,7 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 
-export const Route = createLazyFileRoute('/cookies/cookies-verticalbuttons')({
-  component: RouteComponent
-})
+import Page from '../../pages/preview/marketing/cookies/cookies-verticalbuttons'
 
-function RouteComponent() {
-  return <div>Hello "/cookies/cookies-verticalbuttons"!</div>
-}
+export const Route = createLazyFileRoute('/cookies/cookies-verticalbuttons')({
+  component: () => <Page />
+})

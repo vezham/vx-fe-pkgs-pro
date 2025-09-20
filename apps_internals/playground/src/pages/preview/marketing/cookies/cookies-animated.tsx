@@ -7,9 +7,12 @@ import {
   cookieSettingProps,
   SwitchCellProps
 } from '@vx-pro/marketing-cookies-animated'
+import { useState } from 'react'
 
 /* ------------------ Main Component ------------------ */
-const cookies_animated = () => {
+const CookiesAnimatedComponent = () => {
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false)
+
   const switchOptions: SwitchCellProps[] = [
     {
       label: 'Marketing',
@@ -46,21 +49,24 @@ const cookies_animated = () => {
             backgroundImage: `linear-gradient(hsl(var(--heroui-background)), hsl(var(--heroui-background))), linear-gradient(83.87deg, #F54180, #9353D3)`,
             backgroundOrigin: 'border-box',
             backgroundClip: 'padding-box, border-box'
-          }}>
+          }}
+          onPress={() => console.log('Accept All from Alert clicked!')}>
           Accept All
         </Button>
         <Button
           fullWidth
           className="border-default-200 text-default-foreground font-medium"
           radius="lg"
-          variant="bordered">
+          variant="bordered"
+          onPress={() => console.log('Reject All from Alert clicked!')}>
           Reject All
         </Button>
         <Button
           fullWidth
           className="text-default-foreground font-medium"
           radius="lg"
-          variant="light">
+          variant="light"
+          onPress={() => setIsSettingsOpen(true)}>
           Cookie Settings
         </Button>
       </>
@@ -81,20 +87,29 @@ const cookies_animated = () => {
             backgroundImage: `linear-gradient(hsl(var(--heroui-background)), hsl(var(--heroui-background))), linear-gradient(83.87deg, #F54180, #9353D3)`,
             backgroundOrigin: 'border-box',
             backgroundClip: 'padding-box, border-box'
-          }}>
+          }}
+          onPress={() => console.log('Accept All from Settings clicked!')}>
           Accept All
         </Button>
-        <Button fullWidth variant="bordered">
+        <Button
+          fullWidth
+          variant="bordered"
+          onPress={() => setIsSettingsOpen(false)}>
           Reject All
         </Button>
       </>
     ),
-    switchCell: switchOptions // ✅ just pass the options array
+    switchCell: switchOptions
   }
 
   return (
-    <CookieAnimated alertData={cookieAlertData} settingData={cookieSetData} />
+    <CookieAnimated
+      alertData={cookieAlertData}
+      settingData={cookieSetData}
+      isSettingsOpen={isSettingsOpen}
+      setIsSettingsOpen={setIsSettingsOpen}
+    />
   )
 }
 
-export default cookies_animated
+export default CookiesAnimatedComponent

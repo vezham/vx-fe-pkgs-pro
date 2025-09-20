@@ -41,6 +41,54 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/marketing-banner-floatingbottomcenter/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-floatingbottom/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-floating/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-betweenjustified/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-brandcolors/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-gradient/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-inverted/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-banner-basic/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-verticalbuttons/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-fullwidth/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-floatingbottom/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-brandcolors/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-animated/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-bottomcenter/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-bottomfixed/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-cookies-basic/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/marketing-centeredfooter-with-sociallinks/tsconfig.lib.json"
     },
     {

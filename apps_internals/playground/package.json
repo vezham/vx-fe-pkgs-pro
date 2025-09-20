@@ -36,6 +36,22 @@
     "@vx-pro/marketing-footer-with-themeswitch": "workspace:*",
     "@vx-pro/marketing-footer-with-columns": "workspace:*",
     "@vx-pro/marketing-footer-with-columns-newsletter": "workspace:*",
-    "@vx-pro/marketing-centeredfooter-with-sociallinks": "workspace:*"
+    "@vx-pro/marketing-centeredfooter-with-sociallinks": "workspace:*",
+    "@vx-pro/marketing-cookies-basic": "workspace:*",
+    "@vx-pro/marketing-cookies-bottomfixed": "workspace:*",
+    "@vx-pro/marketing-cookies-bottomcenter": "workspace:*",
+    "@vx-pro/marketing-cookies-animated": "workspace:*",
+    "@vx-pro/marketing-cookies-brandcolors": "workspace:*",
+    "@vx-pro/marketing-cookies-floatingbottom": "workspace:*",
+    "@vx-pro/marketing-cookies-fullwidth": "workspace:*",
+    "@vx-pro/marketing-cookies-verticalbuttons": "workspace:*",
+    "@vx-pro/marketing-banner-basic": "workspace:*",
+    "@vx-pro/marketing-banner-inverted": "workspace:*",
+    "@vx-pro/marketing-banner-gradient": "workspace:*",
+    "@vx-pro/marketing-banner-brandcolors": "workspace:*",
+    "@vx-pro/marketing-banner-betweenjustified": "workspace:*",
+    "@vx-pro/marketing-banner-floating": "workspace:*",
+    "@vx-pro/marketing-banner-floatingbottom": "workspace:*",
+    "@vx-pro/marketing-banner-floatingbottomcenter": "workspace:*"
   }
 }
