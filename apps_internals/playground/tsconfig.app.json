@@ -41,6 +41,30 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/marketing-pricingcomparison-stickyheader/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-mostpopulartiersoft/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-mostpopulartier/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-highlightedtier/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-featuredtierfilled/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-featuredtier/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-blurredbackground/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-basicprice/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/marketing-pricing-simpleprice/tsconfig.lib.json"
     },
     {

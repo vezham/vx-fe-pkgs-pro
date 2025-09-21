@@ -60,6 +60,14 @@
     "@vx-pro/marketing-pricing-mostpopulartier": "workspace:*",
     "@vx-pro/marketing-pricing-mostpopulartier-highlighted": "workspace:*",
     "@vx-pro/marketing-pricing-mostpopulartierfilled": "workspace:*",
-    "@vx-pro/marketing-pricing-simpleprice": "workspace:*"
+    "@vx-pro/marketing-pricing-simpleprice": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-basicprice": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-blurredbackground": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-featuredtier": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-featuredtierfilled": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-highlightedtier": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-mostpopulartier": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-mostpopulartiersoft": "workspace:*",
+    "@vx-pro/marketing-pricingcomparison-stickyheader": "workspace:*"
   }
 }

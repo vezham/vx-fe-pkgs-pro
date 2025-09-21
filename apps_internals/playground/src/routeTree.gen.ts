@@ -14,6 +14,9 @@ import { Route as rootRouteImport } from './routes/__root'
 
 const TestLazyRouteImport = createFileRoute('/test')()
 const TeamsLazyRouteImport = createFileRoute('/teams')()
+const PricingComparisonLazyRouteImport = createFileRoute(
+  '/pricing-comparison',
+)()
 const PricingLazyRouteImport = createFileRoute('/pricing')()
 const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
@@ -47,6 +50,23 @@ const PricingPricingBlurredbackgroundLazyRouteImport = createFileRoute(
 )()
 const PricingPricingBasepriceLazyRouteImport = createFileRoute(
   '/pricing/pricing-baseprice',
+)()
+const PricingComparisonPricingComparisonStickyheaderLazyRouteImport =
+  createFileRoute('/pricing-comparison/pricing-comparison-stickyheader')()
+const PricingComparisonPricingComparisonMostpopularsoftLazyRouteImport =
+  createFileRoute('/pricing-comparison/pricing-comparison-mostpopularsoft')()
+const PricingComparisonPricingComparisonMostpopularLazyRouteImport =
+  createFileRoute('/pricing-comparison/pricing-comparison-mostpopular')()
+const PricingComparisonPricingComparisonHighlightedLazyRouteImport =
+  createFileRoute('/pricing-comparison/pricing-comparison-highlighted')()
+const PricingComparisonPricingComparisonFeaturefilledLazyRouteImport =
+  createFileRoute('/pricing-comparison/pricing-comparison-featurefilled')()
+const PricingComparisonPricingComparisonFeaturedLazyRouteImport =
+  createFileRoute('/pricing-comparison/pricing-comparison-featured')()
+const PricingComparisonPricingComparisonBlurredLazyRouteImport =
+  createFileRoute('/pricing-comparison/pricing-comparison-blurred')()
+const PricingComparisonPricingComparisonBaseLazyRouteImport = createFileRoute(
+  '/pricing-comparison/pricing-comparison-base',
 )()
 const KpistatsKpistat9LazyRouteImport = createFileRoute('/kpistats/kpistat-9')()
 const KpistatsKpistat8LazyRouteImport = createFileRoute('/kpistats/kpistat-8')()
@@ -146,6 +166,13 @@ const TeamsLazyRoute = TeamsLazyRouteImport.update({
   path: '/teams',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/teams.lazy').then((d) => d.Route))
+const PricingComparisonLazyRoute = PricingComparisonLazyRouteImport.update({
+  id: '/pricing-comparison',
+  path: '/pricing-comparison',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/pricing-comparison.lazy').then((d) => d.Route),
+)
 const PricingLazyRoute = PricingLazyRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -269,6 +296,86 @@ const PricingPricingBasepriceLazyRoute =
     getParentRoute: () => PricingLazyRoute,
   } as any).lazy(() =>
     import('./routes/pricing/pricing-baseprice.lazy').then((d) => d.Route),
+  )
+const PricingComparisonPricingComparisonStickyheaderLazyRoute =
+  PricingComparisonPricingComparisonStickyheaderLazyRouteImport.update({
+    id: '/pricing-comparison-stickyheader',
+    path: '/pricing-comparison-stickyheader',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/pricing-comparison/pricing-comparison-stickyheader.lazy'
+    ).then((d) => d.Route),
+  )
+const PricingComparisonPricingComparisonMostpopularsoftLazyRoute =
+  PricingComparisonPricingComparisonMostpopularsoftLazyRouteImport.update({
+    id: '/pricing-comparison-mostpopularsoft',
+    path: '/pricing-comparison-mostpopularsoft',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/pricing-comparison/pricing-comparison-mostpopularsoft.lazy'
+    ).then((d) => d.Route),
+  )
+const PricingComparisonPricingComparisonMostpopularLazyRoute =
+  PricingComparisonPricingComparisonMostpopularLazyRouteImport.update({
+    id: '/pricing-comparison-mostpopular',
+    path: '/pricing-comparison-mostpopular',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/pricing-comparison/pricing-comparison-mostpopular.lazy'
+    ).then((d) => d.Route),
+  )
+const PricingComparisonPricingComparisonHighlightedLazyRoute =
+  PricingComparisonPricingComparisonHighlightedLazyRouteImport.update({
+    id: '/pricing-comparison-highlighted',
+    path: '/pricing-comparison-highlighted',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/pricing-comparison/pricing-comparison-highlighted.lazy'
+    ).then((d) => d.Route),
+  )
+const PricingComparisonPricingComparisonFeaturefilledLazyRoute =
+  PricingComparisonPricingComparisonFeaturefilledLazyRouteImport.update({
+    id: '/pricing-comparison-featurefilled',
+    path: '/pricing-comparison-featurefilled',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/pricing-comparison/pricing-comparison-featurefilled.lazy'
+    ).then((d) => d.Route),
+  )
+const PricingComparisonPricingComparisonFeaturedLazyRoute =
+  PricingComparisonPricingComparisonFeaturedLazyRouteImport.update({
+    id: '/pricing-comparison-featured',
+    path: '/pricing-comparison-featured',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing-comparison/pricing-comparison-featured.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const PricingComparisonPricingComparisonBlurredLazyRoute =
+  PricingComparisonPricingComparisonBlurredLazyRouteImport.update({
+    id: '/pricing-comparison-blurred',
+    path: '/pricing-comparison-blurred',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing-comparison/pricing-comparison-blurred.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const PricingComparisonPricingComparisonBaseLazyRoute =
+  PricingComparisonPricingComparisonBaseLazyRouteImport.update({
+    id: '/pricing-comparison-base',
+    path: '/pricing-comparison-base',
+    getParentRoute: () => PricingComparisonLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/pricing-comparison/pricing-comparison-base.lazy').then(
+      (d) => d.Route,
+    ),
   )
 const KpistatsKpistat9LazyRoute = KpistatsKpistat9LazyRouteImport.update({
   id: '/kpistat-9',
@@ -606,6 +713,7 @@ export interface FileRoutesByFullPath {
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
+  '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -653,6 +761,14 @@ export interface FileRoutesByFullPath {
   '/kpistats/kpistat-7': typeof KpistatsKpistat7LazyRoute
   '/kpistats/kpistat-8': typeof KpistatsKpistat8LazyRoute
   '/kpistats/kpistat-9': typeof KpistatsKpistat9LazyRoute
+  '/pricing-comparison/pricing-comparison-base': typeof PricingComparisonPricingComparisonBaseLazyRoute
+  '/pricing-comparison/pricing-comparison-blurred': typeof PricingComparisonPricingComparisonBlurredLazyRoute
+  '/pricing-comparison/pricing-comparison-featured': typeof PricingComparisonPricingComparisonFeaturedLazyRoute
+  '/pricing-comparison/pricing-comparison-featurefilled': typeof PricingComparisonPricingComparisonFeaturefilledLazyRoute
+  '/pricing-comparison/pricing-comparison-highlighted': typeof PricingComparisonPricingComparisonHighlightedLazyRoute
+  '/pricing-comparison/pricing-comparison-mostpopular': typeof PricingComparisonPricingComparisonMostpopularLazyRoute
+  '/pricing-comparison/pricing-comparison-mostpopularsoft': typeof PricingComparisonPricingComparisonMostpopularsoftLazyRoute
+  '/pricing-comparison/pricing-comparison-stickyheader': typeof PricingComparisonPricingComparisonStickyheaderLazyRoute
   '/pricing/pricing-baseprice': typeof PricingPricingBasepriceLazyRoute
   '/pricing/pricing-blurredbackground': typeof PricingPricingBlurredbackgroundLazyRoute
   '/pricing/pricing-featuredtier': typeof PricingPricingFeaturedtierLazyRoute
@@ -673,6 +789,7 @@ export interface FileRoutesByTo {
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
+  '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -720,6 +837,14 @@ export interface FileRoutesByTo {
   '/kpistats/kpistat-7': typeof KpistatsKpistat7LazyRoute
   '/kpistats/kpistat-8': typeof KpistatsKpistat8LazyRoute
   '/kpistats/kpistat-9': typeof KpistatsKpistat9LazyRoute
+  '/pricing-comparison/pricing-comparison-base': typeof PricingComparisonPricingComparisonBaseLazyRoute
+  '/pricing-comparison/pricing-comparison-blurred': typeof PricingComparisonPricingComparisonBlurredLazyRoute
+  '/pricing-comparison/pricing-comparison-featured': typeof PricingComparisonPricingComparisonFeaturedLazyRoute
+  '/pricing-comparison/pricing-comparison-featurefilled': typeof PricingComparisonPricingComparisonFeaturefilledLazyRoute
+  '/pricing-comparison/pricing-comparison-highlighted': typeof PricingComparisonPricingComparisonHighlightedLazyRoute
+  '/pricing-comparison/pricing-comparison-mostpopular': typeof PricingComparisonPricingComparisonMostpopularLazyRoute
+  '/pricing-comparison/pricing-comparison-mostpopularsoft': typeof PricingComparisonPricingComparisonMostpopularsoftLazyRoute
+  '/pricing-comparison/pricing-comparison-stickyheader': typeof PricingComparisonPricingComparisonStickyheaderLazyRoute
   '/pricing/pricing-baseprice': typeof PricingPricingBasepriceLazyRoute
   '/pricing/pricing-blurredbackground': typeof PricingPricingBlurredbackgroundLazyRoute
   '/pricing/pricing-featuredtier': typeof PricingPricingFeaturedtierLazyRoute
@@ -741,6 +866,7 @@ export interface FileRoutesById {
   '/graph': typeof GraphLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
+  '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -788,6 +914,14 @@ export interface FileRoutesById {
   '/kpistats/kpistat-7': typeof KpistatsKpistat7LazyRoute
   '/kpistats/kpistat-8': typeof KpistatsKpistat8LazyRoute
   '/kpistats/kpistat-9': typeof KpistatsKpistat9LazyRoute
+  '/pricing-comparison/pricing-comparison-base': typeof PricingComparisonPricingComparisonBaseLazyRoute
+  '/pricing-comparison/pricing-comparison-blurred': typeof PricingComparisonPricingComparisonBlurredLazyRoute
+  '/pricing-comparison/pricing-comparison-featured': typeof PricingComparisonPricingComparisonFeaturedLazyRoute
+  '/pricing-comparison/pricing-comparison-featurefilled': typeof PricingComparisonPricingComparisonFeaturefilledLazyRoute
+  '/pricing-comparison/pricing-comparison-highlighted': typeof PricingComparisonPricingComparisonHighlightedLazyRoute
+  '/pricing-comparison/pricing-comparison-mostpopular': typeof PricingComparisonPricingComparisonMostpopularLazyRoute
+  '/pricing-comparison/pricing-comparison-mostpopularsoft': typeof PricingComparisonPricingComparisonMostpopularsoftLazyRoute
+  '/pricing-comparison/pricing-comparison-stickyheader': typeof PricingComparisonPricingComparisonStickyheaderLazyRoute
   '/pricing/pricing-baseprice': typeof PricingPricingBasepriceLazyRoute
   '/pricing/pricing-blurredbackground': typeof PricingPricingBlurredbackgroundLazyRoute
   '/pricing/pricing-featuredtier': typeof PricingPricingFeaturedtierLazyRoute
@@ -810,6 +944,7 @@ export interface FileRouteTypes {
     | '/graph'
     | '/kpistats'
     | '/pricing'
+    | '/pricing-comparison'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -857,6 +992,14 @@ export interface FileRouteTypes {
     | '/kpistats/kpistat-7'
     | '/kpistats/kpistat-8'
     | '/kpistats/kpistat-9'
+    | '/pricing-comparison/pricing-comparison-base'
+    | '/pricing-comparison/pricing-comparison-blurred'
+    | '/pricing-comparison/pricing-comparison-featured'
+    | '/pricing-comparison/pricing-comparison-featurefilled'
+    | '/pricing-comparison/pricing-comparison-highlighted'
+    | '/pricing-comparison/pricing-comparison-mostpopular'
+    | '/pricing-comparison/pricing-comparison-mostpopularsoft'
+    | '/pricing-comparison/pricing-comparison-stickyheader'
     | '/pricing/pricing-baseprice'
     | '/pricing/pricing-blurredbackground'
     | '/pricing/pricing-featuredtier'
@@ -877,6 +1020,7 @@ export interface FileRouteTypes {
     | '/graph'
     | '/kpistats'
     | '/pricing'
+    | '/pricing-comparison'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -924,6 +1068,14 @@ export interface FileRouteTypes {
     | '/kpistats/kpistat-7'
     | '/kpistats/kpistat-8'
     | '/kpistats/kpistat-9'
+    | '/pricing-comparison/pricing-comparison-base'
+    | '/pricing-comparison/pricing-comparison-blurred'
+    | '/pricing-comparison/pricing-comparison-featured'
+    | '/pricing-comparison/pricing-comparison-featurefilled'
+    | '/pricing-comparison/pricing-comparison-highlighted'
+    | '/pricing-comparison/pricing-comparison-mostpopular'
+    | '/pricing-comparison/pricing-comparison-mostpopularsoft'
+    | '/pricing-comparison/pricing-comparison-stickyheader'
     | '/pricing/pricing-baseprice'
     | '/pricing/pricing-blurredbackground'
     | '/pricing/pricing-featuredtier'
@@ -944,6 +1096,7 @@ export interface FileRouteTypes {
     | '/graph'
     | '/kpistats'
     | '/pricing'
+    | '/pricing-comparison'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -991,6 +1144,14 @@ export interface FileRouteTypes {
     | '/kpistats/kpistat-7'
     | '/kpistats/kpistat-8'
     | '/kpistats/kpistat-9'
+    | '/pricing-comparison/pricing-comparison-base'
+    | '/pricing-comparison/pricing-comparison-blurred'
+    | '/pricing-comparison/pricing-comparison-featured'
+    | '/pricing-comparison/pricing-comparison-featurefilled'
+    | '/pricing-comparison/pricing-comparison-highlighted'
+    | '/pricing-comparison/pricing-comparison-mostpopular'
+    | '/pricing-comparison/pricing-comparison-mostpopularsoft'
+    | '/pricing-comparison/pricing-comparison-stickyheader'
     | '/pricing/pricing-baseprice'
     | '/pricing/pricing-blurredbackground'
     | '/pricing/pricing-featuredtier'
@@ -1012,6 +1173,7 @@ export interface RootRouteChildren {
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
   KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
   PricingLazyRoute: typeof PricingLazyRouteWithChildren
+  PricingComparisonLazyRoute: typeof PricingComparisonLazyRouteWithChildren
   TeamsLazyRoute: typeof TeamsLazyRoute
   TestLazyRoute: typeof TestLazyRoute
   BannersBannerBasicLazyRoute: typeof BannersBannerBasicLazyRoute
@@ -1042,6 +1204,13 @@ declare module '@tanstack/react-router' {
       path: '/teams'
       fullPath: '/teams'
       preLoaderRoute: typeof TeamsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing-comparison': {
+      id: '/pricing-comparison'
+      path: '/pricing-comparison'
+      fullPath: '/pricing-comparison'
+      preLoaderRoute: typeof PricingComparisonLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -1169,6 +1338,62 @@ declare module '@tanstack/react-router' {
       fullPath: '/pricing/pricing-baseprice'
       preLoaderRoute: typeof PricingPricingBasepriceLazyRouteImport
       parentRoute: typeof PricingLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-stickyheader': {
+      id: '/pricing-comparison/pricing-comparison-stickyheader'
+      path: '/pricing-comparison-stickyheader'
+      fullPath: '/pricing-comparison/pricing-comparison-stickyheader'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonStickyheaderLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-mostpopularsoft': {
+      id: '/pricing-comparison/pricing-comparison-mostpopularsoft'
+      path: '/pricing-comparison-mostpopularsoft'
+      fullPath: '/pricing-comparison/pricing-comparison-mostpopularsoft'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonMostpopularsoftLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-mostpopular': {
+      id: '/pricing-comparison/pricing-comparison-mostpopular'
+      path: '/pricing-comparison-mostpopular'
+      fullPath: '/pricing-comparison/pricing-comparison-mostpopular'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonMostpopularLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-highlighted': {
+      id: '/pricing-comparison/pricing-comparison-highlighted'
+      path: '/pricing-comparison-highlighted'
+      fullPath: '/pricing-comparison/pricing-comparison-highlighted'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonHighlightedLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-featurefilled': {
+      id: '/pricing-comparison/pricing-comparison-featurefilled'
+      path: '/pricing-comparison-featurefilled'
+      fullPath: '/pricing-comparison/pricing-comparison-featurefilled'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonFeaturefilledLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-featured': {
+      id: '/pricing-comparison/pricing-comparison-featured'
+      path: '/pricing-comparison-featured'
+      fullPath: '/pricing-comparison/pricing-comparison-featured'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonFeaturedLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-blurred': {
+      id: '/pricing-comparison/pricing-comparison-blurred'
+      path: '/pricing-comparison-blurred'
+      fullPath: '/pricing-comparison/pricing-comparison-blurred'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonBlurredLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/pricing-comparison/pricing-comparison-base': {
+      id: '/pricing-comparison/pricing-comparison-base'
+      path: '/pricing-comparison-base'
+      fullPath: '/pricing-comparison/pricing-comparison-base'
+      preLoaderRoute: typeof PricingComparisonPricingComparisonBaseLazyRouteImport
+      parentRoute: typeof PricingComparisonLazyRoute
     }
     '/kpistats/kpistat-9': {
       id: '/kpistats/kpistat-9'
@@ -1646,6 +1871,41 @@ const PricingLazyRouteWithChildren = PricingLazyRoute._addFileChildren(
   PricingLazyRouteChildren,
 )
 
+interface PricingComparisonLazyRouteChildren {
+  PricingComparisonPricingComparisonBaseLazyRoute: typeof PricingComparisonPricingComparisonBaseLazyRoute
+  PricingComparisonPricingComparisonBlurredLazyRoute: typeof PricingComparisonPricingComparisonBlurredLazyRoute
+  PricingComparisonPricingComparisonFeaturedLazyRoute: typeof PricingComparisonPricingComparisonFeaturedLazyRoute
+  PricingComparisonPricingComparisonFeaturefilledLazyRoute: typeof PricingComparisonPricingComparisonFeaturefilledLazyRoute
+  PricingComparisonPricingComparisonHighlightedLazyRoute: typeof PricingComparisonPricingComparisonHighlightedLazyRoute
+  PricingComparisonPricingComparisonMostpopularLazyRoute: typeof PricingComparisonPricingComparisonMostpopularLazyRoute
+  PricingComparisonPricingComparisonMostpopularsoftLazyRoute: typeof PricingComparisonPricingComparisonMostpopularsoftLazyRoute
+  PricingComparisonPricingComparisonStickyheaderLazyRoute: typeof PricingComparisonPricingComparisonStickyheaderLazyRoute
+}
+
+const PricingComparisonLazyRouteChildren: PricingComparisonLazyRouteChildren = {
+  PricingComparisonPricingComparisonBaseLazyRoute:
+    PricingComparisonPricingComparisonBaseLazyRoute,
+  PricingComparisonPricingComparisonBlurredLazyRoute:
+    PricingComparisonPricingComparisonBlurredLazyRoute,
+  PricingComparisonPricingComparisonFeaturedLazyRoute:
+    PricingComparisonPricingComparisonFeaturedLazyRoute,
+  PricingComparisonPricingComparisonFeaturefilledLazyRoute:
+    PricingComparisonPricingComparisonFeaturefilledLazyRoute,
+  PricingComparisonPricingComparisonHighlightedLazyRoute:
+    PricingComparisonPricingComparisonHighlightedLazyRoute,
+  PricingComparisonPricingComparisonMostpopularLazyRoute:
+    PricingComparisonPricingComparisonMostpopularLazyRoute,
+  PricingComparisonPricingComparisonMostpopularsoftLazyRoute:
+    PricingComparisonPricingComparisonMostpopularsoftLazyRoute,
+  PricingComparisonPricingComparisonStickyheaderLazyRoute:
+    PricingComparisonPricingComparisonStickyheaderLazyRoute,
+}
+
+const PricingComparisonLazyRouteWithChildren =
+  PricingComparisonLazyRoute._addFileChildren(
+    PricingComparisonLazyRouteChildren,
+  )
+
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   BannerLazyRoute: BannerLazyRoute,
@@ -1657,6 +1917,7 @@ const rootRouteChildren: RootRouteChildren = {
   GraphLazyRoute: GraphLazyRouteWithChildren,
   KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
   PricingLazyRoute: PricingLazyRouteWithChildren,
+  PricingComparisonLazyRoute: PricingComparisonLazyRouteWithChildren,
   TeamsLazyRoute: TeamsLazyRoute,
   TestLazyRoute: TestLazyRoute,
   BannersBannerBasicLazyRoute: BannersBannerBasicLazyRoute,

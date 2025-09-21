@@ -3,6 +3,30 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/marketing-pricingcomparison-stickyheader"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-mostpopulartiersoft"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-mostpopulartier"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-highlightedtier"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-featuredtierfilled"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-featuredtier"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-blurredbackground"
+    },
+    {
+      "path": "../../packages/components/marketing-pricingcomparison-basicprice"
+    },
+    {
       "path": "../../packages/components/marketing-pricing-simpleprice"
     },
     {
