@@ -1,0 +1,9 @@
+{
+  "name": "marketing-herosections-screenshot",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/marketing-herosections-screenshot/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project marketing-herosections-screenshot --web",
+  "targets": {}
+}

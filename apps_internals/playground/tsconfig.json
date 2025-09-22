@@ -3,6 +3,18 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/marketing-herosections-skewedscreenshot"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-screenshot"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-centerednavbar"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-basic"
+    },
+    {
       "path": "../../packages/components/marketing-pricingcomparison-stickyheader"
     },
     {

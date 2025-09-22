@@ -41,6 +41,18 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/marketing-herosections-skewedscreenshot/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-screenshot/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-centerednavbar/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-basic/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/marketing-pricingcomparison-stickyheader/tsconfig.lib.json"
     },
     {

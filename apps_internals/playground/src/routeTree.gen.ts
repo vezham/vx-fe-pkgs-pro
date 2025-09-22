@@ -19,6 +19,7 @@ const PricingComparisonLazyRouteImport = createFileRoute(
 )()
 const PricingLazyRouteImport = createFileRoute('/pricing')()
 const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
+const HerosectionLazyRouteImport = createFileRoute('/herosection')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
 const FooterLazyRouteImport = createFileRoute('/footer')()
 const FaqsLazyRouteImport = createFileRoute('/faqs')()
@@ -77,6 +78,18 @@ const KpistatsKpistat4LazyRouteImport = createFileRoute('/kpistats/kpistat-4')()
 const KpistatsKpistat3LazyRouteImport = createFileRoute('/kpistats/kpistat-3')()
 const KpistatsKpistat2LazyRouteImport = createFileRoute('/kpistats/kpistat-2')()
 const KpistatsKpistat1LazyRouteImport = createFileRoute('/kpistats/kpistat-1')()
+const HerosectionHerosectionSkewedLazyRouteImport = createFileRoute(
+  '/herosection/herosection-skewed',
+)()
+const HerosectionHerosectionScreenshotLazyRouteImport = createFileRoute(
+  '/herosection/herosection-screenshot',
+)()
+const HerosectionHerosectionCenterednavbarLazyRouteImport = createFileRoute(
+  '/herosection/herosection-centerednavbar',
+)()
+const HerosectionHerosectionBasicLazyRouteImport = createFileRoute(
+  '/herosection/herosection-basic',
+)()
 const GraphGraph2LazyRouteImport = createFileRoute('/graph/graph-2')()
 const GraphGraph1LazyRouteImport = createFileRoute('/graph/graph-1')()
 const FootersFooterThemeLazyRouteImport = createFileRoute(
@@ -183,6 +196,11 @@ const KpistatsLazyRoute = KpistatsLazyRouteImport.update({
   path: '/kpistats',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/kpistats.lazy').then((d) => d.Route))
+const HerosectionLazyRoute = HerosectionLazyRouteImport.update({
+  id: '/herosection',
+  path: '/herosection',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/herosection.lazy').then((d) => d.Route))
 const GraphLazyRoute = GraphLazyRouteImport.update({
   id: '/graph',
   path: '/graph',
@@ -440,6 +458,42 @@ const KpistatsKpistat1LazyRoute = KpistatsKpistat1LazyRouteImport.update({
 } as any).lazy(() =>
   import('./routes/kpistats/kpistat-1.lazy').then((d) => d.Route),
 )
+const HerosectionHerosectionSkewedLazyRoute =
+  HerosectionHerosectionSkewedLazyRouteImport.update({
+    id: '/herosection-skewed',
+    path: '/herosection-skewed',
+    getParentRoute: () => HerosectionLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/herosection/herosection-skewed.lazy').then((d) => d.Route),
+  )
+const HerosectionHerosectionScreenshotLazyRoute =
+  HerosectionHerosectionScreenshotLazyRouteImport.update({
+    id: '/herosection-screenshot',
+    path: '/herosection-screenshot',
+    getParentRoute: () => HerosectionLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/herosection/herosection-screenshot.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const HerosectionHerosectionCenterednavbarLazyRoute =
+  HerosectionHerosectionCenterednavbarLazyRouteImport.update({
+    id: '/herosection-centerednavbar',
+    path: '/herosection-centerednavbar',
+    getParentRoute: () => HerosectionLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/herosection/herosection-centerednavbar.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const HerosectionHerosectionBasicLazyRoute =
+  HerosectionHerosectionBasicLazyRouteImport.update({
+    id: '/herosection-basic',
+    path: '/herosection-basic',
+    getParentRoute: () => HerosectionLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/herosection/herosection-basic.lazy').then((d) => d.Route),
+  )
 const GraphGraph2LazyRoute = GraphGraph2LazyRouteImport.update({
   id: '/graph-2',
   path: '/graph-2',
@@ -711,6 +765,7 @@ export interface FileRoutesByFullPath {
   '/faqs': typeof FaqsLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
+  '/herosection': typeof HerosectionLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
@@ -752,6 +807,10 @@ export interface FileRoutesByFullPath {
   '/footers/footer-theme': typeof FootersFooterThemeLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
+  '/herosection/herosection-basic': typeof HerosectionHerosectionBasicLazyRoute
+  '/herosection/herosection-centerednavbar': typeof HerosectionHerosectionCenterednavbarLazyRoute
+  '/herosection/herosection-screenshot': typeof HerosectionHerosectionScreenshotLazyRoute
+  '/herosection/herosection-skewed': typeof HerosectionHerosectionSkewedLazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
   '/kpistats/kpistat-2': typeof KpistatsKpistat2LazyRoute
   '/kpistats/kpistat-3': typeof KpistatsKpistat3LazyRoute
@@ -787,6 +846,7 @@ export interface FileRoutesByTo {
   '/faqs': typeof FaqsLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
+  '/herosection': typeof HerosectionLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
@@ -828,6 +888,10 @@ export interface FileRoutesByTo {
   '/footers/footer-theme': typeof FootersFooterThemeLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
+  '/herosection/herosection-basic': typeof HerosectionHerosectionBasicLazyRoute
+  '/herosection/herosection-centerednavbar': typeof HerosectionHerosectionCenterednavbarLazyRoute
+  '/herosection/herosection-screenshot': typeof HerosectionHerosectionScreenshotLazyRoute
+  '/herosection/herosection-skewed': typeof HerosectionHerosectionSkewedLazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
   '/kpistats/kpistat-2': typeof KpistatsKpistat2LazyRoute
   '/kpistats/kpistat-3': typeof KpistatsKpistat3LazyRoute
@@ -864,6 +928,7 @@ export interface FileRoutesById {
   '/faqs': typeof FaqsLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
+  '/herosection': typeof HerosectionLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
@@ -905,6 +970,10 @@ export interface FileRoutesById {
   '/footers/footer-theme': typeof FootersFooterThemeLazyRoute
   '/graph/graph-1': typeof GraphGraph1LazyRoute
   '/graph/graph-2': typeof GraphGraph2LazyRoute
+  '/herosection/herosection-basic': typeof HerosectionHerosectionBasicLazyRoute
+  '/herosection/herosection-centerednavbar': typeof HerosectionHerosectionCenterednavbarLazyRoute
+  '/herosection/herosection-screenshot': typeof HerosectionHerosectionScreenshotLazyRoute
+  '/herosection/herosection-skewed': typeof HerosectionHerosectionSkewedLazyRoute
   '/kpistats/kpistat-1': typeof KpistatsKpistat1LazyRoute
   '/kpistats/kpistat-2': typeof KpistatsKpistat2LazyRoute
   '/kpistats/kpistat-3': typeof KpistatsKpistat3LazyRoute
@@ -942,6 +1011,7 @@ export interface FileRouteTypes {
     | '/faqs'
     | '/footer'
     | '/graph'
+    | '/herosection'
     | '/kpistats'
     | '/pricing'
     | '/pricing-comparison'
@@ -983,6 +1053,10 @@ export interface FileRouteTypes {
     | '/footers/footer-theme'
     | '/graph/graph-1'
     | '/graph/graph-2'
+    | '/herosection/herosection-basic'
+    | '/herosection/herosection-centerednavbar'
+    | '/herosection/herosection-screenshot'
+    | '/herosection/herosection-skewed'
     | '/kpistats/kpistat-1'
     | '/kpistats/kpistat-2'
     | '/kpistats/kpistat-3'
@@ -1018,6 +1092,7 @@ export interface FileRouteTypes {
     | '/faqs'
     | '/footer'
     | '/graph'
+    | '/herosection'
     | '/kpistats'
     | '/pricing'
     | '/pricing-comparison'
@@ -1059,6 +1134,10 @@ export interface FileRouteTypes {
     | '/footers/footer-theme'
     | '/graph/graph-1'
     | '/graph/graph-2'
+    | '/herosection/herosection-basic'
+    | '/herosection/herosection-centerednavbar'
+    | '/herosection/herosection-screenshot'
+    | '/herosection/herosection-skewed'
     | '/kpistats/kpistat-1'
     | '/kpistats/kpistat-2'
     | '/kpistats/kpistat-3'
@@ -1094,6 +1173,7 @@ export interface FileRouteTypes {
     | '/faqs'
     | '/footer'
     | '/graph'
+    | '/herosection'
     | '/kpistats'
     | '/pricing'
     | '/pricing-comparison'
@@ -1135,6 +1215,10 @@ export interface FileRouteTypes {
     | '/footers/footer-theme'
     | '/graph/graph-1'
     | '/graph/graph-2'
+    | '/herosection/herosection-basic'
+    | '/herosection/herosection-centerednavbar'
+    | '/herosection/herosection-screenshot'
+    | '/herosection/herosection-skewed'
     | '/kpistats/kpistat-1'
     | '/kpistats/kpistat-2'
     | '/kpistats/kpistat-3'
@@ -1171,6 +1255,7 @@ export interface RootRouteChildren {
   FaqsLazyRoute: typeof FaqsLazyRouteWithChildren
   FooterLazyRoute: typeof FooterLazyRoute
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
+  HerosectionLazyRoute: typeof HerosectionLazyRouteWithChildren
   KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
   PricingLazyRoute: typeof PricingLazyRouteWithChildren
   PricingComparisonLazyRoute: typeof PricingComparisonLazyRouteWithChildren
@@ -1225,6 +1310,13 @@ declare module '@tanstack/react-router' {
       path: '/kpistats'
       fullPath: '/kpistats'
       preLoaderRoute: typeof KpistatsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/herosection': {
+      id: '/herosection'
+      path: '/herosection'
+      fullPath: '/herosection'
+      preLoaderRoute: typeof HerosectionLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/graph': {
@@ -1457,6 +1549,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/kpistats/kpistat-1'
       preLoaderRoute: typeof KpistatsKpistat1LazyRouteImport
       parentRoute: typeof KpistatsLazyRoute
+    }
+    '/herosection/herosection-skewed': {
+      id: '/herosection/herosection-skewed'
+      path: '/herosection-skewed'
+      fullPath: '/herosection/herosection-skewed'
+      preLoaderRoute: typeof HerosectionHerosectionSkewedLazyRouteImport
+      parentRoute: typeof HerosectionLazyRoute
+    }
+    '/herosection/herosection-screenshot': {
+      id: '/herosection/herosection-screenshot'
+      path: '/herosection-screenshot'
+      fullPath: '/herosection/herosection-screenshot'
+      preLoaderRoute: typeof HerosectionHerosectionScreenshotLazyRouteImport
+      parentRoute: typeof HerosectionLazyRoute
+    }
+    '/herosection/herosection-centerednavbar': {
+      id: '/herosection/herosection-centerednavbar'
+      path: '/herosection-centerednavbar'
+      fullPath: '/herosection/herosection-centerednavbar'
+      preLoaderRoute: typeof HerosectionHerosectionCenterednavbarLazyRouteImport
+      parentRoute: typeof HerosectionLazyRoute
+    }
+    '/herosection/herosection-basic': {
+      id: '/herosection/herosection-basic'
+      path: '/herosection-basic'
+      fullPath: '/herosection/herosection-basic'
+      preLoaderRoute: typeof HerosectionHerosectionBasicLazyRouteImport
+      parentRoute: typeof HerosectionLazyRoute
     }
     '/graph/graph-2': {
       id: '/graph/graph-2'
@@ -1812,6 +1932,26 @@ const GraphLazyRouteWithChildren = GraphLazyRoute._addFileChildren(
   GraphLazyRouteChildren,
 )
 
+interface HerosectionLazyRouteChildren {
+  HerosectionHerosectionBasicLazyRoute: typeof HerosectionHerosectionBasicLazyRoute
+  HerosectionHerosectionCenterednavbarLazyRoute: typeof HerosectionHerosectionCenterednavbarLazyRoute
+  HerosectionHerosectionScreenshotLazyRoute: typeof HerosectionHerosectionScreenshotLazyRoute
+  HerosectionHerosectionSkewedLazyRoute: typeof HerosectionHerosectionSkewedLazyRoute
+}
+
+const HerosectionLazyRouteChildren: HerosectionLazyRouteChildren = {
+  HerosectionHerosectionBasicLazyRoute: HerosectionHerosectionBasicLazyRoute,
+  HerosectionHerosectionCenterednavbarLazyRoute:
+    HerosectionHerosectionCenterednavbarLazyRoute,
+  HerosectionHerosectionScreenshotLazyRoute:
+    HerosectionHerosectionScreenshotLazyRoute,
+  HerosectionHerosectionSkewedLazyRoute: HerosectionHerosectionSkewedLazyRoute,
+}
+
+const HerosectionLazyRouteWithChildren = HerosectionLazyRoute._addFileChildren(
+  HerosectionLazyRouteChildren,
+)
+
 interface KpistatsLazyRouteChildren {
   KpistatsKpistat1LazyRoute: typeof KpistatsKpistat1LazyRoute
   KpistatsKpistat2LazyRoute: typeof KpistatsKpistat2LazyRoute
@@ -1915,6 +2055,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqsLazyRoute: FaqsLazyRouteWithChildren,
   FooterLazyRoute: FooterLazyRoute,
   GraphLazyRoute: GraphLazyRouteWithChildren,
+  HerosectionLazyRoute: HerosectionLazyRouteWithChildren,
   KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
   PricingLazyRoute: PricingLazyRouteWithChildren,
   PricingComparisonLazyRoute: PricingComparisonLazyRouteWithChildren,
