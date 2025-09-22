@@ -381,6 +381,18 @@ importers:
       '@vx-pro/marketing-footer-with-themeswitch':
         specifier: workspace:*
         version: link:../../packages/components/marketing-footer-with-themeswitch
+      '@vx-pro/marketing-herosections-basic':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-herosections-basic
+      '@vx-pro/marketing-herosections-centerednavbar':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-herosections-centerednavbar
+      '@vx-pro/marketing-herosections-screenshot':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-herosections-screenshot
+      '@vx-pro/marketing-herosections-skewedscreenshot':
+        specifier: workspace:*
+        version: link:../../packages/components/marketing-herosections-skewedscreenshot
       '@vx-pro/marketing-pricing-basicprice':
         specifier: workspace:*
         version: link:../../packages/components/marketing-pricing-basicprice
@@ -461,6 +473,24 @@ importers:
         version: 16.4.7
 
   packages/components/abc: {}
+
+  packages/components/application-navbar-basic:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-navbar-centered-navbar:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-navbar-centeredItems-navbar:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
 
   packages/components/charts-bars-1:
     dependencies:

@@ -57,14 +57,21 @@ const herosection_centerednavbar = () => {
           </span>
         </NavbarBrand>
 
+        {/* Center Content */}
         <NavbarContent className="hidden md:flex" justify="center">
-          {navItems.map((item, index) => (
-            <NavbarItem key={`${item}-${index}`}>
-              <Link className="text-default-500" to=".">
-                {item}
-              </Link>
-            </NavbarItem>
-          ))}
+          {navItems.map((item, index) => {
+            const isActive = index === 0
+            return (
+              <NavbarItem key={`${item}-${index}`} isActive={isActive}>
+                <Link
+                  className={isActive ? 'text-background' : 'text-default-500'}
+                  href="#"
+                  to={'.'}>
+                  {item}
+                </Link>
+              </NavbarItem>
+            )
+          })}
         </NavbarContent>
 
         <NavbarContent className="hidden md:flex" justify="end">

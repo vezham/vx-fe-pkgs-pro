@@ -217,6 +217,15 @@
     },
     {
       "path": "./packages/components/marketing-herosections-centerednavbar"
+    },
+    {
+      "path": "./packages/components/application-navbar-basic"
+    },
+    {
+      "path": "./packages/components/application-navbar-centeredItems-navbar"
+    },
+    {
+      "path": "./packages/components/application-navbar-centered-navbar"
     }
   ]
 }

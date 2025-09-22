@@ -68,6 +68,10 @@
     "@vx-pro/marketing-pricingcomparison-highlightedtier": "workspace:*",
     "@vx-pro/marketing-pricingcomparison-mostpopulartier": "workspace:*",
     "@vx-pro/marketing-pricingcomparison-mostpopulartiersoft": "workspace:*",
-    "@vx-pro/marketing-pricingcomparison-stickyheader": "workspace:*"
+    "@vx-pro/marketing-pricingcomparison-stickyheader": "workspace:*",
+    "@vx-pro/marketing-herosections-basic": "workspace:*",
+    "@vx-pro/marketing-herosections-screenshot": "workspace:*",
+    "@vx-pro/marketing-herosections-skewedscreenshot": "workspace:*",
+    "@vx-pro/marketing-herosections-centerednavbar": "workspace:*"
   }
 }

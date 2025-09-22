@@ -72,14 +72,18 @@ const herosection_skewed = () => {
           </span>
         </NavbarBrand>
 
+        {/* Center Content */}
         <NavbarContent justify="center">
-          {navItems.map((item, index) => (
-            <NavbarItem key={`${item}-${index}`}>
-              <Link className="text-default-500" href="#" to={'.'}>
-                {item}
-              </Link>
-            </NavbarItem>
-          ))}
+          {navItems.map((item, index) => {
+            const isActive = index === 0
+            return (
+              <NavbarItem key={`${item}-${index}`} isActive={isActive}>
+                <Link className="text-default-foreground" href="#" to={'.'}>
+                  {item}
+                </Link>
+              </NavbarItem>
+            )
+          })}
         </NavbarContent>
 
         {/* Right Content */}
