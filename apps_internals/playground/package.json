@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@iconify/react": "^6.0.2",
+     "@react-stately/utils": "^3.10.0",
     "@vx/start": "workspace:*",
     "@vx/system-utils": "workspace:*",
     "@vx-pro/abc": "workspace:*",
@@ -72,6 +73,17 @@
     "@vx-pro/marketing-herosections-basic": "workspace:*",
     "@vx-pro/marketing-herosections-screenshot": "workspace:*",
     "@vx-pro/marketing-herosections-skewedscreenshot": "workspace:*",
-    "@vx-pro/marketing-herosections-centerednavbar": "workspace:*"
+    "@vx-pro/marketing-herosections-centerednavbar": "workspace:*",
+    "@vx-pro/application-navbar-basic": "workspace:*",
+    "@vx-pro/application-navbar-centered-navbar": "workspace:*",
+    "@vx-pro/application-navbar-centeredItems-navbar": "workspace:*",
+    "@vx-pro/application-stepper-basic": "workspace:*",
+    "@vx-pro/application-stepper-minimal": "workspace:*",
+    "@vx-pro/application-stepper-simple": "workspace:*",
+    "@vx-pro/application-stepper-vertical": "workspace:*",
+    "@vx-pro/application-stepper-verticalcollapsible": "workspace:*",
+    "@vx-pro/application-stepper-verticalsplitted": "workspace:*",
+    "@vx-pro/application-stepper-verticalsplitted-helpers": "workspace:*"
   }
+
 }

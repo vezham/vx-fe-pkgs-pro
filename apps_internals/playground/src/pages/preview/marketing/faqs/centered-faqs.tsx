@@ -1,6 +1,7 @@
 import {
   CenteredFAQs,
-  CenteredFAQsProps
+  CenteredFAQsProps,
+  faqsProps
 } from '@vx-pro/marketing-centered-faqs'
 
 const centered_faqs = () => {
@@ -55,9 +56,15 @@ const centered_faqs = () => {
     }
   ]
 
+  const data: faqsProps = {
+    title: 'FAQs',
+    subtitle: 'Frequently Asked Questions',
+    faqs: faqs
+  }
+
   return (
     <div>
-      <CenteredFAQs data={faqs} />
+      <CenteredFAQs data={data} />
     </div>
   )
 }

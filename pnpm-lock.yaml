@@ -246,9 +246,42 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
       '@vx-pro/abc':
         specifier: workspace:*
         version: link:../../packages/components/abc
+      '@vx-pro/application-navbar-basic':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navbar-basic
+      '@vx-pro/application-navbar-centered-navbar':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navbar-centered-navbar
+      '@vx-pro/application-navbar-centeredItems-navbar':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navbar-centeredItems-navbar
+      '@vx-pro/application-stepper-basic':
+        specifier: workspace:*
+        version: link:../../packages/components/application-stepper-basic
+      '@vx-pro/application-stepper-minimal':
+        specifier: workspace:*
+        version: link:../../packages/components/application-stepper-minimal
+      '@vx-pro/application-stepper-simple':
+        specifier: workspace:*
+        version: link:../../packages/components/application-stepper-simple
+      '@vx-pro/application-stepper-vertical':
+        specifier: workspace:*
+        version: link:../../packages/components/application-stepper-vertical
+      '@vx-pro/application-stepper-verticalcollapsible':
+        specifier: workspace:*
+        version: link:../../packages/components/application-stepper-verticalcollapsible
+      '@vx-pro/application-stepper-verticalsplitted':
+        specifier: workspace:*
+        version: link:../../packages/components/application-stepper-verticalsplitted-
+      '@vx-pro/application-stepper-verticalsplitted-helpers':
+        specifier: workspace:*
+        version: link:../../packages/components/application-stepper-verticalsplitted-helpers
       '@vx-pro/charts-bars-1':
         specifier: workspace:*
         version: link:../../packages/components/charts-bars-1
@@ -491,6 +524,48 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
+
+  packages/components/application-stepper-basic:
+    devDependencies:
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
+
+  packages/components/application-stepper-minimal:
+    devDependencies:
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
+
+  packages/components/application-stepper-simple:
+    devDependencies:
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
+
+  packages/components/application-stepper-vertical:
+    devDependencies:
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
+
+  packages/components/application-stepper-verticalcollapsible:
+    devDependencies:
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
+
+  packages/components/application-stepper-verticalsplitted-:
+    devDependencies:
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
+
+  packages/components/application-stepper-verticalsplitted-helpers:
+    devDependencies:
+      '@react-stately/utils':
+        specifier: ^3.10.0
+        version: 3.10.8(react@19.0.0)
 
   packages/components/charts-bars-1:
     dependencies:

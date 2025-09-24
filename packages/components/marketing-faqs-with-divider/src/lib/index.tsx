@@ -4,25 +4,21 @@ import { Icon } from '@iconify/react'
 import { Accordion, AccordionItem } from '@vx-oss/react'
 import React from 'react'
 
-const FAQsDivider = ({
-  data,
-  actions
-}: {
-  data: FAQsDividerProps[]
-  actions?: React.ReactNode
-}) => {
+const FAQsDivider = ({ data }: { data: faqsProps }) => {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 py-20 sm:py-32 md:px-6 lg:px-8 lg:py-40">
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8">
         <h2 className="from-foreground to-foreground-600 w-full max-w-3xl bg-linear-to-br bg-clip-text px-2 text-center text-3xl leading-7 font-bold tracking-tight text-transparent md:text-5xl">
-          <span className="inline-block md:hidden">Acme&apos;s FAQs</span>
+          <span className="inline-block md:hidden">
+            {data.title}&apos;s {data.subtitle}
+          </span>
           <span className="hidden md:inline-block">
-            Acme&apos;s Frequently asked questions
+            {data.title}&apos;s {data.mainHeading}
           </span>
         </h2>
 
         {/* Common actions section */}
-        {actions && <div>{actions}</div>}
+        {data.actions}
 
         <Accordion
           fullWidth
@@ -35,7 +31,7 @@ const FAQsDivider = ({
             indicator: 'rotate-0 data-[open=true]:-rotate-45'
           }}
           selectionMode="multiple">
-          {data.map((item, i) => (
+          {data.faqs.map((item, i) => (
             <AccordionItem
               key={i}
               indicator={
@@ -60,4 +56,12 @@ export { FAQsDivider }
 export type FAQsDividerProps = {
   title: string
   content: string
+}
+
+export type faqsProps = {
+  title: string
+  subtitle: string
+  mainHeading: string
+  faqs: FAQsDividerProps[]
+  actions?: React.ReactNode
 }

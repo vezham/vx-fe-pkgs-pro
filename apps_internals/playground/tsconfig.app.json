@@ -41,13 +41,43 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/application-stepper-verticalsplitted-helpers/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-stepper-verticalsplitted-/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-stepper-verticalcollapsible/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-stepper-vertical/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-stepper-simple/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-stepper-minimal/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-stepper-basic/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navbar-centeredItems-navbar/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navbar-centered-navbar/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navbar-basic/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-centerednavbar/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/marketing-herosections-skewedscreenshot/tsconfig.lib.json"
     },
     {
       "path": "../../packages/components/marketing-herosections-screenshot/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/marketing-herosections-centerednavbar/tsconfig.lib.json"
     },
     {
       "path": "../../packages/components/marketing-herosections-basic/tsconfig.lib.json"

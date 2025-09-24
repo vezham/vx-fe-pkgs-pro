@@ -4,7 +4,8 @@ import { Icon } from '@iconify/react'
 import { Button } from '@vx-oss/react'
 import {
   FAQsDivider,
-  FAQsDividerProps
+  FAQsDividerProps,
+  faqsProps
 } from '@vx-pro/marketing-faqs-with-divider'
 
 const faqs_with_divider = () => {
@@ -59,20 +60,25 @@ const faqs_with_divider = () => {
     }
   ]
 
-  const actions = (
-    <Button
-      disableAnimation
-      className="from-foreground to-foreground-600 text-background bg-linear-to-br font-medium"
-      endContent={<Icon icon="lucide:chevron-right" width={24} />}
-      size="lg"
-      variant="shadow">
-      Contact Us
-    </Button>
-  )
-
+  const data: faqsProps = {
+    title: 'Acme',
+    subtitle: 'FAQs',
+    mainHeading: 'Frequently Asked Questions',
+    faqs: faqs,
+    actions: (
+      <Button
+        disableAnimation
+        className="from-foreground to-foreground-600 text-background bg-linear-to-br font-medium"
+        endContent={<Icon icon="lucide:chevron-right" width={24} />}
+        size="lg"
+        variant="shadow">
+        Contact Us
+      </Button>
+    )
+  }
   return (
     <div>
-      <FAQsDivider data={faqs} actions={actions} />
+      <FAQsDivider data={data} />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { FAQs, FAQSProps } from '@vx-pro/marketing-faqs'
+import { faqProps, FAQs, FAQSProps } from '@vx-pro/marketing-faqs'
 const basic_faqs = () => {
   const faqs: FAQSProps[] = [
     {
@@ -51,7 +51,13 @@ const basic_faqs = () => {
     }
   ]
 
-  return <FAQs data={faqs} />
+  const data: faqProps = {
+    title: 'FAQS',
+    subtitle: ' Frequently asked questions',
+    faqs: faqs
+  }
+
+  return <FAQs data={data} />
 }
 
 export default basic_faqs

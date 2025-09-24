@@ -21,7 +21,7 @@ const FooterThemeSwitch = ({ data }: { data: FooterProps }) => {
         </div>
         <div className="mt-4 md:order-1 md:mt-0">
           <div className="flex items-center justify-center gap-3 md:justify-start">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center">
               {logo}
               {companyName && (
                 <span className="text-small font-medium">{companyName}</span>

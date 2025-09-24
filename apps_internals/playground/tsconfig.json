@@ -3,13 +3,43 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/application-stepper-verticalsplitted-helpers"
+    },
+    {
+      "path": "../../packages/components/application-stepper-verticalsplitted-"
+    },
+    {
+      "path": "../../packages/components/application-stepper-verticalcollapsible"
+    },
+    {
+      "path": "../../packages/components/application-stepper-vertical"
+    },
+    {
+      "path": "../../packages/components/application-stepper-simple"
+    },
+    {
+      "path": "../../packages/components/application-stepper-minimal"
+    },
+    {
+      "path": "../../packages/components/application-stepper-basic"
+    },
+    {
+      "path": "../../packages/components/application-navbar-centeredItems-navbar"
+    },
+    {
+      "path": "../../packages/components/application-navbar-centered-navbar"
+    },
+    {
+      "path": "../../packages/components/application-navbar-basic"
+    },
+    {
+      "path": "../../packages/components/marketing-herosections-centerednavbar"
+    },
+    {
       "path": "../../packages/components/marketing-herosections-skewedscreenshot"
     },
     {
       "path": "../../packages/components/marketing-herosections-screenshot"
-    },
-    {
-      "path": "../../packages/components/marketing-herosections-centerednavbar"
     },
     {
       "path": "../../packages/components/marketing-herosections-basic"

@@ -3,15 +3,13 @@
 import { Icon } from '@iconify/react'
 import { Accordion, AccordionItem } from '@vx-oss/react'
 
-const CenteredFAQs = ({ data }: { data: CenteredFAQsProps[] }) => {
+const CenteredFAQs = ({ data }: { data: faqsProps }) => {
   return (
     <section className="mx-auto w-full max-w-6xl px-0 py-20 sm:py-32 md:px-4 lg:px-8 lg:py-40">
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6">
         <h2 className="px-2 text-3xl leading-7">
-          <span className="inline-block md:hidden">FAQs</span>
-          <span className="hidden md:inline-block">
-            Frequently asked questions
-          </span>
+          <span className="inline-block md:hidden">{data.title}</span>
+          <span className="hidden md:inline-block">{data.subtitle}</span>
         </h2>
         <Accordion
           fullWidth
@@ -26,7 +24,7 @@ const CenteredFAQs = ({ data }: { data: CenteredFAQsProps[] }) => {
           }}
           selectionMode="multiple"
           variant="splitted">
-          {data.map((item, i) => (
+          {data.faqs.map((item, i) => (
             <AccordionItem
               key={i}
               indicator={<Icon icon="solar:alt-arrow-down-linear" width={24} />}
@@ -45,4 +43,10 @@ export { CenteredFAQs }
 export type CenteredFAQsProps = {
   title: string
   content: string
+}
+
+export type faqsProps = {
+  title: string
+  subtitle: string
+  faqs: CenteredFAQsProps[]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "application-stepper-basic",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-stepper-basic/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-stepper-basic --web",
+  "targets": {}
+}

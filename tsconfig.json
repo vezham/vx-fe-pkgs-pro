@@ -226,6 +226,27 @@
     },
     {
       "path": "./packages/components/application-navbar-centered-navbar"
+    },
+    {
+      "path": "./packages/components/application-stepper-basic"
+    },
+    {
+      "path": "./packages/components/application-stepper-simple"
+    },
+    {
+      "path": "./packages/components/application-stepper-minimal"
+    },
+    {
+      "path": "./packages/components/application-stepper-vertical"
+    },
+    {
+      "path": "./packages/components/application-stepper-verticalsplitted-"
+    },
+    {
+      "path": "./packages/components/application-stepper-verticalsplitted-helpers"
+    },
+    {
+      "path": "./packages/components/application-stepper-verticalcollapsible"
     }
   ]
 }

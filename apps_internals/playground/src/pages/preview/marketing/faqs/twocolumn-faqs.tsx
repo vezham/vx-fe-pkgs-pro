@@ -1,4 +1,9 @@
-import { FAQsColumn, FAQsColumnProps } from '@vx-pro/marketing-twocolumns-faqs'
+import {
+  FAQsColumn,
+  FAQsColumnProps,
+  faqsProps
+} from '@vx-pro/marketing-twocolumns-faqs'
+
 const basic_faqs = () => {
   const faqs: FAQsColumnProps[] = [
     {
@@ -51,7 +56,15 @@ const basic_faqs = () => {
     }
   ]
 
-  return <FAQsColumn data={faqs} />
+  const data: faqsProps = {
+    title: 'FAQs',
+    subtitle1: 'Frequently',
+    subtitle2: 'Asked',
+    subtitle3: 'Questions',
+    faqs: faqs
+  }
+
+  return <FAQsColumn data={data} />
 }
 
 export default basic_faqs

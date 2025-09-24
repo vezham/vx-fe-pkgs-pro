@@ -14,6 +14,7 @@ import { Route as rootRouteImport } from './routes/__root'
 
 const TestLazyRouteImport = createFileRoute('/test')()
 const TeamsLazyRouteImport = createFileRoute('/teams')()
+const StepperLazyRouteImport = createFileRoute('/stepper')()
 const PricingComparisonLazyRouteImport = createFileRoute(
   '/pricing-comparison',
 )()
@@ -29,6 +30,27 @@ const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const BannerLazyRouteImport = createFileRoute('/banner')()
 const IndexLazyRouteImport = createFileRoute('/')()
+const StepperStepperVerticalcollapsibleLazyRouteImport = createFileRoute(
+  '/stepper/stepper-verticalcollapsible',
+)()
+const StepperStepperVerticalLazyRouteImport = createFileRoute(
+  '/stepper/stepper-vertical',
+)()
+const StepperStepperSplittedHelpersLazyRouteImport = createFileRoute(
+  '/stepper/stepper-splittedHelpers',
+)()
+const StepperStepperSplittedLazyRouteImport = createFileRoute(
+  '/stepper/stepper-splitted',
+)()
+const StepperStepperSimpleLazyRouteImport = createFileRoute(
+  '/stepper/stepper-simple',
+)()
+const StepperStepperMinimalLazyRouteImport = createFileRoute(
+  '/stepper/stepper-minimal',
+)()
+const StepperStepperBasicLazyRouteImport = createFileRoute(
+  '/stepper/stepper-basic',
+)()
 const PricingPricingSimplepriceLazyRouteImport = createFileRoute(
   '/pricing/pricing-simpleprice',
 )()
@@ -189,6 +211,11 @@ const TeamsLazyRoute = TeamsLazyRouteImport.update({
   path: '/teams',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/teams.lazy').then((d) => d.Route))
+const StepperLazyRoute = StepperLazyRouteImport.update({
+  id: '/stepper',
+  path: '/stepper',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/stepper.lazy').then((d) => d.Route))
 const PricingComparisonLazyRoute = PricingComparisonLazyRouteImport.update({
   id: '/pricing-comparison',
   path: '/pricing-comparison',
@@ -256,6 +283,65 @@ const IndexLazyRoute = IndexLazyRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+const StepperStepperVerticalcollapsibleLazyRoute =
+  StepperStepperVerticalcollapsibleLazyRouteImport.update({
+    id: '/stepper-verticalcollapsible',
+    path: '/stepper-verticalcollapsible',
+    getParentRoute: () => StepperLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/stepper/stepper-verticalcollapsible.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const StepperStepperVerticalLazyRoute =
+  StepperStepperVerticalLazyRouteImport.update({
+    id: '/stepper-vertical',
+    path: '/stepper-vertical',
+    getParentRoute: () => StepperLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/stepper/stepper-vertical.lazy').then((d) => d.Route),
+  )
+const StepperStepperSplittedHelpersLazyRoute =
+  StepperStepperSplittedHelpersLazyRouteImport.update({
+    id: '/stepper-splittedHelpers',
+    path: '/stepper-splittedHelpers',
+    getParentRoute: () => StepperLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/stepper/stepper-splittedHelpers.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const StepperStepperSplittedLazyRoute =
+  StepperStepperSplittedLazyRouteImport.update({
+    id: '/stepper-splitted',
+    path: '/stepper-splitted',
+    getParentRoute: () => StepperLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/stepper/stepper-splitted.lazy').then((d) => d.Route),
+  )
+const StepperStepperSimpleLazyRoute =
+  StepperStepperSimpleLazyRouteImport.update({
+    id: '/stepper-simple',
+    path: '/stepper-simple',
+    getParentRoute: () => StepperLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/stepper/stepper-simple.lazy').then((d) => d.Route),
+  )
+const StepperStepperMinimalLazyRoute =
+  StepperStepperMinimalLazyRouteImport.update({
+    id: '/stepper-minimal',
+    path: '/stepper-minimal',
+    getParentRoute: () => StepperLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/stepper/stepper-minimal.lazy').then((d) => d.Route),
+  )
+const StepperStepperBasicLazyRoute = StepperStepperBasicLazyRouteImport.update({
+  id: '/stepper-basic',
+  path: '/stepper-basic',
+  getParentRoute: () => StepperLazyRoute,
+} as any).lazy(() =>
+  import('./routes/stepper/stepper-basic.lazy').then((d) => d.Route),
+)
 const PricingPricingSimplepriceLazyRoute =
   PricingPricingSimplepriceLazyRouteImport.update({
     id: '/pricing-simpleprice',
@@ -808,6 +894,7 @@ export interface FileRoutesByFullPath {
   '/navbar': typeof NavbarLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
+  '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -878,6 +965,13 @@ export interface FileRoutesByFullPath {
   '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
   '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
   '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
+  '/stepper/stepper-basic': typeof StepperStepperBasicLazyRoute
+  '/stepper/stepper-minimal': typeof StepperStepperMinimalLazyRoute
+  '/stepper/stepper-simple': typeof StepperStepperSimpleLazyRoute
+  '/stepper/stepper-splitted': typeof StepperStepperSplittedLazyRoute
+  '/stepper/stepper-splittedHelpers': typeof StepperStepperSplittedHelpersLazyRoute
+  '/stepper/stepper-vertical': typeof StepperStepperVerticalLazyRoute
+  '/stepper/stepper-verticalcollapsible': typeof StepperStepperVerticalcollapsibleLazyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
@@ -893,6 +987,7 @@ export interface FileRoutesByTo {
   '/navbar': typeof NavbarLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
+  '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -963,6 +1058,13 @@ export interface FileRoutesByTo {
   '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
   '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
   '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
+  '/stepper/stepper-basic': typeof StepperStepperBasicLazyRoute
+  '/stepper/stepper-minimal': typeof StepperStepperMinimalLazyRoute
+  '/stepper/stepper-simple': typeof StepperStepperSimpleLazyRoute
+  '/stepper/stepper-splitted': typeof StepperStepperSplittedLazyRoute
+  '/stepper/stepper-splittedHelpers': typeof StepperStepperSplittedHelpersLazyRoute
+  '/stepper/stepper-vertical': typeof StepperStepperVerticalLazyRoute
+  '/stepper/stepper-verticalcollapsible': typeof StepperStepperVerticalcollapsibleLazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -979,6 +1081,7 @@ export interface FileRoutesById {
   '/navbar': typeof NavbarLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
+  '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
@@ -1049,6 +1152,13 @@ export interface FileRoutesById {
   '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
   '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
   '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
+  '/stepper/stepper-basic': typeof StepperStepperBasicLazyRoute
+  '/stepper/stepper-minimal': typeof StepperStepperMinimalLazyRoute
+  '/stepper/stepper-simple': typeof StepperStepperSimpleLazyRoute
+  '/stepper/stepper-splitted': typeof StepperStepperSplittedLazyRoute
+  '/stepper/stepper-splittedHelpers': typeof StepperStepperSplittedHelpersLazyRoute
+  '/stepper/stepper-vertical': typeof StepperStepperVerticalLazyRoute
+  '/stepper/stepper-verticalcollapsible': typeof StepperStepperVerticalcollapsibleLazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -1066,6 +1176,7 @@ export interface FileRouteTypes {
     | '/navbar'
     | '/pricing'
     | '/pricing-comparison'
+    | '/stepper'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -1136,6 +1247,13 @@ export interface FileRouteTypes {
     | '/pricing/pricing-mostpopulartier'
     | '/pricing/pricing-mostpopulartierfilled'
     | '/pricing/pricing-simpleprice'
+    | '/stepper/stepper-basic'
+    | '/stepper/stepper-minimal'
+    | '/stepper/stepper-simple'
+    | '/stepper/stepper-splitted'
+    | '/stepper/stepper-splittedHelpers'
+    | '/stepper/stepper-vertical'
+    | '/stepper/stepper-verticalcollapsible'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -1151,6 +1269,7 @@ export interface FileRouteTypes {
     | '/navbar'
     | '/pricing'
     | '/pricing-comparison'
+    | '/stepper'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -1221,6 +1340,13 @@ export interface FileRouteTypes {
     | '/pricing/pricing-mostpopulartier'
     | '/pricing/pricing-mostpopulartierfilled'
     | '/pricing/pricing-simpleprice'
+    | '/stepper/stepper-basic'
+    | '/stepper/stepper-minimal'
+    | '/stepper/stepper-simple'
+    | '/stepper/stepper-splitted'
+    | '/stepper/stepper-splittedHelpers'
+    | '/stepper/stepper-vertical'
+    | '/stepper/stepper-verticalcollapsible'
   id:
     | '__root__'
     | '/'
@@ -1236,6 +1362,7 @@ export interface FileRouteTypes {
     | '/navbar'
     | '/pricing'
     | '/pricing-comparison'
+    | '/stepper'
     | '/teams'
     | '/test'
     | '/banners/banner-basic'
@@ -1306,6 +1433,13 @@ export interface FileRouteTypes {
     | '/pricing/pricing-mostpopulartier'
     | '/pricing/pricing-mostpopulartierfilled'
     | '/pricing/pricing-simpleprice'
+    | '/stepper/stepper-basic'
+    | '/stepper/stepper-minimal'
+    | '/stepper/stepper-simple'
+    | '/stepper/stepper-splitted'
+    | '/stepper/stepper-splittedHelpers'
+    | '/stepper/stepper-vertical'
+    | '/stepper/stepper-verticalcollapsible'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1322,6 +1456,7 @@ export interface RootRouteChildren {
   NavbarLazyRoute: typeof NavbarLazyRouteWithChildren
   PricingLazyRoute: typeof PricingLazyRouteWithChildren
   PricingComparisonLazyRoute: typeof PricingComparisonLazyRouteWithChildren
+  StepperLazyRoute: typeof StepperLazyRouteWithChildren
   TeamsLazyRoute: typeof TeamsLazyRoute
   TestLazyRoute: typeof TestLazyRoute
   BannersBannerBasicLazyRoute: typeof BannersBannerBasicLazyRoute
@@ -1352,6 +1487,13 @@ declare module '@tanstack/react-router' {
       path: '/teams'
       fullPath: '/teams'
       preLoaderRoute: typeof TeamsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stepper': {
+      id: '/stepper'
+      path: '/stepper'
+      fullPath: '/stepper'
+      preLoaderRoute: typeof StepperLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing-comparison': {
@@ -1444,6 +1586,55 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexLazyRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/stepper/stepper-verticalcollapsible': {
+      id: '/stepper/stepper-verticalcollapsible'
+      path: '/stepper-verticalcollapsible'
+      fullPath: '/stepper/stepper-verticalcollapsible'
+      preLoaderRoute: typeof StepperStepperVerticalcollapsibleLazyRouteImport
+      parentRoute: typeof StepperLazyRoute
+    }
+    '/stepper/stepper-vertical': {
+      id: '/stepper/stepper-vertical'
+      path: '/stepper-vertical'
+      fullPath: '/stepper/stepper-vertical'
+      preLoaderRoute: typeof StepperStepperVerticalLazyRouteImport
+      parentRoute: typeof StepperLazyRoute
+    }
+    '/stepper/stepper-splittedHelpers': {
+      id: '/stepper/stepper-splittedHelpers'
+      path: '/stepper-splittedHelpers'
+      fullPath: '/stepper/stepper-splittedHelpers'
+      preLoaderRoute: typeof StepperStepperSplittedHelpersLazyRouteImport
+      parentRoute: typeof StepperLazyRoute
+    }
+    '/stepper/stepper-splitted': {
+      id: '/stepper/stepper-splitted'
+      path: '/stepper-splitted'
+      fullPath: '/stepper/stepper-splitted'
+      preLoaderRoute: typeof StepperStepperSplittedLazyRouteImport
+      parentRoute: typeof StepperLazyRoute
+    }
+    '/stepper/stepper-simple': {
+      id: '/stepper/stepper-simple'
+      path: '/stepper-simple'
+      fullPath: '/stepper/stepper-simple'
+      preLoaderRoute: typeof StepperStepperSimpleLazyRouteImport
+      parentRoute: typeof StepperLazyRoute
+    }
+    '/stepper/stepper-minimal': {
+      id: '/stepper/stepper-minimal'
+      path: '/stepper-minimal'
+      fullPath: '/stepper/stepper-minimal'
+      preLoaderRoute: typeof StepperStepperMinimalLazyRouteImport
+      parentRoute: typeof StepperLazyRoute
+    }
+    '/stepper/stepper-basic': {
+      id: '/stepper/stepper-basic'
+      path: '/stepper-basic'
+      fullPath: '/stepper/stepper-basic'
+      preLoaderRoute: typeof StepperStepperBasicLazyRouteImport
+      parentRoute: typeof StepperLazyRoute
     }
     '/pricing/pricing-simpleprice': {
       id: '/pricing/pricing-simpleprice'
@@ -2153,6 +2344,32 @@ const PricingComparisonLazyRouteWithChildren =
     PricingComparisonLazyRouteChildren,
   )
 
+interface StepperLazyRouteChildren {
+  StepperStepperBasicLazyRoute: typeof StepperStepperBasicLazyRoute
+  StepperStepperMinimalLazyRoute: typeof StepperStepperMinimalLazyRoute
+  StepperStepperSimpleLazyRoute: typeof StepperStepperSimpleLazyRoute
+  StepperStepperSplittedLazyRoute: typeof StepperStepperSplittedLazyRoute
+  StepperStepperSplittedHelpersLazyRoute: typeof StepperStepperSplittedHelpersLazyRoute
+  StepperStepperVerticalLazyRoute: typeof StepperStepperVerticalLazyRoute
+  StepperStepperVerticalcollapsibleLazyRoute: typeof StepperStepperVerticalcollapsibleLazyRoute
+}
+
+const StepperLazyRouteChildren: StepperLazyRouteChildren = {
+  StepperStepperBasicLazyRoute: StepperStepperBasicLazyRoute,
+  StepperStepperMinimalLazyRoute: StepperStepperMinimalLazyRoute,
+  StepperStepperSimpleLazyRoute: StepperStepperSimpleLazyRoute,
+  StepperStepperSplittedLazyRoute: StepperStepperSplittedLazyRoute,
+  StepperStepperSplittedHelpersLazyRoute:
+    StepperStepperSplittedHelpersLazyRoute,
+  StepperStepperVerticalLazyRoute: StepperStepperVerticalLazyRoute,
+  StepperStepperVerticalcollapsibleLazyRoute:
+    StepperStepperVerticalcollapsibleLazyRoute,
+}
+
+const StepperLazyRouteWithChildren = StepperLazyRoute._addFileChildren(
+  StepperLazyRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   BannerLazyRoute: BannerLazyRoute,
@@ -2167,6 +2384,7 @@ const rootRouteChildren: RootRouteChildren = {
   NavbarLazyRoute: NavbarLazyRouteWithChildren,
   PricingLazyRoute: PricingLazyRouteWithChildren,
   PricingComparisonLazyRoute: PricingComparisonLazyRouteWithChildren,
+  StepperLazyRoute: StepperLazyRouteWithChildren,
   TeamsLazyRoute: TeamsLazyRoute,
   TestLazyRoute: TestLazyRoute,
   BannersBannerBasicLazyRoute: BannersBannerBasicLazyRoute,
