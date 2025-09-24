@@ -41,6 +41,33 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/application-scrollingbanners-vertical/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-scrollingbanners-tworows/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-scrollingbanners-testimonials/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-scrollingbanners-grid/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-scrollingbanners-basic/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-feedback-modal/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-feedback-popover/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-feedback-textarea/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-feedback-rating/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/application-stepper-verticalsplitted-helpers/tsconfig.lib.json"
     },
     {

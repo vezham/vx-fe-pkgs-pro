@@ -1,0 +1,9 @@
+{
+  "name": "application-scrollingbanners-testimonials",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-scrollingbanners-testimonials/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-scrollingbanners-testimonials --web",
+  "targets": {}
+}

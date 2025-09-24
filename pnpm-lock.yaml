@@ -273,6 +273,21 @@ importers:
       '@vx-pro/application-navbar-centeredItems-navbar':
         specifier: workspace:*
         version: link:../../packages/components/application-navbar-centeredItems-navbar
+      '@vx-pro/application-scrollingbanners-basic':
+        specifier: workspace:*
+        version: link:../../packages/components/application-scrollingbanners-basic
+      '@vx-pro/application-scrollingbanners-grid':
+        specifier: workspace:*
+        version: link:../../packages/components/application-scrollingbanners-grid
+      '@vx-pro/application-scrollingbanners-testimonials':
+        specifier: workspace:*
+        version: link:../../packages/components/application-scrollingbanners-testimonials
+      '@vx-pro/application-scrollingbanners-tworows':
+        specifier: workspace:*
+        version: link:../../packages/components/application-scrollingbanners-tworows
+      '@vx-pro/application-scrollingbanners-vertical':
+        specifier: workspace:*
+        version: link:../../packages/components/application-scrollingbanners-vertical
       '@vx-pro/application-stepper-basic':
         specifier: workspace:*
         version: link:../../packages/components/application-stepper-basic
@@ -560,6 +575,20 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
+
+  packages/components/application-scrollingbanners-basic: {}
+
+  packages/components/application-scrollingbanners-grid: {}
+
+  packages/components/application-scrollingbanners-testimonials:
+    devDependencies:
+      usehooks-ts:
+        specifier: ^3.1.0
+        version: 3.1.1(react@19.0.0)
+
+  packages/components/application-scrollingbanners-tworows: {}
+
+  packages/components/application-scrollingbanners-vertical: {}
 
   packages/components/application-stepper-basic:
     devDependencies:
@@ -9881,6 +9910,12 @@ packages:
     resolution: {integrity: sha512-Rb46I4cGGVBmjamjphe8L/UnvJD+uPPtTkNvX5mZgqdbavhI4EbgIWJiIHXJ8bc/i9EQGPRh4DwEURJ552Do0A==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  usehooks-ts@3.1.1:
+    resolution: {integrity: sha512-I4diPp9Cq6ieSUH2wu+fDAVQO43xwtulo+fKEidHUwZPnYImbtkTjzIJYcDcJqxgmX31GVqNFURodvcgHcW0pA==}
+    engines: {node: '>=16.15.0'}
+    peerDependencies:
+      react: ^16.8.0  || ^17 || ^18 || ^19 || ^19.0.0-rc
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -20877,6 +20912,11 @@ snapshots:
 
   use-sync-external-store@1.5.0(react@19.0.0):
     dependencies:
+      react: 19.0.0
+
+  usehooks-ts@3.1.1(react@19.0.0):
+    dependencies:
+      lodash.debounce: 4.0.8
       react: 19.0.0
 
   util-deprecate@1.0.2: {}

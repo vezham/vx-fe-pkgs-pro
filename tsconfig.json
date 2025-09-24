@@ -259,6 +259,21 @@
     },
     {
       "path": "./packages/components/application-feedback-modal"
+    },
+    {
+      "path": "./packages/components/application-scrollingbanners-basic"
+    },
+    {
+      "path": "./packages/components/application-scrollingbanners-tworows"
+    },
+    {
+      "path": "./packages/components/application-scrollingbanners-vertical"
+    },
+    {
+      "path": "./packages/components/application-scrollingbanners-grid"
+    },
+    {
+      "path": "./packages/components/application-scrollingbanners-testimonials"
     }
   ]
 }

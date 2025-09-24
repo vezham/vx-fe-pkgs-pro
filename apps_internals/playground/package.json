@@ -87,6 +87,11 @@
     "@vx-pro/application-feedback-rating": "workspace:*",
     "@vx-pro/application-feedback-textarea": "workspace:*",
     "@vx-pro/application-feedback-popover": "workspace:*",
-    "@vx-pro/application-feedback-modal": "workspace:*"
+    "@vx-pro/application-feedback-modal": "workspace:*",
+    "@vx-pro/application-scrollingbanners-basic": "workspace:*",
+    "@vx-pro/application-scrollingbanners-grid": "workspace:*",
+    "@vx-pro/application-scrollingbanners-testimonials": "workspace:*",
+    "@vx-pro/application-scrollingbanners-tworows": "workspace:*",
+    "@vx-pro/application-scrollingbanners-vertical": "workspace:*"
   }
 }

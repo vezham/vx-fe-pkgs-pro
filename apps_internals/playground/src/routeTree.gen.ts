@@ -15,6 +15,7 @@ import { Route as rootRouteImport } from './routes/__root'
 const TestLazyRouteImport = createFileRoute('/test')()
 const TeamsLazyRouteImport = createFileRoute('/teams')()
 const StepperLazyRouteImport = createFileRoute('/stepper')()
+const ScrollingbannersLazyRouteImport = createFileRoute('/scrollingbanners')()
 const PricingComparisonLazyRouteImport = createFileRoute(
   '/pricing-comparison',
 )()
@@ -51,6 +52,20 @@ const StepperStepperMinimalLazyRouteImport = createFileRoute(
 )()
 const StepperStepperBasicLazyRouteImport = createFileRoute(
   '/stepper/stepper-basic',
+)()
+const ScrollingbannersScrollingbannersVerticalLazyRouteImport = createFileRoute(
+  '/scrollingbanners/scrollingbanners-vertical',
+)()
+const ScrollingbannersScrollingbannersTworowsLazyRouteImport = createFileRoute(
+  '/scrollingbanners/scrollingbanners-tworows',
+)()
+const ScrollingbannersScrollingbannersTestimonialsLazyRouteImport =
+  createFileRoute('/scrollingbanners/scrollingbanners-testimonials')()
+const ScrollingbannersScrollingbannersGridLazyRouteImport = createFileRoute(
+  '/scrollingbanners/scrollingbanners-grid',
+)()
+const ScrollingbannersScrollingbannersBasicLazyRouteImport = createFileRoute(
+  '/scrollingbanners/scrollingbanners-basic',
 )()
 const PricingPricingSimplepriceLazyRouteImport = createFileRoute(
   '/pricing/pricing-simpleprice',
@@ -229,6 +244,13 @@ const StepperLazyRoute = StepperLazyRouteImport.update({
   path: '/stepper',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/stepper.lazy').then((d) => d.Route))
+const ScrollingbannersLazyRoute = ScrollingbannersLazyRouteImport.update({
+  id: '/scrollingbanners',
+  path: '/scrollingbanners',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/scrollingbanners.lazy').then((d) => d.Route),
+)
 const PricingComparisonLazyRoute = PricingComparisonLazyRouteImport.update({
   id: '/pricing-comparison',
   path: '/pricing-comparison',
@@ -360,6 +382,56 @@ const StepperStepperBasicLazyRoute = StepperStepperBasicLazyRouteImport.update({
 } as any).lazy(() =>
   import('./routes/stepper/stepper-basic.lazy').then((d) => d.Route),
 )
+const ScrollingbannersScrollingbannersVerticalLazyRoute =
+  ScrollingbannersScrollingbannersVerticalLazyRouteImport.update({
+    id: '/scrollingbanners-vertical',
+    path: '/scrollingbanners-vertical',
+    getParentRoute: () => ScrollingbannersLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/scrollingbanners/scrollingbanners-vertical.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const ScrollingbannersScrollingbannersTworowsLazyRoute =
+  ScrollingbannersScrollingbannersTworowsLazyRouteImport.update({
+    id: '/scrollingbanners-tworows',
+    path: '/scrollingbanners-tworows',
+    getParentRoute: () => ScrollingbannersLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/scrollingbanners/scrollingbanners-tworows.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const ScrollingbannersScrollingbannersTestimonialsLazyRoute =
+  ScrollingbannersScrollingbannersTestimonialsLazyRouteImport.update({
+    id: '/scrollingbanners-testimonials',
+    path: '/scrollingbanners-testimonials',
+    getParentRoute: () => ScrollingbannersLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/scrollingbanners/scrollingbanners-testimonials.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const ScrollingbannersScrollingbannersGridLazyRoute =
+  ScrollingbannersScrollingbannersGridLazyRouteImport.update({
+    id: '/scrollingbanners-grid',
+    path: '/scrollingbanners-grid',
+    getParentRoute: () => ScrollingbannersLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/scrollingbanners/scrollingbanners-grid.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const ScrollingbannersScrollingbannersBasicLazyRoute =
+  ScrollingbannersScrollingbannersBasicLazyRouteImport.update({
+    id: '/scrollingbanners-basic',
+    path: '/scrollingbanners-basic',
+    getParentRoute: () => ScrollingbannersLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/scrollingbanners/scrollingbanners-basic.lazy').then(
+      (d) => d.Route,
+    ),
+  )
 const PricingPricingSimplepriceLazyRoute =
   PricingPricingSimplepriceLazyRouteImport.update({
     id: '/pricing-simpleprice',
@@ -945,6 +1017,7 @@ export interface FileRoutesByFullPath {
   '/navbar': typeof NavbarLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
+  '/scrollingbanners': typeof ScrollingbannersLazyRouteWithChildren
   '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
@@ -1020,6 +1093,11 @@ export interface FileRoutesByFullPath {
   '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
   '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
   '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
+  '/scrollingbanners/scrollingbanners-basic': typeof ScrollingbannersScrollingbannersBasicLazyRoute
+  '/scrollingbanners/scrollingbanners-grid': typeof ScrollingbannersScrollingbannersGridLazyRoute
+  '/scrollingbanners/scrollingbanners-testimonials': typeof ScrollingbannersScrollingbannersTestimonialsLazyRoute
+  '/scrollingbanners/scrollingbanners-tworows': typeof ScrollingbannersScrollingbannersTworowsLazyRoute
+  '/scrollingbanners/scrollingbanners-vertical': typeof ScrollingbannersScrollingbannersVerticalLazyRoute
   '/stepper/stepper-basic': typeof StepperStepperBasicLazyRoute
   '/stepper/stepper-minimal': typeof StepperStepperMinimalLazyRoute
   '/stepper/stepper-simple': typeof StepperStepperSimpleLazyRoute
@@ -1043,6 +1121,7 @@ export interface FileRoutesByTo {
   '/navbar': typeof NavbarLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
+  '/scrollingbanners': typeof ScrollingbannersLazyRouteWithChildren
   '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
@@ -1118,6 +1197,11 @@ export interface FileRoutesByTo {
   '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
   '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
   '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
+  '/scrollingbanners/scrollingbanners-basic': typeof ScrollingbannersScrollingbannersBasicLazyRoute
+  '/scrollingbanners/scrollingbanners-grid': typeof ScrollingbannersScrollingbannersGridLazyRoute
+  '/scrollingbanners/scrollingbanners-testimonials': typeof ScrollingbannersScrollingbannersTestimonialsLazyRoute
+  '/scrollingbanners/scrollingbanners-tworows': typeof ScrollingbannersScrollingbannersTworowsLazyRoute
+  '/scrollingbanners/scrollingbanners-vertical': typeof ScrollingbannersScrollingbannersVerticalLazyRoute
   '/stepper/stepper-basic': typeof StepperStepperBasicLazyRoute
   '/stepper/stepper-minimal': typeof StepperStepperMinimalLazyRoute
   '/stepper/stepper-simple': typeof StepperStepperSimpleLazyRoute
@@ -1142,6 +1226,7 @@ export interface FileRoutesById {
   '/navbar': typeof NavbarLazyRouteWithChildren
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
+  '/scrollingbanners': typeof ScrollingbannersLazyRouteWithChildren
   '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
@@ -1217,6 +1302,11 @@ export interface FileRoutesById {
   '/pricing/pricing-mostpopulartier': typeof PricingPricingMostpopulartierLazyRoute
   '/pricing/pricing-mostpopulartierfilled': typeof PricingPricingMostpopulartierfilledLazyRoute
   '/pricing/pricing-simpleprice': typeof PricingPricingSimplepriceLazyRoute
+  '/scrollingbanners/scrollingbanners-basic': typeof ScrollingbannersScrollingbannersBasicLazyRoute
+  '/scrollingbanners/scrollingbanners-grid': typeof ScrollingbannersScrollingbannersGridLazyRoute
+  '/scrollingbanners/scrollingbanners-testimonials': typeof ScrollingbannersScrollingbannersTestimonialsLazyRoute
+  '/scrollingbanners/scrollingbanners-tworows': typeof ScrollingbannersScrollingbannersTworowsLazyRoute
+  '/scrollingbanners/scrollingbanners-vertical': typeof ScrollingbannersScrollingbannersVerticalLazyRoute
   '/stepper/stepper-basic': typeof StepperStepperBasicLazyRoute
   '/stepper/stepper-minimal': typeof StepperStepperMinimalLazyRoute
   '/stepper/stepper-simple': typeof StepperStepperSimpleLazyRoute
@@ -1242,6 +1332,7 @@ export interface FileRouteTypes {
     | '/navbar'
     | '/pricing'
     | '/pricing-comparison'
+    | '/scrollingbanners'
     | '/stepper'
     | '/teams'
     | '/test'
@@ -1317,6 +1408,11 @@ export interface FileRouteTypes {
     | '/pricing/pricing-mostpopulartier'
     | '/pricing/pricing-mostpopulartierfilled'
     | '/pricing/pricing-simpleprice'
+    | '/scrollingbanners/scrollingbanners-basic'
+    | '/scrollingbanners/scrollingbanners-grid'
+    | '/scrollingbanners/scrollingbanners-testimonials'
+    | '/scrollingbanners/scrollingbanners-tworows'
+    | '/scrollingbanners/scrollingbanners-vertical'
     | '/stepper/stepper-basic'
     | '/stepper/stepper-minimal'
     | '/stepper/stepper-simple'
@@ -1340,6 +1436,7 @@ export interface FileRouteTypes {
     | '/navbar'
     | '/pricing'
     | '/pricing-comparison'
+    | '/scrollingbanners'
     | '/stepper'
     | '/teams'
     | '/test'
@@ -1415,6 +1512,11 @@ export interface FileRouteTypes {
     | '/pricing/pricing-mostpopulartier'
     | '/pricing/pricing-mostpopulartierfilled'
     | '/pricing/pricing-simpleprice'
+    | '/scrollingbanners/scrollingbanners-basic'
+    | '/scrollingbanners/scrollingbanners-grid'
+    | '/scrollingbanners/scrollingbanners-testimonials'
+    | '/scrollingbanners/scrollingbanners-tworows'
+    | '/scrollingbanners/scrollingbanners-vertical'
     | '/stepper/stepper-basic'
     | '/stepper/stepper-minimal'
     | '/stepper/stepper-simple'
@@ -1438,6 +1540,7 @@ export interface FileRouteTypes {
     | '/navbar'
     | '/pricing'
     | '/pricing-comparison'
+    | '/scrollingbanners'
     | '/stepper'
     | '/teams'
     | '/test'
@@ -1513,6 +1616,11 @@ export interface FileRouteTypes {
     | '/pricing/pricing-mostpopulartier'
     | '/pricing/pricing-mostpopulartierfilled'
     | '/pricing/pricing-simpleprice'
+    | '/scrollingbanners/scrollingbanners-basic'
+    | '/scrollingbanners/scrollingbanners-grid'
+    | '/scrollingbanners/scrollingbanners-testimonials'
+    | '/scrollingbanners/scrollingbanners-tworows'
+    | '/scrollingbanners/scrollingbanners-vertical'
     | '/stepper/stepper-basic'
     | '/stepper/stepper-minimal'
     | '/stepper/stepper-simple'
@@ -1537,6 +1645,7 @@ export interface RootRouteChildren {
   NavbarLazyRoute: typeof NavbarLazyRouteWithChildren
   PricingLazyRoute: typeof PricingLazyRouteWithChildren
   PricingComparisonLazyRoute: typeof PricingComparisonLazyRouteWithChildren
+  ScrollingbannersLazyRoute: typeof ScrollingbannersLazyRouteWithChildren
   StepperLazyRoute: typeof StepperLazyRouteWithChildren
   TeamsLazyRoute: typeof TeamsLazyRoute
   TestLazyRoute: typeof TestLazyRoute
@@ -1575,6 +1684,13 @@ declare module '@tanstack/react-router' {
       path: '/stepper'
       fullPath: '/stepper'
       preLoaderRoute: typeof StepperLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scrollingbanners': {
+      id: '/scrollingbanners'
+      path: '/scrollingbanners'
+      fullPath: '/scrollingbanners'
+      preLoaderRoute: typeof ScrollingbannersLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing-comparison': {
@@ -1723,6 +1839,41 @@ declare module '@tanstack/react-router' {
       fullPath: '/stepper/stepper-basic'
       preLoaderRoute: typeof StepperStepperBasicLazyRouteImport
       parentRoute: typeof StepperLazyRoute
+    }
+    '/scrollingbanners/scrollingbanners-vertical': {
+      id: '/scrollingbanners/scrollingbanners-vertical'
+      path: '/scrollingbanners-vertical'
+      fullPath: '/scrollingbanners/scrollingbanners-vertical'
+      preLoaderRoute: typeof ScrollingbannersScrollingbannersVerticalLazyRouteImport
+      parentRoute: typeof ScrollingbannersLazyRoute
+    }
+    '/scrollingbanners/scrollingbanners-tworows': {
+      id: '/scrollingbanners/scrollingbanners-tworows'
+      path: '/scrollingbanners-tworows'
+      fullPath: '/scrollingbanners/scrollingbanners-tworows'
+      preLoaderRoute: typeof ScrollingbannersScrollingbannersTworowsLazyRouteImport
+      parentRoute: typeof ScrollingbannersLazyRoute
+    }
+    '/scrollingbanners/scrollingbanners-testimonials': {
+      id: '/scrollingbanners/scrollingbanners-testimonials'
+      path: '/scrollingbanners-testimonials'
+      fullPath: '/scrollingbanners/scrollingbanners-testimonials'
+      preLoaderRoute: typeof ScrollingbannersScrollingbannersTestimonialsLazyRouteImport
+      parentRoute: typeof ScrollingbannersLazyRoute
+    }
+    '/scrollingbanners/scrollingbanners-grid': {
+      id: '/scrollingbanners/scrollingbanners-grid'
+      path: '/scrollingbanners-grid'
+      fullPath: '/scrollingbanners/scrollingbanners-grid'
+      preLoaderRoute: typeof ScrollingbannersScrollingbannersGridLazyRouteImport
+      parentRoute: typeof ScrollingbannersLazyRoute
+    }
+    '/scrollingbanners/scrollingbanners-basic': {
+      id: '/scrollingbanners/scrollingbanners-basic'
+      path: '/scrollingbanners-basic'
+      fullPath: '/scrollingbanners/scrollingbanners-basic'
+      preLoaderRoute: typeof ScrollingbannersScrollingbannersBasicLazyRouteImport
+      parentRoute: typeof ScrollingbannersLazyRoute
     }
     '/pricing/pricing-simpleprice': {
       id: '/pricing/pricing-simpleprice'
@@ -2478,6 +2629,30 @@ const PricingComparisonLazyRouteWithChildren =
     PricingComparisonLazyRouteChildren,
   )
 
+interface ScrollingbannersLazyRouteChildren {
+  ScrollingbannersScrollingbannersBasicLazyRoute: typeof ScrollingbannersScrollingbannersBasicLazyRoute
+  ScrollingbannersScrollingbannersGridLazyRoute: typeof ScrollingbannersScrollingbannersGridLazyRoute
+  ScrollingbannersScrollingbannersTestimonialsLazyRoute: typeof ScrollingbannersScrollingbannersTestimonialsLazyRoute
+  ScrollingbannersScrollingbannersTworowsLazyRoute: typeof ScrollingbannersScrollingbannersTworowsLazyRoute
+  ScrollingbannersScrollingbannersVerticalLazyRoute: typeof ScrollingbannersScrollingbannersVerticalLazyRoute
+}
+
+const ScrollingbannersLazyRouteChildren: ScrollingbannersLazyRouteChildren = {
+  ScrollingbannersScrollingbannersBasicLazyRoute:
+    ScrollingbannersScrollingbannersBasicLazyRoute,
+  ScrollingbannersScrollingbannersGridLazyRoute:
+    ScrollingbannersScrollingbannersGridLazyRoute,
+  ScrollingbannersScrollingbannersTestimonialsLazyRoute:
+    ScrollingbannersScrollingbannersTestimonialsLazyRoute,
+  ScrollingbannersScrollingbannersTworowsLazyRoute:
+    ScrollingbannersScrollingbannersTworowsLazyRoute,
+  ScrollingbannersScrollingbannersVerticalLazyRoute:
+    ScrollingbannersScrollingbannersVerticalLazyRoute,
+}
+
+const ScrollingbannersLazyRouteWithChildren =
+  ScrollingbannersLazyRoute._addFileChildren(ScrollingbannersLazyRouteChildren)
+
 interface StepperLazyRouteChildren {
   StepperStepperBasicLazyRoute: typeof StepperStepperBasicLazyRoute
   StepperStepperMinimalLazyRoute: typeof StepperStepperMinimalLazyRoute
@@ -2519,6 +2694,7 @@ const rootRouteChildren: RootRouteChildren = {
   NavbarLazyRoute: NavbarLazyRouteWithChildren,
   PricingLazyRoute: PricingLazyRouteWithChildren,
   PricingComparisonLazyRoute: PricingComparisonLazyRouteWithChildren,
+  ScrollingbannersLazyRoute: ScrollingbannersLazyRouteWithChildren,
   StepperLazyRoute: StepperLazyRouteWithChildren,
   TeamsLazyRoute: TeamsLazyRoute,
   TestLazyRoute: TestLazyRoute,
