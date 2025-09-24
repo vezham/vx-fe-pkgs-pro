@@ -247,6 +247,18 @@
     },
     {
       "path": "./packages/components/application-stepper-verticalcollapsible"
+    },
+    {
+      "path": "./packages/components/application-feedback-rating"
+    },
+    {
+      "path": "./packages/components/application-feedback-textarea"
+    },
+    {
+      "path": "./packages/components/application-feedback-popover"
+    },
+    {
+      "path": "./packages/components/application-feedback-modal"
     }
   ]
 }

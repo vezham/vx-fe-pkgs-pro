@@ -1,5 +1,5 @@
 import { createLazyFileRoute, Outlet } from '@tanstack/react-router'
 
-export const Route = createLazyFileRoute('/banner')({
+export const Route = createLazyFileRoute('/feedback')({
   component: () => <Outlet />
 })

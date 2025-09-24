@@ -252,6 +252,18 @@ importers:
       '@vx-pro/abc':
         specifier: workspace:*
         version: link:../../packages/components/abc
+      '@vx-pro/application-feedback-modal':
+        specifier: workspace:*
+        version: link:../../packages/components/application-feedback-modal
+      '@vx-pro/application-feedback-popover':
+        specifier: workspace:*
+        version: link:../../packages/components/application-feedback-popover
+      '@vx-pro/application-feedback-rating':
+        specifier: workspace:*
+        version: link:../../packages/components/application-feedback-rating
+      '@vx-pro/application-feedback-textarea':
+        specifier: workspace:*
+        version: link:../../packages/components/application-feedback-textarea
       '@vx-pro/application-navbar-basic':
         specifier: workspace:*
         version: link:../../packages/components/application-navbar-basic
@@ -506,6 +518,30 @@ importers:
         version: 16.4.7
 
   packages/components/abc: {}
+
+  packages/components/application-feedback-modal:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-feedback-popover:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-feedback-rating:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-feedback-textarea:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
 
   packages/components/application-navbar-basic:
     devDependencies:

@@ -24,6 +24,7 @@ const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const HerosectionLazyRouteImport = createFileRoute('/herosection')()
 const GraphLazyRouteImport = createFileRoute('/graph')()
 const FooterLazyRouteImport = createFileRoute('/footer')()
+const FeedbackLazyRouteImport = createFileRoute('/feedback')()
 const FaqsLazyRouteImport = createFileRoute('/faqs')()
 const CookiesLazyRouteImport = createFileRoute('/cookies')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
@@ -135,6 +136,18 @@ const FootersFooterNewsletterLazyRouteImport = createFileRoute(
 )()
 const FootersFooterColumnLazyRouteImport = createFileRoute(
   '/footers/footer-column',
+)()
+const FeedbackFeedbackTextareaLazyRouteImport = createFileRoute(
+  '/feedback/feedback-textarea',
+)()
+const FeedbackFeedbackRatingLazyRouteImport = createFileRoute(
+  '/feedback/feedback-rating',
+)()
+const FeedbackFeedbackPopoverLazyRouteImport = createFileRoute(
+  '/feedback/feedback-popover',
+)()
+const FeedbackFeedbackModalLazyRouteImport = createFileRoute(
+  '/feedback/feedback-modal',
 )()
 const FaqsTwocolumnFaqsLazyRouteImport = createFileRoute(
   '/faqs/twocolumn-faqs',
@@ -253,6 +266,11 @@ const FooterLazyRoute = FooterLazyRouteImport.update({
   path: '/footer',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/footer.lazy').then((d) => d.Route))
+const FeedbackLazyRoute = FeedbackLazyRouteImport.update({
+  id: '/feedback',
+  path: '/feedback',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/feedback.lazy').then((d) => d.Route))
 const FaqsLazyRoute = FaqsLazyRouteImport.update({
   id: '/faqs',
   path: '/faqs',
@@ -658,6 +676,38 @@ const FootersFooterColumnLazyRoute = FootersFooterColumnLazyRouteImport.update({
 } as any).lazy(() =>
   import('./routes/footers/footer-column.lazy').then((d) => d.Route),
 )
+const FeedbackFeedbackTextareaLazyRoute =
+  FeedbackFeedbackTextareaLazyRouteImport.update({
+    id: '/feedback-textarea',
+    path: '/feedback-textarea',
+    getParentRoute: () => FeedbackLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/feedback/feedback-textarea.lazy').then((d) => d.Route),
+  )
+const FeedbackFeedbackRatingLazyRoute =
+  FeedbackFeedbackRatingLazyRouteImport.update({
+    id: '/feedback-rating',
+    path: '/feedback-rating',
+    getParentRoute: () => FeedbackLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/feedback/feedback-rating.lazy').then((d) => d.Route),
+  )
+const FeedbackFeedbackPopoverLazyRoute =
+  FeedbackFeedbackPopoverLazyRouteImport.update({
+    id: '/feedback-popover',
+    path: '/feedback-popover',
+    getParentRoute: () => FeedbackLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/feedback/feedback-popover.lazy').then((d) => d.Route),
+  )
+const FeedbackFeedbackModalLazyRoute =
+  FeedbackFeedbackModalLazyRouteImport.update({
+    id: '/feedback-modal',
+    path: '/feedback-modal',
+    getParentRoute: () => FeedbackLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/feedback/feedback-modal.lazy').then((d) => d.Route),
+  )
 const FaqsTwocolumnFaqsLazyRoute = FaqsTwocolumnFaqsLazyRouteImport.update({
   id: '/twocolumn-faqs',
   path: '/twocolumn-faqs',
@@ -887,6 +937,7 @@ export interface FileRoutesByFullPath {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
+  '/feedback': typeof FeedbackLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/herosection': typeof HerosectionLazyRouteWithChildren
@@ -927,6 +978,10 @@ export interface FileRoutesByFullPath {
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
   '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
+  '/feedback/feedback-modal': typeof FeedbackFeedbackModalLazyRoute
+  '/feedback/feedback-popover': typeof FeedbackFeedbackPopoverLazyRoute
+  '/feedback/feedback-rating': typeof FeedbackFeedbackRatingLazyRoute
+  '/feedback/feedback-textarea': typeof FeedbackFeedbackTextareaLazyRoute
   '/footers/footer-column': typeof FootersFooterColumnLazyRoute
   '/footers/footer-newsletter': typeof FootersFooterNewsletterLazyRoute
   '/footers/footer-socialLink': typeof FootersFooterSocialLinkLazyRoute
@@ -980,6 +1035,7 @@ export interface FileRoutesByTo {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
+  '/feedback': typeof FeedbackLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/herosection': typeof HerosectionLazyRouteWithChildren
@@ -1020,6 +1076,10 @@ export interface FileRoutesByTo {
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
   '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
+  '/feedback/feedback-modal': typeof FeedbackFeedbackModalLazyRoute
+  '/feedback/feedback-popover': typeof FeedbackFeedbackPopoverLazyRoute
+  '/feedback/feedback-rating': typeof FeedbackFeedbackRatingLazyRoute
+  '/feedback/feedback-textarea': typeof FeedbackFeedbackTextareaLazyRoute
   '/footers/footer-column': typeof FootersFooterColumnLazyRoute
   '/footers/footer-newsletter': typeof FootersFooterNewsletterLazyRoute
   '/footers/footer-socialLink': typeof FootersFooterSocialLinkLazyRoute
@@ -1074,6 +1134,7 @@ export interface FileRoutesById {
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
+  '/feedback': typeof FeedbackLazyRouteWithChildren
   '/footer': typeof FooterLazyRoute
   '/graph': typeof GraphLazyRouteWithChildren
   '/herosection': typeof HerosectionLazyRouteWithChildren
@@ -1114,6 +1175,10 @@ export interface FileRoutesById {
   '/faqs/centered-faqs': typeof FaqsCenteredFaqsLazyRoute
   '/faqs/faqs-divider': typeof FaqsFaqsDividerLazyRoute
   '/faqs/twocolumn-faqs': typeof FaqsTwocolumnFaqsLazyRoute
+  '/feedback/feedback-modal': typeof FeedbackFeedbackModalLazyRoute
+  '/feedback/feedback-popover': typeof FeedbackFeedbackPopoverLazyRoute
+  '/feedback/feedback-rating': typeof FeedbackFeedbackRatingLazyRoute
+  '/feedback/feedback-textarea': typeof FeedbackFeedbackTextareaLazyRoute
   '/footers/footer-column': typeof FootersFooterColumnLazyRoute
   '/footers/footer-newsletter': typeof FootersFooterNewsletterLazyRoute
   '/footers/footer-socialLink': typeof FootersFooterSocialLinkLazyRoute
@@ -1169,6 +1234,7 @@ export interface FileRouteTypes {
     | '/charts'
     | '/cookies'
     | '/faqs'
+    | '/feedback'
     | '/footer'
     | '/graph'
     | '/herosection'
@@ -1209,6 +1275,10 @@ export interface FileRouteTypes {
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
     | '/faqs/twocolumn-faqs'
+    | '/feedback/feedback-modal'
+    | '/feedback/feedback-popover'
+    | '/feedback/feedback-rating'
+    | '/feedback/feedback-textarea'
     | '/footers/footer-column'
     | '/footers/footer-newsletter'
     | '/footers/footer-socialLink'
@@ -1262,6 +1332,7 @@ export interface FileRouteTypes {
     | '/charts'
     | '/cookies'
     | '/faqs'
+    | '/feedback'
     | '/footer'
     | '/graph'
     | '/herosection'
@@ -1302,6 +1373,10 @@ export interface FileRouteTypes {
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
     | '/faqs/twocolumn-faqs'
+    | '/feedback/feedback-modal'
+    | '/feedback/feedback-popover'
+    | '/feedback/feedback-rating'
+    | '/feedback/feedback-textarea'
     | '/footers/footer-column'
     | '/footers/footer-newsletter'
     | '/footers/footer-socialLink'
@@ -1355,6 +1430,7 @@ export interface FileRouteTypes {
     | '/charts'
     | '/cookies'
     | '/faqs'
+    | '/feedback'
     | '/footer'
     | '/graph'
     | '/herosection'
@@ -1395,6 +1471,10 @@ export interface FileRouteTypes {
     | '/faqs/centered-faqs'
     | '/faqs/faqs-divider'
     | '/faqs/twocolumn-faqs'
+    | '/feedback/feedback-modal'
+    | '/feedback/feedback-popover'
+    | '/feedback/feedback-rating'
+    | '/feedback/feedback-textarea'
     | '/footers/footer-column'
     | '/footers/footer-newsletter'
     | '/footers/footer-socialLink'
@@ -1449,6 +1529,7 @@ export interface RootRouteChildren {
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
   CookiesLazyRoute: typeof CookiesLazyRouteWithChildren
   FaqsLazyRoute: typeof FaqsLazyRouteWithChildren
+  FeedbackLazyRoute: typeof FeedbackLazyRouteWithChildren
   FooterLazyRoute: typeof FooterLazyRoute
   GraphLazyRoute: typeof GraphLazyRouteWithChildren
   HerosectionLazyRoute: typeof HerosectionLazyRouteWithChildren
@@ -1543,6 +1624,13 @@ declare module '@tanstack/react-router' {
       path: '/footer'
       fullPath: '/footer'
       preLoaderRoute: typeof FooterLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feedback': {
+      id: '/feedback'
+      path: '/feedback'
+      fullPath: '/feedback'
+      preLoaderRoute: typeof FeedbackLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faqs': {
@@ -1902,6 +1990,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FootersFooterColumnLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/feedback/feedback-textarea': {
+      id: '/feedback/feedback-textarea'
+      path: '/feedback-textarea'
+      fullPath: '/feedback/feedback-textarea'
+      preLoaderRoute: typeof FeedbackFeedbackTextareaLazyRouteImport
+      parentRoute: typeof FeedbackLazyRoute
+    }
+    '/feedback/feedback-rating': {
+      id: '/feedback/feedback-rating'
+      path: '/feedback-rating'
+      fullPath: '/feedback/feedback-rating'
+      preLoaderRoute: typeof FeedbackFeedbackRatingLazyRouteImport
+      parentRoute: typeof FeedbackLazyRoute
+    }
+    '/feedback/feedback-popover': {
+      id: '/feedback/feedback-popover'
+      path: '/feedback-popover'
+      fullPath: '/feedback/feedback-popover'
+      preLoaderRoute: typeof FeedbackFeedbackPopoverLazyRouteImport
+      parentRoute: typeof FeedbackLazyRoute
+    }
+    '/feedback/feedback-modal': {
+      id: '/feedback/feedback-modal'
+      path: '/feedback-modal'
+      fullPath: '/feedback/feedback-modal'
+      preLoaderRoute: typeof FeedbackFeedbackModalLazyRouteImport
+      parentRoute: typeof FeedbackLazyRoute
+    }
     '/faqs/twocolumn-faqs': {
       id: '/faqs/twocolumn-faqs'
       path: '/twocolumn-faqs'
@@ -2200,6 +2316,24 @@ const FaqsLazyRouteWithChildren = FaqsLazyRoute._addFileChildren(
   FaqsLazyRouteChildren,
 )
 
+interface FeedbackLazyRouteChildren {
+  FeedbackFeedbackModalLazyRoute: typeof FeedbackFeedbackModalLazyRoute
+  FeedbackFeedbackPopoverLazyRoute: typeof FeedbackFeedbackPopoverLazyRoute
+  FeedbackFeedbackRatingLazyRoute: typeof FeedbackFeedbackRatingLazyRoute
+  FeedbackFeedbackTextareaLazyRoute: typeof FeedbackFeedbackTextareaLazyRoute
+}
+
+const FeedbackLazyRouteChildren: FeedbackLazyRouteChildren = {
+  FeedbackFeedbackModalLazyRoute: FeedbackFeedbackModalLazyRoute,
+  FeedbackFeedbackPopoverLazyRoute: FeedbackFeedbackPopoverLazyRoute,
+  FeedbackFeedbackRatingLazyRoute: FeedbackFeedbackRatingLazyRoute,
+  FeedbackFeedbackTextareaLazyRoute: FeedbackFeedbackTextareaLazyRoute,
+}
+
+const FeedbackLazyRouteWithChildren = FeedbackLazyRoute._addFileChildren(
+  FeedbackLazyRouteChildren,
+)
+
 interface GraphLazyRouteChildren {
   GraphGraph1LazyRoute: typeof GraphGraph1LazyRoute
   GraphGraph2LazyRoute: typeof GraphGraph2LazyRoute
@@ -2377,6 +2511,7 @@ const rootRouteChildren: RootRouteChildren = {
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
   CookiesLazyRoute: CookiesLazyRouteWithChildren,
   FaqsLazyRoute: FaqsLazyRouteWithChildren,
+  FeedbackLazyRoute: FeedbackLazyRouteWithChildren,
   FooterLazyRoute: FooterLazyRoute,
   GraphLazyRoute: GraphLazyRouteWithChildren,
   HerosectionLazyRoute: HerosectionLazyRouteWithChildren,

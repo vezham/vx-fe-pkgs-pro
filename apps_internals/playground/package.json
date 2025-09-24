@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "@iconify/react": "^6.0.2",
-     "@react-stately/utils": "^3.10.0",
+    "@react-stately/utils": "^3.10.0",
     "@vx/start": "workspace:*",
     "@vx/system-utils": "workspace:*",
     "@vx-pro/abc": "workspace:*",
@@ -83,7 +83,10 @@
     "@vx-pro/application-stepper-vertical": "workspace:*",
     "@vx-pro/application-stepper-verticalcollapsible": "workspace:*",
     "@vx-pro/application-stepper-verticalsplitted": "workspace:*",
-    "@vx-pro/application-stepper-verticalsplitted-helpers": "workspace:*"
+    "@vx-pro/application-stepper-verticalsplitted-helpers": "workspace:*",
+    "@vx-pro/application-feedback-rating": "workspace:*",
+    "@vx-pro/application-feedback-textarea": "workspace:*",
+    "@vx-pro/application-feedback-popover": "workspace:*",
+    "@vx-pro/application-feedback-modal": "workspace:*"
   }
-
 }
