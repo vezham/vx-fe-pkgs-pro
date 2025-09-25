@@ -28,3 +28,5 @@ herosection: top content missing
 application
 navbar: small ui fixes
 stepper: 1,2,3 ui fixes
+scrollingbanners: no ui banners scroll
+navigationheaders: ui fixes togglemenu, bg colors tab, spacing issues

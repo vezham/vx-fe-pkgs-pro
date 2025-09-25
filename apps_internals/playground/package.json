@@ -92,6 +92,11 @@
     "@vx-pro/application-scrollingbanners-grid": "workspace:*",
     "@vx-pro/application-scrollingbanners-testimonials": "workspace:*",
     "@vx-pro/application-scrollingbanners-tworows": "workspace:*",
-    "@vx-pro/application-scrollingbanners-vertical": "workspace:*"
+    "@vx-pro/application-scrollingbanners-vertical": "workspace:*",
+    "@vx-pro/application-navigationheader-basic": "workspace:*",
+    "@vx-pro/application-navigationheader-cta": "workspace:*",
+    "@vx-pro/application-navigationheader-brandcolors": "workspace:*",
+    "@vx-pro/application-navigationheader-searchinput": "workspace:*",
+    "@vx-pro/application-navigationheader-tabs": "workspace:*"
   }
 }

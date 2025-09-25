@@ -273,6 +273,21 @@ importers:
       '@vx-pro/application-navbar-centeredItems-navbar':
         specifier: workspace:*
         version: link:../../packages/components/application-navbar-centeredItems-navbar
+      '@vx-pro/application-navigationheader-basic':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navigationheader-basic
+      '@vx-pro/application-navigationheader-brandcolors':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navigationheader-brandcolors
+      '@vx-pro/application-navigationheader-cta':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navigationheader-cta
+      '@vx-pro/application-navigationheader-searchinput':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navigationheader-searchinput
+      '@vx-pro/application-navigationheader-tabs':
+        specifier: workspace:*
+        version: link:../../packages/components/application-navigationheader-tabs
       '@vx-pro/application-scrollingbanners-basic':
         specifier: workspace:*
         version: link:../../packages/components/application-scrollingbanners-basic
@@ -571,6 +586,36 @@ importers:
         version: 6.0.2(react@19.0.0)
 
   packages/components/application-navbar-centeredItems-navbar:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-navigationheader-basic:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-navigationheader-brandcolors:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-navigationheader-cta:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-navigationheader-searchinput:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-navigationheader-tabs:
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2

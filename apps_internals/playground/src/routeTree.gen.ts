@@ -20,6 +20,7 @@ const PricingComparisonLazyRouteImport = createFileRoute(
   '/pricing-comparison',
 )()
 const PricingLazyRouteImport = createFileRoute('/pricing')()
+const NavigationheaderLazyRouteImport = createFileRoute('/navigationheader')()
 const NavbarLazyRouteImport = createFileRoute('/navbar')()
 const KpistatsLazyRouteImport = createFileRoute('/kpistats')()
 const HerosectionLazyRouteImport = createFileRoute('/herosection')()
@@ -107,6 +108,19 @@ const PricingComparisonPricingComparisonBlurredLazyRouteImport =
   createFileRoute('/pricing-comparison/pricing-comparison-blurred')()
 const PricingComparisonPricingComparisonBaseLazyRouteImport = createFileRoute(
   '/pricing-comparison/pricing-comparison-base',
+)()
+const NavigationheadersNavigationheadersTabsLazyRouteImport = createFileRoute(
+  '/navigationheaders/navigationheaders-tabs',
+)()
+const NavigationheadersNavigationheadersSearchinputLazyRouteImport =
+  createFileRoute('/navigationheaders/navigationheaders-searchinput')()
+const NavigationheadersNavigationheadersCtaLazyRouteImport = createFileRoute(
+  '/navigationheaders/navigationheaders-cta',
+)()
+const NavigationheadersNavigationheadersBrandcolorsLazyRouteImport =
+  createFileRoute('/navigationheaders/navigationheaders-brandcolors')()
+const NavigationheadersNavigationheadersBasicLazyRouteImport = createFileRoute(
+  '/navigationheaders/navigationheaders-basic',
 )()
 const NavbarNavbarCenteredItemsLazyRouteImport = createFileRoute(
   '/navbar/navbar-centeredItems',
@@ -263,6 +277,13 @@ const PricingLazyRoute = PricingLazyRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/pricing.lazy').then((d) => d.Route))
+const NavigationheaderLazyRoute = NavigationheaderLazyRouteImport.update({
+  id: '/navigationheader',
+  path: '/navigationheader',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/navigationheader.lazy').then((d) => d.Route),
+)
 const NavbarLazyRoute = NavbarLazyRouteImport.update({
   id: '/navbar',
   path: '/navbar',
@@ -583,6 +604,56 @@ const PricingComparisonPricingComparisonBaseLazyRoute =
     getParentRoute: () => PricingComparisonLazyRoute,
   } as any).lazy(() =>
     import('./routes/pricing-comparison/pricing-comparison-base.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const NavigationheadersNavigationheadersTabsLazyRoute =
+  NavigationheadersNavigationheadersTabsLazyRouteImport.update({
+    id: '/navigationheaders/navigationheaders-tabs',
+    path: '/navigationheaders/navigationheaders-tabs',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/navigationheaders/navigationheaders-tabs.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const NavigationheadersNavigationheadersSearchinputLazyRoute =
+  NavigationheadersNavigationheadersSearchinputLazyRouteImport.update({
+    id: '/navigationheaders/navigationheaders-searchinput',
+    path: '/navigationheaders/navigationheaders-searchinput',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import(
+      './routes/navigationheaders/navigationheaders-searchinput.lazy'
+    ).then((d) => d.Route),
+  )
+const NavigationheadersNavigationheadersCtaLazyRoute =
+  NavigationheadersNavigationheadersCtaLazyRouteImport.update({
+    id: '/navigationheaders/navigationheaders-cta',
+    path: '/navigationheaders/navigationheaders-cta',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/navigationheaders/navigationheaders-cta.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const NavigationheadersNavigationheadersBrandcolorsLazyRoute =
+  NavigationheadersNavigationheadersBrandcolorsLazyRouteImport.update({
+    id: '/navigationheaders/navigationheaders-brandcolors',
+    path: '/navigationheaders/navigationheaders-brandcolors',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import(
+      './routes/navigationheaders/navigationheaders-brandcolors.lazy'
+    ).then((d) => d.Route),
+  )
+const NavigationheadersNavigationheadersBasicLazyRoute =
+  NavigationheadersNavigationheadersBasicLazyRouteImport.update({
+    id: '/navigationheaders/navigationheaders-basic',
+    path: '/navigationheaders/navigationheaders-basic',
+    getParentRoute: () => rootRouteImport,
+  } as any).lazy(() =>
+    import('./routes/navigationheaders/navigationheaders-basic.lazy').then(
       (d) => d.Route,
     ),
   )
@@ -1015,6 +1086,7 @@ export interface FileRoutesByFullPath {
   '/herosection': typeof HerosectionLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/navbar': typeof NavbarLazyRouteWithChildren
+  '/navigationheader': typeof NavigationheaderLazyRoute
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
   '/scrollingbanners': typeof ScrollingbannersLazyRouteWithChildren
@@ -1077,6 +1149,11 @@ export interface FileRoutesByFullPath {
   '/navbar/navbar-basic': typeof NavbarNavbarBasicLazyRoute
   '/navbar/navbar-centered': typeof NavbarNavbarCenteredLazyRoute
   '/navbar/navbar-centeredItems': typeof NavbarNavbarCenteredItemsLazyRoute
+  '/navigationheaders/navigationheaders-basic': typeof NavigationheadersNavigationheadersBasicLazyRoute
+  '/navigationheaders/navigationheaders-brandcolors': typeof NavigationheadersNavigationheadersBrandcolorsLazyRoute
+  '/navigationheaders/navigationheaders-cta': typeof NavigationheadersNavigationheadersCtaLazyRoute
+  '/navigationheaders/navigationheaders-searchinput': typeof NavigationheadersNavigationheadersSearchinputLazyRoute
+  '/navigationheaders/navigationheaders-tabs': typeof NavigationheadersNavigationheadersTabsLazyRoute
   '/pricing-comparison/pricing-comparison-base': typeof PricingComparisonPricingComparisonBaseLazyRoute
   '/pricing-comparison/pricing-comparison-blurred': typeof PricingComparisonPricingComparisonBlurredLazyRoute
   '/pricing-comparison/pricing-comparison-featured': typeof PricingComparisonPricingComparisonFeaturedLazyRoute
@@ -1119,6 +1196,7 @@ export interface FileRoutesByTo {
   '/herosection': typeof HerosectionLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/navbar': typeof NavbarLazyRouteWithChildren
+  '/navigationheader': typeof NavigationheaderLazyRoute
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
   '/scrollingbanners': typeof ScrollingbannersLazyRouteWithChildren
@@ -1181,6 +1259,11 @@ export interface FileRoutesByTo {
   '/navbar/navbar-basic': typeof NavbarNavbarBasicLazyRoute
   '/navbar/navbar-centered': typeof NavbarNavbarCenteredLazyRoute
   '/navbar/navbar-centeredItems': typeof NavbarNavbarCenteredItemsLazyRoute
+  '/navigationheaders/navigationheaders-basic': typeof NavigationheadersNavigationheadersBasicLazyRoute
+  '/navigationheaders/navigationheaders-brandcolors': typeof NavigationheadersNavigationheadersBrandcolorsLazyRoute
+  '/navigationheaders/navigationheaders-cta': typeof NavigationheadersNavigationheadersCtaLazyRoute
+  '/navigationheaders/navigationheaders-searchinput': typeof NavigationheadersNavigationheadersSearchinputLazyRoute
+  '/navigationheaders/navigationheaders-tabs': typeof NavigationheadersNavigationheadersTabsLazyRoute
   '/pricing-comparison/pricing-comparison-base': typeof PricingComparisonPricingComparisonBaseLazyRoute
   '/pricing-comparison/pricing-comparison-blurred': typeof PricingComparisonPricingComparisonBlurredLazyRoute
   '/pricing-comparison/pricing-comparison-featured': typeof PricingComparisonPricingComparisonFeaturedLazyRoute
@@ -1224,6 +1307,7 @@ export interface FileRoutesById {
   '/herosection': typeof HerosectionLazyRouteWithChildren
   '/kpistats': typeof KpistatsLazyRouteWithChildren
   '/navbar': typeof NavbarLazyRouteWithChildren
+  '/navigationheader': typeof NavigationheaderLazyRoute
   '/pricing': typeof PricingLazyRouteWithChildren
   '/pricing-comparison': typeof PricingComparisonLazyRouteWithChildren
   '/scrollingbanners': typeof ScrollingbannersLazyRouteWithChildren
@@ -1286,6 +1370,11 @@ export interface FileRoutesById {
   '/navbar/navbar-basic': typeof NavbarNavbarBasicLazyRoute
   '/navbar/navbar-centered': typeof NavbarNavbarCenteredLazyRoute
   '/navbar/navbar-centeredItems': typeof NavbarNavbarCenteredItemsLazyRoute
+  '/navigationheaders/navigationheaders-basic': typeof NavigationheadersNavigationheadersBasicLazyRoute
+  '/navigationheaders/navigationheaders-brandcolors': typeof NavigationheadersNavigationheadersBrandcolorsLazyRoute
+  '/navigationheaders/navigationheaders-cta': typeof NavigationheadersNavigationheadersCtaLazyRoute
+  '/navigationheaders/navigationheaders-searchinput': typeof NavigationheadersNavigationheadersSearchinputLazyRoute
+  '/navigationheaders/navigationheaders-tabs': typeof NavigationheadersNavigationheadersTabsLazyRoute
   '/pricing-comparison/pricing-comparison-base': typeof PricingComparisonPricingComparisonBaseLazyRoute
   '/pricing-comparison/pricing-comparison-blurred': typeof PricingComparisonPricingComparisonBlurredLazyRoute
   '/pricing-comparison/pricing-comparison-featured': typeof PricingComparisonPricingComparisonFeaturedLazyRoute
@@ -1330,6 +1419,7 @@ export interface FileRouteTypes {
     | '/herosection'
     | '/kpistats'
     | '/navbar'
+    | '/navigationheader'
     | '/pricing'
     | '/pricing-comparison'
     | '/scrollingbanners'
@@ -1392,6 +1482,11 @@ export interface FileRouteTypes {
     | '/navbar/navbar-basic'
     | '/navbar/navbar-centered'
     | '/navbar/navbar-centeredItems'
+    | '/navigationheaders/navigationheaders-basic'
+    | '/navigationheaders/navigationheaders-brandcolors'
+    | '/navigationheaders/navigationheaders-cta'
+    | '/navigationheaders/navigationheaders-searchinput'
+    | '/navigationheaders/navigationheaders-tabs'
     | '/pricing-comparison/pricing-comparison-base'
     | '/pricing-comparison/pricing-comparison-blurred'
     | '/pricing-comparison/pricing-comparison-featured'
@@ -1434,6 +1529,7 @@ export interface FileRouteTypes {
     | '/herosection'
     | '/kpistats'
     | '/navbar'
+    | '/navigationheader'
     | '/pricing'
     | '/pricing-comparison'
     | '/scrollingbanners'
@@ -1496,6 +1592,11 @@ export interface FileRouteTypes {
     | '/navbar/navbar-basic'
     | '/navbar/navbar-centered'
     | '/navbar/navbar-centeredItems'
+    | '/navigationheaders/navigationheaders-basic'
+    | '/navigationheaders/navigationheaders-brandcolors'
+    | '/navigationheaders/navigationheaders-cta'
+    | '/navigationheaders/navigationheaders-searchinput'
+    | '/navigationheaders/navigationheaders-tabs'
     | '/pricing-comparison/pricing-comparison-base'
     | '/pricing-comparison/pricing-comparison-blurred'
     | '/pricing-comparison/pricing-comparison-featured'
@@ -1538,6 +1639,7 @@ export interface FileRouteTypes {
     | '/herosection'
     | '/kpistats'
     | '/navbar'
+    | '/navigationheader'
     | '/pricing'
     | '/pricing-comparison'
     | '/scrollingbanners'
@@ -1600,6 +1702,11 @@ export interface FileRouteTypes {
     | '/navbar/navbar-basic'
     | '/navbar/navbar-centered'
     | '/navbar/navbar-centeredItems'
+    | '/navigationheaders/navigationheaders-basic'
+    | '/navigationheaders/navigationheaders-brandcolors'
+    | '/navigationheaders/navigationheaders-cta'
+    | '/navigationheaders/navigationheaders-searchinput'
+    | '/navigationheaders/navigationheaders-tabs'
     | '/pricing-comparison/pricing-comparison-base'
     | '/pricing-comparison/pricing-comparison-blurred'
     | '/pricing-comparison/pricing-comparison-featured'
@@ -1643,6 +1750,7 @@ export interface RootRouteChildren {
   HerosectionLazyRoute: typeof HerosectionLazyRouteWithChildren
   KpistatsLazyRoute: typeof KpistatsLazyRouteWithChildren
   NavbarLazyRoute: typeof NavbarLazyRouteWithChildren
+  NavigationheaderLazyRoute: typeof NavigationheaderLazyRoute
   PricingLazyRoute: typeof PricingLazyRouteWithChildren
   PricingComparisonLazyRoute: typeof PricingComparisonLazyRouteWithChildren
   ScrollingbannersLazyRoute: typeof ScrollingbannersLazyRouteWithChildren
@@ -1661,6 +1769,11 @@ export interface RootRouteChildren {
   FootersFooterNewsletterLazyRoute: typeof FootersFooterNewsletterLazyRoute
   FootersFooterSocialLinkLazyRoute: typeof FootersFooterSocialLinkLazyRoute
   FootersFooterThemeLazyRoute: typeof FootersFooterThemeLazyRoute
+  NavigationheadersNavigationheadersBasicLazyRoute: typeof NavigationheadersNavigationheadersBasicLazyRoute
+  NavigationheadersNavigationheadersBrandcolorsLazyRoute: typeof NavigationheadersNavigationheadersBrandcolorsLazyRoute
+  NavigationheadersNavigationheadersCtaLazyRoute: typeof NavigationheadersNavigationheadersCtaLazyRoute
+  NavigationheadersNavigationheadersSearchinputLazyRoute: typeof NavigationheadersNavigationheadersSearchinputLazyRoute
+  NavigationheadersNavigationheadersTabsLazyRoute: typeof NavigationheadersNavigationheadersTabsLazyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1705,6 +1818,13 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/navigationheader': {
+      id: '/navigationheader'
+      path: '/navigationheader'
+      fullPath: '/navigationheader'
+      preLoaderRoute: typeof NavigationheaderLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/navbar': {
@@ -1986,6 +2106,41 @@ declare module '@tanstack/react-router' {
       fullPath: '/pricing-comparison/pricing-comparison-base'
       preLoaderRoute: typeof PricingComparisonPricingComparisonBaseLazyRouteImport
       parentRoute: typeof PricingComparisonLazyRoute
+    }
+    '/navigationheaders/navigationheaders-tabs': {
+      id: '/navigationheaders/navigationheaders-tabs'
+      path: '/navigationheaders/navigationheaders-tabs'
+      fullPath: '/navigationheaders/navigationheaders-tabs'
+      preLoaderRoute: typeof NavigationheadersNavigationheadersTabsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/navigationheaders/navigationheaders-searchinput': {
+      id: '/navigationheaders/navigationheaders-searchinput'
+      path: '/navigationheaders/navigationheaders-searchinput'
+      fullPath: '/navigationheaders/navigationheaders-searchinput'
+      preLoaderRoute: typeof NavigationheadersNavigationheadersSearchinputLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/navigationheaders/navigationheaders-cta': {
+      id: '/navigationheaders/navigationheaders-cta'
+      path: '/navigationheaders/navigationheaders-cta'
+      fullPath: '/navigationheaders/navigationheaders-cta'
+      preLoaderRoute: typeof NavigationheadersNavigationheadersCtaLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/navigationheaders/navigationheaders-brandcolors': {
+      id: '/navigationheaders/navigationheaders-brandcolors'
+      path: '/navigationheaders/navigationheaders-brandcolors'
+      fullPath: '/navigationheaders/navigationheaders-brandcolors'
+      preLoaderRoute: typeof NavigationheadersNavigationheadersBrandcolorsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/navigationheaders/navigationheaders-basic': {
+      id: '/navigationheaders/navigationheaders-basic'
+      path: '/navigationheaders/navigationheaders-basic'
+      fullPath: '/navigationheaders/navigationheaders-basic'
+      preLoaderRoute: typeof NavigationheadersNavigationheadersBasicLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/navbar/navbar-centeredItems': {
       id: '/navbar/navbar-centeredItems'
@@ -2692,6 +2847,7 @@ const rootRouteChildren: RootRouteChildren = {
   HerosectionLazyRoute: HerosectionLazyRouteWithChildren,
   KpistatsLazyRoute: KpistatsLazyRouteWithChildren,
   NavbarLazyRoute: NavbarLazyRouteWithChildren,
+  NavigationheaderLazyRoute: NavigationheaderLazyRoute,
   PricingLazyRoute: PricingLazyRouteWithChildren,
   PricingComparisonLazyRoute: PricingComparisonLazyRouteWithChildren,
   ScrollingbannersLazyRoute: ScrollingbannersLazyRouteWithChildren,
@@ -2712,6 +2868,16 @@ const rootRouteChildren: RootRouteChildren = {
   FootersFooterNewsletterLazyRoute: FootersFooterNewsletterLazyRoute,
   FootersFooterSocialLinkLazyRoute: FootersFooterSocialLinkLazyRoute,
   FootersFooterThemeLazyRoute: FootersFooterThemeLazyRoute,
+  NavigationheadersNavigationheadersBasicLazyRoute:
+    NavigationheadersNavigationheadersBasicLazyRoute,
+  NavigationheadersNavigationheadersBrandcolorsLazyRoute:
+    NavigationheadersNavigationheadersBrandcolorsLazyRoute,
+  NavigationheadersNavigationheadersCtaLazyRoute:
+    NavigationheadersNavigationheadersCtaLazyRoute,
+  NavigationheadersNavigationheadersSearchinputLazyRoute:
+    NavigationheadersNavigationheadersSearchinputLazyRoute,
+  NavigationheadersNavigationheadersTabsLazyRoute:
+    NavigationheadersNavigationheadersTabsLazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

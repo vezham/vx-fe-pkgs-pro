@@ -1,0 +1,9 @@
+{
+  "name": "application-navigationheader-brandcolors",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-navigationheader-brandcolors/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-navigationheader-brandcolors --web",
+  "targets": {}
+}

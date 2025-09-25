@@ -1,0 +1,9 @@
+{
+  "name": "application-navigationheader-searchinput",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-navigationheader-searchinput/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-navigationheader-searchinput --web",
+  "targets": {}
+}

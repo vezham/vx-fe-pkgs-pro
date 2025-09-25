@@ -274,6 +274,21 @@
     },
     {
       "path": "./packages/components/application-scrollingbanners-testimonials"
+    },
+    {
+      "path": "./packages/components/application-navigationheader-basic"
+    },
+    {
+      "path": "./packages/components/application-navigationheader-searchinput"
+    },
+    {
+      "path": "./packages/components/application-navigationheader-tabs"
+    },
+    {
+      "path": "./packages/components/application-navigationheader-cta"
+    },
+    {
+      "path": "./packages/components/application-navigationheader-brandcolors"
     }
   ]
 }
