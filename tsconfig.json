@@ -289,6 +289,36 @@
     },
     {
       "path": "./packages/components/application-navigationheader-brandcolors"
+    },
+    {
+      "path": "./packages/components/application-authentication-simplesignup"
+    },
+    {
+      "path": "./packages/components/application-authentication-simplelogin"
+    },
+    {
+      "path": "./packages/components/application-authentication-simplelogin-without-background"
+    },
+    {
+      "path": "./packages/components/application-authentication-simplesignup-without-background"
+    },
+    {
+      "path": "./packages/components/application-authentication-simplelogin-without-socialbtn"
+    },
+    {
+      "path": "./packages/components/application-authentication-centered-signup"
+    },
+    {
+      "path": "./packages/components/application-authentication-centered-signup-animatedform"
+    },
+    {
+      "path": "./packages/components/application-authentication-centered-login-animatedform"
+    },
+    {
+      "path": "./packages/components/application-authentication-centered-login-email"
+    },
+    {
+      "path": "./packages/components/application-authentication-centered-signup-email"
     }
   ]
 }

@@ -41,6 +41,36 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/application-authentication-simplesignup-without-background/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplelogin-without-socialbtn/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplesignup/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplelogin-without-background/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplelogin/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-tabs/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-searchinput/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-brandcolors/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-cta/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-basic/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/application-scrollingbanners-vertical/tsconfig.lib.json"
     },
     {

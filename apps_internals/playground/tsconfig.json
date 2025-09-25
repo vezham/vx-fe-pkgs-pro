@@ -3,6 +3,36 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/application-authentication-simplesignup-without-background"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplelogin-without-socialbtn"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplesignup"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplelogin-without-background"
+    },
+    {
+      "path": "../../packages/components/application-authentication-simplelogin"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-tabs"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-searchinput"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-brandcolors"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-cta"
+    },
+    {
+      "path": "../../packages/components/application-navigationheader-basic"
+    },
+    {
       "path": "../../packages/components/application-scrollingbanners-vertical"
     },
     {

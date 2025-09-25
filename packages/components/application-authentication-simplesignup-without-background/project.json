@@ -1,0 +1,9 @@
+{
+  "name": "application-authentication-simplesignup-without-background",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-authentication-simplesignup-without-background/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-authentication-simplesignup-without-background --web",
+  "targets": {}
+}

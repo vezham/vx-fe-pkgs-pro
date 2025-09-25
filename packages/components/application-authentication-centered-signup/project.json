@@ -1,0 +1,9 @@
+{
+  "name": "application-authentication-centered-signup",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-authentication-centered-signup/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-authentication-centered-signup --web",
+  "targets": {}
+}

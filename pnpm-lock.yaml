@@ -252,6 +252,21 @@ importers:
       '@vx-pro/abc':
         specifier: workspace:*
         version: link:../../packages/components/abc
+      '@vx-pro/application-authentication-simplelogin':
+        specifier: workspace:*
+        version: link:../../packages/components/application-authentication-simplelogin
+      '@vx-pro/application-authentication-simplelogin-without-background':
+        specifier: workspace:*
+        version: link:../../packages/components/application-authentication-simplelogin-without-background
+      '@vx-pro/application-authentication-simplelogin-without-socialbtn':
+        specifier: workspace:*
+        version: link:../../packages/components/application-authentication-simplelogin-without-socialbtn
+      '@vx-pro/application-authentication-simplesignup':
+        specifier: workspace:*
+        version: link:../../packages/components/application-authentication-simplesignup
+      '@vx-pro/application-authentication-simplesignup-without-background':
+        specifier: workspace:*
+        version: link:../../packages/components/application-authentication-simplesignup-without-background
       '@vx-pro/application-feedback-modal':
         specifier: workspace:*
         version: link:../../packages/components/application-feedback-modal
@@ -548,6 +563,66 @@ importers:
         version: 16.4.7
 
   packages/components/abc: {}
+
+  packages/components/application-authentication-centered-login-animatedform:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-centered-login-email:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-centered-signup:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-centered-signup-animatedform:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-centered-signup-email:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-simplelogin:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-simplelogin-without-background:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-simplelogin-without-socialbtn:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-simplesignup:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-authentication-simplesignup-without-background:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
 
   packages/components/application-feedback-modal:
     devDependencies:

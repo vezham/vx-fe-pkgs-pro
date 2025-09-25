@@ -32,6 +32,7 @@ const CookiesLazyRouteImport = createFileRoute('/cookies')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const BannerLazyRouteImport = createFileRoute('/banner')()
+const AuthenticationLazyRouteImport = createFileRoute('/authentication')()
 const IndexLazyRouteImport = createFileRoute('/')()
 const StepperStepperVerticalcollapsibleLazyRouteImport = createFileRoute(
   '/stepper/stepper-verticalcollapsible',
@@ -242,6 +243,30 @@ const BannersBannerBetweenjustifiedLazyRouteImport = createFileRoute(
 const BannersBannerBasicLazyRouteImport = createFileRoute(
   '/banners/banner-basic',
 )()
+const AuthenticationAuthenticationSimplesignupWithoutbgLazyRouteImport =
+  createFileRoute('/authentication/authentication-simplesignup-withoutbg')()
+const AuthenticationAuthenticationSimplesignupLazyRouteImport = createFileRoute(
+  '/authentication/authentication-simplesignup',
+)()
+const AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRouteImport =
+  createFileRoute(
+    '/authentication/authentication-simplelogin-withoutsocialbtn',
+  )()
+const AuthenticationAuthenticationSimpleloginWithoutbgLazyRouteImport =
+  createFileRoute('/authentication/authentication-simplelogin-withoutbg')()
+const AuthenticationAuthenticationSimpleloginLazyRouteImport = createFileRoute(
+  '/authentication/authentication-simplelogin',
+)()
+const AuthenticationAuthenticationCenteredsignupEmailLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredsignup-email')()
+const AuthenticationAuthenticationCenteredsignupAnimatedLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredsignup-animated')()
+const AuthenticationAuthenticationCenteredloginEmailLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredlogin-email')()
+const AuthenticationAuthenticationCenteredloginAnimatedLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredlogin-animated')()
+const AuthenticationAuthenticationCenteredSignupLazyRouteImport =
+  createFileRoute('/authentication/authentication-centered-signup')()
 
 const TestLazyRoute = TestLazyRouteImport.update({
   id: '/test',
@@ -339,6 +364,13 @@ const BannerLazyRoute = BannerLazyRouteImport.update({
   path: '/banner',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/banner.lazy').then((d) => d.Route))
+const AuthenticationLazyRoute = AuthenticationLazyRouteImport.update({
+  id: '/authentication',
+  path: '/authentication',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/authentication.lazy').then((d) => d.Route),
+)
 const IndexLazyRoute = IndexLazyRouteImport.update({
   id: '/',
   path: '/',
@@ -1072,9 +1104,112 @@ const BannersBannerBasicLazyRoute = BannersBannerBasicLazyRouteImport.update({
 } as any).lazy(() =>
   import('./routes/banners/banner-basic.lazy').then((d) => d.Route),
 )
+const AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute =
+  AuthenticationAuthenticationSimplesignupWithoutbgLazyRouteImport.update({
+    id: '/authentication-simplesignup-withoutbg',
+    path: '/authentication-simplesignup-withoutbg',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-simplesignup-withoutbg.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationSimplesignupLazyRoute =
+  AuthenticationAuthenticationSimplesignupLazyRouteImport.update({
+    id: '/authentication-simplesignup',
+    path: '/authentication-simplesignup',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/authentication/authentication-simplesignup.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute =
+  AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRouteImport.update(
+    {
+      id: '/authentication-simplelogin-withoutsocialbtn',
+      path: '/authentication-simplelogin-withoutsocialbtn',
+      getParentRoute: () => AuthenticationLazyRoute,
+    } as any,
+  ).lazy(() =>
+    import(
+      './routes/authentication/authentication-simplelogin-withoutsocialbtn.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute =
+  AuthenticationAuthenticationSimpleloginWithoutbgLazyRouteImport.update({
+    id: '/authentication-simplelogin-withoutbg',
+    path: '/authentication-simplelogin-withoutbg',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-simplelogin-withoutbg.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationSimpleloginLazyRoute =
+  AuthenticationAuthenticationSimpleloginLazyRouteImport.update({
+    id: '/authentication-simplelogin',
+    path: '/authentication-simplelogin',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/authentication/authentication-simplelogin.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const AuthenticationAuthenticationCenteredsignupEmailLazyRoute =
+  AuthenticationAuthenticationCenteredsignupEmailLazyRouteImport.update({
+    id: '/authentication-centeredsignup-email',
+    path: '/authentication-centeredsignup-email',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredsignup-email.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute =
+  AuthenticationAuthenticationCenteredsignupAnimatedLazyRouteImport.update({
+    id: '/authentication-centeredsignup-animated',
+    path: '/authentication-centeredsignup-animated',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredsignup-animated.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredloginEmailLazyRoute =
+  AuthenticationAuthenticationCenteredloginEmailLazyRouteImport.update({
+    id: '/authentication-centeredlogin-email',
+    path: '/authentication-centeredlogin-email',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredlogin-email.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredloginAnimatedLazyRoute =
+  AuthenticationAuthenticationCenteredloginAnimatedLazyRouteImport.update({
+    id: '/authentication-centeredlogin-animated',
+    path: '/authentication-centeredlogin-animated',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredlogin-animated.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredSignupLazyRoute =
+  AuthenticationAuthenticationCenteredSignupLazyRouteImport.update({
+    id: '/authentication-centered-signup',
+    path: '/authentication-centered-signup',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/authentication/authentication-centered-signup.lazy').then(
+      (d) => d.Route,
+    ),
+  )
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
+  '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
@@ -1093,6 +1228,16 @@ export interface FileRoutesByFullPath {
   '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
+  '/authentication/authentication-centered-signup': typeof AuthenticationAuthenticationCenteredSignupLazyRoute
+  '/authentication/authentication-centeredlogin-animated': typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  '/authentication/authentication-centeredlogin-email': typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  '/authentication/authentication-centeredsignup-animated': typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  '/authentication/authentication-centeredsignup-email': typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  '/authentication/authentication-simplelogin': typeof AuthenticationAuthenticationSimpleloginLazyRoute
+  '/authentication/authentication-simplelogin-withoutbg': typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
+  '/authentication/authentication-simplelogin-withoutsocialbtn': typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
+  '/authentication/authentication-simplesignup': typeof AuthenticationAuthenticationSimplesignupLazyRoute
+  '/authentication/authentication-simplesignup-withoutbg': typeof AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
   '/banners/banner-betweenjustified': typeof BannersBannerBetweenjustifiedLazyRoute
   '/banners/banner-brandcolors': typeof BannersBannerBrandcolorsLazyRoute
@@ -1185,6 +1330,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
+  '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
@@ -1203,6 +1349,16 @@ export interface FileRoutesByTo {
   '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
+  '/authentication/authentication-centered-signup': typeof AuthenticationAuthenticationCenteredSignupLazyRoute
+  '/authentication/authentication-centeredlogin-animated': typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  '/authentication/authentication-centeredlogin-email': typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  '/authentication/authentication-centeredsignup-animated': typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  '/authentication/authentication-centeredsignup-email': typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  '/authentication/authentication-simplelogin': typeof AuthenticationAuthenticationSimpleloginLazyRoute
+  '/authentication/authentication-simplelogin-withoutbg': typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
+  '/authentication/authentication-simplelogin-withoutsocialbtn': typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
+  '/authentication/authentication-simplesignup': typeof AuthenticationAuthenticationSimplesignupLazyRoute
+  '/authentication/authentication-simplesignup-withoutbg': typeof AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
   '/banners/banner-betweenjustified': typeof BannersBannerBetweenjustifiedLazyRoute
   '/banners/banner-brandcolors': typeof BannersBannerBrandcolorsLazyRoute
@@ -1296,6 +1452,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexLazyRoute
+  '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
@@ -1314,6 +1471,16 @@ export interface FileRoutesById {
   '/stepper': typeof StepperLazyRouteWithChildren
   '/teams': typeof TeamsLazyRoute
   '/test': typeof TestLazyRoute
+  '/authentication/authentication-centered-signup': typeof AuthenticationAuthenticationCenteredSignupLazyRoute
+  '/authentication/authentication-centeredlogin-animated': typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  '/authentication/authentication-centeredlogin-email': typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  '/authentication/authentication-centeredsignup-animated': typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  '/authentication/authentication-centeredsignup-email': typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  '/authentication/authentication-simplelogin': typeof AuthenticationAuthenticationSimpleloginLazyRoute
+  '/authentication/authentication-simplelogin-withoutbg': typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
+  '/authentication/authentication-simplelogin-withoutsocialbtn': typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
+  '/authentication/authentication-simplesignup': typeof AuthenticationAuthenticationSimplesignupLazyRoute
+  '/authentication/authentication-simplesignup-withoutbg': typeof AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute
   '/banners/banner-basic': typeof BannersBannerBasicLazyRoute
   '/banners/banner-betweenjustified': typeof BannersBannerBetweenjustifiedLazyRoute
   '/banners/banner-brandcolors': typeof BannersBannerBrandcolorsLazyRoute
@@ -1408,6 +1575,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/authentication'
     | '/banner'
     | '/bars'
     | '/charts'
@@ -1426,6 +1594,16 @@ export interface FileRouteTypes {
     | '/stepper'
     | '/teams'
     | '/test'
+    | '/authentication/authentication-centered-signup'
+    | '/authentication/authentication-centeredlogin-animated'
+    | '/authentication/authentication-centeredlogin-email'
+    | '/authentication/authentication-centeredsignup-animated'
+    | '/authentication/authentication-centeredsignup-email'
+    | '/authentication/authentication-simplelogin'
+    | '/authentication/authentication-simplelogin-withoutbg'
+    | '/authentication/authentication-simplelogin-withoutsocialbtn'
+    | '/authentication/authentication-simplesignup'
+    | '/authentication/authentication-simplesignup-withoutbg'
     | '/banners/banner-basic'
     | '/banners/banner-betweenjustified'
     | '/banners/banner-brandcolors'
@@ -1518,6 +1696,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/authentication'
     | '/banner'
     | '/bars'
     | '/charts'
@@ -1536,6 +1715,16 @@ export interface FileRouteTypes {
     | '/stepper'
     | '/teams'
     | '/test'
+    | '/authentication/authentication-centered-signup'
+    | '/authentication/authentication-centeredlogin-animated'
+    | '/authentication/authentication-centeredlogin-email'
+    | '/authentication/authentication-centeredsignup-animated'
+    | '/authentication/authentication-centeredsignup-email'
+    | '/authentication/authentication-simplelogin'
+    | '/authentication/authentication-simplelogin-withoutbg'
+    | '/authentication/authentication-simplelogin-withoutsocialbtn'
+    | '/authentication/authentication-simplesignup'
+    | '/authentication/authentication-simplesignup-withoutbg'
     | '/banners/banner-basic'
     | '/banners/banner-betweenjustified'
     | '/banners/banner-brandcolors'
@@ -1628,6 +1817,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/authentication'
     | '/banner'
     | '/bars'
     | '/charts'
@@ -1646,6 +1836,16 @@ export interface FileRouteTypes {
     | '/stepper'
     | '/teams'
     | '/test'
+    | '/authentication/authentication-centered-signup'
+    | '/authentication/authentication-centeredlogin-animated'
+    | '/authentication/authentication-centeredlogin-email'
+    | '/authentication/authentication-centeredsignup-animated'
+    | '/authentication/authentication-centeredsignup-email'
+    | '/authentication/authentication-simplelogin'
+    | '/authentication/authentication-simplelogin-withoutbg'
+    | '/authentication/authentication-simplelogin-withoutsocialbtn'
+    | '/authentication/authentication-simplesignup'
+    | '/authentication/authentication-simplesignup-withoutbg'
     | '/banners/banner-basic'
     | '/banners/banner-betweenjustified'
     | '/banners/banner-brandcolors'
@@ -1739,6 +1939,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
+  AuthenticationLazyRoute: typeof AuthenticationLazyRouteWithChildren
   BannerLazyRoute: typeof BannerLazyRoute
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
@@ -1902,6 +2103,13 @@ declare module '@tanstack/react-router' {
       path: '/banner'
       fullPath: '/banner'
       preLoaderRoute: typeof BannerLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/authentication': {
+      id: '/authentication'
+      path: '/authentication'
+      fullPath: '/authentication'
+      preLoaderRoute: typeof AuthenticationLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -2534,8 +2742,117 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BannersBannerBasicLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/authentication/authentication-simplesignup-withoutbg': {
+      id: '/authentication/authentication-simplesignup-withoutbg'
+      path: '/authentication-simplesignup-withoutbg'
+      fullPath: '/authentication/authentication-simplesignup-withoutbg'
+      preLoaderRoute: typeof AuthenticationAuthenticationSimplesignupWithoutbgLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-simplesignup': {
+      id: '/authentication/authentication-simplesignup'
+      path: '/authentication-simplesignup'
+      fullPath: '/authentication/authentication-simplesignup'
+      preLoaderRoute: typeof AuthenticationAuthenticationSimplesignupLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-simplelogin-withoutsocialbtn': {
+      id: '/authentication/authentication-simplelogin-withoutsocialbtn'
+      path: '/authentication-simplelogin-withoutsocialbtn'
+      fullPath: '/authentication/authentication-simplelogin-withoutsocialbtn'
+      preLoaderRoute: typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-simplelogin-withoutbg': {
+      id: '/authentication/authentication-simplelogin-withoutbg'
+      path: '/authentication-simplelogin-withoutbg'
+      fullPath: '/authentication/authentication-simplelogin-withoutbg'
+      preLoaderRoute: typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-simplelogin': {
+      id: '/authentication/authentication-simplelogin'
+      path: '/authentication-simplelogin'
+      fullPath: '/authentication/authentication-simplelogin'
+      preLoaderRoute: typeof AuthenticationAuthenticationSimpleloginLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredsignup-email': {
+      id: '/authentication/authentication-centeredsignup-email'
+      path: '/authentication-centeredsignup-email'
+      fullPath: '/authentication/authentication-centeredsignup-email'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupEmailLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredsignup-animated': {
+      id: '/authentication/authentication-centeredsignup-animated'
+      path: '/authentication-centeredsignup-animated'
+      fullPath: '/authentication/authentication-centeredsignup-animated'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredlogin-email': {
+      id: '/authentication/authentication-centeredlogin-email'
+      path: '/authentication-centeredlogin-email'
+      fullPath: '/authentication/authentication-centeredlogin-email'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredloginEmailLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredlogin-animated': {
+      id: '/authentication/authentication-centeredlogin-animated'
+      path: '/authentication-centeredlogin-animated'
+      fullPath: '/authentication/authentication-centeredlogin-animated'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centered-signup': {
+      id: '/authentication/authentication-centered-signup'
+      path: '/authentication-centered-signup'
+      fullPath: '/authentication/authentication-centered-signup'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredSignupLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
   }
 }
+
+interface AuthenticationLazyRouteChildren {
+  AuthenticationAuthenticationCenteredSignupLazyRoute: typeof AuthenticationAuthenticationCenteredSignupLazyRoute
+  AuthenticationAuthenticationCenteredloginAnimatedLazyRoute: typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  AuthenticationAuthenticationCenteredloginEmailLazyRoute: typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute: typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  AuthenticationAuthenticationCenteredsignupEmailLazyRoute: typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  AuthenticationAuthenticationSimpleloginLazyRoute: typeof AuthenticationAuthenticationSimpleloginLazyRoute
+  AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute: typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
+  AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute: typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
+  AuthenticationAuthenticationSimplesignupLazyRoute: typeof AuthenticationAuthenticationSimplesignupLazyRoute
+  AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute: typeof AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute
+}
+
+const AuthenticationLazyRouteChildren: AuthenticationLazyRouteChildren = {
+  AuthenticationAuthenticationCenteredSignupLazyRoute:
+    AuthenticationAuthenticationCenteredSignupLazyRoute,
+  AuthenticationAuthenticationCenteredloginAnimatedLazyRoute:
+    AuthenticationAuthenticationCenteredloginAnimatedLazyRoute,
+  AuthenticationAuthenticationCenteredloginEmailLazyRoute:
+    AuthenticationAuthenticationCenteredloginEmailLazyRoute,
+  AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute:
+    AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute,
+  AuthenticationAuthenticationCenteredsignupEmailLazyRoute:
+    AuthenticationAuthenticationCenteredsignupEmailLazyRoute,
+  AuthenticationAuthenticationSimpleloginLazyRoute:
+    AuthenticationAuthenticationSimpleloginLazyRoute,
+  AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute:
+    AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute,
+  AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute:
+    AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute,
+  AuthenticationAuthenticationSimplesignupLazyRoute:
+    AuthenticationAuthenticationSimplesignupLazyRoute,
+  AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute:
+    AuthenticationAuthenticationSimplesignupWithoutbgLazyRoute,
+}
+
+const AuthenticationLazyRouteWithChildren =
+  AuthenticationLazyRoute._addFileChildren(AuthenticationLazyRouteChildren)
 
 interface BarsLazyRouteChildren {
   BarsBars1LazyRoute: typeof BarsBars1LazyRoute
@@ -2836,6 +3153,7 @@ const StepperLazyRouteWithChildren = StepperLazyRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
+  AuthenticationLazyRoute: AuthenticationLazyRouteWithChildren,
   BannerLazyRoute: BannerLazyRoute,
   BarsLazyRoute: BarsLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,

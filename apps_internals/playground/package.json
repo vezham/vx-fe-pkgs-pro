@@ -97,6 +97,11 @@
     "@vx-pro/application-navigationheader-cta": "workspace:*",
     "@vx-pro/application-navigationheader-brandcolors": "workspace:*",
     "@vx-pro/application-navigationheader-searchinput": "workspace:*",
-    "@vx-pro/application-navigationheader-tabs": "workspace:*"
+    "@vx-pro/application-navigationheader-tabs": "workspace:*",
+    "@vx-pro/application-authentication-simplelogin": "workspace:*",
+    "@vx-pro/application-authentication-simplelogin-without-background": "workspace:*",
+    "@vx-pro/application-authentication-simplesignup": "workspace:*",
+    "@vx-pro/application-authentication-simplelogin-without-socialbtn": "workspace:*",
+    "@vx-pro/application-authentication-simplesignup-without-background": "workspace:*"
   }
 }
