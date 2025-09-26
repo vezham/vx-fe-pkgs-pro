@@ -319,6 +319,48 @@
     },
     {
       "path": "./packages/components/application-authentication-centered-signup-email"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredlogin-twosteps"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredsignup-twosteps"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredsignup-logo"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredlogin-logo"
+    },
+    {
+      "path": "./packages/components/application-authentication-leftlogin-imagebackground"
+    },
+    {
+      "path": "./packages/components/application-authentication-leftlogin-righttestimonial"
+    },
+    {
+      "path": "./packages/components/application-authentication-rightsignup-imagebackground"
+    },
+    {
+      "path": "./packages/components/application-authentication-leftsignup-righttestimonial"
+    },
+    {
+      "path": "./packages/components/application-authentication-rightlogin-imagebackground"
+    },
+    {
+      "path": "./packages/components/application-authentication-leftsignup-imagebackground"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredlogin-gradientbackground"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredlogin-blurredcontainer"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredsignup-blurredcontainer"
+    },
+    {
+      "path": "./packages/components/application-authentication-centeredsignup-gradientbackground"
     }
   ]
 }

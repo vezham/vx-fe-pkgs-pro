@@ -257,12 +257,42 @@ const AuthenticationAuthenticationSimpleloginWithoutbgLazyRouteImport =
 const AuthenticationAuthenticationSimpleloginLazyRouteImport = createFileRoute(
   '/authentication/authentication-simplelogin',
 )()
+const AuthenticationAuthenticationRightsignupImgbgLazyRouteImport =
+  createFileRoute('/authentication/authentication-rightsignup-imgbg')()
+const AuthenticationAuthenticationRightloginImgbgLazyRouteImport =
+  createFileRoute('/authentication/authentication-rightlogin-imgbg')()
+const AuthenticationAuthenticationLeftsignupRighttestimonialLazyRouteImport =
+  createFileRoute(
+    '/authentication/authentication-leftsignup-righttestimonial',
+  )()
+const AuthenticationAuthenticationLeftsignupImgbgLazyRouteImport =
+  createFileRoute('/authentication/authentication-leftsignup-imgbg')()
+const AuthenticationAuthenticationLeftloginRighttestimonialLazyRouteImport =
+  createFileRoute('/authentication/authentication-leftlogin-righttestimonial')()
+const AuthenticationAuthenticationLeftloginImgbgLazyRouteImport =
+  createFileRoute('/authentication/authentication-leftlogin-imgbg')()
+const AuthenticationAuthenticationCenteredsignupTwostepsLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredsignup-twosteps')()
+const AuthenticationAuthenticationCenteredsignupLogoLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredsignup-logo')()
+const AuthenticationAuthenticationCenteredsignupGradientLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredsignup-gradient')()
 const AuthenticationAuthenticationCenteredsignupEmailLazyRouteImport =
   createFileRoute('/authentication/authentication-centeredsignup-email')()
+const AuthenticationAuthenticationCenteredsignupBlurredLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredsignup-blurred')()
 const AuthenticationAuthenticationCenteredsignupAnimatedLazyRouteImport =
   createFileRoute('/authentication/authentication-centeredsignup-animated')()
+const AuthenticationAuthenticationCenteredloginTwostepsLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredlogin-twosteps')()
+const AuthenticationAuthenticationCenteredloginLogoLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredlogin-logo')()
+const AuthenticationAuthenticationCenteredloginGradientLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredlogin-gradient')()
 const AuthenticationAuthenticationCenteredloginEmailLazyRouteImport =
   createFileRoute('/authentication/authentication-centeredlogin-email')()
+const AuthenticationAuthenticationCenteredloginBlurredLazyRouteImport =
+  createFileRoute('/authentication/authentication-centeredlogin-blurred')()
 const AuthenticationAuthenticationCenteredloginAnimatedLazyRouteImport =
   createFileRoute('/authentication/authentication-centeredlogin-animated')()
 const AuthenticationAuthenticationCenteredSignupLazyRouteImport =
@@ -1156,6 +1186,96 @@ const AuthenticationAuthenticationSimpleloginLazyRoute =
       (d) => d.Route,
     ),
   )
+const AuthenticationAuthenticationRightsignupImgbgLazyRoute =
+  AuthenticationAuthenticationRightsignupImgbgLazyRouteImport.update({
+    id: '/authentication-rightsignup-imgbg',
+    path: '/authentication-rightsignup-imgbg',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-rightsignup-imgbg.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationRightloginImgbgLazyRoute =
+  AuthenticationAuthenticationRightloginImgbgLazyRouteImport.update({
+    id: '/authentication-rightlogin-imgbg',
+    path: '/authentication-rightlogin-imgbg',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/authentication/authentication-rightlogin-imgbg.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute =
+  AuthenticationAuthenticationLeftsignupRighttestimonialLazyRouteImport.update({
+    id: '/authentication-leftsignup-righttestimonial',
+    path: '/authentication-leftsignup-righttestimonial',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-leftsignup-righttestimonial.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationLeftsignupImgbgLazyRoute =
+  AuthenticationAuthenticationLeftsignupImgbgLazyRouteImport.update({
+    id: '/authentication-leftsignup-imgbg',
+    path: '/authentication-leftsignup-imgbg',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/authentication/authentication-leftsignup-imgbg.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute =
+  AuthenticationAuthenticationLeftloginRighttestimonialLazyRouteImport.update({
+    id: '/authentication-leftlogin-righttestimonial',
+    path: '/authentication-leftlogin-righttestimonial',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-leftlogin-righttestimonial.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationLeftloginImgbgLazyRoute =
+  AuthenticationAuthenticationLeftloginImgbgLazyRouteImport.update({
+    id: '/authentication-leftlogin-imgbg',
+    path: '/authentication-leftlogin-imgbg',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/authentication/authentication-leftlogin-imgbg.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute =
+  AuthenticationAuthenticationCenteredsignupTwostepsLazyRouteImport.update({
+    id: '/authentication-centeredsignup-twosteps',
+    path: '/authentication-centeredsignup-twosteps',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredsignup-twosteps.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredsignupLogoLazyRoute =
+  AuthenticationAuthenticationCenteredsignupLogoLazyRouteImport.update({
+    id: '/authentication-centeredsignup-logo',
+    path: '/authentication-centeredsignup-logo',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredsignup-logo.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredsignupGradientLazyRoute =
+  AuthenticationAuthenticationCenteredsignupGradientLazyRouteImport.update({
+    id: '/authentication-centeredsignup-gradient',
+    path: '/authentication-centeredsignup-gradient',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredsignup-gradient.lazy'
+    ).then((d) => d.Route),
+  )
 const AuthenticationAuthenticationCenteredsignupEmailLazyRoute =
   AuthenticationAuthenticationCenteredsignupEmailLazyRouteImport.update({
     id: '/authentication-centeredsignup-email',
@@ -1164,6 +1284,16 @@ const AuthenticationAuthenticationCenteredsignupEmailLazyRoute =
   } as any).lazy(() =>
     import(
       './routes/authentication/authentication-centeredsignup-email.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredsignupBlurredLazyRoute =
+  AuthenticationAuthenticationCenteredsignupBlurredLazyRouteImport.update({
+    id: '/authentication-centeredsignup-blurred',
+    path: '/authentication-centeredsignup-blurred',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredsignup-blurred.lazy'
     ).then((d) => d.Route),
   )
 const AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute =
@@ -1176,6 +1306,36 @@ const AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute =
       './routes/authentication/authentication-centeredsignup-animated.lazy'
     ).then((d) => d.Route),
   )
+const AuthenticationAuthenticationCenteredloginTwostepsLazyRoute =
+  AuthenticationAuthenticationCenteredloginTwostepsLazyRouteImport.update({
+    id: '/authentication-centeredlogin-twosteps',
+    path: '/authentication-centeredlogin-twosteps',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredlogin-twosteps.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredloginLogoLazyRoute =
+  AuthenticationAuthenticationCenteredloginLogoLazyRouteImport.update({
+    id: '/authentication-centeredlogin-logo',
+    path: '/authentication-centeredlogin-logo',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredlogin-logo.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredloginGradientLazyRoute =
+  AuthenticationAuthenticationCenteredloginGradientLazyRouteImport.update({
+    id: '/authentication-centeredlogin-gradient',
+    path: '/authentication-centeredlogin-gradient',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredlogin-gradient.lazy'
+    ).then((d) => d.Route),
+  )
 const AuthenticationAuthenticationCenteredloginEmailLazyRoute =
   AuthenticationAuthenticationCenteredloginEmailLazyRouteImport.update({
     id: '/authentication-centeredlogin-email',
@@ -1184,6 +1344,16 @@ const AuthenticationAuthenticationCenteredloginEmailLazyRoute =
   } as any).lazy(() =>
     import(
       './routes/authentication/authentication-centeredlogin-email.lazy'
+    ).then((d) => d.Route),
+  )
+const AuthenticationAuthenticationCenteredloginBlurredLazyRoute =
+  AuthenticationAuthenticationCenteredloginBlurredLazyRouteImport.update({
+    id: '/authentication-centeredlogin-blurred',
+    path: '/authentication-centeredlogin-blurred',
+    getParentRoute: () => AuthenticationLazyRoute,
+  } as any).lazy(() =>
+    import(
+      './routes/authentication/authentication-centeredlogin-blurred.lazy'
     ).then((d) => d.Route),
   )
 const AuthenticationAuthenticationCenteredloginAnimatedLazyRoute =
@@ -1230,9 +1400,23 @@ export interface FileRoutesByFullPath {
   '/test': typeof TestLazyRoute
   '/authentication/authentication-centered-signup': typeof AuthenticationAuthenticationCenteredSignupLazyRoute
   '/authentication/authentication-centeredlogin-animated': typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  '/authentication/authentication-centeredlogin-blurred': typeof AuthenticationAuthenticationCenteredloginBlurredLazyRoute
   '/authentication/authentication-centeredlogin-email': typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  '/authentication/authentication-centeredlogin-gradient': typeof AuthenticationAuthenticationCenteredloginGradientLazyRoute
+  '/authentication/authentication-centeredlogin-logo': typeof AuthenticationAuthenticationCenteredloginLogoLazyRoute
+  '/authentication/authentication-centeredlogin-twosteps': typeof AuthenticationAuthenticationCenteredloginTwostepsLazyRoute
   '/authentication/authentication-centeredsignup-animated': typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  '/authentication/authentication-centeredsignup-blurred': typeof AuthenticationAuthenticationCenteredsignupBlurredLazyRoute
   '/authentication/authentication-centeredsignup-email': typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  '/authentication/authentication-centeredsignup-gradient': typeof AuthenticationAuthenticationCenteredsignupGradientLazyRoute
+  '/authentication/authentication-centeredsignup-logo': typeof AuthenticationAuthenticationCenteredsignupLogoLazyRoute
+  '/authentication/authentication-centeredsignup-twosteps': typeof AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute
+  '/authentication/authentication-leftlogin-imgbg': typeof AuthenticationAuthenticationLeftloginImgbgLazyRoute
+  '/authentication/authentication-leftlogin-righttestimonial': typeof AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute
+  '/authentication/authentication-leftsignup-imgbg': typeof AuthenticationAuthenticationLeftsignupImgbgLazyRoute
+  '/authentication/authentication-leftsignup-righttestimonial': typeof AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute
+  '/authentication/authentication-rightlogin-imgbg': typeof AuthenticationAuthenticationRightloginImgbgLazyRoute
+  '/authentication/authentication-rightsignup-imgbg': typeof AuthenticationAuthenticationRightsignupImgbgLazyRoute
   '/authentication/authentication-simplelogin': typeof AuthenticationAuthenticationSimpleloginLazyRoute
   '/authentication/authentication-simplelogin-withoutbg': typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
   '/authentication/authentication-simplelogin-withoutsocialbtn': typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
@@ -1351,9 +1535,23 @@ export interface FileRoutesByTo {
   '/test': typeof TestLazyRoute
   '/authentication/authentication-centered-signup': typeof AuthenticationAuthenticationCenteredSignupLazyRoute
   '/authentication/authentication-centeredlogin-animated': typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  '/authentication/authentication-centeredlogin-blurred': typeof AuthenticationAuthenticationCenteredloginBlurredLazyRoute
   '/authentication/authentication-centeredlogin-email': typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  '/authentication/authentication-centeredlogin-gradient': typeof AuthenticationAuthenticationCenteredloginGradientLazyRoute
+  '/authentication/authentication-centeredlogin-logo': typeof AuthenticationAuthenticationCenteredloginLogoLazyRoute
+  '/authentication/authentication-centeredlogin-twosteps': typeof AuthenticationAuthenticationCenteredloginTwostepsLazyRoute
   '/authentication/authentication-centeredsignup-animated': typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  '/authentication/authentication-centeredsignup-blurred': typeof AuthenticationAuthenticationCenteredsignupBlurredLazyRoute
   '/authentication/authentication-centeredsignup-email': typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  '/authentication/authentication-centeredsignup-gradient': typeof AuthenticationAuthenticationCenteredsignupGradientLazyRoute
+  '/authentication/authentication-centeredsignup-logo': typeof AuthenticationAuthenticationCenteredsignupLogoLazyRoute
+  '/authentication/authentication-centeredsignup-twosteps': typeof AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute
+  '/authentication/authentication-leftlogin-imgbg': typeof AuthenticationAuthenticationLeftloginImgbgLazyRoute
+  '/authentication/authentication-leftlogin-righttestimonial': typeof AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute
+  '/authentication/authentication-leftsignup-imgbg': typeof AuthenticationAuthenticationLeftsignupImgbgLazyRoute
+  '/authentication/authentication-leftsignup-righttestimonial': typeof AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute
+  '/authentication/authentication-rightlogin-imgbg': typeof AuthenticationAuthenticationRightloginImgbgLazyRoute
+  '/authentication/authentication-rightsignup-imgbg': typeof AuthenticationAuthenticationRightsignupImgbgLazyRoute
   '/authentication/authentication-simplelogin': typeof AuthenticationAuthenticationSimpleloginLazyRoute
   '/authentication/authentication-simplelogin-withoutbg': typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
   '/authentication/authentication-simplelogin-withoutsocialbtn': typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
@@ -1473,9 +1671,23 @@ export interface FileRoutesById {
   '/test': typeof TestLazyRoute
   '/authentication/authentication-centered-signup': typeof AuthenticationAuthenticationCenteredSignupLazyRoute
   '/authentication/authentication-centeredlogin-animated': typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  '/authentication/authentication-centeredlogin-blurred': typeof AuthenticationAuthenticationCenteredloginBlurredLazyRoute
   '/authentication/authentication-centeredlogin-email': typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  '/authentication/authentication-centeredlogin-gradient': typeof AuthenticationAuthenticationCenteredloginGradientLazyRoute
+  '/authentication/authentication-centeredlogin-logo': typeof AuthenticationAuthenticationCenteredloginLogoLazyRoute
+  '/authentication/authentication-centeredlogin-twosteps': typeof AuthenticationAuthenticationCenteredloginTwostepsLazyRoute
   '/authentication/authentication-centeredsignup-animated': typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  '/authentication/authentication-centeredsignup-blurred': typeof AuthenticationAuthenticationCenteredsignupBlurredLazyRoute
   '/authentication/authentication-centeredsignup-email': typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  '/authentication/authentication-centeredsignup-gradient': typeof AuthenticationAuthenticationCenteredsignupGradientLazyRoute
+  '/authentication/authentication-centeredsignup-logo': typeof AuthenticationAuthenticationCenteredsignupLogoLazyRoute
+  '/authentication/authentication-centeredsignup-twosteps': typeof AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute
+  '/authentication/authentication-leftlogin-imgbg': typeof AuthenticationAuthenticationLeftloginImgbgLazyRoute
+  '/authentication/authentication-leftlogin-righttestimonial': typeof AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute
+  '/authentication/authentication-leftsignup-imgbg': typeof AuthenticationAuthenticationLeftsignupImgbgLazyRoute
+  '/authentication/authentication-leftsignup-righttestimonial': typeof AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute
+  '/authentication/authentication-rightlogin-imgbg': typeof AuthenticationAuthenticationRightloginImgbgLazyRoute
+  '/authentication/authentication-rightsignup-imgbg': typeof AuthenticationAuthenticationRightsignupImgbgLazyRoute
   '/authentication/authentication-simplelogin': typeof AuthenticationAuthenticationSimpleloginLazyRoute
   '/authentication/authentication-simplelogin-withoutbg': typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
   '/authentication/authentication-simplelogin-withoutsocialbtn': typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
@@ -1596,9 +1808,23 @@ export interface FileRouteTypes {
     | '/test'
     | '/authentication/authentication-centered-signup'
     | '/authentication/authentication-centeredlogin-animated'
+    | '/authentication/authentication-centeredlogin-blurred'
     | '/authentication/authentication-centeredlogin-email'
+    | '/authentication/authentication-centeredlogin-gradient'
+    | '/authentication/authentication-centeredlogin-logo'
+    | '/authentication/authentication-centeredlogin-twosteps'
     | '/authentication/authentication-centeredsignup-animated'
+    | '/authentication/authentication-centeredsignup-blurred'
     | '/authentication/authentication-centeredsignup-email'
+    | '/authentication/authentication-centeredsignup-gradient'
+    | '/authentication/authentication-centeredsignup-logo'
+    | '/authentication/authentication-centeredsignup-twosteps'
+    | '/authentication/authentication-leftlogin-imgbg'
+    | '/authentication/authentication-leftlogin-righttestimonial'
+    | '/authentication/authentication-leftsignup-imgbg'
+    | '/authentication/authentication-leftsignup-righttestimonial'
+    | '/authentication/authentication-rightlogin-imgbg'
+    | '/authentication/authentication-rightsignup-imgbg'
     | '/authentication/authentication-simplelogin'
     | '/authentication/authentication-simplelogin-withoutbg'
     | '/authentication/authentication-simplelogin-withoutsocialbtn'
@@ -1717,9 +1943,23 @@ export interface FileRouteTypes {
     | '/test'
     | '/authentication/authentication-centered-signup'
     | '/authentication/authentication-centeredlogin-animated'
+    | '/authentication/authentication-centeredlogin-blurred'
     | '/authentication/authentication-centeredlogin-email'
+    | '/authentication/authentication-centeredlogin-gradient'
+    | '/authentication/authentication-centeredlogin-logo'
+    | '/authentication/authentication-centeredlogin-twosteps'
     | '/authentication/authentication-centeredsignup-animated'
+    | '/authentication/authentication-centeredsignup-blurred'
     | '/authentication/authentication-centeredsignup-email'
+    | '/authentication/authentication-centeredsignup-gradient'
+    | '/authentication/authentication-centeredsignup-logo'
+    | '/authentication/authentication-centeredsignup-twosteps'
+    | '/authentication/authentication-leftlogin-imgbg'
+    | '/authentication/authentication-leftlogin-righttestimonial'
+    | '/authentication/authentication-leftsignup-imgbg'
+    | '/authentication/authentication-leftsignup-righttestimonial'
+    | '/authentication/authentication-rightlogin-imgbg'
+    | '/authentication/authentication-rightsignup-imgbg'
     | '/authentication/authentication-simplelogin'
     | '/authentication/authentication-simplelogin-withoutbg'
     | '/authentication/authentication-simplelogin-withoutsocialbtn'
@@ -1838,9 +2078,23 @@ export interface FileRouteTypes {
     | '/test'
     | '/authentication/authentication-centered-signup'
     | '/authentication/authentication-centeredlogin-animated'
+    | '/authentication/authentication-centeredlogin-blurred'
     | '/authentication/authentication-centeredlogin-email'
+    | '/authentication/authentication-centeredlogin-gradient'
+    | '/authentication/authentication-centeredlogin-logo'
+    | '/authentication/authentication-centeredlogin-twosteps'
     | '/authentication/authentication-centeredsignup-animated'
+    | '/authentication/authentication-centeredsignup-blurred'
     | '/authentication/authentication-centeredsignup-email'
+    | '/authentication/authentication-centeredsignup-gradient'
+    | '/authentication/authentication-centeredsignup-logo'
+    | '/authentication/authentication-centeredsignup-twosteps'
+    | '/authentication/authentication-leftlogin-imgbg'
+    | '/authentication/authentication-leftlogin-righttestimonial'
+    | '/authentication/authentication-leftsignup-imgbg'
+    | '/authentication/authentication-leftsignup-righttestimonial'
+    | '/authentication/authentication-rightlogin-imgbg'
+    | '/authentication/authentication-rightsignup-imgbg'
     | '/authentication/authentication-simplelogin'
     | '/authentication/authentication-simplelogin-withoutbg'
     | '/authentication/authentication-simplelogin-withoutsocialbtn'
@@ -2777,11 +3031,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticationAuthenticationSimpleloginLazyRouteImport
       parentRoute: typeof AuthenticationLazyRoute
     }
+    '/authentication/authentication-rightsignup-imgbg': {
+      id: '/authentication/authentication-rightsignup-imgbg'
+      path: '/authentication-rightsignup-imgbg'
+      fullPath: '/authentication/authentication-rightsignup-imgbg'
+      preLoaderRoute: typeof AuthenticationAuthenticationRightsignupImgbgLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-rightlogin-imgbg': {
+      id: '/authentication/authentication-rightlogin-imgbg'
+      path: '/authentication-rightlogin-imgbg'
+      fullPath: '/authentication/authentication-rightlogin-imgbg'
+      preLoaderRoute: typeof AuthenticationAuthenticationRightloginImgbgLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-leftsignup-righttestimonial': {
+      id: '/authentication/authentication-leftsignup-righttestimonial'
+      path: '/authentication-leftsignup-righttestimonial'
+      fullPath: '/authentication/authentication-leftsignup-righttestimonial'
+      preLoaderRoute: typeof AuthenticationAuthenticationLeftsignupRighttestimonialLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-leftsignup-imgbg': {
+      id: '/authentication/authentication-leftsignup-imgbg'
+      path: '/authentication-leftsignup-imgbg'
+      fullPath: '/authentication/authentication-leftsignup-imgbg'
+      preLoaderRoute: typeof AuthenticationAuthenticationLeftsignupImgbgLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-leftlogin-righttestimonial': {
+      id: '/authentication/authentication-leftlogin-righttestimonial'
+      path: '/authentication-leftlogin-righttestimonial'
+      fullPath: '/authentication/authentication-leftlogin-righttestimonial'
+      preLoaderRoute: typeof AuthenticationAuthenticationLeftloginRighttestimonialLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-leftlogin-imgbg': {
+      id: '/authentication/authentication-leftlogin-imgbg'
+      path: '/authentication-leftlogin-imgbg'
+      fullPath: '/authentication/authentication-leftlogin-imgbg'
+      preLoaderRoute: typeof AuthenticationAuthenticationLeftloginImgbgLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredsignup-twosteps': {
+      id: '/authentication/authentication-centeredsignup-twosteps'
+      path: '/authentication-centeredsignup-twosteps'
+      fullPath: '/authentication/authentication-centeredsignup-twosteps'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupTwostepsLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredsignup-logo': {
+      id: '/authentication/authentication-centeredsignup-logo'
+      path: '/authentication-centeredsignup-logo'
+      fullPath: '/authentication/authentication-centeredsignup-logo'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupLogoLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredsignup-gradient': {
+      id: '/authentication/authentication-centeredsignup-gradient'
+      path: '/authentication-centeredsignup-gradient'
+      fullPath: '/authentication/authentication-centeredsignup-gradient'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupGradientLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
     '/authentication/authentication-centeredsignup-email': {
       id: '/authentication/authentication-centeredsignup-email'
       path: '/authentication-centeredsignup-email'
       fullPath: '/authentication/authentication-centeredsignup-email'
       preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupEmailLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredsignup-blurred': {
+      id: '/authentication/authentication-centeredsignup-blurred'
+      path: '/authentication-centeredsignup-blurred'
+      fullPath: '/authentication/authentication-centeredsignup-blurred'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupBlurredLazyRouteImport
       parentRoute: typeof AuthenticationLazyRoute
     }
     '/authentication/authentication-centeredsignup-animated': {
@@ -2791,11 +3115,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRouteImport
       parentRoute: typeof AuthenticationLazyRoute
     }
+    '/authentication/authentication-centeredlogin-twosteps': {
+      id: '/authentication/authentication-centeredlogin-twosteps'
+      path: '/authentication-centeredlogin-twosteps'
+      fullPath: '/authentication/authentication-centeredlogin-twosteps'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredloginTwostepsLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredlogin-logo': {
+      id: '/authentication/authentication-centeredlogin-logo'
+      path: '/authentication-centeredlogin-logo'
+      fullPath: '/authentication/authentication-centeredlogin-logo'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredloginLogoLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredlogin-gradient': {
+      id: '/authentication/authentication-centeredlogin-gradient'
+      path: '/authentication-centeredlogin-gradient'
+      fullPath: '/authentication/authentication-centeredlogin-gradient'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredloginGradientLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
     '/authentication/authentication-centeredlogin-email': {
       id: '/authentication/authentication-centeredlogin-email'
       path: '/authentication-centeredlogin-email'
       fullPath: '/authentication/authentication-centeredlogin-email'
       preLoaderRoute: typeof AuthenticationAuthenticationCenteredloginEmailLazyRouteImport
+      parentRoute: typeof AuthenticationLazyRoute
+    }
+    '/authentication/authentication-centeredlogin-blurred': {
+      id: '/authentication/authentication-centeredlogin-blurred'
+      path: '/authentication-centeredlogin-blurred'
+      fullPath: '/authentication/authentication-centeredlogin-blurred'
+      preLoaderRoute: typeof AuthenticationAuthenticationCenteredloginBlurredLazyRouteImport
       parentRoute: typeof AuthenticationLazyRoute
     }
     '/authentication/authentication-centeredlogin-animated': {
@@ -2818,9 +3170,23 @@ declare module '@tanstack/react-router' {
 interface AuthenticationLazyRouteChildren {
   AuthenticationAuthenticationCenteredSignupLazyRoute: typeof AuthenticationAuthenticationCenteredSignupLazyRoute
   AuthenticationAuthenticationCenteredloginAnimatedLazyRoute: typeof AuthenticationAuthenticationCenteredloginAnimatedLazyRoute
+  AuthenticationAuthenticationCenteredloginBlurredLazyRoute: typeof AuthenticationAuthenticationCenteredloginBlurredLazyRoute
   AuthenticationAuthenticationCenteredloginEmailLazyRoute: typeof AuthenticationAuthenticationCenteredloginEmailLazyRoute
+  AuthenticationAuthenticationCenteredloginGradientLazyRoute: typeof AuthenticationAuthenticationCenteredloginGradientLazyRoute
+  AuthenticationAuthenticationCenteredloginLogoLazyRoute: typeof AuthenticationAuthenticationCenteredloginLogoLazyRoute
+  AuthenticationAuthenticationCenteredloginTwostepsLazyRoute: typeof AuthenticationAuthenticationCenteredloginTwostepsLazyRoute
   AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute: typeof AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute
+  AuthenticationAuthenticationCenteredsignupBlurredLazyRoute: typeof AuthenticationAuthenticationCenteredsignupBlurredLazyRoute
   AuthenticationAuthenticationCenteredsignupEmailLazyRoute: typeof AuthenticationAuthenticationCenteredsignupEmailLazyRoute
+  AuthenticationAuthenticationCenteredsignupGradientLazyRoute: typeof AuthenticationAuthenticationCenteredsignupGradientLazyRoute
+  AuthenticationAuthenticationCenteredsignupLogoLazyRoute: typeof AuthenticationAuthenticationCenteredsignupLogoLazyRoute
+  AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute: typeof AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute
+  AuthenticationAuthenticationLeftloginImgbgLazyRoute: typeof AuthenticationAuthenticationLeftloginImgbgLazyRoute
+  AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute: typeof AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute
+  AuthenticationAuthenticationLeftsignupImgbgLazyRoute: typeof AuthenticationAuthenticationLeftsignupImgbgLazyRoute
+  AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute: typeof AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute
+  AuthenticationAuthenticationRightloginImgbgLazyRoute: typeof AuthenticationAuthenticationRightloginImgbgLazyRoute
+  AuthenticationAuthenticationRightsignupImgbgLazyRoute: typeof AuthenticationAuthenticationRightsignupImgbgLazyRoute
   AuthenticationAuthenticationSimpleloginLazyRoute: typeof AuthenticationAuthenticationSimpleloginLazyRoute
   AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute: typeof AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute
   AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute: typeof AuthenticationAuthenticationSimpleloginWithoutsocialbtnLazyRoute
@@ -2833,12 +3199,40 @@ const AuthenticationLazyRouteChildren: AuthenticationLazyRouteChildren = {
     AuthenticationAuthenticationCenteredSignupLazyRoute,
   AuthenticationAuthenticationCenteredloginAnimatedLazyRoute:
     AuthenticationAuthenticationCenteredloginAnimatedLazyRoute,
+  AuthenticationAuthenticationCenteredloginBlurredLazyRoute:
+    AuthenticationAuthenticationCenteredloginBlurredLazyRoute,
   AuthenticationAuthenticationCenteredloginEmailLazyRoute:
     AuthenticationAuthenticationCenteredloginEmailLazyRoute,
+  AuthenticationAuthenticationCenteredloginGradientLazyRoute:
+    AuthenticationAuthenticationCenteredloginGradientLazyRoute,
+  AuthenticationAuthenticationCenteredloginLogoLazyRoute:
+    AuthenticationAuthenticationCenteredloginLogoLazyRoute,
+  AuthenticationAuthenticationCenteredloginTwostepsLazyRoute:
+    AuthenticationAuthenticationCenteredloginTwostepsLazyRoute,
   AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute:
     AuthenticationAuthenticationCenteredsignupAnimatedLazyRoute,
+  AuthenticationAuthenticationCenteredsignupBlurredLazyRoute:
+    AuthenticationAuthenticationCenteredsignupBlurredLazyRoute,
   AuthenticationAuthenticationCenteredsignupEmailLazyRoute:
     AuthenticationAuthenticationCenteredsignupEmailLazyRoute,
+  AuthenticationAuthenticationCenteredsignupGradientLazyRoute:
+    AuthenticationAuthenticationCenteredsignupGradientLazyRoute,
+  AuthenticationAuthenticationCenteredsignupLogoLazyRoute:
+    AuthenticationAuthenticationCenteredsignupLogoLazyRoute,
+  AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute:
+    AuthenticationAuthenticationCenteredsignupTwostepsLazyRoute,
+  AuthenticationAuthenticationLeftloginImgbgLazyRoute:
+    AuthenticationAuthenticationLeftloginImgbgLazyRoute,
+  AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute:
+    AuthenticationAuthenticationLeftloginRighttestimonialLazyRoute,
+  AuthenticationAuthenticationLeftsignupImgbgLazyRoute:
+    AuthenticationAuthenticationLeftsignupImgbgLazyRoute,
+  AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute:
+    AuthenticationAuthenticationLeftsignupRighttestimonialLazyRoute,
+  AuthenticationAuthenticationRightloginImgbgLazyRoute:
+    AuthenticationAuthenticationRightloginImgbgLazyRoute,
+  AuthenticationAuthenticationRightsignupImgbgLazyRoute:
+    AuthenticationAuthenticationRightsignupImgbgLazyRoute,
   AuthenticationAuthenticationSimpleloginLazyRoute:
     AuthenticationAuthenticationSimpleloginLazyRoute,
   AuthenticationAuthenticationSimpleloginWithoutbgLazyRoute:

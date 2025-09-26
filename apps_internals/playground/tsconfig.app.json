@@ -41,6 +41,21 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/application-authentication-centered-signup-email/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-signup-animatedform/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-login-email/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-login-animatedform/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-signup/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/application-authentication-simplesignup-without-background/tsconfig.lib.json"
     },
     {

@@ -3,6 +3,21 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/application-authentication-centered-signup-email"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-signup-animatedform"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-login-email"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-login-animatedform"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centered-signup"
+    },
+    {
       "path": "../../packages/components/application-authentication-simplesignup-without-background"
     },
     {

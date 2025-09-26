@@ -1,0 +1,9 @@
+{
+  "name": "application-authentication-leftsignup-righttestimonial",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-authentication-leftsignup-righttestimonial/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-authentication-leftsignup-righttestimonial --web",
+  "targets": {}
+}

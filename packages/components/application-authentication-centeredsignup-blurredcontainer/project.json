@@ -1,0 +1,9 @@
+{
+  "name": "application-authentication-centeredsignup-blurredcontainer",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-authentication-centeredsignup-blurredcontainer/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-authentication-centeredsignup-blurredcontainer --web",
+  "targets": {}
+}
