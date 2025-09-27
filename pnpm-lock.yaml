@@ -267,6 +267,36 @@ importers:
       '@vx-pro/application-authentication-simplesignup-without-background':
         specifier: workspace:*
         version: link:../../packages/components/application-authentication-simplesignup-without-background
+      '@vx-pro/application-card-actioncards':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-actioncards
+      '@vx-pro/application-card-cardfieldset':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-cardfieldset
+      '@vx-pro/application-card-discountcard':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-discountcard
+      '@vx-pro/application-card-dismissablecard':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-dismissablecard
+      '@vx-pro/application-card-eventannouncement':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-eventannouncement
+      '@vx-pro/application-card-invitemember':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-invitemember
+      '@vx-pro/application-card-notifications':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-notifications
+      '@vx-pro/application-card-onboardchecklist':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-onboardchecklist
+      '@vx-pro/application-card-spotlight':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-spotlight
+      '@vx-pro/application-card-thumbnail':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-thumbnail
       '@vx-pro/application-feedback-modal':
         specifier: workspace:*
         version: link:../../packages/components/application-feedback-modal
@@ -703,6 +733,66 @@ importers:
         version: 6.0.2(react@19.0.0)
 
   packages/components/application-authentication-simplesignup-without-background:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-actioncards:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-cardfieldset:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-discountcard:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-dismissablecard:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-eventannouncement:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-invitemember:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-notifications:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-onboardchecklist:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-spotlight:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-thumbnail:
     devDependencies:
       '@iconify/react':
         specifier: ^6.0.2

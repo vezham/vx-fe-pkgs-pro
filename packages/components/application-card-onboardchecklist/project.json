@@ -1,0 +1,9 @@
+{
+  "name": "application-card-onboardchecklist",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-card-onboardchecklist/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-card-onboardchecklist --web",
+  "targets": {}
+}

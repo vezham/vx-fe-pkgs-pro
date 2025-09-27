@@ -41,13 +41,55 @@
   ],
   "references": [
     {
+      "path": "../../packages/components/application-authentication-rightsignup-imagebackground/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-rightlogin-imagebackground/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-leftsignup-righttestimonial/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-leftsignup-imagebackground/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-leftlogin-righttestimonial/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-leftlogin-imagebackground/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centeredsignup-twosteps/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centeredsignup-logo/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centeredsignup-gradientbackground/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/application-authentication-centered-signup-email/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centeredsignup-blurredcontainer/tsconfig.lib.json"
     },
     {
       "path": "../../packages/components/application-authentication-centered-signup-animatedform/tsconfig.lib.json"
     },
     {
+      "path": "../../packages/components/application-authentication-centeredlogin-twosteps/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centeredlogin-logo/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centeredlogin-gradientbackground/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/components/application-authentication-centered-login-email/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-authentication-centeredlogin-blurredcontainer/tsconfig.lib.json"
     },
     {
       "path": "../../packages/components/application-authentication-centered-login-animatedform/tsconfig.lib.json"

@@ -30,6 +30,7 @@ const FeedbackLazyRouteImport = createFileRoute('/feedback')()
 const FaqsLazyRouteImport = createFileRoute('/faqs')()
 const CookiesLazyRouteImport = createFileRoute('/cookies')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
+const CardLazyRouteImport = createFileRoute('/card')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const BannerLazyRouteImport = createFileRoute('/banner')()
 const AuthenticationLazyRouteImport = createFileRoute('/authentication')()
@@ -215,6 +216,26 @@ const ChartsCircle4LazyRouteImport = createFileRoute('/charts/circle-4')()
 const ChartsCircle3LazyRouteImport = createFileRoute('/charts/circle-3')()
 const ChartsCircle2LazyRouteImport = createFileRoute('/charts/circle-2')()
 const ChartsCircle1LazyRouteImport = createFileRoute('/charts/circle-1')()
+const CardCardThumbnailLazyRouteImport = createFileRoute(
+  '/card/card-thumbnail',
+)()
+const CardCardSpotlightLazyRouteImport = createFileRoute(
+  '/card/card-spotlight',
+)()
+const CardCardOnboardchecklistLazyRouteImport = createFileRoute(
+  '/card/card-onboardchecklist',
+)()
+const CardCardFieldsetLazyRouteImport = createFileRoute('/card/card-fieldset')()
+const CardCardEventannouncementLazyRouteImport = createFileRoute(
+  '/card/card-eventannouncement',
+)()
+const CardCardDismissableLazyRouteImport = createFileRoute(
+  '/card/card-dismissable',
+)()
+const CardCardDiscountLazyRouteImport = createFileRoute('/card/card-discount')()
+const CardCardActioncardsLazyRouteImport = createFileRoute(
+  '/card/card-actioncards',
+)()
 const BarsBars4LazyRouteImport = createFileRoute('/bars/bars-4')()
 const BarsBars3LazyRouteImport = createFileRoute('/bars/bars-3')()
 const BarsBars2LazyRouteImport = createFileRoute('/bars/bars-2')()
@@ -384,6 +405,11 @@ const ChartsLazyRoute = ChartsLazyRouteImport.update({
   path: '/charts',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/charts.lazy').then((d) => d.Route))
+const CardLazyRoute = CardLazyRouteImport.update({
+  id: '/card',
+  path: '/card',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/card.lazy').then((d) => d.Route))
 const BarsLazyRoute = BarsLazyRouteImport.update({
   id: '/bars',
   path: '/bars',
@@ -1048,6 +1074,64 @@ const ChartsCircle1LazyRoute = ChartsCircle1LazyRouteImport.update({
 } as any).lazy(() =>
   import('./routes/charts/circle-1.lazy').then((d) => d.Route),
 )
+const CardCardThumbnailLazyRoute = CardCardThumbnailLazyRouteImport.update({
+  id: '/card-thumbnail',
+  path: '/card-thumbnail',
+  getParentRoute: () => CardLazyRoute,
+} as any).lazy(() =>
+  import('./routes/card/card-thumbnail.lazy').then((d) => d.Route),
+)
+const CardCardSpotlightLazyRoute = CardCardSpotlightLazyRouteImport.update({
+  id: '/card-spotlight',
+  path: '/card-spotlight',
+  getParentRoute: () => CardLazyRoute,
+} as any).lazy(() =>
+  import('./routes/card/card-spotlight.lazy').then((d) => d.Route),
+)
+const CardCardOnboardchecklistLazyRoute =
+  CardCardOnboardchecklistLazyRouteImport.update({
+    id: '/card-onboardchecklist',
+    path: '/card-onboardchecklist',
+    getParentRoute: () => CardLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/card/card-onboardchecklist.lazy').then((d) => d.Route),
+  )
+const CardCardFieldsetLazyRoute = CardCardFieldsetLazyRouteImport.update({
+  id: '/card-fieldset',
+  path: '/card-fieldset',
+  getParentRoute: () => CardLazyRoute,
+} as any).lazy(() =>
+  import('./routes/card/card-fieldset.lazy').then((d) => d.Route),
+)
+const CardCardEventannouncementLazyRoute =
+  CardCardEventannouncementLazyRouteImport.update({
+    id: '/card-eventannouncement',
+    path: '/card-eventannouncement',
+    getParentRoute: () => CardLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/card/card-eventannouncement.lazy').then((d) => d.Route),
+  )
+const CardCardDismissableLazyRoute = CardCardDismissableLazyRouteImport.update({
+  id: '/card-dismissable',
+  path: '/card-dismissable',
+  getParentRoute: () => CardLazyRoute,
+} as any).lazy(() =>
+  import('./routes/card/card-dismissable.lazy').then((d) => d.Route),
+)
+const CardCardDiscountLazyRoute = CardCardDiscountLazyRouteImport.update({
+  id: '/card-discount',
+  path: '/card-discount',
+  getParentRoute: () => CardLazyRoute,
+} as any).lazy(() =>
+  import('./routes/card/card-discount.lazy').then((d) => d.Route),
+)
+const CardCardActioncardsLazyRoute = CardCardActioncardsLazyRouteImport.update({
+  id: '/card-actioncards',
+  path: '/card-actioncards',
+  getParentRoute: () => CardLazyRoute,
+} as any).lazy(() =>
+  import('./routes/card/card-actioncards.lazy').then((d) => d.Route),
+)
 const BarsBars4LazyRoute = BarsBars4LazyRouteImport.update({
   id: '/bars-4',
   path: '/bars-4',
@@ -1382,6 +1466,7 @@ export interface FileRoutesByFullPath {
   '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
+  '/card': typeof CardLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
@@ -1434,6 +1519,14 @@ export interface FileRoutesByFullPath {
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
   '/bars/bars-4': typeof BarsBars4LazyRoute
+  '/card/card-actioncards': typeof CardCardActioncardsLazyRoute
+  '/card/card-discount': typeof CardCardDiscountLazyRoute
+  '/card/card-dismissable': typeof CardCardDismissableLazyRoute
+  '/card/card-eventannouncement': typeof CardCardEventannouncementLazyRoute
+  '/card/card-fieldset': typeof CardCardFieldsetLazyRoute
+  '/card/card-onboardchecklist': typeof CardCardOnboardchecklistLazyRoute
+  '/card/card-spotlight': typeof CardCardSpotlightLazyRoute
+  '/card/card-thumbnail': typeof CardCardThumbnailLazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
   '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/circle-3': typeof ChartsCircle3LazyRoute
@@ -1517,6 +1610,7 @@ export interface FileRoutesByTo {
   '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
+  '/card': typeof CardLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
@@ -1569,6 +1663,14 @@ export interface FileRoutesByTo {
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
   '/bars/bars-4': typeof BarsBars4LazyRoute
+  '/card/card-actioncards': typeof CardCardActioncardsLazyRoute
+  '/card/card-discount': typeof CardCardDiscountLazyRoute
+  '/card/card-dismissable': typeof CardCardDismissableLazyRoute
+  '/card/card-eventannouncement': typeof CardCardEventannouncementLazyRoute
+  '/card/card-fieldset': typeof CardCardFieldsetLazyRoute
+  '/card/card-onboardchecklist': typeof CardCardOnboardchecklistLazyRoute
+  '/card/card-spotlight': typeof CardCardSpotlightLazyRoute
+  '/card/card-thumbnail': typeof CardCardThumbnailLazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
   '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/circle-3': typeof ChartsCircle3LazyRoute
@@ -1653,6 +1755,7 @@ export interface FileRoutesById {
   '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
+  '/card': typeof CardLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
   '/faqs': typeof FaqsLazyRouteWithChildren
@@ -1705,6 +1808,14 @@ export interface FileRoutesById {
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
   '/bars/bars-4': typeof BarsBars4LazyRoute
+  '/card/card-actioncards': typeof CardCardActioncardsLazyRoute
+  '/card/card-discount': typeof CardCardDiscountLazyRoute
+  '/card/card-dismissable': typeof CardCardDismissableLazyRoute
+  '/card/card-eventannouncement': typeof CardCardEventannouncementLazyRoute
+  '/card/card-fieldset': typeof CardCardFieldsetLazyRoute
+  '/card/card-onboardchecklist': typeof CardCardOnboardchecklistLazyRoute
+  '/card/card-spotlight': typeof CardCardSpotlightLazyRoute
+  '/card/card-thumbnail': typeof CardCardThumbnailLazyRoute
   '/charts/circle-1': typeof ChartsCircle1LazyRoute
   '/charts/circle-2': typeof ChartsCircle2LazyRoute
   '/charts/circle-3': typeof ChartsCircle3LazyRoute
@@ -1790,6 +1901,7 @@ export interface FileRouteTypes {
     | '/authentication'
     | '/banner'
     | '/bars'
+    | '/card'
     | '/charts'
     | '/cookies'
     | '/faqs'
@@ -1842,6 +1954,14 @@ export interface FileRouteTypes {
     | '/bars/bars-2'
     | '/bars/bars-3'
     | '/bars/bars-4'
+    | '/card/card-actioncards'
+    | '/card/card-discount'
+    | '/card/card-dismissable'
+    | '/card/card-eventannouncement'
+    | '/card/card-fieldset'
+    | '/card/card-onboardchecklist'
+    | '/card/card-spotlight'
+    | '/card/card-thumbnail'
     | '/charts/circle-1'
     | '/charts/circle-2'
     | '/charts/circle-3'
@@ -1925,6 +2045,7 @@ export interface FileRouteTypes {
     | '/authentication'
     | '/banner'
     | '/bars'
+    | '/card'
     | '/charts'
     | '/cookies'
     | '/faqs'
@@ -1977,6 +2098,14 @@ export interface FileRouteTypes {
     | '/bars/bars-2'
     | '/bars/bars-3'
     | '/bars/bars-4'
+    | '/card/card-actioncards'
+    | '/card/card-discount'
+    | '/card/card-dismissable'
+    | '/card/card-eventannouncement'
+    | '/card/card-fieldset'
+    | '/card/card-onboardchecklist'
+    | '/card/card-spotlight'
+    | '/card/card-thumbnail'
     | '/charts/circle-1'
     | '/charts/circle-2'
     | '/charts/circle-3'
@@ -2060,6 +2189,7 @@ export interface FileRouteTypes {
     | '/authentication'
     | '/banner'
     | '/bars'
+    | '/card'
     | '/charts'
     | '/cookies'
     | '/faqs'
@@ -2112,6 +2242,14 @@ export interface FileRouteTypes {
     | '/bars/bars-2'
     | '/bars/bars-3'
     | '/bars/bars-4'
+    | '/card/card-actioncards'
+    | '/card/card-discount'
+    | '/card/card-dismissable'
+    | '/card/card-eventannouncement'
+    | '/card/card-fieldset'
+    | '/card/card-onboardchecklist'
+    | '/card/card-spotlight'
+    | '/card/card-thumbnail'
     | '/charts/circle-1'
     | '/charts/circle-2'
     | '/charts/circle-3'
@@ -2196,6 +2334,7 @@ export interface RootRouteChildren {
   AuthenticationLazyRoute: typeof AuthenticationLazyRouteWithChildren
   BannerLazyRoute: typeof BannerLazyRoute
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
+  CardLazyRoute: typeof CardLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
   CookiesLazyRoute: typeof CookiesLazyRouteWithChildren
   FaqsLazyRoute: typeof FaqsLazyRouteWithChildren
@@ -2343,6 +2482,13 @@ declare module '@tanstack/react-router' {
       path: '/charts'
       fullPath: '/charts'
       preLoaderRoute: typeof ChartsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/card': {
+      id: '/card'
+      path: '/card'
+      fullPath: '/card'
+      preLoaderRoute: typeof CardLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bars': {
@@ -2912,6 +3058,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChartsCircle1LazyRouteImport
       parentRoute: typeof ChartsLazyRoute
     }
+    '/card/card-thumbnail': {
+      id: '/card/card-thumbnail'
+      path: '/card-thumbnail'
+      fullPath: '/card/card-thumbnail'
+      preLoaderRoute: typeof CardCardThumbnailLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
+    '/card/card-spotlight': {
+      id: '/card/card-spotlight'
+      path: '/card-spotlight'
+      fullPath: '/card/card-spotlight'
+      preLoaderRoute: typeof CardCardSpotlightLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
+    '/card/card-onboardchecklist': {
+      id: '/card/card-onboardchecklist'
+      path: '/card-onboardchecklist'
+      fullPath: '/card/card-onboardchecklist'
+      preLoaderRoute: typeof CardCardOnboardchecklistLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
+    '/card/card-fieldset': {
+      id: '/card/card-fieldset'
+      path: '/card-fieldset'
+      fullPath: '/card/card-fieldset'
+      preLoaderRoute: typeof CardCardFieldsetLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
+    '/card/card-eventannouncement': {
+      id: '/card/card-eventannouncement'
+      path: '/card-eventannouncement'
+      fullPath: '/card/card-eventannouncement'
+      preLoaderRoute: typeof CardCardEventannouncementLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
+    '/card/card-dismissable': {
+      id: '/card/card-dismissable'
+      path: '/card-dismissable'
+      fullPath: '/card/card-dismissable'
+      preLoaderRoute: typeof CardCardDismissableLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
+    '/card/card-discount': {
+      id: '/card/card-discount'
+      path: '/card-discount'
+      fullPath: '/card/card-discount'
+      preLoaderRoute: typeof CardCardDiscountLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
+    '/card/card-actioncards': {
+      id: '/card/card-actioncards'
+      path: '/card-actioncards'
+      fullPath: '/card/card-actioncards'
+      preLoaderRoute: typeof CardCardActioncardsLazyRouteImport
+      parentRoute: typeof CardLazyRoute
+    }
     '/bars/bars-4': {
       id: '/bars/bars-4'
       path: '/bars-4'
@@ -3266,6 +3468,32 @@ const BarsLazyRouteWithChildren = BarsLazyRoute._addFileChildren(
   BarsLazyRouteChildren,
 )
 
+interface CardLazyRouteChildren {
+  CardCardActioncardsLazyRoute: typeof CardCardActioncardsLazyRoute
+  CardCardDiscountLazyRoute: typeof CardCardDiscountLazyRoute
+  CardCardDismissableLazyRoute: typeof CardCardDismissableLazyRoute
+  CardCardEventannouncementLazyRoute: typeof CardCardEventannouncementLazyRoute
+  CardCardFieldsetLazyRoute: typeof CardCardFieldsetLazyRoute
+  CardCardOnboardchecklistLazyRoute: typeof CardCardOnboardchecklistLazyRoute
+  CardCardSpotlightLazyRoute: typeof CardCardSpotlightLazyRoute
+  CardCardThumbnailLazyRoute: typeof CardCardThumbnailLazyRoute
+}
+
+const CardLazyRouteChildren: CardLazyRouteChildren = {
+  CardCardActioncardsLazyRoute: CardCardActioncardsLazyRoute,
+  CardCardDiscountLazyRoute: CardCardDiscountLazyRoute,
+  CardCardDismissableLazyRoute: CardCardDismissableLazyRoute,
+  CardCardEventannouncementLazyRoute: CardCardEventannouncementLazyRoute,
+  CardCardFieldsetLazyRoute: CardCardFieldsetLazyRoute,
+  CardCardOnboardchecklistLazyRoute: CardCardOnboardchecklistLazyRoute,
+  CardCardSpotlightLazyRoute: CardCardSpotlightLazyRoute,
+  CardCardThumbnailLazyRoute: CardCardThumbnailLazyRoute,
+}
+
+const CardLazyRouteWithChildren = CardLazyRoute._addFileChildren(
+  CardLazyRouteChildren,
+)
+
 interface ChartsLazyRouteChildren {
   ChartsCircle1LazyRoute: typeof ChartsCircle1LazyRoute
   ChartsCircle2LazyRoute: typeof ChartsCircle2LazyRoute
@@ -3550,6 +3778,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticationLazyRoute: AuthenticationLazyRouteWithChildren,
   BannerLazyRoute: BannerLazyRoute,
   BarsLazyRoute: BarsLazyRouteWithChildren,
+  CardLazyRoute: CardLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
   CookiesLazyRoute: CookiesLazyRouteWithChildren,
   FaqsLazyRoute: FaqsLazyRouteWithChildren,

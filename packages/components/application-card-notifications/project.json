@@ -1,0 +1,9 @@
+{
+  "name": "application-card-notifications",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-card-notifications/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-card-notifications --web",
+  "targets": {}
+}

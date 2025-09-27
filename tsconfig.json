@@ -361,6 +361,36 @@
     },
     {
       "path": "./packages/components/application-authentication-centeredsignup-gradientbackground"
+    },
+    {
+      "path": "./packages/components/application-card-eventannouncement"
+    },
+    {
+      "path": "./packages/components/application-card-actioncards"
+    },
+    {
+      "path": "./packages/components/application-card-cardfieldset"
+    },
+    {
+      "path": "./packages/components/application-card-dismissablecard"
+    },
+    {
+      "path": "./packages/components/application-card-discountcard"
+    },
+    {
+      "path": "./packages/components/application-card-thumbnail"
+    },
+    {
+      "path": "./packages/components/application-card-spotlight"
+    },
+    {
+      "path": "./packages/components/application-card-invitemember"
+    },
+    {
+      "path": "./packages/components/application-card-notifications"
+    },
+    {
+      "path": "./packages/components/application-card-onboardchecklist"
     }
   ]
 }

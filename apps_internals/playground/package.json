@@ -102,6 +102,16 @@
     "@vx-pro/application-authentication-simplelogin-without-background": "workspace:*",
     "@vx-pro/application-authentication-simplesignup": "workspace:*",
     "@vx-pro/application-authentication-simplelogin-without-socialbtn": "workspace:*",
-    "@vx-pro/application-authentication-simplesignup-without-background": "workspace:*"
+    "@vx-pro/application-authentication-simplesignup-without-background": "workspace:*",
+    "@vx-pro/application-card-eventannouncement": "workspace:*",
+    "@vx-pro/application-card-actioncards": "workspace:*",
+    "@vx-pro/application-card-cardfieldset": "workspace:*",
+    "@vx-pro/application-card-discountcard": "workspace:*",
+    "@vx-pro/application-card-dismissablecard": "workspace:*",
+    "@vx-pro/application-card-invitemember": "workspace:*",
+    "@vx-pro/application-card-notifications": "workspace:*",
+    "@vx-pro/application-card-onboardchecklist": "workspace:*",
+    "@vx-pro/application-card-spotlight": "workspace:*",
+    "@vx-pro/application-card-thumbnail": "workspace:*"
   }
 }

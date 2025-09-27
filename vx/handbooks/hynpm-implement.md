@@ -30,4 +30,4 @@ navbar: small ui fixes
 stepper: 1,2,3 ui fixes
 scrollingbanners: no ui banners scroll
 navigationheaders: ui fixes togglemenu, bg colors tab, spacing issues
-authentication: usind card authentication alignment missing, left and right img background logo and description misssing,
+authentication: usind card authentication alignment missing, left and right img background logo and description misssing, ui fixes and alignment fixed common for all
