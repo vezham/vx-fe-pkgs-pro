@@ -1,0 +1,9 @@
+{
+  "name": "application-card-settingstabs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-card-settingstabs/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-card-settingstabs --web",
+  "targets": {}
+}

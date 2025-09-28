@@ -3,6 +3,36 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/components/application-card-userprofile-extended"
+    },
+    {
+      "path": "../../packages/components/application-card-userprofile"
+    },
+    {
+      "path": "../../packages/components/application-card-settingstabs"
+    },
+    {
+      "path": "../../packages/components/application-card-selectpayment"
+    },
+    {
+      "path": "../../packages/components/application-card-select"
+    },
+    {
+      "path": "../../packages/components/application-card-security-settings"
+    },
+    {
+      "path": "../../packages/components/application-card-personaldetails"
+    },
+    {
+      "path": "../../packages/components/application-card-notification-settings"
+    },
+    {
+      "path": "../../packages/components/application-card-marketplace"
+    },
+    {
+      "path": "../../packages/components/application-card-accountdetails"
+    },
+    {
       "path": "../../packages/components/application-authentication-rightsignup-imagebackground"
     },
     {
@@ -58,6 +88,36 @@
     },
     {
       "path": "../../packages/components/application-authentication-centered-signup"
+    },
+    {
+      "path": "../../packages/components/application-card-thumbnail"
+    },
+    {
+      "path": "../../packages/components/application-card-spotlight"
+    },
+    {
+      "path": "../../packages/components/application-card-onboardchecklist"
+    },
+    {
+      "path": "../../packages/components/application-card-notifications"
+    },
+    {
+      "path": "../../packages/components/application-card-invitemember"
+    },
+    {
+      "path": "../../packages/components/application-card-dismissablecard"
+    },
+    {
+      "path": "../../packages/components/application-card-discountcard"
+    },
+    {
+      "path": "../../packages/components/application-card-cardfieldset"
+    },
+    {
+      "path": "../../packages/components/application-card-actioncards"
+    },
+    {
+      "path": "../../packages/components/application-card-eventannouncement"
     },
     {
       "path": "../../packages/components/application-authentication-simplesignup-without-background"

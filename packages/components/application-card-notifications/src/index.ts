@@ -1,1 +1,1 @@
-export * from './lib/application-card-notifications'
+export * from './lib/index'

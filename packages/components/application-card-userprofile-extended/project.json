@@ -1,0 +1,9 @@
+{
+  "name": "application-card-userprofile-extended",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/components/application-card-userprofile-extended/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project application-card-userprofile-extended --web",
+  "targets": {}
+}

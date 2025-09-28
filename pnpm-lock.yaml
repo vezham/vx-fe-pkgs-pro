@@ -738,6 +738,8 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
+  packages/components/application-card-accountdetails: {}
+
   packages/components/application-card-actioncards:
     devDependencies:
       '@iconify/react':
@@ -774,6 +776,10 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
+  packages/components/application-card-marketplace: {}
+
+  packages/components/application-card-notification-settings: {}
+
   packages/components/application-card-notifications:
     devDependencies:
       '@iconify/react':
@@ -786,6 +792,20 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
 
+  packages/components/application-card-personaldetails: {}
+
+  packages/components/application-card-security-settings: {}
+
+  packages/components/application-card-select:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-selectpayment: {}
+
+  packages/components/application-card-settingstabs: {}
+
   packages/components/application-card-spotlight:
     devDependencies:
       '@iconify/react':
@@ -797,6 +817,10 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
+
+  packages/components/application-card-userprofile: {}
+
+  packages/components/application-card-userprofile-extended: {}
 
   packages/components/application-feedback-modal:
     devDependencies:
