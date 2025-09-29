@@ -3,36 +3,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../packages/components/application-card-userprofile-extended"
-    },
-    {
-      "path": "../../packages/components/application-card-userprofile"
-    },
-    {
-      "path": "../../packages/components/application-card-settingstabs"
-    },
-    {
-      "path": "../../packages/components/application-card-selectpayment"
-    },
-    {
-      "path": "../../packages/components/application-card-select"
-    },
-    {
-      "path": "../../packages/components/application-card-security-settings"
-    },
-    {
-      "path": "../../packages/components/application-card-personaldetails"
-    },
-    {
-      "path": "../../packages/components/application-card-notification-settings"
-    },
-    {
-      "path": "../../packages/components/application-card-marketplace"
-    },
-    {
-      "path": "../../packages/components/application-card-accountdetails"
-    },
-    {
       "path": "../../packages/components/application-authentication-rightsignup-imagebackground"
     },
     {
@@ -88,6 +58,45 @@
     },
     {
       "path": "../../packages/components/application-authentication-centered-signup"
+    },
+    {
+      "path": "../../packages/components/application-calendarbooking-form"
+    },
+    {
+      "path": "../../packages/components/application-calendarbooking-confirmation"
+    },
+    {
+      "path": "../../packages/components/application-calendarbooking"
+    },
+    {
+      "path": "../../packages/components/application-card-settingstabs"
+    },
+    {
+      "path": "../../packages/components/application-card-accountdetails"
+    },
+    {
+      "path": "../../packages/components/application-card-security-settings"
+    },
+    {
+      "path": "../../packages/components/application-card-personaldetails"
+    },
+    {
+      "path": "../../packages/components/application-card-notification-settings"
+    },
+    {
+      "path": "../../packages/components/application-card-userprofile-extended"
+    },
+    {
+      "path": "../../packages/components/application-card-userprofile"
+    },
+    {
+      "path": "../../packages/components/application-card-select"
+    },
+    {
+      "path": "../../packages/components/application-card-selectpayment"
+    },
+    {
+      "path": "../../packages/components/application-card-marketplace"
     },
     {
       "path": "../../packages/components/application-card-thumbnail"

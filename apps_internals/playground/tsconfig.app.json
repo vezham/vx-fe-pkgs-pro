@@ -41,36 +41,6 @@
   ],
   "references": [
     {
-      "path": "../../packages/components/application-card-userprofile-extended/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-userprofile/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-settingstabs/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-selectpayment/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-select/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-security-settings/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-personaldetails/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-notification-settings/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-marketplace/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/components/application-card-accountdetails/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/components/application-authentication-rightsignup-imagebackground/tsconfig.lib.json"
     },
     {
@@ -126,6 +96,45 @@
     },
     {
       "path": "../../packages/components/application-authentication-centered-signup/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-calendarbooking-form/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-calendarbooking-confirmation/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-calendarbooking/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-settingstabs/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-accountdetails/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-security-settings/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-personaldetails/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-notification-settings/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-userprofile-extended/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-userprofile/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-select/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-selectpayment/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/components/application-card-marketplace/tsconfig.lib.json"
     },
     {
       "path": "../../packages/components/application-card-thumbnail/tsconfig.lib.json"

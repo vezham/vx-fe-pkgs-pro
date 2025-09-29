@@ -31,6 +31,7 @@ const FaqsLazyRouteImport = createFileRoute('/faqs')()
 const CookiesLazyRouteImport = createFileRoute('/cookies')()
 const ChartsLazyRouteImport = createFileRoute('/charts')()
 const CardLazyRouteImport = createFileRoute('/card')()
+const CalendarLazyRouteImport = createFileRoute('/calendar')()
 const BarsLazyRouteImport = createFileRoute('/bars')()
 const BannerLazyRouteImport = createFileRoute('/banner')()
 const AuthenticationLazyRouteImport = createFileRoute('/authentication')()
@@ -270,6 +271,15 @@ const CardCardActioncardsLazyRouteImport = createFileRoute(
 const CardCardAccountdetailsLazyRouteImport = createFileRoute(
   '/card/card-accountdetails',
 )()
+const CalendarCalendarbookingFormLazyRouteImport = createFileRoute(
+  '/calendar/calendarbooking-form',
+)()
+const CalendarCalendarbookingConfirmationLazyRouteImport = createFileRoute(
+  '/calendar/calendarbooking-confirmation',
+)()
+const CalendarCalendarbookingLazyRouteImport = createFileRoute(
+  '/calendar/calendarbooking',
+)()
 const BarsBars4LazyRouteImport = createFileRoute('/bars/bars-4')()
 const BarsBars3LazyRouteImport = createFileRoute('/bars/bars-3')()
 const BarsBars2LazyRouteImport = createFileRoute('/bars/bars-2')()
@@ -444,6 +454,11 @@ const CardLazyRoute = CardLazyRouteImport.update({
   path: '/card',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/card.lazy').then((d) => d.Route))
+const CalendarLazyRoute = CalendarLazyRouteImport.update({
+  id: '/calendar',
+  path: '/calendar',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/calendar.lazy').then((d) => d.Route))
 const BarsLazyRoute = BarsLazyRouteImport.update({
   id: '/bars',
   path: '/bars',
@@ -1259,6 +1274,32 @@ const CardCardAccountdetailsLazyRoute =
   } as any).lazy(() =>
     import('./routes/card/card-accountdetails.lazy').then((d) => d.Route),
   )
+const CalendarCalendarbookingFormLazyRoute =
+  CalendarCalendarbookingFormLazyRouteImport.update({
+    id: '/calendarbooking-form',
+    path: '/calendarbooking-form',
+    getParentRoute: () => CalendarLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/calendar/calendarbooking-form.lazy').then((d) => d.Route),
+  )
+const CalendarCalendarbookingConfirmationLazyRoute =
+  CalendarCalendarbookingConfirmationLazyRouteImport.update({
+    id: '/calendarbooking-confirmation',
+    path: '/calendarbooking-confirmation',
+    getParentRoute: () => CalendarLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/calendar/calendarbooking-confirmation.lazy').then(
+      (d) => d.Route,
+    ),
+  )
+const CalendarCalendarbookingLazyRoute =
+  CalendarCalendarbookingLazyRouteImport.update({
+    id: '/calendarbooking',
+    path: '/calendarbooking',
+    getParentRoute: () => CalendarLazyRoute,
+  } as any).lazy(() =>
+    import('./routes/calendar/calendarbooking.lazy').then((d) => d.Route),
+  )
 const BarsBars4LazyRoute = BarsBars4LazyRouteImport.update({
   id: '/bars-4',
   path: '/bars-4',
@@ -1593,6 +1634,7 @@ export interface FileRoutesByFullPath {
   '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
+  '/calendar': typeof CalendarLazyRouteWithChildren
   '/card': typeof CardLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
@@ -1646,6 +1688,9 @@ export interface FileRoutesByFullPath {
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
   '/bars/bars-4': typeof BarsBars4LazyRoute
+  '/calendar/calendarbooking': typeof CalendarCalendarbookingLazyRoute
+  '/calendar/calendarbooking-confirmation': typeof CalendarCalendarbookingConfirmationLazyRoute
+  '/calendar/calendarbooking-form': typeof CalendarCalendarbookingFormLazyRoute
   '/card/card-accountdetails': typeof CardCardAccountdetailsLazyRoute
   '/card/card-actioncards': typeof CardCardActioncardsLazyRoute
   '/card/card-discount': typeof CardCardDiscountLazyRoute
@@ -1749,6 +1794,7 @@ export interface FileRoutesByTo {
   '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
+  '/calendar': typeof CalendarLazyRouteWithChildren
   '/card': typeof CardLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
@@ -1802,6 +1848,9 @@ export interface FileRoutesByTo {
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
   '/bars/bars-4': typeof BarsBars4LazyRoute
+  '/calendar/calendarbooking': typeof CalendarCalendarbookingLazyRoute
+  '/calendar/calendarbooking-confirmation': typeof CalendarCalendarbookingConfirmationLazyRoute
+  '/calendar/calendarbooking-form': typeof CalendarCalendarbookingFormLazyRoute
   '/card/card-accountdetails': typeof CardCardAccountdetailsLazyRoute
   '/card/card-actioncards': typeof CardCardActioncardsLazyRoute
   '/card/card-discount': typeof CardCardDiscountLazyRoute
@@ -1906,6 +1955,7 @@ export interface FileRoutesById {
   '/authentication': typeof AuthenticationLazyRouteWithChildren
   '/banner': typeof BannerLazyRoute
   '/bars': typeof BarsLazyRouteWithChildren
+  '/calendar': typeof CalendarLazyRouteWithChildren
   '/card': typeof CardLazyRouteWithChildren
   '/charts': typeof ChartsLazyRouteWithChildren
   '/cookies': typeof CookiesLazyRouteWithChildren
@@ -1959,6 +2009,9 @@ export interface FileRoutesById {
   '/bars/bars-2': typeof BarsBars2LazyRoute
   '/bars/bars-3': typeof BarsBars3LazyRoute
   '/bars/bars-4': typeof BarsBars4LazyRoute
+  '/calendar/calendarbooking': typeof CalendarCalendarbookingLazyRoute
+  '/calendar/calendarbooking-confirmation': typeof CalendarCalendarbookingConfirmationLazyRoute
+  '/calendar/calendarbooking-form': typeof CalendarCalendarbookingFormLazyRoute
   '/card/card-accountdetails': typeof CardCardAccountdetailsLazyRoute
   '/card/card-actioncards': typeof CardCardActioncardsLazyRoute
   '/card/card-discount': typeof CardCardDiscountLazyRoute
@@ -2064,6 +2117,7 @@ export interface FileRouteTypes {
     | '/authentication'
     | '/banner'
     | '/bars'
+    | '/calendar'
     | '/card'
     | '/charts'
     | '/cookies'
@@ -2117,6 +2171,9 @@ export interface FileRouteTypes {
     | '/bars/bars-2'
     | '/bars/bars-3'
     | '/bars/bars-4'
+    | '/calendar/calendarbooking'
+    | '/calendar/calendarbooking-confirmation'
+    | '/calendar/calendarbooking-form'
     | '/card/card-accountdetails'
     | '/card/card-actioncards'
     | '/card/card-discount'
@@ -2220,6 +2277,7 @@ export interface FileRouteTypes {
     | '/authentication'
     | '/banner'
     | '/bars'
+    | '/calendar'
     | '/card'
     | '/charts'
     | '/cookies'
@@ -2273,6 +2331,9 @@ export interface FileRouteTypes {
     | '/bars/bars-2'
     | '/bars/bars-3'
     | '/bars/bars-4'
+    | '/calendar/calendarbooking'
+    | '/calendar/calendarbooking-confirmation'
+    | '/calendar/calendarbooking-form'
     | '/card/card-accountdetails'
     | '/card/card-actioncards'
     | '/card/card-discount'
@@ -2376,6 +2437,7 @@ export interface FileRouteTypes {
     | '/authentication'
     | '/banner'
     | '/bars'
+    | '/calendar'
     | '/card'
     | '/charts'
     | '/cookies'
@@ -2429,6 +2491,9 @@ export interface FileRouteTypes {
     | '/bars/bars-2'
     | '/bars/bars-3'
     | '/bars/bars-4'
+    | '/calendar/calendarbooking'
+    | '/calendar/calendarbooking-confirmation'
+    | '/calendar/calendarbooking-form'
     | '/card/card-accountdetails'
     | '/card/card-actioncards'
     | '/card/card-discount'
@@ -2533,6 +2598,7 @@ export interface RootRouteChildren {
   AuthenticationLazyRoute: typeof AuthenticationLazyRouteWithChildren
   BannerLazyRoute: typeof BannerLazyRoute
   BarsLazyRoute: typeof BarsLazyRouteWithChildren
+  CalendarLazyRoute: typeof CalendarLazyRouteWithChildren
   CardLazyRoute: typeof CardLazyRouteWithChildren
   ChartsLazyRoute: typeof ChartsLazyRouteWithChildren
   CookiesLazyRoute: typeof CookiesLazyRouteWithChildren
@@ -2688,6 +2754,13 @@ declare module '@tanstack/react-router' {
       path: '/card'
       fullPath: '/card'
       preLoaderRoute: typeof CardLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calendar': {
+      id: '/calendar'
+      path: '/calendar'
+      fullPath: '/calendar'
+      preLoaderRoute: typeof CalendarLazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bars': {
@@ -3397,6 +3470,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CardCardAccountdetailsLazyRouteImport
       parentRoute: typeof CardLazyRoute
     }
+    '/calendar/calendarbooking-form': {
+      id: '/calendar/calendarbooking-form'
+      path: '/calendarbooking-form'
+      fullPath: '/calendar/calendarbooking-form'
+      preLoaderRoute: typeof CalendarCalendarbookingFormLazyRouteImport
+      parentRoute: typeof CalendarLazyRoute
+    }
+    '/calendar/calendarbooking-confirmation': {
+      id: '/calendar/calendarbooking-confirmation'
+      path: '/calendarbooking-confirmation'
+      fullPath: '/calendar/calendarbooking-confirmation'
+      preLoaderRoute: typeof CalendarCalendarbookingConfirmationLazyRouteImport
+      parentRoute: typeof CalendarLazyRoute
+    }
+    '/calendar/calendarbooking': {
+      id: '/calendar/calendarbooking'
+      path: '/calendarbooking'
+      fullPath: '/calendar/calendarbooking'
+      preLoaderRoute: typeof CalendarCalendarbookingLazyRouteImport
+      parentRoute: typeof CalendarLazyRoute
+    }
     '/bars/bars-4': {
       id: '/bars/bars-4'
       path: '/bars-4'
@@ -3751,6 +3845,23 @@ const BarsLazyRouteWithChildren = BarsLazyRoute._addFileChildren(
   BarsLazyRouteChildren,
 )
 
+interface CalendarLazyRouteChildren {
+  CalendarCalendarbookingLazyRoute: typeof CalendarCalendarbookingLazyRoute
+  CalendarCalendarbookingConfirmationLazyRoute: typeof CalendarCalendarbookingConfirmationLazyRoute
+  CalendarCalendarbookingFormLazyRoute: typeof CalendarCalendarbookingFormLazyRoute
+}
+
+const CalendarLazyRouteChildren: CalendarLazyRouteChildren = {
+  CalendarCalendarbookingLazyRoute: CalendarCalendarbookingLazyRoute,
+  CalendarCalendarbookingConfirmationLazyRoute:
+    CalendarCalendarbookingConfirmationLazyRoute,
+  CalendarCalendarbookingFormLazyRoute: CalendarCalendarbookingFormLazyRoute,
+}
+
+const CalendarLazyRouteWithChildren = CalendarLazyRoute._addFileChildren(
+  CalendarLazyRouteChildren,
+)
+
 interface CardLazyRouteChildren {
   CardCardAccountdetailsLazyRoute: typeof CardCardAccountdetailsLazyRoute
   CardCardActioncardsLazyRoute: typeof CardCardActioncardsLazyRoute
@@ -4085,6 +4196,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticationLazyRoute: AuthenticationLazyRouteWithChildren,
   BannerLazyRoute: BannerLazyRoute,
   BarsLazyRoute: BarsLazyRouteWithChildren,
+  CalendarLazyRoute: CalendarLazyRouteWithChildren,
   CardLazyRoute: CardLazyRouteWithChildren,
   ChartsLazyRoute: ChartsLazyRouteWithChildren,
   CookiesLazyRoute: CookiesLazyRouteWithChildren,

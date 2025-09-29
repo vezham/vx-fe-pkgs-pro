@@ -421,6 +421,15 @@
     },
     {
       "path": "./packages/components/application-card-settingstabs"
+    },
+    {
+      "path": "./packages/components/application-calendarbooking"
+    },
+    {
+      "path": "./packages/components/application-calendarbooking-form"
+    },
+    {
+      "path": "./packages/components/application-calendarbooking-confirmation"
     }
   ]
 }

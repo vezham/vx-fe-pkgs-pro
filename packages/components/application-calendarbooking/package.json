@@ -1,0 +1,26 @@
+{
+  "name": "@vx-pro/application-calendarbooking",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "devDependencies": {
+    "@iconify/react": "^6.0.2",
+    "@internationalized/date": "^3.5.0",
+    "date-fns": "^4.1.0"
+  }
+}

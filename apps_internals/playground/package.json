@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@iconify/react": "^6.0.2",
+    "date-fns": "^4.1.0",
     "@react-stately/utils": "^3.10.0",
     "@vx/start": "workspace:*",
     "@vx/system-utils": "workspace:*",
@@ -112,6 +113,19 @@
     "@vx-pro/application-card-notifications": "workspace:*",
     "@vx-pro/application-card-onboardchecklist": "workspace:*",
     "@vx-pro/application-card-spotlight": "workspace:*",
-    "@vx-pro/application-card-thumbnail": "workspace:*"
+    "@vx-pro/application-card-thumbnail": "workspace:*",
+    "@vx-pro/application-card-marketplace": "workspace:*",
+    "@vx-pro/application-card-selectpayment": "workspace:*",
+    "@vx-pro/application-card-select": "workspace:*",
+    "@vx-pro/application-card-userprofile": "workspace:*",
+    "@vx-pro/application-card-userprofile-extended": "workspace:*",
+    "@vx-pro/application-card-notification-settings": "workspace:*",
+    "@vx-pro/application-card-personaldetails": "workspace:*",
+    "@vx-pro/application-card-security-settings": "workspace:*",
+    "@vx-pro/application-card-accountdetails": "workspace:*",
+    "@vx-pro/application-card-settingstabs": "workspace:*",
+    "@vx-pro/application-calendarbooking": "workspace:*",
+    "@vx-pro/application-calendarbooking-confirmation": "workspace:*",
+    "@vx-pro/application-calendarbooking-form": "workspace:*"
   }
 }

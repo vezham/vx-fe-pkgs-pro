@@ -34,3 +34,9 @@ authentication: using card authentication alignment missing, left and right img 
 
 card: card with discount ui issues,
 eventannouncement ui issues,
+
+// vezham-books
+
+books - card , table
+reports - sidebar, kpi stats, graphs,card
+settings - layout settings

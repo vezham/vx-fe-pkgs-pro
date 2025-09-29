@@ -144,6 +144,9 @@ importers:
       commitlint-plugin-function-rules:
         specifier: ^4.0.2
         version: 4.0.2(@commitlint/lint@19.8.1)
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
       eslint:
         specifier: ^9.8.0
         version: 9.34.0(jiti@2.4.2)
@@ -267,6 +270,18 @@ importers:
       '@vx-pro/application-authentication-simplesignup-without-background':
         specifier: workspace:*
         version: link:../../packages/components/application-authentication-simplesignup-without-background
+      '@vx-pro/application-calendarbooking':
+        specifier: workspace:*
+        version: link:../../packages/components/application-calendarbooking
+      '@vx-pro/application-calendarbooking-confirmation':
+        specifier: workspace:*
+        version: link:../../packages/components/application-calendarbooking-confirmation
+      '@vx-pro/application-calendarbooking-form':
+        specifier: workspace:*
+        version: link:../../packages/components/application-calendarbooking-form
+      '@vx-pro/application-card-accountdetails':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-accountdetails
       '@vx-pro/application-card-actioncards':
         specifier: workspace:*
         version: link:../../packages/components/application-card-actioncards
@@ -285,18 +300,45 @@ importers:
       '@vx-pro/application-card-invitemember':
         specifier: workspace:*
         version: link:../../packages/components/application-card-invitemember
+      '@vx-pro/application-card-marketplace':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-marketplace
+      '@vx-pro/application-card-notification-settings':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-notification-settings
       '@vx-pro/application-card-notifications':
         specifier: workspace:*
         version: link:../../packages/components/application-card-notifications
       '@vx-pro/application-card-onboardchecklist':
         specifier: workspace:*
         version: link:../../packages/components/application-card-onboardchecklist
+      '@vx-pro/application-card-personaldetails':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-personaldetails
+      '@vx-pro/application-card-security-settings':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-security-settings
+      '@vx-pro/application-card-select':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-select
+      '@vx-pro/application-card-selectpayment':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-selectpayment
+      '@vx-pro/application-card-settingstabs':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-settingstabs
       '@vx-pro/application-card-spotlight':
         specifier: workspace:*
         version: link:../../packages/components/application-card-spotlight
       '@vx-pro/application-card-thumbnail':
         specifier: workspace:*
         version: link:../../packages/components/application-card-thumbnail
+      '@vx-pro/application-card-userprofile':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-userprofile
+      '@vx-pro/application-card-userprofile-extended':
+        specifier: workspace:*
+        version: link:../../packages/components/application-card-userprofile-extended
       '@vx-pro/application-feedback-modal':
         specifier: workspace:*
         version: link:../../packages/components/application-feedback-modal
@@ -573,6 +615,9 @@ importers:
       '@vx/system-utils':
         specifier: workspace:*
         version: link:../../packages/vx/system-utils
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
 
   apps_internals/playground-e2e: {}
 
@@ -737,6 +782,33 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.0.0)
+
+  packages/components/application-calendarbooking:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+      '@internationalized/date':
+        specifier: ^3.5.0
+        version: 3.9.0
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
+
+  packages/components/application-calendarbooking-confirmation:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+
+  packages/components/application-calendarbooking-form:
+    devDependencies:
+      '@iconify/react':
+        specifier: ^6.0.2
+        version: 6.0.2(react@19.0.0)
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
 
   packages/components/application-card-accountdetails: {}
 
@@ -6260,6 +6332,9 @@ packages:
   data-view-byte-offset@1.0.1:
     resolution: {integrity: sha512-BS8PfmtDGnrgYdOonGZQdLZslWIeCGFP9tpan0hi1Co2Zr2NKADsvGYA8XxuG/4UWgJ6Cjtv+YJnB6MM69QGlQ==}
     engines: {node: '>= 0.4'}
+
+  date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
 
   date-format@4.0.14:
     resolution: {integrity: sha512-39BOQLs9ZjKh0/patS9nrT8wc3ioX3/eA/zgbKNopnF2wCqJEoxywwwElATYvRsXdnOxA/OQeQoFZ3rFjVajhg==}
@@ -12552,7 +12627,7 @@ snapshots:
 
   '@react-aria/calendar@3.9.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@internationalized/date': 3.8.2
+      '@internationalized/date': 3.9.0
       '@react-aria/i18n': 3.12.11(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@react-aria/interactions': 3.25.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@react-aria/live-announcer': 3.4.4
@@ -12604,7 +12679,7 @@ snapshots:
 
   '@react-aria/datepicker@3.15.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@internationalized/date': 3.8.2
+      '@internationalized/date': 3.9.0
       '@internationalized/number': 3.6.5
       '@internationalized/string': 3.2.7
       '@react-aria/focus': 3.21.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -13130,7 +13205,7 @@ snapshots:
 
   '@react-stately/calendar@3.8.3(react@19.0.0)':
     dependencies:
-      '@internationalized/date': 3.8.2
+      '@internationalized/date': 3.9.0
       '@react-stately/utils': 3.10.8(react@19.0.0)
       '@react-types/calendar': 3.7.3(react@19.0.0)
       '@react-types/shared': 3.31.0(react@19.0.0)
@@ -13173,7 +13248,7 @@ snapshots:
 
   '@react-stately/datepicker@3.15.0(react@19.0.0)':
     dependencies:
-      '@internationalized/date': 3.8.2
+      '@internationalized/date': 3.9.0
       '@internationalized/string': 3.2.7
       '@react-stately/form': 3.2.1(react@19.0.0)
       '@react-stately/overlays': 3.6.19(react@19.0.0)
@@ -13404,7 +13479,7 @@ snapshots:
 
   '@react-types/calendar@3.7.3(react@19.0.0)':
     dependencies:
-      '@internationalized/date': 3.8.2
+      '@internationalized/date': 3.9.0
       '@react-types/shared': 3.31.0(react@19.0.0)
       react: 19.0.0
 
@@ -13431,7 +13506,7 @@ snapshots:
 
   '@react-types/datepicker@3.13.0(react@19.0.0)':
     dependencies:
-      '@internationalized/date': 3.8.2
+      '@internationalized/date': 3.9.0
       '@react-types/calendar': 3.7.4(react@19.0.0)
       '@react-types/overlays': 3.9.1(react@19.0.0)
       '@react-types/shared': 3.31.0(react@19.0.0)
@@ -16978,6 +17053,8 @@ snapshots:
       call-bound: 1.0.4
       es-errors: 1.3.0
       is-data-view: 1.0.2
+
+  date-fns@4.1.0: {}
 
   date-format@4.0.14: {}
 
