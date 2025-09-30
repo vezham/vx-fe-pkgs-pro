@@ -1,0 +1,93 @@
+---
+
+title: Card
+description: A flexible container component for displaying content with multiple layout variants and surface levels
+icon: preview
+links: []
+
+---
+
+## Import
+
+```tsx
+import { Card } from '@heroui/react'
+```
+
+## Example
+
+<ComponentPreview name="card-default" />
+
+## Anatomy
+
+Import all parts and piece them together.
+
+```tsx
+<Card>
+  <Card.Header>
+    <Card.Title>Card Title</Card.Title>
+  </Card.Header>
+  <Card.Body />
+  <Card.Footer />
+</Card>
+```
+
+## Styling
+
+### Passing Tailwind CSS classes
+
+```tsx
+import { Card } from '@heroui/react'
+
+function CustomCard() {
+  return (
+    <Card className="border-2 border-blue-500 bg-gradient-to-r from-blue-50 to-purple-50">
+      <Card.Header>
+        <Card.Title>Custom Styled Card</Card.Title>
+      </Card.Header>
+      <Card.Body>content</Card.Body>
+    </Card>
+  )
+}
+```
+
+#### Base Classes
+
+- `.card` - Base card container
+- `.card__header` - Header section
+- `.card__title` - Title element
+- `.card__body` - Body element
+- `.card__footer` - Footer section
+
+## API Reference
+
+### Card Props
+
+| Prop        | Type                          | Default | Description                                  |
+| ----------- | ----------------------------- | ------- | -------------------------------------------- |
+| `variant`   | `'side' \| 'item' \| 'full'`  | -       | Layout variant for different card styles     |
+| `surface`   | `'none' \| '1' \| '2' \| '3'` | `'1'`   | Surface elevation level for visual hierarchy |
+| `asChild`   | `boolean`                     | `false` | Render as a child element                    |
+| `className` | `string`                      | -       | Additional CSS classes                       |
+| `children`  | `React.ReactNode`             | -       | Card content                                 |
+
+### Card.Header Props
+
+### Card.Body Props
+
+### Card.Footer Props
+
+| Prop        | Type              | Default | Description               |
+| ----------- | ----------------- | ------- | ------------------------- |
+| `asChild`   | `boolean`         | `false` | Render as a child element |
+| `className` | `string`          | -       | Additional CSS classes    |
+| `children`  | `React.ReactNode` | -       | Footer content            |
+
+Inherits all props from React Aria's `Button` component:
+
+| Prop         | Type                                                                | Default         | Description                           |
+| ------------ | ------------------------------------------------------------------- | --------------- | ------------------------------------- |
+| `onPress`    | `(e: PressEvent) => void`                                           | -               | Handler called when button is pressed |
+| `isDisabled` | `boolean`                                                           | `false`         | Whether the button is disabled        |
+| `asChild`    | `boolean`                                                           | `false`         | Render as a child element             |
+| `className`  | `string`                                                            | -               | Additional CSS classes                |
+| `children`   | `React.ReactNode \| (values: ButtonRenderProps) => React.ReactNode` | `<CloseIcon />` | Button content or render prop         |

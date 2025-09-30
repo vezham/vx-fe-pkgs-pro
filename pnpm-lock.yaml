@@ -1022,6 +1022,8 @@ importers:
         specifier: ^3.10.0
         version: 3.10.8(react@19.0.0)
 
+  packages/components/application-table-withfilters: {}
+
   packages/components/charts-bars-1:
     dependencies:
       recharts:

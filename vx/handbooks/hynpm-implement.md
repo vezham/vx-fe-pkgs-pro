@@ -32,11 +32,11 @@ scrollingbanners: no ui banners scroll
 navigationheaders: ui fixes togglemenu, bg colors tab, spacing issues
 authentication: using card authentication alignment missing, left and right img background logo and description misssing, ui fixes and alignment fixed common for all
 
-card: card with discount ui issues,
-eventannouncement ui issues,
+card: card with discount ui issues, eventannouncement ui issues,
+calendar: ui alignment fixes, some code errors also.
 
 // vezham-books
 
-books - card , table
-reports - sidebar, kpi stats, graphs,card
+books - card , table with filters
+reports - sidebar with responsive, kpi stats- kpistats- 2, graph- graph 1 & 2 ,card - marketplace card, notification settings,
 settings - layout settings
