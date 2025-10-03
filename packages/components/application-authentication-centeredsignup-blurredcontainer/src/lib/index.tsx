@@ -127,4 +127,6 @@ export type authenticationProps = {
   footerActions?: React.ReactNode
   actions?: React.ReactNode
   btnactions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

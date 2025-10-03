@@ -4,7 +4,7 @@ import type { RadioGroupProps, RadioProps } from '@vx-oss/react'
 import { cn, RadioGroup } from '@vx-oss/react'
 import React from 'react'
 
-type FeedBackRatingProps = { data?: FeedbackRatingItemsProps } & RadioGroupProps
+type FeedBackRatingProps = { data?: FeedbackProps } & RadioGroupProps
 
 const FeedBackRating: React.FC<FeedBackRatingProps> = ({
   data,
@@ -46,6 +46,8 @@ export type FeedbackRatingItemProps = Omit<RadioProps, 'value'> & {
   value: RatingValueEnum
 }
 
-export type FeedbackRatingItemsProps = {
+export type FeedbackProps = {
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

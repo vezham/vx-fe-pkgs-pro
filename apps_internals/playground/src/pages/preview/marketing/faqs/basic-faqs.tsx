@@ -1,4 +1,4 @@
-import { faqProps, FAQs, FAQSProps } from '@vx-pro/marketing-faqs'
+import { FAQs, faqsProps, FAQSProps } from '@vx-pro/marketing-faqs'
 const basic_faqs = () => {
   const faqs: FAQSProps[] = [
     {
@@ -51,7 +51,7 @@ const basic_faqs = () => {
     }
   ]
 
-  const data: faqProps = {
+  const data: faqsProps = {
     title: 'FAQS',
     subtitle: ' Frequently asked questions',
     faqs: faqs

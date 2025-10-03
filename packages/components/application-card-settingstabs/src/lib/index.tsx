@@ -7,7 +7,7 @@ import React from 'react'
 
 import type { SwitchProps } from '@vx-oss/react'
 
-const CardSettingsTabs = ({ data }: { data: cardTabProps[] }) => {
+const CardSettingsTabs = ({ data }: { data: cardProps[] }) => {
   return (
     <Card>
       <Tabs
@@ -56,10 +56,11 @@ export type CellProps = {
   action?: React.ReactNode
 }
 
-export type cardTabProps = {
+export type cardProps = {
   key?: string
   textValue?: string
   title?: React.ReactNode
+  className?: string
   children?: React.ReactNode
 }
 

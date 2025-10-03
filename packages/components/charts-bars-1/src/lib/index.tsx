@@ -190,6 +190,7 @@ ButtonRadioItem.displayName = 'ButtonRadioItem'
 export { ButtonRadioItem }
 
 // ------------------ Types ------------------
+
 export type ChartData = {
   weekday: string
   [key: string]: string | number
@@ -202,4 +203,6 @@ export type BarChartProps = {
   chartData: ChartData[]
   actions?: React.ReactNode
   formatWeekday?: (weekday: string) => string
+  className?: string
+  children?: React.ReactNode
 }

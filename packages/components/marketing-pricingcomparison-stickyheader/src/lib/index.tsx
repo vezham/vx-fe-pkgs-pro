@@ -393,4 +393,6 @@ export type pricingProps = {
   tablePrice: string
   footerText: string
   footerLinkText: string
+  className?: string
+  children?: React.ReactNode
 }

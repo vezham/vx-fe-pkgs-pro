@@ -4,7 +4,7 @@ import type { ButtonProps } from '@vx-oss/react'
 import React from 'react'
 
 // ✅ Component
-const StepperSplittedHelpers = ({ data }: { data: VerticalStepsProps }) => {
+const StepperSplittedHelpers = ({ data }: { data: StepperProps }) => {
   return (
     <section className="max-w-sm">
       {data.heading && (
@@ -31,8 +31,7 @@ export type VerticalStepProps = {
   title?: React.ReactNode
 }
 
-export interface VerticalStepsProps
-  extends React.HTMLAttributes<HTMLButtonElement> {
+export interface StepperProps extends React.HTMLAttributes<HTMLButtonElement> {
   heading?: string
   subHead?: string
   headerActions?: React.ReactNode
@@ -46,6 +45,7 @@ export interface VerticalStepsProps
   defaultStep?: number
   hideProgressBars?: boolean
   className?: string
+  children?: React.ReactNode
   stepClassName?: string
   onStepChange?: (stepIndex: number) => void
 }

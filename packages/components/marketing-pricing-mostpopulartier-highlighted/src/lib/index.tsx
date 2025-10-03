@@ -189,4 +189,6 @@ export type pricingProps = {
   subHeading: string
   footerText: string
   footerLinkText: string
+  className?: string
+  children?: React.ReactNode
 }

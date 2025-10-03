@@ -6,7 +6,7 @@ import { Divider, Link, Textarea } from '@vx-oss/react'
 
 import React from 'react'
 
-const FeedBackTextarea = ({ data }: { data: FeedBackTextProps }) => {
+const FeedBackTextarea = ({ data }: { data: FeedBackProps }) => {
   return (
     <form
       className="rounded-medium bg-content1 shadow-small flex w-full max-w-sm flex-col gap-2 p-3"
@@ -60,8 +60,10 @@ export type FeedbackRatingItemProps = Omit<RadioProps, 'value'> & {
   value: RatingValueEnum
 }
 
-export type FeedBackTextProps = {
+export type FeedBackProps = {
   icon?: React.ReactNode
   content?: React.ReactNode
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

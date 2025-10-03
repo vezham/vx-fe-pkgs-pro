@@ -86,4 +86,6 @@ export type FooterProps = {
   navData: NavItem[]
   socialData: SocialItem[]
   copyright?: string
+  className?: string
+  children?: React.ReactNode
 }

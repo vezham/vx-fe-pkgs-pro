@@ -3,11 +3,7 @@
 import type { ButtonProps } from '@vx-oss/react'
 import React from 'react'
 
-const StepperVerticalCollapsible = ({
-  data
-}: {
-  data: VerticalCollapsibleStepsProps
-}) => {
+const StepperVerticalCollapsible = ({ data }: { data: StepperProps }) => {
   return (
     <section className="max-w-sm">
       {data.heading && (
@@ -35,8 +31,7 @@ export type VerticalCollapsibleStepProps = {
   details?: string[]
 }
 
-export interface VerticalCollapsibleStepsProps
-  extends React.HTMLAttributes<HTMLButtonElement> {
+export interface StepperProps extends React.HTMLAttributes<HTMLButtonElement> {
   heading?: string
   subHead?: string
   headerActions?: React.ReactNode
@@ -53,11 +48,11 @@ export interface VerticalCollapsibleStepsProps
 
   hideProgressBars?: boolean
 
-  className?: string
-
   stepClassName?: string
 
   onStepChange?: (stepIndex: number) => void
+  className?: string
+  children?: React.ReactNode
 }
 
 export type SupportCardProps = React.HTMLAttributes<HTMLDivElement>

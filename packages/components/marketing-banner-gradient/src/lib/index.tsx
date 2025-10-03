@@ -23,4 +23,6 @@ export type bannerProps = {
   linkActions?: React.ReactNode
 
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

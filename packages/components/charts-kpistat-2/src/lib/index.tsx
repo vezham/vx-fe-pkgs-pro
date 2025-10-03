@@ -93,4 +93,6 @@ export type KpiStatProps = {
   changeType: 'positive' | 'neutral' | 'negative'
   trendChipPosition?: 'top' | 'bottom'
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

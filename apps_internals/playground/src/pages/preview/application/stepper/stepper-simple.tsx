@@ -1,9 +1,6 @@
 'use client'
 
-import {
-  RowStepsProps,
-  StepperSimple
-} from '@vx-pro/application-stepper-simple'
+import { StepperProps, StepperSimple } from '@vx-pro/application-stepper-simple'
 import { m } from 'framer-motion'
 import { ComponentProps } from 'react'
 
@@ -33,7 +30,7 @@ const stepper_simple = () => {
     )
   }
 
-  const data: RowStepsProps = {
+  const data: StepperProps = {
     defaultStep: 2,
     steps: [
       {

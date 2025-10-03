@@ -11,9 +11,9 @@ import {
   Spacer
 } from '@vx-oss/react'
 import {
+  StepperProps,
   StepperVerticalCollapsible,
-  SupportCardProps,
-  VerticalCollapsibleStepsProps
+  SupportCardProps
 } from '@vx-pro/application-stepper-verticalcollapsible'
 import { domAnimation, LazyMotion, m } from 'framer-motion'
 
@@ -87,7 +87,7 @@ const StepperVerticalCollapsibleUsage = () => {
 
   const VerticalCollapsibleSteps = React.forwardRef<
     HTMLButtonElement,
-    VerticalCollapsibleStepsProps
+    StepperProps
   >(
     (
       {
@@ -342,7 +342,7 @@ const StepperVerticalCollapsibleUsage = () => {
     )
   )
 
-  const data: VerticalCollapsibleStepsProps = {
+  const data: StepperProps = {
     heading: 'Getting Started',
     subHead:
       'Follow the steps to configure your account. This allows you to set up your business address.',
@@ -363,15 +363,13 @@ const StepperVerticalCollapsibleUsage = () => {
       />
     ),
     mainContent: (
-      <>
-        <VerticalCollapsibleSteps
-          hideProgressBars
-          currentStep={currentStep}
-          stepClassName="border border-default-200 dark:border-default-50 aria-[current]:bg-default-100 dark:aria-[current]:bg-default-50"
-          steps={steps}
-          onStepChange={setCurrentStep}
-        />
-      </>
+      <VerticalCollapsibleSteps
+        hideProgressBars
+        currentStep={currentStep}
+        stepClassName="border border-default-200 dark:border-default-50 aria-[current]:bg-default-100 dark:aria-[current]:bg-default-50"
+        steps={steps}
+        onStepChange={setCurrentStep}
+      />
     ),
     footerCard: (
       <>

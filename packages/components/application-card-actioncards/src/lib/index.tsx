@@ -91,4 +91,6 @@ export type ActionCardProps = CardProps & {
   title: string
   color?: 'primary' | 'secondary' | 'warning' | 'danger'
   description: string
+  className?: string
+  children?: React.ReactNode
 }

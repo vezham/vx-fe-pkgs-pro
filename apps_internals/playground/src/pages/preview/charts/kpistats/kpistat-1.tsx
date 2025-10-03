@@ -1,7 +1,7 @@
-import { TrendCard, TrendCardProps } from '@vx-pro/charts-kpistat-1'
+import { KpiStatProps, TrendCard } from '@vx-pro/charts-kpistat-1'
 
 const kpistat_1 = () => {
-  const data: TrendCardProps[] = [
+  const data: KpiStatProps[] = [
     {
       title: 'Total Revenue',
       value: '$228,451',
@@ -32,7 +32,7 @@ const kpistat_1 = () => {
     }
   ]
 
-  const data2: TrendCardProps[] = [
+  const data2: KpiStatProps[] = [
     {
       title: 'Monthly Sales',
       value: '$345,892',

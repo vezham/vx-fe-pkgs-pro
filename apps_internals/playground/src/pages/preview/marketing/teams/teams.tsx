@@ -1,10 +1,10 @@
 'use client'
 
-import { TeamMember, TeamMemberCard } from '@vx-pro/marketing-teams'
+import { TeamMemberCard, TeamMemberProps } from '@vx-pro/marketing-teams'
 
 import { Button, Spacer } from '@vx-oss/react'
 
-const teamMembers: TeamMember[] = [
+const teamMembers: TeamMemberProps[] = [
   {
     name: 'John Doe',
     avatar: 'https://i.pravatar.cc/150?u=a04258114e29026708c',

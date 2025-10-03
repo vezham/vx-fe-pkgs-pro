@@ -112,4 +112,6 @@ export type FooterProps = {
   themeItems?: ThemeSwitchItem[]
   themeSwitch?: React.ReactNode
   copyright?: string
+  className?: string
+  children?: React.ReactNode
 }

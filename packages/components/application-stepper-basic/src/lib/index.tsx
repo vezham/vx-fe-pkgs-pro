@@ -7,7 +7,7 @@ import { cn } from '@vx-oss/react'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import React from 'react'
 
-const StepperBasic = React.forwardRef<HTMLButtonElement, HorizontalStepsProps>(
+const StepperBasic = React.forwardRef<HTMLButtonElement, StepperProps>(
   (
     {
       color = 'primary',
@@ -194,15 +194,15 @@ export type HorizontalStepProps = {
   className?: string
 }
 
-export interface HorizontalStepsProps
-  extends React.HTMLAttributes<HTMLButtonElement> {
+export interface StepperProps extends React.HTMLAttributes<HTMLButtonElement> {
   steps?: HorizontalStepProps[]
-
   color?: ButtonProps['color']
   currentStep?: number
   defaultStep?: number
   hideProgressBars?: boolean
-  className?: string
+
   stepClassName?: string
   onStepChange?: (stepIndex: number) => void
+  className?: string
+  children?: React.ReactNode
 }

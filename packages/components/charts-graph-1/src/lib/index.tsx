@@ -12,10 +12,10 @@ import {
   XAxis
 } from 'recharts'
 
-export const GraphCard: React.FC<{ data: Chart[]; tabs: TabData[] }> = ({
-  data,
-  tabs
-}) => {
+export const GraphCard: React.FC<{
+  data: graphChartProps[]
+  tabs: TabData[]
+}> = ({ data, tabs }) => {
   const [activeChart, setActiveChart] = React.useState(data[0].key)
 
   const activeChartData = React.useMemo(() => {
@@ -226,7 +226,7 @@ export type TabData = {
   title: string
 }
 
-export type Chart = {
+export type graphChartProps = {
   key: string
   title: string
   value: number
@@ -238,4 +238,6 @@ export type Chart = {
   actions?: React.ReactNode
   formatValue: (value: number, type: string | undefined) => string | number
   formatMonth: (month: string) => string
+  className?: string
+  children?: React.ReactNode
 }

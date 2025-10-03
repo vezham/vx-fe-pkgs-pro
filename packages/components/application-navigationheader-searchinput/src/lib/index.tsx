@@ -111,4 +111,6 @@ export type navigationHeaderProps = {
   logo?: React.ReactNode
   navItems: string[]
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

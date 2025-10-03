@@ -89,4 +89,6 @@ export type calendarProps = {
   footerLink?: React.ReactNode
   footerActions?: React.ReactNode
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

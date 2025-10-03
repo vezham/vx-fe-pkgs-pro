@@ -153,4 +153,6 @@ export type cardProps = {
   footerActions?: React.ReactNode
   countries?: countryProp[]
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

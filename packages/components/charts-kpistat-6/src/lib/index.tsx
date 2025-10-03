@@ -124,4 +124,6 @@ export type KpiStatProps = {
   xaxis: string
   change: string
   changeType: 'positive' | 'negative' | 'neutral'
+  className?: string
+  children?: React.ReactNode
 }

@@ -9,9 +9,9 @@ import {
   VisuallyHidden
 } from '@vx-oss/react'
 import {
+  FeedBackProps,
   FeedbackRatingItemProps,
   FeedBackTextarea,
-  FeedBackTextProps,
   RatingValueEnum
 } from '@vx-pro/application-feedback-textarea'
 import React from 'react'
@@ -136,7 +136,7 @@ const feedback_textarea = () => {
     )
   }
 
-  const data: FeedBackTextProps = {
+  const data: FeedBackProps = {
     icon: (
       <Icon
         className="text-default-400 dark:text-default-300"

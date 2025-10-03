@@ -55,4 +55,6 @@ export type faqsProps = {
   subtitle2: string
   subtitle3: string
   faqs: FAQsColumnProps[]
+  className?: string
+  children?: React.ReactNode
 }

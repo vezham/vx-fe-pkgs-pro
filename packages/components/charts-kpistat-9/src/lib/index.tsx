@@ -145,4 +145,6 @@ export type KpiStatProps = {
   color: 'default' | 'primary' | 'secondary' | 'danger' | 'success' | 'warning'
   chartData: ChartData[]
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

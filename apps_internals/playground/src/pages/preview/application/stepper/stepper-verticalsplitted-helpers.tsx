@@ -11,9 +11,9 @@ import {
   Spacer
 } from '@vx-oss/react'
 import {
+  StepperProps,
   StepperSplittedHelpers,
-  SupportCardProps,
-  VerticalStepsProps
+  SupportCardProps
 } from '@vx-pro/application-stepper-verticalsplitted-helpers'
 import { domAnimation, LazyMotion, m } from 'framer-motion'
 import React, { ComponentProps, useState } from 'react'
@@ -46,7 +46,7 @@ const StepperVerticalSplittedHelpers = () => {
     )
   }
 
-  const VerticalSteps = React.forwardRef<HTMLButtonElement, VerticalStepsProps>(
+  const VerticalSteps = React.forwardRef<HTMLButtonElement, StepperProps>(
     (
       {
         color = 'primary',
@@ -292,7 +292,7 @@ const StepperVerticalSplittedHelpers = () => {
     }
   ]
 
-  const data: VerticalStepsProps = {
+  const data: StepperProps = {
     heading: 'Getting Started',
     subHead:
       'Follow the steps to configure your account. This allows you to set up your business address.',

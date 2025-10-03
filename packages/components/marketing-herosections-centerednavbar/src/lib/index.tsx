@@ -76,6 +76,8 @@ export type heroSectionProps = {
   navbarActions?: React.ReactNode
   scrollBannerActions?: React.ReactNode
   appActions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }
 
 export type NavProps = {

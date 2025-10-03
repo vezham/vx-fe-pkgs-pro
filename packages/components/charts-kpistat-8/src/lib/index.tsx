@@ -9,7 +9,7 @@ import React from 'react'
 import { Area, AreaChart, ResponsiveContainer, YAxis } from 'recharts'
 import { chart } from './variant'
 
-const ChartCard = React.forwardRef<HTMLDivElement, ChartCardProps>(
+const ChartCard = React.forwardRef<HTMLDivElement, KpiStatProps>(
   (
     {
       title,
@@ -154,14 +154,14 @@ ChartCard.displayName = 'ChartCard'
 
 export { ChartCard }
 
-export type ChartProps = Omit<ChartCardProps, 'index'>
+export type ChartProps = Omit<KpiStatProps, 'index'>
 
 export type ChartData = {
   month: string
   value: number
 }
 
-export type ChartCardProps = {
+export type KpiStatProps = {
   title: string
   value: number | string
   change: string

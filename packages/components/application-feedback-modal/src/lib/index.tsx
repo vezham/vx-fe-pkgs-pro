@@ -12,7 +12,7 @@ import {
 
 import type { RadioProps } from '@vx-oss/react'
 
-const FeedBackModal = ({ data }: { data: FeedBackModalProps }) => {
+const FeedBackModal = ({ data }: { data: FeedBackProps }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
   return (
@@ -66,6 +66,7 @@ const FeedBackModal = ({ data }: { data: FeedBackModalProps }) => {
 }
 
 export { FeedBackModal }
+
 export enum RatingValueEnum {
   BAD = 'bad',
   NEUTRAL = 'neutral',
@@ -77,7 +78,7 @@ export type FeedbackRatingItemProps = Omit<RadioProps, 'value'> & {
   value: RatingValueEnum
 }
 
-export type FeedBackModalProps = {
+export type FeedBackProps = {
   heading: string
   modalTitle: string
   modalDescription: string
@@ -86,4 +87,6 @@ export type FeedBackModalProps = {
   icon?: React.ReactNode
   content?: React.ReactNode
   actions?: React.ReactNode | ((onClose: () => void) => React.ReactNode)
+  className?: string
+  children?: React.ReactNode
 }

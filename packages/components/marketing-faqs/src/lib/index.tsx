@@ -3,7 +3,7 @@
 import { Icon } from '@iconify/react'
 import { Accordion, AccordionItem } from '@vx-oss/react'
 
-const FAQs = ({ data }: { data: faqProps }) => {
+const FAQs = ({ data }: { data: faqsProps }) => {
   return (
     <section className="mx-auto w-full max-w-6xl px-0 py-20 sm:py-32 md:px-6 lg:px-8 lg:py-40">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
@@ -44,8 +44,10 @@ export type FAQSProps = {
   content: string
 }
 
-export type faqProps = {
+export type faqsProps = {
   title: string
   subtitle: string
   faqs: FAQSProps[]
+  className?: string
+  children?: React.ReactNode
 }

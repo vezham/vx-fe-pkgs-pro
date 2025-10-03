@@ -232,6 +232,8 @@ export type BarChartProps = {
   getPeriodProps?: Record<Period, periodProps>
   actions?: React.ReactNode
   formatMonth?: (month: string) => string
+  className?: string
+  children?: React.ReactNode
 }
 
 export type Period = 'per-day' | 'per-week' | 'per-month'

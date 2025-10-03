@@ -5,7 +5,7 @@ import { Avatar, cn, Link } from '@vx-oss/react'
 import React from 'react'
 
 export type TeamMemberCardProps = React.HTMLAttributes<HTMLDivElement> &
-  TeamMember
+  TeamMemberProps
 
 const TeamMemberCard = React.forwardRef<HTMLDivElement, TeamMemberCardProps>(
   ({ children, avatar, name, role, bio, social, className, ...props }, ref) => (
@@ -45,7 +45,7 @@ TeamMemberCard.displayName = 'TeamMemberCard'
 
 export { TeamMemberCard }
 
-export type TeamMember = {
+export type TeamMemberProps = {
   name: string
   avatar: string
   role: string
@@ -55,4 +55,6 @@ export type TeamMember = {
     linkedin: string
     github?: string
   }
+  className?: string
+  children?: React.ReactNode
 }

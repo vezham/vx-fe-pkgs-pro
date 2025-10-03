@@ -12,7 +12,7 @@ import {
 } from '@vx-oss/react'
 import {
   FeedBackPopover,
-  FeedBackPopoverProps,
+  FeedBackProps,
   FeedbackRatingItemProps,
   RatingValueEnum
 } from '@vx-pro/application-feedback-popover'
@@ -138,7 +138,7 @@ const FeedbackPopoverWrapper = () => {
     )
   }
 
-  const data: FeedBackPopoverProps = {
+  const data: FeedBackProps = {
     title: 'Feedback',
     textarea: (
       <Textarea

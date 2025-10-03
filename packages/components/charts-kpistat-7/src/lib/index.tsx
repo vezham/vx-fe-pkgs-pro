@@ -173,4 +173,6 @@ export type KpiStatProps = {
   formatValue: (value: number) => string | number
   handleMouseEnter: (chartIndex: number, itemIndex: number) => void
   handleMouseLeave: (chartIndex: number) => void
+  className?: string
+  children?: React.ReactNode
 }

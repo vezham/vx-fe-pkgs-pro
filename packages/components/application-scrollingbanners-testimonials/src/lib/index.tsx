@@ -195,4 +195,6 @@ export type UserReviewProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export type ScrollBannerProps = {
   testimonials: UserReviewProps[]
+  className?: string
+  children?: React.ReactNode
 }

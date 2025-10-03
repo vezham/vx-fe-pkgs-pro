@@ -68,4 +68,6 @@ export type KpiStatProps = {
   status: 'good' | 'warn' | 'danger'
   iconName: string
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

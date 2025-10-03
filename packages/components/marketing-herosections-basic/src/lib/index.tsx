@@ -67,6 +67,8 @@ export type heroSectionProps = {
   actions?: React.ReactNode
   navbarActions?: React.ReactNode
   fadeImgActions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }
 
 export type NavProps = {

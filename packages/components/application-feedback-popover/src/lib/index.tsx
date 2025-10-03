@@ -9,7 +9,7 @@ import {
 } from '@vx-oss/react'
 import React from 'react'
 
-const FeedBackPopover = ({ data }: { data: FeedBackPopoverProps }) => {
+const FeedBackPopover = ({ data }: { data: FeedBackProps }) => {
   return (
     <div>
       <Popover shouldBlockScroll={false}>
@@ -56,11 +56,13 @@ export type FeedbackRatingItemProps = Omit<RadioProps, 'value'> & {
   value: RatingValueEnum
 }
 
-export type FeedBackPopoverProps = {
+export type FeedBackProps = {
   title: string
   textarea?: React.ReactNode
   link?: React.ReactNode
   icon?: React.ReactNode
   content?: React.ReactNode
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

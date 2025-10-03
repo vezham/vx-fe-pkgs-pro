@@ -1,9 +1,6 @@
 'use client'
 
-import {
-  HorizontalStepsProps,
-  StepperBasic
-} from '@vx-pro/application-stepper-basic'
+import { StepperBasic, StepperProps } from '@vx-pro/application-stepper-basic'
 import { m } from 'framer-motion'
 import { ComponentProps } from 'react'
 
@@ -33,7 +30,7 @@ const stepper_basic = () => {
     )
   }
 
-  const data: HorizontalStepsProps = {
+  const data: StepperProps = {
     defaultStep: 2,
     steps: [
       {

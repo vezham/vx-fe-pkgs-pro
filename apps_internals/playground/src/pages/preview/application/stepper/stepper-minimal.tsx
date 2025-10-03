@@ -1,8 +1,8 @@
 'use client'
 
 import {
-  MinimalRowStepsProps,
-  StepperMinimal
+  StepperMinimal,
+  StepperProps
 } from '@vx-pro/application-stepper-minimal'
 import { m } from 'framer-motion'
 import { ComponentProps, useState } from 'react'
@@ -36,7 +36,7 @@ const Stepper_MinimalUsage = () => {
     )
   }
 
-  const data: MinimalRowStepsProps = {
+  const data: StepperProps = {
     label: `Step ${currentStep + 1} of ${STEPS_COUNT}`,
     stepsCount: STEPS_COUNT,
     currentStep,

@@ -430,9 +430,6 @@
     },
     {
       "path": "./packages/components/application-calendarbooking-confirmation"
-    },
-    {
-      "path": "./packages/components/application-table-withfilters"
     }
   ]
 }

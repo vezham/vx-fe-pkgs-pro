@@ -28,4 +28,6 @@ export type cookieProps = {
   cookieBrief: string
   linkText: string
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

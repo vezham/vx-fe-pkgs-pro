@@ -1,8 +1,8 @@
 'use client'
 
 import {
-  StepperSplitted,
-  VerticalStepsProps
+  StepperProps,
+  StepperSplitted
 } from '@vx-pro/application-stepper-verticalsplitted'
 import { m } from 'framer-motion'
 import { ComponentProps } from 'react'
@@ -34,7 +34,7 @@ const StepperVerticalSplitted = () => {
   }
 
   // ✅ all data inside one object
-  const data: VerticalStepsProps = {
+  const data: StepperProps = {
     steps: [
       {
         icon: <CheckIcon className="h-6 w-6 text-(--active-fg-color)" />,

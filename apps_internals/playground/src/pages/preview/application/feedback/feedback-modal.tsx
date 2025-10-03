@@ -12,7 +12,7 @@ import {
 } from '@vx-oss/react'
 import {
   FeedBackModal,
-  FeedBackModalProps,
+  FeedBackProps,
   FeedbackRatingItemProps,
   RatingValueEnum
 } from '@vx-pro/application-feedback-modal'
@@ -138,7 +138,7 @@ const FeedBackModalWrapper = () => {
     )
   }
 
-  const data: FeedBackModalProps = {
+  const data: FeedBackProps = {
     heading: 'Give Feedback',
     modalTitle: 'Help us improve Acme.',
     modalDescription:

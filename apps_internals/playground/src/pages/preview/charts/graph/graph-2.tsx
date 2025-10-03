@@ -6,7 +6,7 @@ import {
   DropdownMenu,
   DropdownTrigger
 } from '@vx-oss/react'
-import { Chart, GraphCard, TabData } from '@vx-pro/charts-graph-2'
+import { GraphCard, graphChartProps, TabData } from '@vx-pro/charts-graph-2'
 
 const graph_2 = () => {
   const formatValue = (value: number, type: string | undefined) => {
@@ -54,7 +54,7 @@ const graph_2 = () => {
     { key: '24-hours', title: '24 Hours' }
   ]
 
-  const data: Chart[] = [
+  const data: graphChartProps[] = [
     {
       key: 'unique-visitors',
       title: 'Unique Visitors',

@@ -79,4 +79,6 @@ export type cardProps = {
   description?: string
   footerText?: string
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

@@ -148,4 +148,6 @@ export type cardProps = {
   header: CellProps[]
   footer: CellProps[]
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

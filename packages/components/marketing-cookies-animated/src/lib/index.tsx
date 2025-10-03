@@ -68,9 +68,8 @@ const CookieAnimated = ({
   /* ------------------ Switch Cell ------------------ */
 
   const SwitchCell = React.forwardRef<HTMLInputElement, SwitchCellProps>(
-    ({ label, description, classNames, ...props }, ref) => (
+    ({ label, description, classNames, ...props }) => (
       <CustomSwitch
-        ref={ref}
         classNames={{
           ...classNames,
           base: cn(
@@ -217,4 +216,6 @@ export type cookieSettingProps = {
   setlinkText: string
   setactions?: React.ReactNode
   switchCell?: SwitchCellProps[]
+  className?: string
+  children?: React.ReactNode
 }

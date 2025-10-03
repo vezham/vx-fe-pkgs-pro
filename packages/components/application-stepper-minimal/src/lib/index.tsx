@@ -6,10 +6,7 @@ import { cn } from '@vx-oss/react'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import React from 'react'
 
-const StepperMinimal = React.forwardRef<
-  HTMLButtonElement,
-  MinimalRowStepsProps
->(
+const StepperMinimal = React.forwardRef<HTMLButtonElement, StepperProps>(
   (
     {
       color = 'primary',
@@ -187,8 +184,7 @@ const StepperMinimal = React.forwardRef<
 
 export { StepperMinimal }
 
-export interface MinimalRowStepsProps
-  extends React.HTMLAttributes<HTMLButtonElement> {
+export interface StepperProps extends React.HTMLAttributes<HTMLButtonElement> {
   label?: string
   icon?: React.ReactNode
   stepsCount?: number
@@ -196,7 +192,8 @@ export interface MinimalRowStepsProps
   currentStep?: number
   defaultStep?: number
   hideProgressBars?: boolean
-  className?: string
   stepClassName?: string
   onStepChange?: (stepIndex: number) => void
+  className?: string
+  children?: React.ReactNode
 }

@@ -37,4 +37,6 @@ export type cardProps = {
   footerText?: string
   actions?: React.ReactNode
   footerActions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

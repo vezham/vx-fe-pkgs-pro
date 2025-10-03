@@ -40,4 +40,6 @@ export type cardProps = {
   subtitle?: string
   description?: string
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

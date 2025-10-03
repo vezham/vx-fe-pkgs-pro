@@ -1,8 +1,8 @@
 import { ComponentProps } from 'react'
 
 import {
-  StepperVertical,
-  VerticalStepsProps
+  StepperProps,
+  StepperVertical
 } from '@vx-pro/application-stepper-vertical'
 import { m } from 'framer-motion'
 
@@ -32,7 +32,7 @@ const stepper_vertical = () => {
     )
   }
 
-  const data: VerticalStepsProps = {
+  const data: StepperProps = {
     steps: [
       {
         icon: <CheckIcon className="h-6 w-6 text-(--active-fg-color)" />,

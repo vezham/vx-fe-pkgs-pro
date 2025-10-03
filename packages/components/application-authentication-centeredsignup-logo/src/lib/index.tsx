@@ -115,4 +115,6 @@ export type authenticationProps = {
   footerLink?: string
   footerActions?: React.ReactNode
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

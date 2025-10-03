@@ -148,4 +148,6 @@ export type logoProps = {
 
 export type ScrollBannerProps = {
   logo: logoProps[]
+  className?: string
+  children?: React.ReactNode
 }

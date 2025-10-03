@@ -119,4 +119,6 @@ export type CircleChartProps = {
   total: number
   actions?: React.ReactNode
   formatTotal?: (total: number | undefined) => string
+  className?: string
+  children?: React.ReactNode
 }

@@ -226,17 +226,21 @@ Charts.displayName = 'Charts'
 export { Charts }
 
 // ---------------------- Types ----------------------
+
 export type ChartData = {
   name: string
   [key: string]: string | number
 }
 
 export type Period = 'per-day' | 'per-week' | 'per-month'
-export type periodProps = { label: string }
+
 export type StyleValues = 'currency' | 'decimal' | 'percent' | 'unit'
+
 export type StyleValueProps =
   | { style: 'currency'; currency: string }
   | { style: 'decimal' | 'percent' | 'unit'; currency?: undefined }
+
+export type periodProps = { label: string }
 
 export type CircleChartProps = {
   title: string
@@ -247,11 +251,12 @@ export type CircleChartProps = {
   color: ButtonProps['color']
   categories: string[]
   chartData: ChartData[]
-
   formatStyle?: StyleValues
   actions?: React.ReactNode
   period?: Period
   getPeriodProps?: Record<Period, periodProps>
   getStyleValueProps?: Record<StyleValues, StyleValueProps>
   formatValue?: (value: number | undefined, props: StyleValueProps) => string
+  className?: string
+  children?: React.ReactNode
 }

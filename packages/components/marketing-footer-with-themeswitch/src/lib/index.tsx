@@ -64,6 +64,8 @@ export type FooterProps = {
   actions?: FooterAction[]
   themeSwitch?: React.ReactNode
   copyright?: string
+  className?: string
+  children?: React.ReactNode
 }
 
 export type ThemeSwitchProps = {

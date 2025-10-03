@@ -18,9 +18,9 @@ import {
 import {
   cardAccountProps,
   cardNotificationProps,
+  cardProps,
   cardSecurityProps,
   CardSettingsTabs,
-  cardTabProps,
   CellProps,
   countryProp,
   SwitchCellProps,
@@ -710,7 +710,7 @@ const card_settingstabs = () => {
     )
   }
 
-  const data: cardTabProps[] = [
+  const data: cardProps[] = [
     {
       key: 'account-settings',
       textValue: 'Account Settings',

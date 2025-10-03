@@ -125,4 +125,6 @@ export type FooterProps = {
   footerTitle?: string
   footerSubtitle?: string
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

@@ -49,4 +49,6 @@ export type faqsProps = {
   title: string
   subtitle: string
   faqs: CenteredFAQsProps[]
+  className?: string
+  children?: React.ReactNode
 }

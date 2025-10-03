@@ -11,7 +11,7 @@ const TrendCard = ({
   trendType,
   trendChipPosition = 'top',
   trendChipVariant = 'light'
-}: TrendCardProps) => {
+}: KpiStatProps) => {
   return (
     <Card className="dark:border-default-100 border border-transparent">
       <div className="flex p-4">
@@ -63,7 +63,7 @@ const TrendCard = ({
 
 export { TrendCard }
 
-export type TrendCardProps = {
+export type KpiStatProps = {
   title: string
   value: string
   change: string
@@ -71,4 +71,6 @@ export type TrendCardProps = {
   trendType: 'up' | 'neutral' | 'down'
   trendChipPosition?: 'top' | 'bottom'
   trendChipVariant?: 'flat' | 'light'
+  className?: string
+  children?: React.ReactNode
 }

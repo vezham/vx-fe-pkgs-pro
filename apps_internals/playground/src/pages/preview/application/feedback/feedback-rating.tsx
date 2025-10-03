@@ -10,9 +10,9 @@ import {
 import React from 'react'
 
 import {
+  FeedbackProps,
   FeedBackRating,
   FeedbackRatingItemProps,
-  FeedbackRatingItemsProps,
   RatingValueEnum
 } from '@vx-pro/application-feedback-rating'
 
@@ -104,7 +104,7 @@ const rateValues: RatingValueEnum[] = [
 ]
 
 const FeedbackRatingWrapper = () => {
-  const data: FeedbackRatingItemsProps = {
+  const data: FeedbackProps = {
     actions: (
       <>
         {rateValues.map(value => (

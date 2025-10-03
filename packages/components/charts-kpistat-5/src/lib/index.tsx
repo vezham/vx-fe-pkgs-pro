@@ -73,4 +73,6 @@ export type KpiStatProps = {
   color: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'default'
   iconName: string
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }

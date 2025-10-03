@@ -102,4 +102,6 @@ export type navProps = {
   navMenuactions?: React.ReactNode
   menuItems: string[]
   navItems: string[]
+  className?: string
+  children?: React.ReactNode
 }

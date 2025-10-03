@@ -196,4 +196,6 @@ export type CircleChartProps = {
   getPeriodProps?: Record<Period, periodProps>
   formatTotal?: (total: number | undefined) => string
   colorIndexMap?: (index: number) => number
+  className?: string
+  children?: React.ReactNode
 }

@@ -64,4 +64,6 @@ export type faqsProps = {
   mainHeading: string
   faqs: FAQsDividerProps[]
   actions?: React.ReactNode
+  className?: string
+  children?: React.ReactNode
 }
